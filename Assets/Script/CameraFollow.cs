@@ -17,7 +17,7 @@ public class CameraFollow : MonoBehaviour
         if (shouldFollow)
         {
             followCamera();
-        }//
+        }
     }
 
     private void followCamera()

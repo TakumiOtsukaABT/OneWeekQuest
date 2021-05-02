@@ -22,10 +22,10 @@ public class CharacterController : MonoBehaviour
             case Direction.none:
                 break;
             case Direction.left:
-                this.transform.Translate(-movingSpeed, 0, 0);
+                this.transform.Translate(-movingSpeed*Time.deltaTime, 0, 0);
                 break;
             case Direction.right:
-                this.transform.Translate(movingSpeed, 0, 0);
+                this.transform.Translate(movingSpeed*Time.deltaTime, 0, 0);
                 break;
         }
     }
