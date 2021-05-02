@@ -20,6 +20,7 @@ public class AnimationHandle : MonoBehaviour
         if(stateBeforeRunning != running)
         {
             animator.SetBool("Running", running);
+            
         }
         stateBeforeRunning = running;
     }
