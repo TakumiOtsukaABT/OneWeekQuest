@@ -51,13 +51,16 @@ public class CharacterController : MonoBehaviour
         if (Input.GetMouseButton(0))
         {
             this.currentMousePositionX = Input.mousePosition.x;
-            if (startMousePositionX < currentMousePositionX)
+            if (Mathf.Abs(this.startMousePositionX - this.currentMousePositionX) > 100)
             {
-                this.inputDirection = Direction.right;
-            }
-            else
-            {
-                this.inputDirection = Direction.left;
+                if (startMousePositionX < currentMousePositionX)
+                {
+                    this.inputDirection = Direction.right;
+                }
+                else
+                {
+                    this.inputDirection = Direction.left;
+                }
             }
         }
         else

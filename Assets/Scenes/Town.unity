@@ -1003,7 +1003,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5e656ca66cfb8e42a1afb0698a95a6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  floorName: 
+  floorName: FirstFloor
 --- !u!1 &1604417435
 GameObject:
   m_ObjectHideFlags: 0
