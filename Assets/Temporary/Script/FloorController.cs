@@ -18,4 +18,9 @@ public class FloorController : MonoBehaviour
         this.leftLim = ActiveFloor.LeftLim;
         this.rightLim = ActiveFloor.RightLim;
     }
+
+    public void moveFloor()
+    {
+        Debug.Log("called!");
+    }
 }

@@ -6,8 +6,12 @@ using UnityEngine.UI;
 
 public class GoingUp : MonoBehaviour
 {
+
+    [SerializeField] string floorName;
     public void Onclick()
     {
+        transform.root.gameObject.GetComponent<FloorController>().moveFloor();
+        
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
