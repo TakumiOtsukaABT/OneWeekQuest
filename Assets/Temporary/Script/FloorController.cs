@@ -36,9 +36,15 @@ public class FloorController : MonoBehaviour
         StartCoroutine("Inoperable", i); // 他のスクリプトから呼び出す用
     }
 
-    public void moveFloor(string FloorName)
+    private IEnumerator waitUpStairAnimation(string FloorName)
     {
         character.GetComponent<AnimationHandle>().animationUpStairs();
+        yield return new WaitForSeconds(character.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length/0.5f +1.0f);
         character.transform.position = GameObject.Find(FloorName).transform.Find("FloorStartPosition").transform.position;
+    }
+
+    public void moveFloor(string FloorName)
+    {
+        StartCoroutine(waitUpStairAnimation(FloorName));
     }
 }

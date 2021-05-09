@@ -1013,8 +1013,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5e656ca66cfb8e42a1afb0698a95a6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  floorName: 
-  nextFloorName: 
+  floorName: FirstFloor
+  nextFloorName: SecondFloor
 --- !u!58 &1557880575
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1178,7 +1178,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.3549999, y: 0.14500046}
+  m_AnchoredPosition: {x: -0.3549999, y: 0.76}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1933130857

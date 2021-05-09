@@ -7,12 +7,12 @@ using UnityEngine.UI;
 public class GoingUp : MonoBehaviour
 {
 
-    [SerializeField] string floorName;
-    public string nextFloorName;
+    [SerializeField] string floorName ="";
+    public string nextFloorName="";
+
     public void Onclick()
     {
         GameObject.Find("Character").transform.position = transform.Find("StairPosition").transform.position;
-        Debug.Log("tttt" + nextFloorName);
         transform.root.gameObject.GetComponent<FloorController>().moveFloor(nextFloorName);
     }
 
