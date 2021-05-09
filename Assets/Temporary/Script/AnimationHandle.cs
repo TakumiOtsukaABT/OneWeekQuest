@@ -15,12 +15,16 @@ public class AnimationHandle : MonoBehaviour
         animator = GetComponent<Animator>();
     }
 
+    public void animationUpStairs()
+    {
+        animator.Play("WalkUp");
+    }
+
     private void Update()
     {
         if(stateBeforeRunning != running)
         {
             animator.SetBool("Running", running);
-            
         }
         stateBeforeRunning = running;
     }
