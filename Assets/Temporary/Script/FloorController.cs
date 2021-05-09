@@ -41,6 +41,7 @@ public class FloorController : MonoBehaviour
         character.GetComponent<AnimationHandle>().animationUpStairs();
         yield return new WaitForSeconds(character.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length/0.5f +1.0f);
         character.transform.position = GameObject.Find(FloorName).transform.Find("FloorStartPosition").transform.position;
+        yield return new WaitUntil(GameObject.Find("Main Camera").GetComponent<CameraFollow>().resetCameraPosition);
     }
 
     public void moveFloor(string FloorName)

@@ -20,6 +20,13 @@ public class CameraFollow : MonoBehaviour
         }
     }
 
+    public bool resetCameraPosition()
+    {
+        followCamera();
+        Vector3 desiredPosition = target.position + offset;
+        return transform.position == desiredPosition;
+    }
+
     private void followCamera()
     {
         Vector3 desiredPosition = target.position + offset;
