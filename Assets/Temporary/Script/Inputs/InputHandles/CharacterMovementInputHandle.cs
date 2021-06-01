@@ -9,7 +9,6 @@ public class CharacterMovementInputHandle : InputHandle
     private Direction inputDirection = Direction.none;
     public override void handle()
     {
-        Debug.Log("tttt");
         if (Input.GetMouseButtonDown(0))
         {
             this.startMousePositionX = Input.mousePosition.x;
@@ -32,9 +31,7 @@ public class CharacterMovementInputHandle : InputHandle
         else
         {
             this.inputDirection = Direction.none;
-            //this.animationHandle.Running = false;
         }
-
         this.target.GetComponent<CharacterController>().inputDirection = GetDirection();
     }
 

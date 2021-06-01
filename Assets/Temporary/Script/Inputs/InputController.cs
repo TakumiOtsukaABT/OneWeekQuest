@@ -4,20 +4,27 @@ using UnityEngine;
 
 public class InputController : MonoBehaviour
 {
-    public InputHandle[] inputHandles;
+    public InputHandle inputHandle;
+    public bool active = true;
     InputTypes inputType = 0;
+
     // Start is called before the first frame update
     void Start()
     {
-        inputHandles[0] = gameObject.GetComponent<CharacterMovementInputHandle>();
+        inputHandle = gameObject.GetComponent<CharacterMovementInputHandle>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (inputHandles[(int)inputType].enabled)
+        if (active)
         {
-        inputHandles[(int)inputType].handle();
+        inputHandle.handle();
         }
+    }
+
+    public void setInputHandle()
+    {
+        inputHandle = gameObject.GetComponent
     }
 }
