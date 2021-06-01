@@ -23,8 +23,8 @@ public class InputController : MonoBehaviour
         }
     }
 
-    public void setInputHandle()
+    public void setInputHandle<Type>() where Type: InputHandle
     {
-        inputHandle = gameObject.GetComponent
+        inputHandle = gameObject.GetComponent<Type>();
     }
 }
