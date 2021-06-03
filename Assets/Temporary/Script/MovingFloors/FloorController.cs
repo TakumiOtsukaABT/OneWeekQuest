@@ -21,16 +21,21 @@ public class FloorController : MonoBehaviour
         this.rightLim = ActiveFloor.RightLim;
     }
 
-    private IEnumerator waitUpStairAnimation(string FloorName)
+    private IEnumerator waitUpStairAnimation(string positionName, string floorName)
     {
         character.GetComponent<AnimationHandle>().animationUpStairs();
+
         yield return new WaitForSeconds(character.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length/0.5f +1.0f);
-        character.transform.position = GameObject.Find(FloorName).transform.Find("FloorStartPosition").transform.position;
-        yield return new WaitUntil(GameObject.Find("Main Camera").GetComponent<CameraFollow>().resetCameraPosition);
+        ActiveFloor = GameObject.Find(floorName).GetComponent<Floor>();
+        character.transform.position = ActiveFloor.transform.Find(positionName).transform.position;
+        updateparams();
+        var camera = GameObject.Find("Main Camera").GetComponent<CameraFollow>();
+        camera.setHaji(ActiveFloor);
+        yield return new WaitUntil(camera.resetCameraPosition);
     }
 
-    public void moveFloor(string FloorName)
+    public void moveFloor(string positionName, string floorName)
     {
-        StartCoroutine(waitUpStairAnimation(FloorName));
+        StartCoroutine(waitUpStairAnimation(positionName, floorName));
     }
 }

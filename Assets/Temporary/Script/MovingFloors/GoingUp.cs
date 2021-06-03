@@ -8,12 +8,14 @@ public class GoingUp : MonoBehaviour
 {
 
     [SerializeField] string floorName ="";
-    public string nextFloorName="";
+    public string nextPositionName="";
+    public string nextFloorName = "";
+
 
     public void Onclick()
     {
-        GameObject.Find("Character").transform.position = transform.Find("StairPosition").transform.position;
-        transform.root.gameObject.GetComponent<FloorController>().moveFloor(nextFloorName);
+        GameObject.Find("Character").transform.position = transform.parent.Find("StairPosition").transform.position;
+        transform.root.gameObject.GetComponent<FloorController>().moveFloor(nextPositionName,nextFloorName);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
