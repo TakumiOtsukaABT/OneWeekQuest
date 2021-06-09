@@ -5,7 +5,7 @@ using UnityEngine;
 public class CharacterController : MonoBehaviour
 {
     float startMousePositionX, currentMousePositionX;
-    Direction inputDirection = Direction.none;
+    public Direction inputDirection = Direction.none;
     public float movingSpeed = 0.0f;
     private bool inputBoolean = true;
     AnimationHandle animationHandle;
@@ -25,11 +25,11 @@ public class CharacterController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        inputHandling();
         switch (inputDirection)
         {
             case Direction.none:
                 transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, 1);
+                this.animationHandle.Running = false;
                 break;
             case Direction.left:
                 transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, 1);
@@ -47,39 +47,6 @@ public class CharacterController : MonoBehaviour
                     animationHandle.Running = true;
                 }
                 break;
-        }
-    }
-
-    private void inputHandling()
-    {
-        if (!inputBoolean)
-        {
-            Debug.Log("inputDisabled");
-            return;
-        }
-        if (Input.GetMouseButtonDown(0))
-        {
-            this.startMousePositionX = Input.mousePosition.x;
-        }
-        if (Input.GetMouseButton(0))
-        {
-            this.currentMousePositionX = Input.mousePosition.x;
-            if (Mathf.Abs(this.startMousePositionX - this.currentMousePositionX) > 100)
-            {
-                if (startMousePositionX < currentMousePositionX)
-                {
-                    this.inputDirection = Direction.right;
-                }
-                else
-                {
-                    this.inputDirection = Direction.left;
-                }
-            }
-        }
-        else
-        {
-            this.inputDirection = Direction.none;
-            this.animationHandle.Running = false;
         }
     }
 }

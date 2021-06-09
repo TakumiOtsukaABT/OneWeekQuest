@@ -27,6 +27,12 @@ public class CameraFollow : MonoBehaviour
         return transform.position == desiredPosition;
     }
 
+    public void setHaji(Floor floor)
+    {
+        migihaji = floor.RightLim - 4;
+        hidarihaji = floor.LeftLim + 13.5f;
+    }
+
     private void followCamera()
     {
         Vector3 desiredPosition = target.position + offset;

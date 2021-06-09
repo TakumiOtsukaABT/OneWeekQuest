@@ -36,8 +36,8 @@ public class CallInoperate : StateMachineBehaviour
 
     private void setInputActivation(bool active)
     {
-        GameObject inputObj = GameObject.Find("Character");
-        CharacterController inputScript = inputObj.GetComponent<CharacterController>();
-        inputScript.InputBoolean = active;
+        GameObject inputObj = GameObject.Find("InputController");
+        InputController inputScript = inputObj.GetComponent<InputController>();
+        inputScript.active = active;
     }
 }
