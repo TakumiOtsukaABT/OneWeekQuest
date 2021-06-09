@@ -1,8 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public enum InputTypes
+﻿public enum InputTypes
 {
     characterInput//0
 }

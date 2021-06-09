@@ -12,12 +12,8 @@ public class GoingUp : MonoBehaviour
 
     public void Onclick()
     {
-        Debug.Log("tttt" + stairPositionClassName);
-        Debug.Log("tttt" + floorName);
-        Debug.Log("tttt" + nextFloorName);
-        GameObject.Find("Character").transform.position = transform.parent.Find("StairPosition").transform.position;
+        GameObject.Find("Character").transform.position = transform.parent.Find(stairPositionClassName).transform.position;
         transform.root.gameObject.GetComponent<FloorController>().moveFloor(nextPositionName, nextFloorName);
-        Debug.Log("tttt" + nextPositionName);
 
     }
 

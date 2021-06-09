@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class FloorController : MonoBehaviour
@@ -25,7 +24,7 @@ public class FloorController : MonoBehaviour
     {
         character.GetComponent<AnimationHandle>().animationUpStairs();
 
-        yield return new WaitForSeconds(character.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length/0.5f +1.0f);
+        yield return new WaitForSeconds(character.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length / 0.5f + 1.0f);
         ActiveFloor = GameObject.Find(floorName).GetComponent<Floor>();
         character.transform.position = ActiveFloor.transform.Find(positionName).transform.position;
         updateparams();

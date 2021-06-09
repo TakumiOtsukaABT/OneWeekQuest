@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class InputController : MonoBehaviour
 {
@@ -19,11 +17,11 @@ public class InputController : MonoBehaviour
     {
         if (active)
         {
-        inputHandle.handle();
+            inputHandle.handle();
         }
     }
 
-    public void setInputHandle<Type>() where Type: InputHandle
+    public void setInputHandle<Type>() where Type : InputHandle
     {
         inputHandle = gameObject.GetComponent<Type>();
     }

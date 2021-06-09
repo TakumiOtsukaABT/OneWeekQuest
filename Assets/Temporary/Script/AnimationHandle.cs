@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class AnimationHandle : MonoBehaviour
 {
@@ -22,7 +20,7 @@ public class AnimationHandle : MonoBehaviour
 
     private void Update()
     {
-        if(stateBeforeRunning != running)
+        if (stateBeforeRunning != running)
         {
             animator.SetBool("Running", running);
         }

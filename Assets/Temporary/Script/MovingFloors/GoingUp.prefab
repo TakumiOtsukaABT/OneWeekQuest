@@ -321,7 +321,6 @@ GameObject:
   - component: {fileID: 5948825670963406438}
   - component: {fileID: 5948825670963406437}
   - component: {fileID: 5948825670963406436}
-  - component: {fileID: 5948825670963406747}
   m_Layer: 0
   m_Name: GoingUp
   m_TagString: Untagged
@@ -357,8 +356,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   floorName: FirstFloor
-  nextPositionName: 
+  nextPositionName: FloorStartPosition
   nextFloorName: SecondFloor
+  stairPositionClassName: StairPosition
 --- !u!58 &5948825670963406436
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -375,18 +375,3 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 3
---- !u!114 &5948825670963406747
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5948825670963406439}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e5e656ca66cfb8e42a1afb0698a95a6c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  floorName: FirstFloor
-  nextPositionName: 
-  nextFloorName: SecondFloor

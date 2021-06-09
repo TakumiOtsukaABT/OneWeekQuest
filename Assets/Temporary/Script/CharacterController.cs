@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class CharacterController : MonoBehaviour
 {
@@ -35,7 +33,7 @@ public class CharacterController : MonoBehaviour
                 transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, 1);
                 if (transform.position.x > floorController.leftLim)
                 {
-                this.transform.Translate(-movingSpeed*Time.deltaTime, 0, 0);
+                    this.transform.Translate(-movingSpeed * Time.deltaTime, 0, 0);
                     animationHandle.Running = true;
                 }
                 break;
@@ -43,7 +41,7 @@ public class CharacterController : MonoBehaviour
                 transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, 1);
                 if (transform.position.x < floorController.rightLim)
                 {
-                this.transform.Translate(movingSpeed*Time.deltaTime, 0, 0);
+                    this.transform.Translate(movingSpeed * Time.deltaTime, 0, 0);
                     animationHandle.Running = true;
                 }
                 break;
