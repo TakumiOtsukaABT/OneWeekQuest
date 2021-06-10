@@ -32,9 +32,25 @@ public class FloorController : MonoBehaviour
         camera.setHaji(ActiveFloor);
         yield return new WaitUntil(camera.resetCameraPosition);
     }
+    private IEnumerator waitDownStairAnimation(string positionName, string floorName)
+    {
+        character.GetComponent<AnimationHandle>().animationDownStairs();
+        yield return new WaitForSeconds(character.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length / 0.5f + 1.0f);
+        ActiveFloor = GameObject.Find(floorName).GetComponent<Floor>();
+        character.transform.position = ActiveFloor.transform.Find(positionName).transform.position;
+        updateparams();
+        var camera = GameObject.Find("Main Camera").GetComponent<CameraFollow>();
+        camera.setHaji(ActiveFloor);
+        yield return new WaitUntil(camera.resetCameraPosition);
+    }
 
-    public void moveFloor(string positionName, string floorName)
+    public void moveFloorUp(string positionName, string floorName)
     {
         StartCoroutine(waitUpStairAnimation(positionName, floorName));
+    }
+
+    public void moveFloorDown(string positionName, string floorName)
+    {
+        StartCoroutine(waitDownStairAnimation(positionName, floorName));
     }
 }

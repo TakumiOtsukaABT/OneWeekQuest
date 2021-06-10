@@ -18,6 +18,11 @@ public class AnimationHandle : MonoBehaviour
         animator.Play("WalkUp");
     }
 
+    public void animationDownStairs()
+    {
+        animator.Play("WalkDown");
+    }
+
     private void Update()
     {
         if (stateBeforeRunning != running)

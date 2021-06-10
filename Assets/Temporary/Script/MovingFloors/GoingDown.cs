@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 
-public class GoingUp : MonoBehaviour
+public class GoingDown : MonoBehaviour
 {
 
     [SerializeField] string floorName = "";
@@ -13,7 +13,7 @@ public class GoingUp : MonoBehaviour
     public void Onclick()
     {
         GameObject.Find("Character").transform.position = transform.parent.Find(stairPositionClassName).transform.position;
-        transform.root.gameObject.GetComponent<FloorController>().moveFloorUp(nextPositionName, nextFloorName);
+        transform.root.gameObject.GetComponent<FloorController>().moveFloorDown(nextPositionName, nextFloorName);
 
     }
 

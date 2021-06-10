@@ -7,6 +7,7 @@ public class CameraFollow : MonoBehaviour
     public float smoothSpeed = 0.125f;
     public Vector3 offset;
     [SerializeField] private float migihaji, hidarihaji;
+    [SerializeField] private float localY;
     bool shouldFollow = true;
 
     private void LateUpdate()
