@@ -43,7 +43,7 @@ namespace Gamekit2D
 
             gameObject.SetActive(true);
             animator.SetBool(m_HashActivePara, true);
-            textMeshProUGUI.text = Translator.Instance[phraseKey];
+            //textMeshProUGUI.text = Translator.Instance[phraseKey];
         }
 
         public void DeactivateCanvasWithDelay (float delay)

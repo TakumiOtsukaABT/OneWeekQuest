@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using Gamekit2D;
 
 public class CharacterMovementInputHandle : InputHandle
 {
@@ -10,6 +11,8 @@ public class CharacterMovementInputHandle : InputHandle
         if (Input.GetMouseButtonDown(0))
         {
             this.startMousePositionX = Input.mousePosition.x;
+            DialogueCanvasController gameObject = GameObject.Find("DialogueCanvas").GetComponent<DialogueCanvasController>();
+            gameObject.ActivateCanvasWithText("hello there");
         }
         if (Input.GetMouseButton(0))
         {
