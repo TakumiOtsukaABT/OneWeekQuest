@@ -6,10 +6,13 @@ public class FloorController : MonoBehaviour
     public float leftLim, rightLim;
     private Floor ActiveFloor;
     GameObject character;
+    private CameraFollow camera;
     // Start is called before the first frame update
     void Start()
     {
         ActiveFloor = transform.GetChild(0).GetComponent<Floor>();
+        camera = GameObject.Find("Main Camera").GetComponent<CameraFollow>();
+        camera.setHaji(ActiveFloor);
         character = GameObject.Find("Character");
         updateparams();
     }
@@ -28,7 +31,6 @@ public class FloorController : MonoBehaviour
         ActiveFloor = GameObject.Find(floorName).GetComponent<Floor>();
         character.transform.position = ActiveFloor.transform.Find(positionName).transform.position;
         updateparams();
-        var camera = GameObject.Find("Main Camera").GetComponent<CameraFollow>();
         camera.setHaji(ActiveFloor);
         yield return new WaitUntil(camera.resetCameraPosition);
     }
