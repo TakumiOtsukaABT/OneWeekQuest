@@ -26,8 +26,10 @@ public class FloorController : MonoBehaviour
     private IEnumerator waitUpStairAnimation(string positionName, string floorName)
     {
         character.GetComponent<AnimationHandle>().animationUpStairs();
+        camera.enabled = false;
 
         yield return new WaitForSeconds(character.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length / 0.5f + 1.0f);
+        camera.enabled = true;
         ActiveFloor = GameObject.Find(floorName).GetComponent<Floor>();
         character.transform.position = ActiveFloor.transform.Find(positionName).transform.position;
         updateparams();
