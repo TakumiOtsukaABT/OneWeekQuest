@@ -4,7 +4,6 @@ public class InputController : MonoBehaviour
 {
     public InputHandle inputHandle;
     public bool active = true;
-    InputTypes inputType = 0;
 
     // Start is called before the first frame update
     void Start()

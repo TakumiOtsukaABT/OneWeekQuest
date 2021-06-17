@@ -9,10 +9,16 @@ namespace Gamekit2D
     {
         public Animator animator;
         public TextMeshProUGUI textMeshProUGUI;
+        InputController inputController;
 
         protected Coroutine m_DeactivationCoroutine;
     
         protected readonly int m_HashActivePara = Animator.StringToHash ("Active");
+
+        private void Start()
+        {
+            inputController = GameObject.Find("InputController").GetComponent<InputController>();
+        }
 
         IEnumerator SetAnimatorParameterWithDelay (float delay)
         {
@@ -31,24 +37,27 @@ namespace Gamekit2D
             gameObject.SetActive (true);
             animator.SetBool (m_HashActivePara, true);
             textMeshProUGUI.text = text;
+            inputController.setInputHandle<TownConversationInputHandle>();
+
         }
 
-        public void ActivateCanvasWithTranslatedText (string phraseKey)
-        {
-            if (m_DeactivationCoroutine != null)
-            {
-                StopCoroutine(m_DeactivationCoroutine);
-                m_DeactivationCoroutine = null;
-            }
+        //public void ActivateCanvasWithTranslatedText (string phraseKey)
+        //{
+        //    if (m_DeactivationCoroutine != null)
+        //    {
+        //        StopCoroutine(m_DeactivationCoroutine);
+        //        m_DeactivationCoroutine = null;
+        //    }
 
-            gameObject.SetActive(true);
-            animator.SetBool(m_HashActivePara, true);
-            //textMeshProUGUI.text = Translator.Instance[phraseKey];
-        }
+        //    gameObject.SetActive(true);
+        //    animator.SetBool(m_HashActivePara, true);
+        //    //textMeshProUGUI.text = Translator.Instance[phraseKey];
+        //}
 
         public void DeactivateCanvasWithDelay (float delay)
         {
             m_DeactivationCoroutine = StartCoroutine (SetAnimatorParameterWithDelay (delay));
+            inputController.setInputHandle<CharacterMovementInputHandle>();
         }
     }
 }
