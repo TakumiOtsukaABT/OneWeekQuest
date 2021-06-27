@@ -9,7 +9,13 @@ public class TownConversationInputHandle : InputHandle
         if (Input.GetMouseButtonDown(0))
         {
             DialogueCanvasController dialogueCanvas = target.GetComponent<DialogueCanvasController>();
-            //dialogueCanvas.DeactivateCanvasWithDelay(0);
+            dialogueCanvas.DialogueIndex++;
+            dialogueCanvas.ActivateCanvasWithDialogueArray();
+            if (dialogueCanvas.isLastDialogue())
+            {
+                dialogueCanvas.DeactivateCanvasWithDelay(0);
+                return;
+            }
         }
     }
 }
