@@ -10,10 +10,15 @@ namespace Gamekit2D
         public Animator animator;
         public TextMeshProUGUI textMeshProUGUI;
         InputController inputController;
+        private string[] dialogue;
+        private int dialogueIndex = 0;
 
         protected Coroutine m_DeactivationCoroutine;
     
         protected readonly int m_HashActivePara = Animator.StringToHash ("Active");
+
+        public string[] Dialogue { get => dialogue; set => dialogue = value; }
+        public int DialogueIndex { get => dialogueIndex; set => dialogueIndex = value; }
 
         private void Start()
         {
@@ -41,6 +46,24 @@ namespace Gamekit2D
 
         }
 
+        public void ActivateCanvasWithDialogueArray()
+        {
+            if (m_DeactivationCoroutine != null)
+            {
+                StopCoroutine(m_DeactivationCoroutine);
+                m_DeactivationCoroutine = null;
+            }
+            gameObject.SetActive(true);
+            animator.SetBool(m_HashActivePara, true);
+            textMeshProUGUI.text = dialogue[dialogueIndex];
+            inputController.setInputHandle<TownConversationInputHandle>();
+        }
+
+        public bool isLastDialogue()
+        {
+            return dialogue[dialogueIndex] == "";
+        }
+
         //public void ActivateCanvasWithTranslatedText (string phraseKey)
         //{
         //    if (m_DeactivationCoroutine != null)
@@ -58,6 +81,7 @@ namespace Gamekit2D
         {
             m_DeactivationCoroutine = StartCoroutine (SetAnimatorParameterWithDelay (delay));
             inputController.setInputHandle<CharacterMovementInputHandle>();
+            dialogueIndex = 0;
         }
     }
 }
