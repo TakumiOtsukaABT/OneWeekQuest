@@ -9,7 +9,6 @@ public class GoingUp : MonoBehaviour
     public string nextFloorName = "";
     public string stairPositionClassName = "";
 
-
     public void Onclick()
     {
         GameObject.Find("Character").transform.position = transform.parent.Find(stairPositionClassName).transform.position;
