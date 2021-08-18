@@ -7,12 +7,14 @@ public class FloorController : MonoBehaviour
     private Floor ActiveFloor;
     GameObject character;
     private CameraFollow camera;
+    private GameObject blackout;
     // Start is called before the first frame update
     void Start()
     {
         ActiveFloor = transform.GetChild(0).GetComponent<Floor>();
         camera = GameObject.Find("Main Camera").GetComponent<CameraFollow>();
         camera.setHaji(ActiveFloor);
+        blackout = GameObject.Find("Blackout");
         character = GameObject.Find("Character");
         updateparams();
     }
@@ -26,6 +28,7 @@ public class FloorController : MonoBehaviour
     private IEnumerator waitUpStairAnimation(string positionName, string floorName)
     {
         character.GetComponent<AnimationHandle>().animationUpStairs();
+        blackout.GetComponent<BlackoutController>().ActivateBlackout();
         camera.enabled = false;
 
         yield return new WaitForSeconds(character.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length / 0.5f + 1.0f);
@@ -49,6 +52,11 @@ public class FloorController : MonoBehaviour
     }
 
     public void moveFloorUp(string positionName, string floorName)
+    {
+        StartCoroutine(waitUpStairAnimation(positionName, floorName));
+    }
+
+    public void moveFloorUpWithBlackout(string positionName, string floorName)
     {
         StartCoroutine(waitUpStairAnimation(positionName, floorName));
     }
