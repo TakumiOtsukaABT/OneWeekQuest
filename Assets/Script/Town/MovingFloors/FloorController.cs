@@ -7,12 +7,14 @@ public class FloorController : MonoBehaviour
     private Floor ActiveFloor;
     GameObject character;
     private CameraFollow camera;
+    private GameObject blackout;
     // Start is called before the first frame update
     void Start()
     {
         ActiveFloor = transform.GetChild(0).GetComponent<Floor>();
         camera = GameObject.Find("Main Camera").GetComponent<CameraFollow>();
         camera.setHaji(ActiveFloor);
+        blackout = GameObject.Find("Blackout");
         character = GameObject.Find("Character");
         updateparams();
     }
@@ -25,21 +27,22 @@ public class FloorController : MonoBehaviour
 
     private IEnumerator waitUpStairAnimation(string positionName, string floorName)
     {
-        character.GetComponent<AnimationHandle>().animationUpStairs();
+        blackout.GetComponent<BlackoutController>().ActivateBlackout();
         camera.enabled = false;
-
-        yield return new WaitForSeconds(character.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length / 0.5f + 1.0f);
+        Debug.Log(blackout.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length);
+        yield return new WaitForSeconds(blackout.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length);
         camera.enabled = true;
         ActiveFloor = GameObject.Find(floorName).GetComponent<Floor>();
         character.transform.position = ActiveFloor.transform.Find(positionName).transform.position;
         updateparams();
         camera.setHaji(ActiveFloor);
         yield return new WaitUntil(camera.resetCameraPosition);
+        blackout.GetComponent<BlackoutController>().DeactivateCanvasWithDelay(0);
     }
     private IEnumerator waitDownStairAnimation(string positionName, string floorName)
     {
-        character.GetComponent<AnimationHandle>().animationDownStairs();
-        yield return new WaitForSeconds(character.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length / 0.5f + 1.0f);
+        blackout.GetComponent<BlackoutController>().ActivateBlackout();
+        yield return new WaitForSeconds(blackout.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length);
         ActiveFloor = GameObject.Find(floorName).GetComponent<Floor>();
         character.transform.position = ActiveFloor.transform.Find(positionName).transform.position;
         updateparams();

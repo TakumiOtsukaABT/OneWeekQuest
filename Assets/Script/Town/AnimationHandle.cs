@@ -17,6 +17,10 @@ public class AnimationHandle : MonoBehaviour
     {
         animator.Play("WalkUp");
     }
+    public void animationBlackout()
+    {
+        animator.Play("WalkUp");
+    }
 
     public void animationDownStairs()
     {
