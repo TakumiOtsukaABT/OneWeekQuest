@@ -27,11 +27,10 @@ public class FloorController : MonoBehaviour
 
     private IEnumerator waitUpStairAnimation(string positionName, string floorName)
     {
-        character.GetComponent<AnimationHandle>().animationUpStairs();
         blackout.GetComponent<BlackoutController>().ActivateBlackout();
         camera.enabled = false;
-
-        yield return new WaitForSeconds(character.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length / 0.5f + 1.0f);
+        Debug.Log(blackout.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length);
+        yield return new WaitForSeconds(blackout.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length);
         camera.enabled = true;
         ActiveFloor = GameObject.Find(floorName).GetComponent<Floor>();
         character.transform.position = ActiveFloor.transform.Find(positionName).transform.position;
@@ -42,8 +41,8 @@ public class FloorController : MonoBehaviour
     }
     private IEnumerator waitDownStairAnimation(string positionName, string floorName)
     {
-        character.GetComponent<AnimationHandle>().animationDownStairs();
-        yield return new WaitForSeconds(character.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length / 0.5f + 1.0f);
+        blackout.GetComponent<BlackoutController>().ActivateBlackout();
+        yield return new WaitForSeconds(blackout.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length);
         ActiveFloor = GameObject.Find(floorName).GetComponent<Floor>();
         character.transform.position = ActiveFloor.transform.Find(positionName).transform.position;
         updateparams();
