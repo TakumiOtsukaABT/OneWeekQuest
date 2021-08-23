@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class MenuCanvas : MonoBehaviour
 {
-    Stack<GameObject> menuStack = new Stack<GameObject>() { };
+    public Stack<GameObject> menuStack = new Stack<GameObject>() { };
     [SerializeField] GameObject firstButton;
     [SerializeField] GameObject basePanel;
     [SerializeField] GameObject menuWindow;
@@ -13,6 +13,11 @@ public class MenuCanvas : MonoBehaviour
     public void Start()
     {
         pushWindow(firstButton);
+    }
+
+    public void Update()
+    {
+        Debug.Log(menuStack.Peek());
     }
 
     public void pushWindow(GameObject window)
@@ -25,6 +30,15 @@ public class MenuCanvas : MonoBehaviour
     {
         var window = menuStack.Pop();
         window.SetActive(false);
+        if (menuStack.Count == 0)
+        {
+            closeMenu();
+        }
+    }
+
+    public void closeMenu()
+    {
+        pushWindow(firstButton);
     }
 
 }
