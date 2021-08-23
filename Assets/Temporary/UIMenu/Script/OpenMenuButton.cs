@@ -14,7 +14,7 @@ public class OpenMenuButton : MonoBehaviour
 
     public void onClick()
     {
-        parent.popWindow();
+        parent.popWindow(true);
         parent.pushWindow(openTarget);
     }
 }

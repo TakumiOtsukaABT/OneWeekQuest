@@ -26,13 +26,16 @@ public class MenuCanvas : MonoBehaviour
         menuStack.Push(window);
     }
 
-    public void popWindow()
+    public void popWindow(bool ignoreEmpty=false)
     {
         var window = menuStack.Pop();
         window.SetActive(false);
         if (menuStack.Count == 0)
         {
-            closeMenu();
+            if (!ignoreEmpty)
+            {
+                closeMenu();
+            }
         }
     }
 
