@@ -7,6 +7,8 @@ public class MenuCanvas : MonoBehaviour
 {
     Stack<GameObject> menuStack = new Stack<GameObject>() { };
     [SerializeField] GameObject firstButton;
+    [SerializeField] GameObject basePanel;
+    [SerializeField] GameObject menuWindow;
 
     public void Start()
     {
