@@ -29,19 +29,40 @@ public class MenuCanvas : MonoBehaviour
     public void popWindow(bool ignoreEmpty=false)
     {
         var window = menuStack.Pop();
-        window.SetActive(false);
         if (menuStack.Count == 0)
         {
             if (!ignoreEmpty)
             {
+                DeactivateCanvasWithDelay(window);
                 closeMenu();
             }
+            else
+            {
+                window.SetActive(false);
+            }
+        }
+        else
+        {
+            window.SetActive(false);
         }
     }
 
     public void closeMenu()
     {
         pushWindow(firstButton);
+    }
+
+    IEnumerator SetAnimatorParameterWithDelay(GameObject window)
+    {
+        var anim = menuWindow.GetComponent<Animator>();
+        anim.SetBool("isActive", false);
+        yield return new WaitForSeconds(anim.GetCurrentAnimatorStateInfo(0).length);
+        window.SetActive(false);
+    }
+
+    public void DeactivateCanvasWithDelay(GameObject window)
+    {
+        StartCoroutine(SetAnimatorParameterWithDelay(window));
     }
 
 }
