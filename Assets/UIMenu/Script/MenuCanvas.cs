@@ -18,7 +18,7 @@ public class MenuCanvas : MonoBehaviour
 
     public void Update()
     {
-        //Debug.Log(menuStack.Peek());
+        Debug.Log(menuStack.Peek());
     }
 
     public void pushWindow(GameObject window)
@@ -43,7 +43,7 @@ public class MenuCanvas : MonoBehaviour
         }
         else
         {
-            window.SetActive(false);
+            DeactivateCanvasWithDelayForLaterPanel(window);
         }
     }
 
@@ -62,9 +62,22 @@ public class MenuCanvas : MonoBehaviour
         inputController.setInputHandle<CharacterMovementInputHandle>();
     }
 
+    IEnumerator SetAnimatorParameterWithDelayForLaterPanel(GameObject window)
+    {
+        var anim = window.GetComponent<Animator>();
+        anim.SetBool("isActive", false);
+        yield return new WaitForSeconds(anim.GetCurrentAnimatorStateInfo(0).length);
+        window.SetActive(false);
+    }
+
     public void DeactivateCanvasWithDelay(GameObject window)
     {
         StartCoroutine(SetAnimatorParameterWithDelay(window));
+    }
+
+    public void DeactivateCanvasWithDelayForLaterPanel(GameObject window)
+    {
+        StartCoroutine(SetAnimatorParameterWithDelayForLaterPanel(window));
     }
 
 }
