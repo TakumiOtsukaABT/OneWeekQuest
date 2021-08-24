@@ -263,6 +263,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &837701944 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7102798926392465798, guid: a51bbcc81071025408a176d7b85dd200, type: 3}
+  m_PrefabInstance: {fileID: 379496932}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecfa7e171f6d04d4686070c8261c5d27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1387250810 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2788137987927048005, guid: 0d0f538935ff43c42aecf8dbdff76ca8, type: 3}
@@ -324,6 +335,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30cfb32e36132bb488d6e0e9eacb29cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inputController: {fileID: 0}
   openTarget: {fileID: 2054574566}
 --- !u!114 &1391686915
 MonoBehaviour:
@@ -640,6 +652,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cab81732d3d858488d5abde2f155915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inputController: {fileID: 837701944}
   firstButton: {fileID: 1391686913}
   basePanel: {fileID: 2054574566}
   menuWindow: {fileID: 1387250810}
