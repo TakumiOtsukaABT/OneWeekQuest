@@ -6,7 +6,8 @@ public class OpenMenuButton : MonoBehaviour
 {
     MenuCanvas parent;
     [SerializeField] InputController inputController;
-    [SerializeField] GameObject openTarget;
+    [SerializeField] GameObject basePanel;
+    [SerializeField] GameObject MenuWindow;
 
     void Start()
     {
@@ -16,7 +17,7 @@ public class OpenMenuButton : MonoBehaviour
     public void onClick()
     {
         parent.popWindow(true);
-        parent.pushWindow(openTarget);
+        parent.pushWindow(basePanel);
         inputController.setInputHandle<MenuInputHandle>();
     }
 }

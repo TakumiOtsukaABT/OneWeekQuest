@@ -18,7 +18,7 @@ public class MenuCanvas : MonoBehaviour
 
     public void Update()
     {
-        Debug.Log(menuStack.Peek());
+        //Debug.Log(menuStack.Peek());
     }
 
     public void pushWindow(GameObject window)
@@ -54,7 +54,7 @@ public class MenuCanvas : MonoBehaviour
 
     IEnumerator SetAnimatorParameterWithDelay(GameObject window)
     {
-        var anim = menuWindow.GetComponent<Animator>();
+        var anim = window.GetComponent<Animator>();
         anim.SetBool("isActive", false);
         yield return new WaitForSeconds(anim.GetCurrentAnimatorStateInfo(0).length);
         window.SetActive(false);

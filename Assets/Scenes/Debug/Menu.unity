@@ -295,25 +295,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2788137987927048005, guid: 0d0f538935ff43c42aecf8dbdff76ca8, type: 3}
   m_PrefabInstance: {fileID: 1638855843}
   m_PrefabAsset: {fileID: 0}
---- !u!95 &1387250811
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1387250810}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: cd5aefb570a3eb0458035d88dc17666e, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!224 &1387250814 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2788137987927048006, guid: 0d0f538935ff43c42aecf8dbdff76ca8, type: 3}
@@ -351,8 +332,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30cfb32e36132bb488d6e0e9eacb29cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inputController: {fileID: 0}
-  openTarget: {fileID: 2054574566}
+  inputController: {fileID: 837701944}
+  basePanel: {fileID: 2054574566}
+  MenuWindow: {fileID: 1387250810}
 --- !u!114 &1391686915
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -638,6 +620,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4415238997124948054, guid: 0d0f538935ff43c42aecf8dbdff76ca8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4415238997124948054, guid: 0d0f538935ff43c42aecf8dbdff76ca8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2024676490}
+    - target: {fileID: 4415238997124948054, guid: 0d0f538935ff43c42aecf8dbdff76ca8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: popWindow
+      objectReference: {fileID: 0}
+    - target: {fileID: 4415238997124948054, guid: 0d0f538935ff43c42aecf8dbdff76ca8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: MenuCanvas, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4415238997124948054, guid: 0d0f538935ff43c42aecf8dbdff76ca8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4855246837354374247, guid: 0d0f538935ff43c42aecf8dbdff76ca8, type: 3}
       propertyPath: menuCanvas
       value: 
@@ -670,7 +672,8 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4855246837354374247, guid: 0d0f538935ff43c42aecf8dbdff76ca8, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 0d0f538935ff43c42aecf8dbdff76ca8, type: 3}
 --- !u!1 &2024676489
 GameObject:
@@ -828,19 +831,25 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2054574568
-MonoBehaviour:
+--- !u!95 &2054574568
+Animator:
+  serializedVersion: 3
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2054574566}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff1e9d45450e6fe47b2bf638d1f2916e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  menuWindow: {fileID: 1387250810}
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: cd5aefb570a3eb0458035d88dc17666e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &2054574569
 MonoBehaviour:
   m_ObjectHideFlags: 0

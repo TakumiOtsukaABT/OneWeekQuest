@@ -8,6 +8,6 @@ public class BasePanel : MonoBehaviour
     // Start is called before the first frame update
     void OnEnable()
     {
-        menuWindow.GetComponent<Animator>().SetBool("isActive", true);
+        //menuWindow.GetComponent<Animator>().SetBool("isActive", true);
     }
 }
