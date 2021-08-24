@@ -5,7 +5,6 @@ using UnityEngine;
 public class CloseMenuButton : MonoBehaviour
 {
     [SerializeField] GameObject menuCanvas;
-
     public void onClick()
     {
         menuCanvas.GetComponent<MenuCanvas>().popWindow();

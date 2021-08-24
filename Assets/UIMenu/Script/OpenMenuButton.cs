@@ -5,6 +5,7 @@ using UnityEngine;
 public class OpenMenuButton : MonoBehaviour
 {
     MenuCanvas parent;
+    [SerializeField] InputController inputController;
     [SerializeField] GameObject openTarget;
 
     void Start()
@@ -16,5 +17,6 @@ public class OpenMenuButton : MonoBehaviour
     {
         parent.popWindow(true);
         parent.pushWindow(openTarget);
+        inputController.setInputHandle<MenuInputHandle>();
     }
 }
