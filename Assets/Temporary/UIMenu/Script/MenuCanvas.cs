@@ -34,7 +34,6 @@ public class MenuCanvas : MonoBehaviour
             if (!ignoreEmpty)
             {
                 DeactivateCanvasWithDelay(window);
-                closeMenu();
             }
             else
             {
@@ -58,6 +57,7 @@ public class MenuCanvas : MonoBehaviour
         anim.SetBool("isActive", false);
         yield return new WaitForSeconds(anim.GetCurrentAnimatorStateInfo(0).length);
         window.SetActive(false);
+        closeMenu();
     }
 
     public void DeactivateCanvasWithDelay(GameObject window)
