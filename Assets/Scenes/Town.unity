@@ -2911,6 +2911,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cab81732d3d858488d5abde2f155915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inputController: {fileID: 1931285822}
   firstButton: {fileID: 1932593389}
   basePanel: {fileID: 1789406094}
   menuWindow: {fileID: 1221833892}
@@ -40714,6 +40715,17 @@ Transform:
   m_Father: {fileID: 363383154}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1931285822 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7102798926392465798, guid: a51bbcc81071025408a176d7b85dd200, type: 3}
+  m_PrefabInstance: {fileID: 7102798925263683777}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecfa7e171f6d04d4686070c8261c5d27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1932593389
 GameObject:
   m_ObjectHideFlags: 0
@@ -40858,6 +40870,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30cfb32e36132bb488d6e0e9eacb29cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inputController: {fileID: 1931285822}
   openTarget: {fileID: 1789406094}
 --- !u!1 &1935561303
 GameObject:
@@ -45512,6 +45525,10 @@ PrefabInstance:
       propertyPath: menuCanvas
       value: 
       objectReference: {fileID: 746969040}
+    - target: {fileID: 4855246837354374247, guid: 0d0f538935ff43c42aecf8dbdff76ca8, type: 3}
+      propertyPath: inputController
+      value: 
+      objectReference: {fileID: 1931285822}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0d0f538935ff43c42aecf8dbdff76ca8, type: 3}
 --- !u!1001 &2807494932188296548
