@@ -782,7 +782,7 @@ PrefabInstance:
     - target: {fileID: 114488631859498054, guid: b7d8d29d9839beb41b123859c19f2966, type: 3}
       propertyPath: m_sharedMaterial
       value: 
-      objectReference: {fileID: -732440932588925597, guid: 1e7b2aa6b67e9e941bf08a5ed4e78a47, type: 2}
+      objectReference: {fileID: 2100000, guid: 94059b618c835d843b21693ad5b9d46c, type: 2}
     - target: {fileID: 114488631859498054, guid: b7d8d29d9839beb41b123859c19f2966, type: 3}
       propertyPath: m_enableAutoSizing
       value: 0
@@ -890,6 +890,14 @@ PrefabInstance:
     - target: {fileID: 224260303033278428, guid: b7d8d29d9839beb41b123859c19f2966, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6906413005008690581, guid: b7d8d29d9839beb41b123859c19f2966, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 150.1101
+      objectReference: {fileID: 0}
+    - target: {fileID: 6906413005008690581, guid: b7d8d29d9839beb41b123859c19f2966, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 30.089966
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b7d8d29d9839beb41b123859c19f2966, type: 3}
