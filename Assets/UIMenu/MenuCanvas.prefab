@@ -1569,6 +1569,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9126952925313857527}
+  - component: {fileID: 6383644500230141425}
   m_Layer: 5
   m_Name: StatData
   m_TagString: Untagged
@@ -1603,6 +1604,26 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &6383644500230141425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3253644649002339588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07e082a0595c6964d8bf3c536c5d1d6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mystatus: {fileID: 11400000, guid: 45bfa4cee6d712743934ae93579adc69, type: 2}
+  HP: {fileID: 8042139043288060644}
+  MP: {fileID: 5418825824561921909}
+  power: {fileID: 3350832482997995410}
+  Defence: {fileID: 5259677272636415767}
+  speed: {fileID: 4929292455536054186}
+  hit: {fileID: 6623988190901626676}
+  regen: {fileID: 250741848436604397}
 --- !u!1 &3561582003699226508
 GameObject:
   m_ObjectHideFlags: 0
