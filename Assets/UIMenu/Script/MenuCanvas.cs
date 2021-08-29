@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class MenuCanvas : MonoBehaviour
 {
     public Stack<GameObject> menuStack = new Stack<GameObject>() { };
+    bool playing;
     [SerializeField] InputController inputController;
     [SerializeField] GameObject firstButton;
     [SerializeField] GameObject basePanel;

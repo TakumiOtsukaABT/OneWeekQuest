@@ -2426,7 +2426,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -2678,7 +2678,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cab81732d3d858488d5abde2f155915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inputController: {fileID: 0}
+  inputController: {fileID: 7102798926392465798, guid: a51bbcc81071025408a176d7b85dd200, type: 3}
   firstButton: {fileID: 4711190797006252105}
   basePanel: {fileID: 4711190796594875566}
   menuWindow: {fileID: 7480751298175948462}
@@ -3231,7 +3231,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
