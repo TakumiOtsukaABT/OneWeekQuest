@@ -5,10 +5,17 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "MyScriptable/Inventory")]
 public class BaseInventory : ScriptableObject
 {
-    public Item[] Items;
+    public List<Item> Items;
+
 }
+
 public class Item : MonoBehaviour
 {
-    int count;
-    string name;
+    public int count;
+    public string nameItem;
+    public Item(string name,int count)
+    {
+        this.nameItem = name;
+        this.count = count;
+    }
 }
