@@ -1720,6 +1720,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2995130532799822217, guid: 593f04141833eab40b2ce3ff293d75ff, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 51d82cb071dfcac488d134d22966a275, type: 3}
+    - target: {fileID: 2995130532799822217, guid: 593f04141833eab40b2ce3ff293d75ff, type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
