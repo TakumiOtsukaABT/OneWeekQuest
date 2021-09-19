@@ -356,7 +356,7 @@ GameObject:
   - component: {fileID: 1634259098555884214}
   - component: {fileID: 3018896959322512340}
   m_Layer: 5
-  m_Name: CommandPanel
+  m_Name: InventoryPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -559,7 +559,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1489975827364007448}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4711190796642599362}
+        m_TargetAssemblyTypeName: MenuCanvas, Assembly-CSharp
+        m_MethodName: pushWindow
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 880497076974354837}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1233951692954422891
 GameObject:
   m_ObjectHideFlags: 0
@@ -952,7 +964,7 @@ GameObject:
   - component: {fileID: 5812512682530299510}
   - component: {fileID: 5467470368650013918}
   m_Layer: 5
-  m_Name: InventoryPanel
+  m_Name: CommandPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1182,7 +1194,7 @@ GameObject:
   - component: {fileID: 2258763028317100205}
   - component: {fileID: 3105435646446397748}
   m_Layer: 5
-  m_Name: InventoryBoard
+  m_Name: CommandBoard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3110,7 +3122,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
+  m_PresetInfoIsWorld: 1
 --- !u!114 &6515349009451757645
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6690,7 +6702,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -2913765952864267611, guid: 2676ff5c94fc9f1489d59bf570d079e3, type: 3}
+  m_Sprite: {fileID: 1226850085980993510, guid: 2676ff5c94fc9f1489d59bf570d079e3, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
