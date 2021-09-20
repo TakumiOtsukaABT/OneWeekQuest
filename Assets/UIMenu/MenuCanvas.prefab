@@ -357,7 +357,7 @@ GameObject:
   - component: {fileID: 3018896959322512340}
   m_Layer: 5
   m_Name: InventoryPanel
-  m_TagString: Untagged
+  m_TagString: UIPanels
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -794,7 +794,7 @@ GameObject:
   - component: {fileID: 3014941704895719762}
   m_Layer: 5
   m_Name: StatusPanel
-  m_TagString: Untagged
+  m_TagString: UIPanels
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -965,7 +965,7 @@ GameObject:
   - component: {fileID: 5467470368650013918}
   m_Layer: 5
   m_Name: CommandPanel
-  m_TagString: Untagged
+  m_TagString: UIPanels
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3246,7 +3246,7 @@ GameObject:
   - component: {fileID: 4711190796594875552}
   m_Layer: 5
   m_Name: BasePanel
-  m_TagString: Untagged
+  m_TagString: UIPanels
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3465,7 +3465,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &4711190797006252110
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4327,7 +4327,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1877042409048829696}
   m_HandleRect: {fileID: 1649139737689588722}
   m_Direction: 2
-  m_Value: 0
+  m_Value: 1
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
