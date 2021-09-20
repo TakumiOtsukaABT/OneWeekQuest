@@ -14,11 +14,11 @@ public class MenuCanvas : MonoBehaviour
 
     public void Start()
     {
-        //firstButton.SetActive(true);
-        //foreach (GameObject i in GameObject.FindGameObjectsWithTag("UIPanels"))
-        //{
-        //    i.SetActive(false);
-        //}
+        firstButton.SetActive(true);
+        foreach (GameObject i in GameObject.FindGameObjectsWithTag("UIPanels"))
+        {
+            i.SetActive(false);
+        }
         pushWindow(firstButton);
     }
 
