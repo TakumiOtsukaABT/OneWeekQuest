@@ -3250,7 +3250,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4711190796594875567
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3444,8 +3444,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inputController: {fileID: 0}
   firstButton: {fileID: 4711190797006252105}
-  basePanel: {fileID: 4711190796594875566}
-  menuWindow: {fileID: 7480751298175948462}
 --- !u!1 &4711190797006252105
 GameObject:
   m_ObjectHideFlags: 0

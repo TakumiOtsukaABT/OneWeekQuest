@@ -33,7 +33,4 @@ public class ItemFunctions : MonoBehaviour
         count_object = gameObject.transform.Find("Count").gameObject;
     }
 
-
-    
-
 }

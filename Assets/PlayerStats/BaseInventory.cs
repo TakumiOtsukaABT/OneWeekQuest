@@ -15,7 +15,7 @@ public class Item : MonoBehaviour
     public string nameItem;
     public Item(string name,int count)
     {
-        this.nameItem = name;
+        nameItem = name;
         this.count = count;
     }
 }
