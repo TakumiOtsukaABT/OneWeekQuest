@@ -9,12 +9,25 @@ public class InventoryItems : MonoBehaviour
     public GameObject itemPrefab;
     private void OnEnable()
     {
+        itemPrefab.GetComponent<ItemFunctions>().nameText = "おもち";
+        itemPrefab.GetComponent<ItemFunctions>().countText = 5;
+        Instantiate(itemPrefab,this.transform);
+        Debug.Log("aaaasss");
+
         foreach (Item i in myInventory.Items)
         {
-            itemPrefab.transform.Find("name").GetComponent<Text>().text = i.nameItem;
-            itemPrefab.transform.Find("count").GetComponent<Text>().text = i.count.ToString();
+            itemPrefab.GetComponent<ItemFunctions>().name = i.nameItem;
+            itemPrefab.GetComponent<ItemFunctions>().countText = i.count;
             Instantiate(itemPrefab);
             Debug.Log("aaaasss");
+        }
+    }
+
+    private void OnDisable()
+    {
+        foreach (Transform n in this.gameObject.transform)
+        {
+            GameObject.Destroy(n.gameObject);
         }
     }
 

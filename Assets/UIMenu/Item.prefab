@@ -150,6 +150,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bf31d193a1e8a8429914fde1a5d9d78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  name_object: {fileID: 6608522625479083584}
+  count_object: {fileID: 8294730384433223536}
+  _name: "\u304A\u3082\u3061"
+  _count: 5
 --- !u!1 &6608522625479083584
 GameObject:
   m_ObjectHideFlags: 0
@@ -228,7 +232,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u304B\u3044\u3075\u304F\u3084\u304F"
+  m_Text: "\u304A\u3082\u3061"
 --- !u!1 &8294730384433223536
 GameObject:
   m_ObjectHideFlags: 0
@@ -307,4 +311,4 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 0
+  m_Text: 5

@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class ItemFunctions : MonoBehaviour
 {
-    private GameObject name_object;
-    private GameObject count_object;
+    [SerializeField] private GameObject name_object;
+    [SerializeField] private GameObject count_object;
 
     [SerializeField] private string _name;
     [SerializeField] private int _count;
@@ -26,11 +26,4 @@ public class ItemFunctions : MonoBehaviour
             count_object.GetComponent<Text>().text = _count.ToString();
         }
     }
-
-    private void Start()
-    {
-        name_object = gameObject.transform.Find("Name").gameObject;
-        count_object = gameObject.transform.Find("Count").gameObject;
-    }
-
 }
