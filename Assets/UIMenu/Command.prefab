@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 785706838394727675}
   - component: {fileID: 1344044497837356491}
   m_Layer: 5
-  m_Name: Item
+  m_Name: Command
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -232,7 +232,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u304A\u3082\u3061"
+  m_Text: "\u304A\u3082\u3061\u30A2\u30BF\u30C3\u30AF"
 --- !u!1 &8294730384433223536
 GameObject:
   m_ObjectHideFlags: 0
@@ -245,7 +245,7 @@ GameObject:
   - component: {fileID: 5307046881711523542}
   - component: {fileID: 8169516880054200727}
   m_Layer: 5
-  m_Name: Count
+  m_Name: Cost
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
