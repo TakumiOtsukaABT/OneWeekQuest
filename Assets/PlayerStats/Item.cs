@@ -1,5 +1,7 @@
+using UnityEngine;
 
-public struct Item
+[System.Serializable]
+public class Item
 {
     public int count;
     public string nameItem;

@@ -9,17 +9,12 @@ public class InventoryItems : MonoBehaviour
     public GameObject itemPrefab;
     private void OnEnable()
     {
-        itemPrefab.GetComponent<ItemFunctions>().nameText = "おもち";
-        itemPrefab.GetComponent<ItemFunctions>().countText = 5;
-        Instantiate(itemPrefab,this.transform);
-        Debug.Log("aaaasss");
-
+        Debug.Log("tttt" + myInventory.Items.Count);
         foreach (Item i in myInventory.Items)
         {
-            itemPrefab.GetComponent<ItemFunctions>().name = i.nameItem;
+            itemPrefab.GetComponent<ItemFunctions>().nameText = i.nameItem;
             itemPrefab.GetComponent<ItemFunctions>().countText = i.count;
-            Instantiate(itemPrefab);
-            Debug.Log("aaaasss");
+            Instantiate(itemPrefab, this.transform);
         }
     }
 
@@ -36,9 +31,11 @@ public class InventoryItems : MonoBehaviour
         if (Input.GetKey(KeyCode.I))
         {
             Item item = new Item("おもち", 3);
-            Debug.Log(item.nameItem);
-            myInventory.Items.Add(item);
-            Debug.Log("instantiated omochi");
+            myInventory.Add(item);
+        }
+        if (Input.GetKey(KeyCode.K))
+        {
+            myInventory.Clear();
         }
     }
 }
