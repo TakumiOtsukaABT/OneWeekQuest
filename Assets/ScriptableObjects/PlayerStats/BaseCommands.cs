@@ -2,17 +2,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BaseCommands : MonoBehaviour
+[CreateAssetMenu(menuName = "MyScriptable/Commands")]
+public class BaseCommands : ScriptableObject
 {
-    // Start is called before the first frame update
-    void Start()
+    public List<Command> Commands = new List<Command>();
+
+    public void Add(Command command)
     {
-        
+        Commands.Add(command);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void RemoveAt(int index)
     {
-        
+        Commands.RemoveAt(index);
+    }
+
+    public void Clear()
+    {
+        Commands.Clear();
     }
 }

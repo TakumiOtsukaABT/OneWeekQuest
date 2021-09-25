@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 359601840152978510}
   - component: {fileID: 1997766126405731429}
   - component: {fileID: 785706838394727675}
-  - component: {fileID: 1344044497837356491}
+  - component: {fileID: 8793193986492034368}
   m_Layer: 5
   m_Name: Command
   m_TagString: Untagged
@@ -138,7 +138,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Padding: {x: 0, y: 0, z: 0, w: 0}
   m_Softness: {x: 0, y: 0}
---- !u!114 &1344044497837356491
+--- !u!114 &8793193986492034368
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -147,13 +147,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1122450379417745021}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3bf31d193a1e8a8429914fde1a5d9d78, type: 3}
+  m_Script: {fileID: 11500000, guid: a249984485fc3644aa9b3c6db92f676a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   name_object: {fileID: 6608522625479083584}
-  count_object: {fileID: 8294730384433223536}
-  _name: "\u304A\u3082\u3061"
-  _count: 3
+  cost_object: {fileID: 8294730384433223536}
+  _name: 
+  cost: 0
 --- !u!1 &6608522625479083584
 GameObject:
   m_ObjectHideFlags: 0
