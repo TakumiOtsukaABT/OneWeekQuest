@@ -3,17 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class CommandsItems : MonoBehaviour
+public class InventoryItems : MonoBehaviour
 {
-    public BaseCommands myInventory;
+    public BaseInventory myInventory;
     public GameObject itemPrefab;
     private void OnEnable()
     {
-        Debug.Log("tttt" + myInventory.Commands.Count);
-        foreach (Command i in myInventory.Commands)
+        foreach (Item i in myInventory.Items)
         {
-            itemPrefab.GetComponent<CommandFunctions>().nameText = i.nameItem;
-            itemPrefab.GetComponent<CommandFunctions>().costText = i.cost;
+            itemPrefab.GetComponent<ItemFunctions>().nameText = i.nameItem;
+            itemPrefab.GetComponent<ItemFunctions>().countText = i.count;
             Instantiate(itemPrefab, this.transform);
         }
     }
@@ -30,7 +29,7 @@ public class CommandsItems : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.I))
         {
-            Command item = new Command("おもちアタック", 15);
+            Item item = new Item("おもち", 3);
             myInventory.Add(item);
         }
         if (Input.GetKey(KeyCode.K))

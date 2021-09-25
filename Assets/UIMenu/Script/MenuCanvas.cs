@@ -20,11 +20,6 @@ public class MenuCanvas : MonoBehaviour
         pushWindow(firstButton);
     }
 
-    public void Update()
-    {
-        Debug.Log(menuStack.Peek());
-    }
-
     public void pushWindow(GameObject window)
     {
         window.SetActive(true);

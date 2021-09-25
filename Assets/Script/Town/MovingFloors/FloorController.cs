@@ -29,7 +29,6 @@ public class FloorController : MonoBehaviour
     {
         blackout.GetComponent<BlackoutController>().ActivateBlackout();
         camera.enabled = false;
-        Debug.Log(blackout.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length);
         yield return new WaitForSeconds(blackout.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length);
         camera.enabled = true;
         ActiveFloor = GameObject.Find(floorName).GetComponent<Floor>();
