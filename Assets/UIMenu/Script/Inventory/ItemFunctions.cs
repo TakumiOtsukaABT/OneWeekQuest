@@ -8,8 +8,8 @@ public class ItemFunctions : MonoBehaviour
     [SerializeField] private GameObject name_object;
     [SerializeField] private GameObject count_object;
 
-    [SerializeField] private string _name;
-    [SerializeField] private int _count;
+    [SerializeField,ReadOnly] private string _name;
+    [SerializeField,ReadOnly] private int _count;
 
     public string nameText
     {
