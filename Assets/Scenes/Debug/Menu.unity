@@ -309,11 +309,19 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 1e7b2aa6b67e9e941bf08a5ed4e78a47, type: 2}
     - target: {fileID: 183389931138098467, guid: 0b7157f30d8839b42b18be8715b4a224, type: 3}
       propertyPath: m_hasFontAssetChanged
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 865244558941343948, guid: 0b7157f30d8839b42b18be8715b4a224, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1336450980177082922, guid: 0b7157f30d8839b42b18be8715b4a224, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1410447724886666765, guid: 0b7157f30d8839b42b18be8715b4a224, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1410786271373182405, guid: 0b7157f30d8839b42b18be8715b4a224, type: 3}
       propertyPath: m_fontSize
@@ -335,13 +343,33 @@ PrefabInstance:
       propertyPath: m_hasFontAssetChanged
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1649139737689588722, guid: 0b7157f30d8839b42b18be8715b4a224, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1649139737689588722, guid: 0b7157f30d8839b42b18be8715b4a224, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1925899484792366628, guid: 0b7157f30d8839b42b18be8715b4a224, type: 3}
       propertyPath: m_SizeDelta.y
       value: 60
       objectReference: {fileID: 0}
+    - target: {fileID: 2249676426352814900, guid: 0b7157f30d8839b42b18be8715b4a224, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2249676426352814900, guid: 0b7157f30d8839b42b18be8715b4a224, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2249676426352814900, guid: 0b7157f30d8839b42b18be8715b4a224, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4711190796594875566, guid: 0b7157f30d8839b42b18be8715b4a224, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4711190796642599361, guid: 0b7157f30d8839b42b18be8715b4a224, type: 3}
       propertyPath: m_Name
@@ -447,13 +475,21 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 17
       objectReference: {fileID: 0}
+    - target: {fileID: 6030635166661073922, guid: 0b7157f30d8839b42b18be8715b4a224, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6030635166661073922, guid: 0b7157f30d8839b42b18be8715b4a224, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6053293442378090185, guid: 0b7157f30d8839b42b18be8715b4a224, type: 3}
       propertyPath: m_fontAsset
       value: 
       objectReference: {fileID: 11400000, guid: 1e7b2aa6b67e9e941bf08a5ed4e78a47, type: 2}
     - target: {fileID: 6053293442378090185, guid: 0b7157f30d8839b42b18be8715b4a224, type: 3}
       propertyPath: m_hasFontAssetChanged
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7168253435884016525, guid: 0b7157f30d8839b42b18be8715b4a224, type: 3}
       propertyPath: m_fontSize
@@ -473,6 +509,10 @@ PrefabInstance:
       objectReference: {fileID: -732440932588925597, guid: 1e7b2aa6b67e9e941bf08a5ed4e78a47, type: 2}
     - target: {fileID: 7168253435884016525, guid: 0b7157f30d8839b42b18be8715b4a224, type: 3}
       propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8554032574344633781, guid: 0b7157f30d8839b42b18be8715b4a224, type: 3}
+      propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
