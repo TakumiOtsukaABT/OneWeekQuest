@@ -7,13 +7,16 @@ public class CommandsItems : MonoBehaviour
 {
     public BaseCommands myInventory;
     public GameObject itemPrefab;
+    [SerializeField] private GameObject board;
     private void OnEnable()
     {
         foreach (Command i in myInventory.Commands)
         {
             itemPrefab.GetComponent<CommandFunctions>().nameText = i.nameItem;
             itemPrefab.GetComponent<CommandFunctions>().costText = i.cost;
-            Instantiate(itemPrefab, this.transform);
+            GameObject instantiated = Instantiate(itemPrefab, this.transform);
+            instantiated.GetComponent<Button>().onClick.AddListener(() => { board.GetComponent<Board>().updateText("aaaa"); });
+
         }
     }
 
