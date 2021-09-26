@@ -3367,6 +3367,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myInventory: {fileID: 11400000, guid: 6a1398b74d3946541be9ec47271f5eb1, type: 2}
   itemPrefab: {fileID: 1122450379417745021, guid: 3240286eab9f8b54bb5e8a4054497b9c, type: 3}
+  board: {fileID: 6004935423494859402}
 --- !u!1 &4711190796594875566
 GameObject:
   m_ObjectHideFlags: 0

@@ -10,7 +10,6 @@ public class Board : MonoBehaviour
 
     public void updateText(string newText)
     {
-        Debug.Log("called" + newText);
         description.GetComponent<TextMeshProUGUI>().text = newText;
     }
 }
