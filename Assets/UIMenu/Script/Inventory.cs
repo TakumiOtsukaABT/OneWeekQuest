@@ -22,11 +22,4 @@ public class Inventory : MonoBehaviour
     {
         Items.Clear();
     }
-    private void Update()
-    {
-        if (Input.GetKey(KeyCode.K))
-        {
-            Add(0);
-        }
-    }
 }
