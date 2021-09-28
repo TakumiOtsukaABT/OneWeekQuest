@@ -5,9 +5,12 @@ using UnityEngine;
 public class CommandList : MonoBehaviour
 {
     public List<Command> Commands = new List<Command>();
+    public CommandDescriptions commandDescriptions;
 
-    public void Add(Command command)
+
+    public void Add(int index)
     {
+        Command command = new Command(commandDescriptions.commandIdAndDescriptions[index]);
         Commands.Add(command);
     }
 
@@ -19,5 +22,13 @@ public class CommandList : MonoBehaviour
     public void Clear()
     {
         Commands.Clear();
+    }
+
+    private void Update()
+    {
+        if (Input.GetKey(KeyCode.K))
+        {
+            Add(0);
+        }
     }
 }

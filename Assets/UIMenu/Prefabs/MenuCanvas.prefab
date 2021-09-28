@@ -1483,7 +1483,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e2c48e080db07546950514147d05e8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myCommandList: {fileID: 0}
+  myCommandList: {fileID: 4711190796642599361}
   itemPrefab: {fileID: 1122450379417745021, guid: 29114edd25c663d40a20216a78b7594c, type: 3}
   board: {fileID: 7189055470670389114}
 --- !u!1 &2475990255288109191
@@ -3595,6 +3595,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Commands: []
+  commandDescriptions: {fileID: 0}
 --- !u!114 &8784633579657978199
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3608,6 +3609,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Items: []
+  itemDescriptions: {fileID: 0}
 --- !u!1 &4711190797006252105
 GameObject:
   m_ObjectHideFlags: 0
