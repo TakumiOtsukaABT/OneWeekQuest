@@ -11,13 +11,17 @@ public class InventoryItems : MonoBehaviour
 
     private void OnEnable()
     {
-        //foreach (Item i in myInventory.Items)
-        //{
-        //    itemPrefab.GetComponent<ItemFunctions>().nameText = i.nameItem;
-        //    itemPrefab.GetComponent<ItemFunctions>().countText = i.count;
-        //    GameObject instantiated = Instantiate(itemPrefab, this.transform);
-        //    instantiated.GetComponent<Button>().onClick.AddListener(() => { board.GetComponent<Board>().updateText("aaaa"); });
-        //}
+        Inventory inventory = myInventory.GetComponent<Inventory>();
+
+        foreach (Item i in inventory.Items)
+        {
+            itemPrefab.GetComponent<ItemFunctions>().nameText = i.itemDescription.name;
+            itemPrefab.GetComponent<ItemFunctions>().countText = i.count;
+            GameObject instantiated = Instantiate(itemPrefab, this.transform);
+            instantiated.GetComponent<Button>().onClick.AddListener(() => {
+                board.GetComponent<Board>().updateText(i.itemDescription.description);
+            });
+        }
     }
 
     private void OnDisable()
@@ -32,12 +36,12 @@ public class InventoryItems : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.I))
         {
-            Item item = new Item("おもち", 3);
-            myInventory.Add(item);
+            //Item item = new Item("おもち", 3);
+            //myInventory.Add(item);
         }
         if (Input.GetKey(KeyCode.K))
         {
-            myInventory.Clear();
+            //myInventory.Clear();
         }
     }
 }

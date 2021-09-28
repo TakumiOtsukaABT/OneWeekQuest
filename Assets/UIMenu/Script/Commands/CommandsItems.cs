@@ -5,17 +5,18 @@ using UnityEngine.UI;
 
 public class CommandsItems : MonoBehaviour
 {
-    public GameObject myInventory;
+    public GameObject myCommandList;
     public GameObject itemPrefab;
     [SerializeField] private GameObject board;
     private void OnEnable()
     {
-        //foreach (Command i in myInventory.Commands)
+        CommandList commandList = myCommandList.GetComponent<CommandList>();
+        foreach (Command i in commandList.Commands)
         {
-            itemPrefab.GetComponent<CommandFunctions>().nameText = i.nameItem;
-            itemPrefab.GetComponent<CommandFunctions>().costText = i.cost;
+            itemPrefab.GetComponent<CommandFunctions>().nameText = i.command.name;
+            itemPrefab.GetComponent<CommandFunctions>().costText = i.command.cost;
             GameObject instantiated = Instantiate(itemPrefab, this.transform);
-            instantiated.GetComponent<Button>().onClick.AddListener(() => { board.GetComponent<Board>().updateText("aaaa"); });
+            instantiated.GetComponent<Button>().onClick.AddListener(() => { board.GetComponent<Board>().updateText(i.command.description); });
 
         }
     }
@@ -32,12 +33,12 @@ public class CommandsItems : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.I))
         {
-            Command item = new Command("おもちアタック", 15);
-            myInventory.Add(item);
+            //Command item = new Command("おもちアタック", 15);
+            //myInventory.Add(item);
         }
         if (Input.GetKey(KeyCode.K))
         {
-            myInventory.Clear();
+            //myInventory.Clear();
         }
     }
 }

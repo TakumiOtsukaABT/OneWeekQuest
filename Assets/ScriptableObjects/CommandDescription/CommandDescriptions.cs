@@ -11,8 +11,8 @@ public class CommandDescriptions : ScriptableObject
 [System.Serializable]
 public class commandIdAndDescription
 {
-    [SerializeField] private int id;
-    [SerializeField] private string description;
-    [SerializeField] private string name;
-    [SerializeField] private int cost;
+    [SerializeField] public int id;
+    [SerializeField] public string description;
+    [SerializeField] public string name;
+    [SerializeField] public int cost;
 }

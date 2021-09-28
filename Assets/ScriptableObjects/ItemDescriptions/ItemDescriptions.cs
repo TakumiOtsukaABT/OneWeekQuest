@@ -11,7 +11,7 @@ public class ItemDescriptions : ScriptableObject
 [System.Serializable]
 public class itemIdAndDescription
 {
-    [SerializeField] private int id;
-    [SerializeField] private string description;
-    [SerializeField] private string name;
+    [SerializeField] public int id;
+    [SerializeField] public string description;
+    [SerializeField] public string name;
 }
