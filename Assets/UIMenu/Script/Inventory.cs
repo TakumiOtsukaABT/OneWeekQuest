@@ -7,8 +7,9 @@ public class Inventory : MonoBehaviour
     public List<Item> Items = new List<Item>();
     public ItemDescriptions itemDescriptions;
 
-    public void Add(Item item)
+    public void Add(int index)
     {
+        Item item = new Item(itemDescriptions.itemIdAndDescriptions[index], 1);
         Items.Add(item);
     }
 
@@ -20,5 +21,12 @@ public class Inventory : MonoBehaviour
     public void Clear()
     {
         Items.Clear();
+    }
+    private void Update()
+    {
+        if (Input.GetKey(KeyCode.K))
+        {
+            Add(0);
+        }
     }
 }

@@ -206,6 +206,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1095927374 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4711190796642599361, guid: 0b7157f30d8839b42b18be8715b4a224, type: 3}
+  m_PrefabInstance: {fileID: 4711190798376820040}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1570297195
 GameObject:
   m_ObjectHideFlags: 0
@@ -315,6 +320,10 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1067627944667462916, guid: 0b7157f30d8839b42b18be8715b4a224, type: 3}
+      propertyPath: myInventory
+      value: 
+      objectReference: {fileID: 1095927374}
     - target: {fileID: 1336450980177082922, guid: 0b7157f30d8839b42b18be8715b4a224, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -491,6 +500,10 @@ PrefabInstance:
       propertyPath: m_hasFontAssetChanged
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7031417957010659511, guid: 0b7157f30d8839b42b18be8715b4a224, type: 3}
+      propertyPath: commandDescriptions
+      value: 
+      objectReference: {fileID: 11400000, guid: 006621bed39dc4d45a08940baf6a8793, type: 2}
     - target: {fileID: 7168253435884016525, guid: 0b7157f30d8839b42b18be8715b4a224, type: 3}
       propertyPath: m_fontSize
       value: 70
@@ -519,5 +532,9 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8784633579657978199, guid: 0b7157f30d8839b42b18be8715b4a224, type: 3}
+      propertyPath: itemDescriptions
+      value: 
+      objectReference: {fileID: 11400000, guid: dd097f8f67f17da4fabde968c164527c, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0b7157f30d8839b42b18be8715b4a224, type: 3}

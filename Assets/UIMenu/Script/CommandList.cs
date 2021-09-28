@@ -23,12 +23,4 @@ public class CommandList : MonoBehaviour
     {
         Commands.Clear();
     }
-
-    private void Update()
-    {
-        if (Input.GetKey(KeyCode.K))
-        {
-            Add(0);
-        }
-    }
 }
