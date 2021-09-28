@@ -28,17 +28,4 @@ public class CommandsItems : MonoBehaviour
             GameObject.Destroy(n.gameObject);
         }
     }
-
-    private void Update()
-    {
-        if (Input.GetKey(KeyCode.I))
-        {
-            //Command item = new Command("おもちアタック", 15);
-            //myInventory.Add(item);
-        }
-        if (Input.GetKey(KeyCode.K))
-        {
-            //myInventory.Clear();
-        }
-    }
 }

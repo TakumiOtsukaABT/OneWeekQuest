@@ -1483,7 +1483,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e2c48e080db07546950514147d05e8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myInventory: {fileID: 11400000, guid: 20143d602b421404cadb6c089e94ac9a, type: 2}
+  myCommandList: {fileID: 0}
   itemPrefab: {fileID: 1122450379417745021, guid: 29114edd25c663d40a20216a78b7594c, type: 3}
   board: {fileID: 7189055470670389114}
 --- !u!1 &2475990255288109191
@@ -1823,7 +1823,7 @@ MonoBehaviour:
   m_text: "\u8AAC\u660E\u6587\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1e7b2aa6b67e9e941bf08a5ed4e78a47, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: 0fc57cf640421094cac6b322fae5f762, type: 2}
+  m_sharedMaterial: {fileID: 0}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3365,7 +3365,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 994ca18242505d141abbf2f7b51066ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myInventory: {fileID: 11400000, guid: 6a1398b74d3946541be9ec47271f5eb1, type: 2}
+  myInventory: {fileID: 0}
   itemPrefab: {fileID: 1122450379417745021, guid: 3240286eab9f8b54bb5e8a4054497b9c, type: 3}
   board: {fileID: 6004935423494859402}
 --- !u!1 &4711190796594875566
@@ -3477,6 +3477,8 @@ GameObject:
   - component: {fileID: 4711190796642599364}
   - component: {fileID: 4711190796642599363}
   - component: {fileID: 4711190796642599362}
+  - component: {fileID: 7031417957010659511}
+  - component: {fileID: 8784633579657978199}
   m_Layer: 5
   m_Name: MenuCanvas
   m_TagString: Untagged
@@ -3580,6 +3582,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inputController: {fileID: 0}
   firstButton: {fileID: 4711190797006252105}
+--- !u!114 &7031417957010659511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4711190796642599361}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2916faba5f1254646be0cfe0d3bd99ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Commands: []
+--- !u!114 &8784633579657978199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4711190796642599361}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2540e9f3a8048454193e0cca225a2d4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Items: []
 --- !u!1 &4711190797006252105
 GameObject:
   m_ObjectHideFlags: 0
@@ -5330,7 +5358,7 @@ MonoBehaviour:
   m_text: "\u8AAC\u660E\u6587\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1e7b2aa6b67e9e941bf08a5ed4e78a47, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: 0fc57cf640421094cac6b322fae5f762, type: 2}
+  m_sharedMaterial: {fileID: 0}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

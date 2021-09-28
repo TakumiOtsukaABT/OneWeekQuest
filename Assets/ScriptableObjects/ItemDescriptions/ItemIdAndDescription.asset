@@ -15,5 +15,4 @@ MonoBehaviour:
   itemIdAndDescriptions:
   - id: 0
     description: "HP\u309230\u56DE\u5FA9"
-  - id: 0
-    description: 
+    name: "\u304A\u3082\u3061"

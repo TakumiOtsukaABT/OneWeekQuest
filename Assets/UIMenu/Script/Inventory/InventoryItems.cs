@@ -31,17 +31,4 @@ public class InventoryItems : MonoBehaviour
             GameObject.Destroy(n.gameObject);
         }
     }
-
-    private void Update()
-    {
-        if (Input.GetKey(KeyCode.I))
-        {
-            //Item item = new Item("おもち", 3);
-            //myInventory.Add(item);
-        }
-        if (Input.GetKey(KeyCode.K))
-        {
-            //myInventory.Clear();
-        }
-    }
 }
