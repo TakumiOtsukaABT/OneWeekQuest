@@ -13,4 +13,5 @@ public class itemIdAndDescription
 {
     [SerializeField] private int id;
     [SerializeField] private string description;
+    [SerializeField] private string name;
 }

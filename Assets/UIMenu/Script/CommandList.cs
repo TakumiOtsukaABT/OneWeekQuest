@@ -1,9 +1,8 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "MyScriptable/Commands")]
-public class BaseCommands : ScriptableObject
+public class CommandList : MonoBehaviour
 {
     public List<Command> Commands = new List<Command>();
 

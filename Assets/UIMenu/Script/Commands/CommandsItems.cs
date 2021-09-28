@@ -5,12 +5,12 @@ using UnityEngine.UI;
 
 public class CommandsItems : MonoBehaviour
 {
-    public BaseCommands myInventory;
+    public GameObject myInventory;
     public GameObject itemPrefab;
     [SerializeField] private GameObject board;
     private void OnEnable()
     {
-        foreach (Command i in myInventory.Commands)
+        //foreach (Command i in myInventory.Commands)
         {
             itemPrefab.GetComponent<CommandFunctions>().nameText = i.nameItem;
             itemPrefab.GetComponent<CommandFunctions>().costText = i.cost;

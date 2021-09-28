@@ -4,10 +4,10 @@ using UnityEngine;
 public class Item
 {
     public int count;
-    public string nameItem;
-    public Item(string name, int count)
+    public itemIdAndDescription itemDescription;
+    public Item(itemIdAndDescription newItem, int count)
     {
-        nameItem = name;
+        itemDescription = newItem;
         this.count = count;
     }
 }

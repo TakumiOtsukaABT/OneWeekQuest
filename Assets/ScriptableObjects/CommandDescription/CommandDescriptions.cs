@@ -5,7 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "MyScriptable/Commanddescriptionlist")]
 public class CommandDescriptions : ScriptableObject
 {
-    public List<commandIdAndDescription> itemIdAndDescriptions = new List<commandIdAndDescription>();
+    public List<commandIdAndDescription> commandIdAndDescriptions = new List<commandIdAndDescription>();
 }
 
 [System.Serializable]
@@ -13,4 +13,6 @@ public class commandIdAndDescription
 {
     [SerializeField] private int id;
     [SerializeField] private string description;
+    [SerializeField] private string name;
+    [SerializeField] private int cost;
 }

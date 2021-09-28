@@ -5,19 +5,19 @@ using UnityEngine.UI;
 
 public class InventoryItems : MonoBehaviour
 {
-    public BaseInventory myInventory;
+    public GameObject myInventory;
     public GameObject itemPrefab;
     [SerializeField] private GameObject board;
 
     private void OnEnable()
     {
-        foreach (Item i in myInventory.Items)
-        {
-            itemPrefab.GetComponent<ItemFunctions>().nameText = i.nameItem;
-            itemPrefab.GetComponent<ItemFunctions>().countText = i.count;
-            GameObject instantiated = Instantiate(itemPrefab, this.transform);
-            instantiated.GetComponent<Button>().onClick.AddListener(() => { board.GetComponent<Board>().updateText("aaaa"); });
-        }
+        //foreach (Item i in myInventory.Items)
+        //{
+        //    itemPrefab.GetComponent<ItemFunctions>().nameText = i.nameItem;
+        //    itemPrefab.GetComponent<ItemFunctions>().countText = i.count;
+        //    GameObject instantiated = Instantiate(itemPrefab, this.transform);
+        //    instantiated.GetComponent<Button>().onClick.AddListener(() => { board.GetComponent<Board>().updateText("aaaa"); });
+        //}
     }
 
     private void OnDisable()
