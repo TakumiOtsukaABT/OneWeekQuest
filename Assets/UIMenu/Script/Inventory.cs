@@ -10,6 +10,14 @@ public class Inventory : MonoBehaviour
     public void Add(int index)
     {
         Item item = new Item(itemDescriptions.itemIdAndDescriptions[index], 1);
+        foreach (Item i in Items)
+        {
+            if (i == item)
+            {
+                i.count+=item.count;
+                return;
+            }
+        }
         Items.Add(item);
     }
 

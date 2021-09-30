@@ -11,6 +11,13 @@ public class CommandList : MonoBehaviour
     public void Add(int index)
     {
         Command command = new Command(commandDescriptions.commandIdAndDescriptions[index]);
+        foreach(Command i in Commands)
+        {
+            if (i == command)
+            {
+                return;
+            }
+        }
         Commands.Add(command);
     }
 

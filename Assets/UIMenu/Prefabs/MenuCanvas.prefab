@@ -3595,7 +3595,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Commands: []
-  commandDescriptions: {fileID: 0}
+  commandDescriptions: {fileID: 11400000, guid: 006621bed39dc4d45a08940baf6a8793, type: 2}
 --- !u!114 &8784633579657978199
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3609,7 +3609,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Items: []
-  itemDescriptions: {fileID: 0}
+  itemDescriptions: {fileID: 11400000, guid: dd097f8f67f17da4fabde968c164527c, type: 2}
 --- !u!1 &4711190797006252105
 GameObject:
   m_ObjectHideFlags: 0
