@@ -4,7 +4,6 @@
 public class GoingDown : MonoBehaviour
 {
 
-    [SerializeField] string floorName = "";
     public string nextPositionName = "";
     public string nextFloorName = "";
     public string stairPositionClassName = "";

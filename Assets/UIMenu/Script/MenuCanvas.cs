@@ -6,20 +6,18 @@ using UnityEngine.UI;
 public class MenuCanvas : MonoBehaviour
 {
     public Stack<GameObject> menuStack = new Stack<GameObject>() { };
-    bool playing;
     [SerializeField] InputController inputController;
     [SerializeField] GameObject firstButton;
-    [SerializeField] GameObject basePanel;
-    [SerializeField] GameObject menuWindow;
+
 
     public void Start()
     {
+        firstButton.SetActive(true);
+        foreach (GameObject i in GameObject.FindGameObjectsWithTag("UIPanels"))
+        {
+            i.SetActive(false);
+        }
         pushWindow(firstButton);
-    }
-
-    public void Update()
-    {
-        Debug.Log(menuStack.Peek());
     }
 
     public void pushWindow(GameObject window)
