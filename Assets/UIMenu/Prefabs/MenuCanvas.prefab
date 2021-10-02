@@ -1823,7 +1823,7 @@ MonoBehaviour:
   m_text: "\u8AAC\u660E\u6587\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1e7b2aa6b67e9e941bf08a5ed4e78a47, type: 2}
-  m_sharedMaterial: {fileID: 0}
+  m_sharedMaterial: {fileID: 2100000, guid: 0fc57cf640421094cac6b322fae5f762, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3365,7 +3365,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 994ca18242505d141abbf2f7b51066ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myInventory: {fileID: 0}
+  myInventory: {fileID: 4711190796642599361}
   itemPrefab: {fileID: 1122450379417745021, guid: 3240286eab9f8b54bb5e8a4054497b9c, type: 3}
   board: {fileID: 6004935423494859402}
 --- !u!1 &4711190796594875566
@@ -5360,7 +5360,7 @@ MonoBehaviour:
   m_text: "\u8AAC\u660E\u6587\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1e7b2aa6b67e9e941bf08a5ed4e78a47, type: 2}
-  m_sharedMaterial: {fileID: 0}
+  m_sharedMaterial: {fileID: 2100000, guid: 0fc57cf640421094cac6b322fae5f762, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
