@@ -6,7 +6,7 @@ using UnityEngine;
 public class BaseTask 
 {
     private bool clearFlag = false;
-    private string taskDescription;
+    public string taskDescription;
     public string[] key;
     public int[] count; 
     private Dictionary<string, int> completeCondition;
@@ -21,15 +21,25 @@ public class BaseTask
     }
     public void checkClear()
     {
-        foreach(int value in completeCondition.Values)
+        int conditionCount = completeCondition.Count;
+        foreach(string key in completeCondition.Keys)
         {
-            return;
+            if (currentCondition[key] > completeCondition[key])
+            {
+                conditionCount--;
+            }
         }
-        return;
+        if (conditionCount < 0)
+        {
+            clearFlag = true;
+        }
     }
 
     public void tickCondition(string key)
     {
-        return;
+        if (currentCondition.ContainsKey(key))
+        {
+            currentCondition[key]++;
+        }
     }
 }
