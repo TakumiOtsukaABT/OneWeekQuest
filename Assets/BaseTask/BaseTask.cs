@@ -19,7 +19,7 @@ public class BaseTask
             currentCondition.Add(key[i], 0);
         }
     }
-    public void checkClear()
+    private void checkClear()
     {
         int conditionCount = completeCondition.Count;
         foreach(string key in completeCondition.Keys)
@@ -41,5 +41,6 @@ public class BaseTask
         {
             currentCondition[key]++;
         }
+        checkClear();
     }
 }
