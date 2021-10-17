@@ -28,6 +28,7 @@ public class TaskHandler : MonoBehaviour
         {
             i.initDictionary();
         }
+        passTask();
     }
 
     // Update is called once per frame
