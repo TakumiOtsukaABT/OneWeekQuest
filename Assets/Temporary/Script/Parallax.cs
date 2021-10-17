@@ -11,7 +11,7 @@ public class Parallax : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        startpos = transform.position.x;
+        startpos = transform.localPosition.x;
     }
 
     // Update is called once per frame
