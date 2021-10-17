@@ -7,9 +7,19 @@ public class BaseTask
 {
     private bool clearFlag = false;
     private string taskDescription;
-    public Dictionary<string, int> completeCondition;
+    public string[] key;
+    public int[] count; 
+    private Dictionary<string, int> completeCondition;
+    private Dictionary<string, int> currentCondition;
 
-    virtual public void checkClear()
+    public void initDictionary()
+    {
+        for (int i = 0;i<key.Length;i++) {
+            completeCondition.Add(key[i], count[i]);
+            currentCondition.Add(key[i], 0);
+        }
+    }
+    public void checkClear()
     {
         foreach(int value in completeCondition.Values)
         {
@@ -18,7 +28,7 @@ public class BaseTask
         return;
     }
 
-    virtual public void tickCondition(string key)
+    public void tickCondition(string key)
     {
         return;
     }
