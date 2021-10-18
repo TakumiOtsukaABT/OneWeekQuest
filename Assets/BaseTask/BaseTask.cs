@@ -5,16 +5,17 @@ using UnityEngine;
 [System.Serializable]
 public class BaseTask 
 {
-    private bool clearFlag = false;
+    public bool clearFlag = false;
     public string taskDescription;
     public string[] key;
     public int[] count; 
-    private Dictionary<string, int> completeCondition;
-    private Dictionary<string, int> currentCondition;
+    private Dictionary<string, int> completeCondition = new Dictionary<string, int>();
+    private Dictionary<string, int> currentCondition = new Dictionary<string, int>();
 
     public void initDictionary()
     {
-        for (int i = 0;i<key.Length;i++) {
+        for (int i = 0; i < key.Length; i++)
+        {
             completeCondition.Add(key[i], count[i]);
             currentCondition.Add(key[i], 0);
         }
