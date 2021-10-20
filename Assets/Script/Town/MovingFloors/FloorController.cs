@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class FloorController : MonoBehaviour
 {
-    public float leftLim, rightLim;
+    [ReadOnly] public float leftLim, rightLim;
     private Floor ActiveFloor;
     GameObject character;
     private CameraFollow camera;
