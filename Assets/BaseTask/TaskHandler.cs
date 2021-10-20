@@ -5,11 +5,11 @@ using UnityEngine;
 public class TaskHandler : MonoBehaviour
 {
     [SerializeField] private BaseTask[] baseTasks;
-    [SerializeField] private GameObject menuCanvas;
+    [SerializeField] private GameObject taskPanel;
 
     private void passTask()
     {
-        TaskPanel taskPanel = menuCanvas.GetComponent<TaskPanel>();
+        TaskPanel taskPanel = this.taskPanel.GetComponent<TaskPanel>();
         taskPanel._BaseTasks = this.baseTasks;
     }
 
