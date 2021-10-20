@@ -123,11 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &260861743 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7193308582232848370, guid: 0b7157f30d8839b42b18be8715b4a224, type: 3}
-  m_PrefabInstance: {fileID: 4711190798376820040}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &586022109
 GameObject:
   m_ObjectHideFlags: 0
@@ -211,6 +206,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &910531499 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7193308582232848370, guid: 0b7157f30d8839b42b18be8715b4a224, type: 3}
+  m_PrefabInstance: {fileID: 4711190798376820040}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1095927374 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4711190796642599361, guid: 0b7157f30d8839b42b18be8715b4a224, type: 3}
@@ -246,12 +246,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baseTasks:
-  - clearFlag: 1
+  - clearFlag: 0
     taskDescription: "\u30C8\u30EC\u30FC\u30CB\u30F3\u30B0\u3092\u3059\u308B"
     key:
     - Train
     count: 01000000
-  - clearFlag: 1
+  - clearFlag: 0
     taskDescription: "\u52C9\u5F37\u3092\u3059\u308B"
     key:
     - Study
@@ -360,7 +360,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baseTasks: []
-  generateTarget: {fileID: 260861743}
+  generateTarget: {fileID: 910531499}
 --- !u!1001 &4711190798376820040
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -459,6 +459,10 @@ PrefabInstance:
     - target: {fileID: 2249676426352814900, guid: 0b7157f30d8839b42b18be8715b4a224, type: 3}
       propertyPath: m_SizeDelta.x
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4102024673333761471, guid: 0b7157f30d8839b42b18be8715b4a224, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4102024673333761471, guid: 0b7157f30d8839b42b18be8715b4a224, type: 3}
       propertyPath: m_SizeDelta.x

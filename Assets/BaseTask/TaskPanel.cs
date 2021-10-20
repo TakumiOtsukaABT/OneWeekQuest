@@ -21,17 +21,16 @@ public class TaskPanel : MonoBehaviour
         rect.y = baseTasks.Length * 100;
         gameObject.GetComponent<RectTransform>().sizeDelta = rect;
         var index = 0;
+        var instance = generateTarget.gameObject;
         foreach (BaseTask i in baseTasks)
         {
-            generateTarget.GetComponent<Text>().color = (i.clearFlag) ? Color.green : Color.white;
-            generateTarget.GetComponent<Text>().text = i.taskDescription;
-            if (index > 0)
-            {
-                Vector2 vector = generateTarget.transform.position;
+            instance.GetComponent<Text>().color = (i.clearFlag) ? Color.green : Color.white;
+            instance.GetComponent<Text>().text = i.taskDescription;
+                Vector2 vector = instance.transform.position;
                 vector.y = vector.y - 70 * index;
-                Instantiate(generateTarget,vector, Quaternion.identity, this.transform);
-            }
+                Instantiate(instance, vector, Quaternion.identity, this.transform);
             index++;
         }
+        Destroy(generateTarget);
     }
 }
