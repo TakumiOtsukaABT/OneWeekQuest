@@ -21,8 +21,7 @@ public class CameraFollow : MonoBehaviour
     public bool resetCameraPosition()
     {
         followCamera();
-        Vector3 desiredPosition = target.position + offset;
-        return transform.position == desiredPosition;
+        return true;
     }
 
     public void setHaji(Floor floor)

@@ -6,7 +6,6 @@ public class GoingUp : MonoBehaviour
 
     public string nextPositionName = "";
     public string nextFloorName = "";
-    public string stairPositionClassName = "";
 
     public void Onclick()
     {
