@@ -32,7 +32,7 @@ public class FloorController : MonoBehaviour
         yield return new WaitForSeconds(blackout.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length);
         camera.enabled = true;
         ActiveFloor = GameObject.Find(floorName).GetComponent<Floor>();
-        character.transform.position = ActiveFloor.transform.Find(positionName).transform.position;
+        character.transform.localPosition = ActiveFloor.transform.Find(positionName).transform.position;
         updateparams();
         camera.setHaji(ActiveFloor);
         yield return new WaitUntil(camera.resetCameraPosition);
