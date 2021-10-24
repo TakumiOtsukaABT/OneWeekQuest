@@ -11,8 +11,8 @@ public class GoingDown : MonoBehaviour
 
     public void Onclick()
     {
-        GameObject.Find("Character").transform.position = transform.parent.Find(stairPositionClassName).transform.position;
-        transform.root.gameObject.GetComponent<FloorController>().moveFloorDown(nextPositionName, nextFloorName);
+        //GameObject.Find("Character").transform.position = transform.parent.Find(stairPositionClassName).transform.position;
+        //transform.root.gameObject.GetComponent<FloorController>().moveFloorDown(nextPositionName, nextFloorName);
 
     }
 
