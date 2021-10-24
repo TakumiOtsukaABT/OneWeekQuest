@@ -7,7 +7,6 @@ public class CameraFollow : MonoBehaviour
     public float smoothSpeed = 0.125f;
     public Vector3 offset;
     [SerializeField] private float migihaji, hidarihaji;
-    [SerializeField] private float localY;
     bool shouldFollow = true;
 
     private void LateUpdate()
@@ -22,14 +21,13 @@ public class CameraFollow : MonoBehaviour
     public bool resetCameraPosition()
     {
         followCamera();
-        Vector3 desiredPosition = target.position + offset;
-        return transform.position == desiredPosition;
+        return true;
     }
 
     public void setHaji(Floor floor)
     {
         migihaji = floor.RightLim - 4;
-        hidarihaji = floor.LeftLim + 13.5f;
+        hidarihaji = floor.LeftLim + 10f;
     }
 
     private void followCamera()

@@ -2,8 +2,11 @@
 
 public class CharacterController : MonoBehaviour
 {
-    float startMousePositionX, currentMousePositionX;
-    public Direction inputDirection = Direction.none;
+    const float idouHidariSeigen = -15.0f;
+    const float idouMigiSeigen = 10.0f;
+
+
+    [ReadOnly] public Direction inputDirection = Direction.none;
     public float movingSpeed = 0.0f;
     private bool inputBoolean = true;
     AnimationHandle animationHandle;
@@ -31,7 +34,7 @@ public class CharacterController : MonoBehaviour
                 break;
             case Direction.left:
                 transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, 1);
-                if (transform.position.x > floorController.leftLim)
+                if (transform.position.x > floorController.leftLim + idouHidariSeigen)
                 {
                     this.transform.Translate(-movingSpeed * Time.deltaTime, 0, 0);
                     animationHandle.Running = true;
@@ -39,7 +42,7 @@ public class CharacterController : MonoBehaviour
                 break;
             case Direction.right:
                 transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, 1);
-                if (transform.position.x < floorController.rightLim)
+                if (transform.position.x < floorController.rightLim + idouMigiSeigen)
                 {
                     this.transform.Translate(movingSpeed * Time.deltaTime, 0, 0);
                     animationHandle.Running = true;
