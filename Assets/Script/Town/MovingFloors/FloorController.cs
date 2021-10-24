@@ -38,25 +38,25 @@ public class FloorController : MonoBehaviour
         yield return new WaitUntil(camera.resetCameraPosition);
         blackout.GetComponent<BlackoutController>().DeactivateCanvasWithDelay(0);
     }
-    private IEnumerator waitDownStairAnimation(string positionName, string floorName)
-    {
-        blackout.GetComponent<BlackoutController>().ActivateBlackout();
-        yield return new WaitForSeconds(blackout.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length);
-        ActiveFloor = GameObject.Find(floorName).GetComponent<Floor>();
-        character.transform.position = ActiveFloor.transform.Find(positionName).transform.position;
-        updateparams();
-        var camera = GameObject.Find("Main Camera").GetComponent<CameraFollow>();
-        camera.setHaji(ActiveFloor);
-        yield return new WaitUntil(camera.resetCameraPosition);
-    }
+    //private IEnumerator waitDownStairAnimation(string positionName, string floorName)
+    //{
+    //    blackout.GetComponent<BlackoutController>().ActivateBlackout();
+    //    yield return new WaitForSeconds(blackout.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length);
+    //    ActiveFloor = GameObject.Find(floorName).GetComponent<Floor>();
+    //    character.transform.position = ActiveFloor.transform.Find(positionName).transform.position;
+    //    updateparams();
+    //    var camera = GameObject.Find("Main Camera").GetComponent<CameraFollow>();
+    //    camera.setHaji(ActiveFloor);
+    //    yield return new WaitUntil(camera.resetCameraPosition);
+    //}
 
     public void moveFloorUp(string positionName, string floorName)
     {
         StartCoroutine(waitUpStairAnimation(positionName, floorName));
     }
 
-    public void moveFloorDown(string positionName, string floorName)
-    {
-        StartCoroutine(waitDownStairAnimation(positionName, floorName));
-    }
+    //public void moveFloorDown(string positionName, string floorName)
+    //{
+    //    StartCoroutine(waitDownStairAnimation(positionName, floorName));
+    //}
 }
