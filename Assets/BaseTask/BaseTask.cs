@@ -22,15 +22,19 @@ public class BaseTask
     }
     private void checkClear()
     {
-        int conditionCount = completeCondition.Count;
-        foreach(string key in completeCondition.Keys)
+         int conditionCount = completeCondition.Count;
+        Debug.Log("tttt3" + conditionCount);
+
+        foreach (string key in completeCondition.Keys)
         {
-            if (currentCondition[key] > completeCondition[key])
+            if (currentCondition[key] >= completeCondition[key])
             {
+                Debug.Log("tttt4" + conditionCount);
+
                 conditionCount--;
             }
         }
-        if (conditionCount < 0)
+        if (conditionCount <= 0)
         {
             clearFlag = true;
         }

@@ -544,6 +544,10 @@ PrefabInstance:
       propertyPath: m_hasFontAssetChanged
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7193308582232848370, guid: 0b7157f30d8839b42b18be8715b4a224, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7365944065934782717, guid: 0b7157f30d8839b42b18be8715b4a224, type: 3}
       propertyPath: m_fontAsset
       value: 
@@ -1289,6 +1293,10 @@ PrefabInstance:
       propertyPath: m_VerticalAlignment
       value: 256
       objectReference: {fileID: 0}
+    - target: {fileID: 114751280143084318, guid: b7d8d29d9839beb41b123859c19f2966, type: 3}
+      propertyPath: taskHandler
+      value: 
+      objectReference: {fileID: 1258033925}
     - target: {fileID: 224070939812307920, guid: b7d8d29d9839beb41b123859c19f2966, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -14.099976
@@ -1427,6 +1435,30 @@ PrefabInstance:
       propertyPath: menuCanvas
       value: 
       objectReference: {fileID: 91554572}
+    - target: {fileID: 8381357421858052506, guid: 957abf0c167b6474cb6590cda767679c, type: 3}
+      propertyPath: baseTasks.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8381357421858052506, guid: 957abf0c167b6474cb6590cda767679c, type: 3}
+      propertyPath: baseTasks.Array.data[3].key.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8381357421858052506, guid: 957abf0c167b6474cb6590cda767679c, type: 3}
+      propertyPath: baseTasks.Array.data[3].taskDescription
+      value: "\u6751\u4EBA\u3068\u4F1A\u8A71\u3092\u3059\u308B"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8381357421858052506, guid: 957abf0c167b6474cb6590cda767679c, type: 3}
+      propertyPath: baseTasks.Array.data[3].count.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8381357421858052506, guid: 957abf0c167b6474cb6590cda767679c, type: 3}
+      propertyPath: baseTasks.Array.data[3].key.Array.data[0]
+      value: Talk
+      objectReference: {fileID: 0}
+    - target: {fileID: 8381357421858052506, guid: 957abf0c167b6474cb6590cda767679c, type: 3}
+      propertyPath: baseTasks.Array.data[3].count.Array.data[0]
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8381357421858052507, guid: 957abf0c167b6474cb6590cda767679c, type: 3}
       propertyPath: m_Name
       value: TaskHandler
@@ -1642,6 +1674,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rightLim: 35
   leftLim: -8
+--- !u!114 &1258033925 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8381357421858052506, guid: 957abf0c167b6474cb6590cda767679c, type: 3}
+  m_PrefabInstance: {fileID: 1062949360}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2838045a440b32c4baba933984d7a54d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1282529179
 GameObject:
   m_ObjectHideFlags: 0

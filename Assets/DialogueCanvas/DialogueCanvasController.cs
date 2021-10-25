@@ -10,6 +10,7 @@ namespace Gamekit2D
         public Animator animator;
         public TextMeshProUGUI textMeshProUGUI;
         InputController inputController;
+        [SerializeField] private TaskHandler taskHandler;
         private string[] dialogue;
         private int dialogueIndex = 0;
 
@@ -82,6 +83,7 @@ namespace Gamekit2D
             m_DeactivationCoroutine = StartCoroutine (SetAnimatorParameterWithDelay (delay));
             inputController.setInputHandle<CharacterMovementInputHandle>();
             dialogueIndex = 0;
+            taskHandler.tickTask("Talk");
         }
     }
 }
