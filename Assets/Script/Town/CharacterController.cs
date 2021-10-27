@@ -9,6 +9,7 @@ public class CharacterController : MonoBehaviour
     [ReadOnly] public Direction inputDirection = Direction.none;
     public float movingSpeed = 0.0f;
     private bool inputBoolean = true;
+    [SerializeField] GameObject startPosition;
     AnimationHandle animationHandle;
 
     FloorController floorController;
@@ -20,6 +21,7 @@ public class CharacterController : MonoBehaviour
     {
         floorController = GameObject.Find("FloorController").GetComponent<FloorController>();
         animationHandle = GetComponent<AnimationHandle>();
+        transform.localPosition = startPosition.transform.position;
 
     }
 
