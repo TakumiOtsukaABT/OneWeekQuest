@@ -4,10 +4,9 @@ using UnityEngine;
 
 public class OpenMenuButton : MonoBehaviour
 {
-    MenuCanvas parent;
+    protected MenuCanvas parent;
     [SerializeField] InputController inputController;
     [SerializeField] GameObject basePanel;
-    [SerializeField] GameObject MenuWindow;
 
     void Start()
     {
