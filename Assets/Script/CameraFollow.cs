@@ -1,21 +1,25 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class CameraFollow : MonoBehaviour
 {
     public Transform target;
 
     public float smoothSpeed = 0.125f;
+    public float smoothSpeed_growth = 0.125f;
+
     public Vector3 offset;
+
     [SerializeField] private float migihaji, hidarihaji;
     bool shouldFollow = true;
 
     private void LateUpdate()
     {
-        shouldFollow = (target.transform.position.x > migihaji || target.transform.position.x < hidarihaji) ? false : true;
-        if (shouldFollow)
-        {
-            followCamera();
-        }
+            shouldFollow = (target.transform.position.x > migihaji || target.transform.position.x < hidarihaji) ? false : true;
+            if (shouldFollow)
+            {
+                followCamera();
+            }
     }
 
     public bool resetCameraPosition()
