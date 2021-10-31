@@ -283,6 +283,10 @@ PrefabInstance:
       propertyPath: m_hasFontAssetChanged
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1685294415034091048, guid: 0b7157f30d8839b42b18be8715b4a224, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2781453702853935489, guid: 0b7157f30d8839b42b18be8715b4a224, type: 3}
       propertyPath: m_fontAsset
       value: 
@@ -1382,7 +1386,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1024212891
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1541,6 +1545,7 @@ GameObject:
   - component: {fileID: 1086125306}
   - component: {fileID: 1086125305}
   - component: {fileID: 1086125304}
+  - component: {fileID: 1086125307}
   m_Layer: 0
   m_Name: GrowthMenuCanvas
   m_TagString: Untagged
@@ -1608,7 +1613,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!223 &1086125306
 Canvas:
   m_ObjectHideFlags: 0
@@ -1630,6 +1635,25 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!95 &1086125307
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1086125302}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e36c779ed2c57014c9588e7c67d84538, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1093468017 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2995130532799822218, guid: 593f04141833eab40b2ce3ff293d75ff, type: 3}
