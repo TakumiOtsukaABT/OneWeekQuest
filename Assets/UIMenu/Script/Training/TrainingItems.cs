@@ -9,6 +9,7 @@ public class TrainingItems : MonoBehaviour
 {
     public GameObject myCommandList;
     public GameObject itemPrefab;
+    public GameObject fade;
     private void OnEnable()
     {
         TrainingList commandList = myCommandList.GetComponent<TrainingList>();
@@ -23,7 +24,9 @@ public class TrainingItems : MonoBehaviour
 
     private void animate()
     {
-        throw new NotImplementedException();
+        fade.SetActive(true);
+        Animation fadeAnim = GameObject.Find("FadePanel").GetComponent<Animation>();
+        fadeAnim.Play();
     }
 
     private void OnDisable()
