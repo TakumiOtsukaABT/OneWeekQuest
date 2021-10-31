@@ -5,9 +5,6 @@ using UnityEngine;
 
 public class openGrowth_hukidashi : OpenMenuButton
 {
-    private Vector2 originalPosition;
-    [SerializeField] private Vector3 newPosition;
-
     private void Start()
     {
         this.parent = gameObject.transform.parent.transform.parent.GetComponent<MenuCanvas>();
