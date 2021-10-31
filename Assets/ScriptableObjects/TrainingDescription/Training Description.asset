@@ -12,4 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81207aab2f334a04392004553e7a9037, type: 3}
   m_Name: Training Description
   m_EditorClassIdentifier: 
-  commandIdAndDescriptions: []
+  commandIdAndDescriptions:
+  - id: 0
+    name: "\u3046\u3067\u305F\u3066\u3075\u305B"
+    description: "\u3061\u304B\u3089+10"
+    power: 10
