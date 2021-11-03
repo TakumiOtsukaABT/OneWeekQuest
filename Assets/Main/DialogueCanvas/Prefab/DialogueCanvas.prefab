@@ -95,8 +95,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 95597451942662976}
   textMeshProUGUI: {fileID: 114488631859498054}
-  inputController: {fileID: 0}
-  taskHandler: {fileID: 0}
+  inputController_1: {fileID: 0}
+  taskHandler_0: {fileID: 0}
 --- !u!114 &792885114715312087
 MonoBehaviour:
   m_ObjectHideFlags: 0
