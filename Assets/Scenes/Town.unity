@@ -2095,21 +2095,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7102798926392465796, guid: a51bbcc81071025408a176d7b85dd200, type: 3}
   m_PrefabInstance: {fileID: 7102798925263683777}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1976383480
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1976383479}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: affb5bae910c23d48b94d65af2169701, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameObjects:
-  - {fileID: 1093468017}
-  - {fileID: 100781830}
 --- !u!1001 &2995130531707438843
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2381,6 +2366,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1911102102264271657, guid: a51bbcc81071025408a176d7b85dd200, type: 3}
+      propertyPath: gameObjects.Array.data[0]
+      value: 
+      objectReference: {fileID: 1093468017}
+    - target: {fileID: 1911102102264271657, guid: a51bbcc81071025408a176d7b85dd200, type: 3}
+      propertyPath: gameObjects.Array.data[1]
+      value: 
+      objectReference: {fileID: 100781830}
     - target: {fileID: 7102798926392465796, guid: a51bbcc81071025408a176d7b85dd200, type: 3}
       propertyPath: m_Name
       value: InputController
