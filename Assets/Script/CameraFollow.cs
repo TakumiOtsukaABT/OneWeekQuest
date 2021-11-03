@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class CameraFollow : MonoBehaviour
 {
-    public Transform target;
+    [SerializeField, ReadOnly]private Transform target;
 
     public float smoothSpeed = 0.125f;
     public float smoothSpeed_growth = 0.125f;
@@ -12,6 +12,11 @@ public class CameraFollow : MonoBehaviour
 
     [SerializeField] private float migihaji, hidarihaji;
     bool shouldFollow = true;
+
+    private void Start()
+    {
+        target = GetComponent<Outlet>().gameObjects[0].transform;
+    }
 
     private void LateUpdate()
     {
