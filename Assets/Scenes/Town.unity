@@ -1743,6 +1743,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1282529180}
   - component: {fileID: 1282529181}
+  - component: {fileID: 1282529182}
   m_Layer: 0
   m_Name: FloorController
   m_TagString: Untagged
@@ -1783,6 +1784,20 @@ MonoBehaviour:
   leftLim: 0
   rightLim: 0
   ActiveFloor: {fileID: 0}
+--- !u!114 &1282529182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1282529179}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: affb5bae910c23d48b94d65af2169701, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameObjects:
+  - {fileID: 1295842225}
 --- !u!1 &1295842225 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4501548977751632719, guid: 06811194cd84af243bebad28f412f52c, type: 3}
