@@ -9,8 +9,8 @@ namespace Gamekit2D
     {
         public Animator animator;
         public TextMeshProUGUI textMeshProUGUI;
-        InputController inputController;
-        [SerializeField] private TaskHandler taskHandler;
+        [SerializeField, ReadOnly] private InputController inputController;
+        [SerializeField,ReadOnly] private TaskHandler taskHandler;
         private string[] dialogue;
         private int dialogueIndex = 0;
 
@@ -23,7 +23,8 @@ namespace Gamekit2D
 
         private void Start()
         {
-            inputController = GameObject.Find("InputController").GetComponent<InputController>();
+            taskHandler = GetComponent<Outlet>().gameObjects[0].GetComponent<TaskHandler>();
+            inputController = GetComponent<Outlet>().gameObjects[1].GetComponent<InputController>();
         }
 
         IEnumerator SetAnimatorParameterWithDelay (float delay)
