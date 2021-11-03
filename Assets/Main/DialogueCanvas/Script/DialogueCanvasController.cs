@@ -9,8 +9,8 @@ namespace Gamekit2D
     {
         public Animator animator;
         public TextMeshProUGUI textMeshProUGUI;
-        [SerializeField, ReadOnly] private InputController inputController;
-        [SerializeField,ReadOnly] private TaskHandler taskHandler;
+        [SerializeField, ReadOnly] private InputController inputController_1;
+        [SerializeField,ReadOnly] private TaskHandler taskHandler_0;
         private string[] dialogue;
         private int dialogueIndex = 0;
 
@@ -23,8 +23,8 @@ namespace Gamekit2D
 
         private void Start()
         {
-            taskHandler = GetComponent<Outlet>().gameObjects[0].GetComponent<TaskHandler>();
-            inputController = GetComponent<Outlet>().gameObjects[1].GetComponent<InputController>();
+            taskHandler_0 = GetComponent<Outlet>().gameObjects[0].GetComponent<TaskHandler>();
+            inputController_1 = GetComponent<Outlet>().gameObjects[1].GetComponent<InputController>();
         }
 
         IEnumerator SetAnimatorParameterWithDelay (float delay)
@@ -58,7 +58,7 @@ namespace Gamekit2D
             gameObject.SetActive(true);
             animator.SetBool(m_HashActivePara, true);
             textMeshProUGUI.text = dialogue[dialogueIndex];
-            inputController.setInputHandle<TownConversationInputHandle>();
+            inputController_1.setInputHandle<TownConversationInputHandle>();
         }
 
         public bool isLastDialogue()
@@ -82,9 +82,9 @@ namespace Gamekit2D
         public void DeactivateCanvasWithDelay (float delay)
         {
             m_DeactivationCoroutine = StartCoroutine (SetAnimatorParameterWithDelay (delay));
-            inputController.setInputHandle<CharacterMovementInputHandle>();
+            inputController_1.setInputHandle<CharacterMovementInputHandle>();
             dialogueIndex = 0;
-            taskHandler.tickTask("Talk");
+            taskHandler_0.tickTask("Talk");
         }
     }
 }
