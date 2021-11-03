@@ -99,7 +99,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8f40b32e8c621e45b18579f447334d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  idouHidariSeigen: -15
+  idouMigiSeigen: 10
+  inputDirection: 0
   movingSpeed: 15
+  startPosition_1: {fileID: 0}
+  floorController_0: {fileID: 0}
 --- !u!95 &2995130532799822222
 Animator:
   serializedVersion: 3

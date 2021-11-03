@@ -2,27 +2,21 @@
 
 public class CharacterController : MonoBehaviour
 {
-    const float idouHidariSeigen = -15.0f;
-    const float idouMigiSeigen = 10.0f;
-
-
+    public float idouHidariSeigen = -15.0f;
+    public float idouMigiSeigen = 10.0f;
+    [SerializeField, ReadOnly] private float leftLim;
+    [SerializeField, ReadOnly] private float rightLim;
     [ReadOnly] public Direction inputDirection = Direction.none;
     public float movingSpeed = 0.0f;
     private bool inputBoolean = true;
-    [SerializeField] GameObject startPosition;
     AnimationHandle animationHandle;
-
-    FloorController floorController;
 
     public bool InputBoolean { get => inputBoolean; set => inputBoolean = value; }
 
     // Start is called before the first frame update
     void Start()
     {
-        floorController = GameObject.Find("FloorController").GetComponent<FloorController>();
         animationHandle = GetComponent<AnimationHandle>();
-        transform.localPosition = startPosition.transform.position;
-
     }
 
     // Update is called once per frame
@@ -36,7 +30,7 @@ public class CharacterController : MonoBehaviour
                 break;
             case Direction.left:
                 transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, 1);
-                if (transform.position.x > floorController.leftLim + idouHidariSeigen)
+                if (transform.position.x > this.leftLim + idouHidariSeigen)
                 {
                     this.transform.Translate(-movingSpeed * Time.deltaTime, 0, 0);
                     animationHandle.Running = true;
@@ -44,12 +38,18 @@ public class CharacterController : MonoBehaviour
                 break;
             case Direction.right:
                 transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, 1);
-                if (transform.position.x < floorController.rightLim + idouMigiSeigen)
+                if (transform.position.x < this.rightLim + idouMigiSeigen)
                 {
                     this.transform.Translate(movingSpeed * Time.deltaTime, 0, 0);
                     animationHandle.Running = true;
                 }
                 break;
         }
+    }
+
+    public void setLeftRightLim(float leftLim, float rightLim)
+    {
+        this.leftLim = leftLim;
+        this.rightLim = rightLim;
     }
 }

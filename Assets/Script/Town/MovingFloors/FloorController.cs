@@ -4,7 +4,7 @@ using UnityEngine;
 public class FloorController : MonoBehaviour
 {
     [ReadOnly] public float leftLim, rightLim;
-    private Floor ActiveFloor;
+    [SerializeField,ReadOnly]private Floor ActiveFloor;
     GameObject character;
     private CameraFollow camera;
     private GameObject blackout;
@@ -16,6 +16,7 @@ public class FloorController : MonoBehaviour
         camera.setHaji(ActiveFloor);
         blackout = GameObject.Find("Blackout");
         character = GameObject.Find("Character");
+        character.transform.localPosition = ActiveFloor.transform.Find("FloorStartPosition").transform.position;
         updateparams();
     }
 
@@ -23,6 +24,7 @@ public class FloorController : MonoBehaviour
     {
         this.leftLim = ActiveFloor.LeftLim;
         this.rightLim = ActiveFloor.RightLim;
+        character.GetComponent<CharacterController>().setLeftRightLim(leftLim, rightLim);
     }
 
     private IEnumerator waitUpStairAnimation(string positionName, string floorName)
