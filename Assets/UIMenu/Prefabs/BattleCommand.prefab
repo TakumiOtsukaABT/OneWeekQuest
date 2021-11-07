@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 785706838394727675}
   - component: {fileID: 8793193986492034368}
   m_Layer: 5
-  m_Name: Command
+  m_Name: BattleCommand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

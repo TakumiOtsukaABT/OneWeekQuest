@@ -1,7 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+[System.Serializable]
 
-public class PlayerTrainingCommandsList : BasePlayerData
+public class TrainingCommand:BaseItemType
 {
 }

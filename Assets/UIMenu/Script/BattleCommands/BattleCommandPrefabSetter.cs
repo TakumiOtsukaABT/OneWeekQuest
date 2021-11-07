@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class CommandFunctions : MonoBehaviour
+public class BattleCommandPrefabSetter : MonoBehaviour//TODO: keisho
 {
     [SerializeField] private GameObject name_object;
     [SerializeField] private GameObject cost_object;
 
-    [SerializeField] private string _name;
-    [SerializeField] private int cost;
+    [SerializeField,ReadOnly] private string _name;
+    [SerializeField,ReadOnly] private int cost;
 
     public string nameText
     {

@@ -3346,9 +3346,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1565265501}
-  - component: {fileID: 1565265500}
-  - component: {fileID: 1565265499}
-  - component: {fileID: 1565265498}
   - component: {fileID: 1565265502}
   - component: {fileID: 1565265505}
   - component: {fileID: 1565265504}
@@ -3360,63 +3357,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1565265498
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1565265497}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6dd652bb5536ca54092756d43929b644, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Commands:
-  - trainingCommand:
-      id: 0
-      name: "\u3046\u3067\u305F\u3066\u3075\u305B"
-      description: 
-      power: 10
-  trainingDescriptions: {fileID: 0}
---- !u!114 &1565265499
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1565265497}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2540e9f3a8048454193e0cca225a2d4f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Items:
-  - count: 0
-    itemDescription:
-      id: 0
-      description: 
-      name: 
-  itemDescriptions: {fileID: 11400000, guid: dd097f8f67f17da4fabde968c164527c, type: 2}
---- !u!114 &1565265500
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1565265497}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2916faba5f1254646be0cfe0d3bd99ec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Commands:
-  - command:
-      id: 0
-      description: 
-      name: 
-      cost: 0
-  commandDescriptions: {fileID: 11400000, guid: 006621bed39dc4d45a08940baf6a8793, type: 2}
 --- !u!4 &1565265501
 Transform:
   m_ObjectHideFlags: 0
