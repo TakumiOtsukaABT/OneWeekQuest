@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1313618978791357632}
   - component: {fileID: 6127623129118893503}
   - component: {fileID: 62832508644847325}
+  - component: {fileID: -9091912751350458570}
   m_Layer: 0
   m_Name: MurasakiWahu
   m_TagString: Untagged
@@ -118,6 +119,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue: []
+  hukidashi_0: {fileID: 0}
+  dialogueCanvas_1: {fileID: 0}
 --- !u!58 &62832508644847325
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -134,6 +137,21 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 1.245
+--- !u!114 &-9091912751350458570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1313618978791357635}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: affb5bae910c23d48b94d65af2169701, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameObjects:
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1001 &2185588719784929770
 PrefabInstance:
   m_ObjectHideFlags: 0

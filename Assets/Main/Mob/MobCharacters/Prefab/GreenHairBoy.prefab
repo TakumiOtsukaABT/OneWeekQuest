@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4016836958877898630}
   - component: {fileID: 5335522647037937752}
   - component: {fileID: 6093105586584259124}
+  - component: {fileID: 6936491519889237447}
   m_Layer: 0
   m_Name: GreenHairBoy
   m_TagString: Untagged
@@ -118,6 +119,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue: []
+  hukidashi_0: {fileID: 0}
+  dialogueCanvas_1: {fileID: 0}
 --- !u!58 &6093105586584259124
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -134,6 +137,21 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 1.245
+--- !u!114 &6936491519889237447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4016836958877898631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: affb5bae910c23d48b94d65af2169701, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameObjects:
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1001 &8962555597007686160
 PrefabInstance:
   m_ObjectHideFlags: 0

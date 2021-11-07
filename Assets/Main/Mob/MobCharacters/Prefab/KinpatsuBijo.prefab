@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6187958358988124828}
   - component: {fileID: 5682712298435319537}
   - component: {fileID: 7409775974423846344}
+  - component: {fileID: 7661915831355585318}
   m_Layer: 0
   m_Name: KinpatsuBijo
   m_TagString: Untagged
@@ -118,6 +119,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue: []
+  hukidashi_0: {fileID: 0}
+  dialogueCanvas_1: {fileID: 0}
 --- !u!58 &7409775974423846344
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -134,6 +137,21 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 1.25
+--- !u!114 &7661915831355585318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6187958358988124831}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: affb5bae910c23d48b94d65af2169701, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameObjects:
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1001 &2822815936196159990
 PrefabInstance:
   m_ObjectHideFlags: 0
