@@ -6,28 +6,27 @@ using Gamekit2D;
 public class MobCharacterController : MonoBehaviour
 {
     public string[] dialogue;
-    [SerializeField,ReadOnly] private GameObject hukidashi_0;
-    [SerializeField, ReadOnly] private GameObject dialogueCanvas_1;
+    [SerializeField] private GameObject hukidashi;
+    [SerializeField, ReadOnly] private GameObject dialogueCanvas_0;
 
     private void Start()
     {
-        hukidashi_0 = GetComponent<Outlet>().gameObjects[0];
-        dialogueCanvas_1 = GetComponent<Outlet>().gameObjects[1];
+        dialogueCanvas_0 = GetComponent<Outlet>().gameObjects[0];
     }
 
     public void activateCanvas()
     {
-        var dialogueCanvas = dialogueCanvas_1.GetComponent<DialogueCanvasController>();
+        var dialogueCanvas = dialogueCanvas_0.GetComponent<DialogueCanvasController>();
         dialogueCanvas.Dialogue = dialogue;
         dialogueCanvas.ActivateCanvasWithDialogueArray();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        hukidashi_0.gameObject.SetActive(true);
+        hukidashi.gameObject.SetActive(true);
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        hukidashi_0.gameObject.SetActive(false);
+        hukidashi.gameObject.SetActive(false);
     }
 }

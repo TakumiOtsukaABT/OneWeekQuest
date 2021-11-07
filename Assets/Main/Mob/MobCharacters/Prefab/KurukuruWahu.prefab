@@ -119,8 +119,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue: []
-  hukidashi_0: {fileID: 0}
-  dialogueCanvas_1: {fileID: 0}
+  hukidashi: {fileID: 7216373088794122689}
+  dialogueCanvas_0: {fileID: 0}
 --- !u!58 &8930227984618901579
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -253,6 +253,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e9971d7f27c18b440b04440bd6f1c78f, type: 3}
+--- !u!1 &7216373088794122689 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 682727601993403643, guid: e9971d7f27c18b440b04440bd6f1c78f, type: 3}
+  m_PrefabInstance: {fileID: 7880239642554455354}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &7216373088794122718 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 682727601993403620, guid: e9971d7f27c18b440b04440bd6f1c78f, type: 3}
