@@ -8,11 +8,12 @@ public class BlackoutController : MonoBehaviour
     protected Coroutine m_DeactivationCoroutine;
 
     protected readonly int m_HashActivePara = Animator.StringToHash("Active");
+    //0stale 1blackout 2blackoutend 3fadeout 4fadeoutend
 
-    IEnumerator SetAnimatorParameterWithDelay(float delay)
+    IEnumerator SetAnimatorParameterWithDelay(float delay, int state)
     {
         yield return new WaitForSeconds(delay);
-        animator.SetBool(m_HashActivePara, false);
+        animator.SetInteger(m_HashActivePara, state);
     }
 
     public void ActivateBlackout()
@@ -23,11 +24,26 @@ public class BlackoutController : MonoBehaviour
             m_DeactivationCoroutine = null;
         }
         gameObject.SetActive(true);
-        animator.SetBool(m_HashActivePara, true);
+        animator.SetInteger(m_HashActivePara, 1);
+    }
+    public void ActivateFadeout()
+    {
+        if (m_DeactivationCoroutine != null)
+        {
+            StopCoroutine(m_DeactivationCoroutine);
+            m_DeactivationCoroutine = null;
+        }
+        gameObject.SetActive(true);
+        animator.SetInteger(m_HashActivePara, 3);
     }
 
-    public void DeactivateCanvasWithDelay(float delay)
+    public void DeactivateBlackoutWithDelay(float delay)
     {
-        m_DeactivationCoroutine = StartCoroutine(SetAnimatorParameterWithDelay(delay));
+        m_DeactivationCoroutine = StartCoroutine(SetAnimatorParameterWithDelay(delay,2));
+    }
+
+    public void DeactivateFadeoutWithDelay(float delay)
+    {
+        m_DeactivationCoroutine = StartCoroutine(SetAnimatorParameterWithDelay(delay, 4));
     }
 }

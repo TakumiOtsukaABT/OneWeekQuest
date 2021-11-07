@@ -38,7 +38,7 @@ public class FloorController : MonoBehaviour
         updateparams();
         camera.setHaji(ActiveFloor);
         yield return new WaitUntil(camera.resetCameraPosition);
-        blackout.GetComponent<BlackoutController>().DeactivateCanvasWithDelay(0);
+        blackout.GetComponent<BlackoutController>().DeactivateBlackoutWithDelay(0);
     }
     //private IEnumerator waitDownStairAnimation(string positionName, string floorName)
     //{
