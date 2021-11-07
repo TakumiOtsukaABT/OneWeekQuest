@@ -18,16 +18,4 @@ public class BattleCommandReference : ScriptableObject
         }
         return null;
     }
-
-    public T GetElement<T>(int id) where T: BaseItemType
-    {
-        foreach (var i in battleCommands)
-        {
-            if (i.id.Equals(id))
-            {
-                return i;
-            }
-        }
-        return null;
-    }
 }
