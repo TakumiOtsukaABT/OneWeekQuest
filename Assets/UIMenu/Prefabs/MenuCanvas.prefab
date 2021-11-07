@@ -2213,7 +2213,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07e082a0595c6964d8bf3c536c5d1d6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mystatus: {fileID: 11400000, guid: 45bfa4cee6d712743934ae93579adc69, type: 2}
+  outlet: {fileID: 7025069519139496981}
   HP: {fileID: 8042139043288060644}
   MP: {fileID: 5418825824561921909}
   power: {fileID: 3350832482997995410}
@@ -3479,6 +3479,7 @@ GameObject:
   - component: {fileID: 4711190796642599362}
   - component: {fileID: 7031417957010659511}
   - component: {fileID: 8784633579657978199}
+  - component: {fileID: 7025069519139496981}
   m_Layer: 5
   m_Name: MenuCanvas
   m_TagString: Untagged
@@ -3611,6 +3612,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Items: []
   itemDescriptions: {fileID: 11400000, guid: dd097f8f67f17da4fabde968c164527c, type: 2}
+--- !u!114 &7025069519139496981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4711190796642599361}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: affb5bae910c23d48b94d65af2169701, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameObjects:
+  - {fileID: 0}
 --- !u!1 &4711190797006252105
 GameObject:
   m_ObjectHideFlags: 0
@@ -3758,7 +3773,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inputController: {fileID: 0}
   basePanel: {fileID: 4711190796594875566}
-  MenuWindow: {fileID: 7480751298175948462}
 --- !u!1 &4721340253587196547
 GameObject:
   m_ObjectHideFlags: 0
