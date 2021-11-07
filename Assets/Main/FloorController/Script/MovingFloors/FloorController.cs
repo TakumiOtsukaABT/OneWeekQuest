@@ -5,18 +5,20 @@ public class FloorController : MonoBehaviour
 {
     [ReadOnly] public float leftLim, rightLim;
     [SerializeField,ReadOnly]private Floor ActiveFloor;
-    GameObject character;
-    private CameraFollow camera;
-    private GameObject blackout;
+    [SerializeField, ReadOnly] GameObject character_2;
+    [SerializeField, ReadOnly] private CameraFollow camera_0;
+    [SerializeField, ReadOnly] private GameObject blackout_1;
+    private Outlet outlet;
     // Start is called before the first frame update
     void Start()
     {
+        outlet = GetComponent<Outlet>();
         ActiveFloor = transform.GetChild(0).GetComponent<Floor>();
-        camera = GameObject.Find("Main Camera").GetComponent<CameraFollow>();
-        camera.setHaji(ActiveFloor);
-        blackout = GameObject.Find("Blackout");
-        character = GameObject.Find("Character");
-        character.transform.localPosition = ActiveFloor.transform.Find("FloorStartPosition").transform.position;
+        camera_0 = outlet.gameObjects[0].GetComponent<CameraFollow>();
+        camera_0.setHaji(ActiveFloor);
+        blackout_1 = outlet.gameObjects[1];
+        character_2 = outlet.gameObjects[2];
+        character_2.transform.localPosition = ActiveFloor.transform.Find("FloorStartPosition").transform.position;
         updateparams();
     }
 
@@ -24,21 +26,21 @@ public class FloorController : MonoBehaviour
     {
         this.leftLim = ActiveFloor.LeftLim;
         this.rightLim = ActiveFloor.RightLim;
-        character.GetComponent<CharacterController>().setLeftRightLim(leftLim, rightLim);
+        character_2.GetComponent<CharacterController>().setLeftRightLim(leftLim, rightLim);
     }
 
     private IEnumerator waitUpStairAnimation(string positionName, string floorName)
     {
-        blackout.GetComponent<BlackoutController>().ActivateBlackout();
-        camera.enabled = false;
-        yield return new WaitForSeconds(blackout.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length);
-        camera.enabled = true;
+        blackout_1.GetComponent<BlackoutController>().ActivateBlackout();
+        camera_0.enabled = false;
+        yield return new WaitForSeconds(blackout_1.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length);
+        camera_0.enabled = true;
         ActiveFloor = GameObject.Find(floorName).GetComponent<Floor>();
-        character.transform.localPosition = ActiveFloor.transform.Find(positionName).transform.position;
+        character_2.transform.localPosition = ActiveFloor.transform.Find(positionName).transform.position;
         updateparams();
-        camera.setHaji(ActiveFloor);
-        yield return new WaitUntil(camera.resetCameraPosition);
-        blackout.GetComponent<BlackoutController>().DeactivateBlackoutWithDelay(0);
+        camera_0.setHaji(ActiveFloor);
+        yield return new WaitUntil(camera_0.resetCameraPosition);
+        blackout_1.GetComponent<BlackoutController>().DeactivateBlackoutWithDelay(0);
     }
     //private IEnumerator waitDownStairAnimation(string positionName, string floorName)
     //{
