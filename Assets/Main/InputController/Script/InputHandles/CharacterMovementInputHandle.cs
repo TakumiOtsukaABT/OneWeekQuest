@@ -4,12 +4,12 @@ using Gamekit2D;
 public class CharacterMovementInputHandle : InputHandle
 {
     float startMousePositionX, currentMousePositionX;
-    [SerializeField,ReadOnly] private GameObject target_0;
+    [SerializeField,ReadOnly] private GameObject character_0;
     private Direction inputDirection = Direction.none;
 
     private void Start()
     {
-        target_0 = gameObject.GetComponent<Outlet>().gameObjects[0];
+        character_0 = gameObject.GetComponent<Outlet>().gameObjects[0];
     }
 
     public override void handle()
@@ -37,7 +37,7 @@ public class CharacterMovementInputHandle : InputHandle
         {
             this.inputDirection = Direction.none;
         }
-        this.target_0.GetComponent<CharacterController>().inputDirection = GetDirection();
+        this.character_0.GetComponent<CharacterController>().inputDirection = GetDirection();
     }
 
     public override Direction GetDirection()

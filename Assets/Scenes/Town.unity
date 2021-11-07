@@ -866,24 +866,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8541140754101183677, guid: 4d7d8c8127c69d749b2086668bac831b, type: 3}
   m_PrefabInstance: {fileID: 6905173982091634997}
   m_PrefabAsset: {fileID: 0}
---- !u!95 &1359739369 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 6961621141767587198, guid: 4d7d8c8127c69d749b2086668bac831b, type: 3}
-  m_PrefabInstance: {fileID: 6905173982091634997}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1359739370
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1359739368}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f557d03405479e24584bf15ba91e0c76, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animator: {fileID: 1359739369}
 --- !u!1 &1454191753 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8381357421858052507, guid: 957abf0c167b6474cb6590cda767679c, type: 3}
@@ -1240,22 +1222,6 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5056493856349191953, guid: 4d7d8c8127c69d749b2086668bac831b, type: 3}
-      propertyPath: m_UiScaleMode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5056493856349191953, guid: 4d7d8c8127c69d749b2086668bac831b, type: 3}
-      propertyPath: m_ReferenceResolution.x
-      value: 2160
-      objectReference: {fileID: 0}
-    - target: {fileID: 5056493856349191953, guid: 4d7d8c8127c69d749b2086668bac831b, type: 3}
-      propertyPath: m_ReferenceResolution.y
-      value: 1080
-      objectReference: {fileID: 0}
-    - target: {fileID: 6961621141767587198, guid: 4d7d8c8127c69d749b2086668bac831b, type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 86cc3babf2b7ca54ca00a9c6bbdc1a73, type: 2}
     - target: {fileID: 7299507992185791703, guid: 4d7d8c8127c69d749b2086668bac831b, type: 3}
       propertyPath: m_Pivot.x
       value: 0
