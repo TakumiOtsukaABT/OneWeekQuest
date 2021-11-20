@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc84080ac4730c84ca31b0337fcb860c, type: 3}
   m_Name: Battle Command Reference
   m_EditorClassIdentifier: 
-  battleCommands:
+  elements:
   - id: 0
     description: "\u3082\u3061\u3082\u3061\u306A\u3053\u3046\u3052\u304D"
     element_name: "\u3082\u3061\u3082\u3061\u30A2\u30BF\u30C3\u30AF"
-    cost: 15
+    cost: 0

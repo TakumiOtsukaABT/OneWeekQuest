@@ -16,10 +16,10 @@ public class BattleCommandContent : MonoBehaviour
         List<int> battle_commands_id_list = outlet.gameObjects[0].GetComponent<PlayerBattleCommandList>().IdList;
         foreach (int i in battle_commands_id_list)
         {
-            battleCommandPrefab.GetComponent<BattleCommandPrefabSetter>().nameText = battleCommandReference.GetBattleCommand(i).element_name;
-            battleCommandPrefab.GetComponent<BattleCommandPrefabSetter>().costText = battleCommandReference.GetBattleCommand(i).cost;
+            battleCommandPrefab.GetComponent<BattleCommandPrefabSetter>().nameText = battleCommandReference.GetElement(i).element_name;
+            battleCommandPrefab.GetComponent<BattleCommandPrefabSetter>().costText = battleCommandReference.GetElement(i).cost;
             GameObject instantiated = Instantiate(battleCommandPrefab, this.transform);
-            instantiated.GetComponent<Button>().onClick.AddListener(() => { board.GetComponent<Board>().updateText(battleCommandReference.GetBattleCommand(i).description); });
+            instantiated.GetComponent<Button>().onClick.AddListener(() => { board.GetComponent<Board>().updateText(battleCommandReference.GetElement(i).description); });
 
         }
     }
