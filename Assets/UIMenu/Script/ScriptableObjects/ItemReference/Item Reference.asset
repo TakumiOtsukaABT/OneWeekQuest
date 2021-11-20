@@ -12,4 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 642b3e6ae0c79b547b41a51e7051e6ac, type: 3}
   m_Name: Item Reference
   m_EditorClassIdentifier: 
-  elements: []
+  elements:
+  - id: 0
+    description: "HP\u309215\u304B\u3044\u3075\u304F"
+    element_name: "\u304A\u3082\u3061"
+    count: 0

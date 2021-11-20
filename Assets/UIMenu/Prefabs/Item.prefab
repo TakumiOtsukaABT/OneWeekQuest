@@ -147,13 +147,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1122450379417745021}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3bf31d193a1e8a8429914fde1a5d9d78, type: 3}
+  m_Script: {fileID: 11500000, guid: 628e1db6996b301438acdbe4b6bd0a97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   name_object: {fileID: 6608522625479083584}
-  count_object: {fileID: 8294730384433223536}
-  _name: "\u304A\u3082\u3061"
-  _count: 3
+  cost_object: {fileID: 8294730384433223536}
+  _name: 
+  cost: 0
 --- !u!1 &6608522625479083584
 GameObject:
   m_ObjectHideFlags: 0

@@ -1484,7 +1484,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menuCanvas: {fileID: 4711190796642599361}
-  battleCommandPrefab: {fileID: 1122450379417745021, guid: 29114edd25c663d40a20216a78b7594c, type: 3}
+  prefab: {fileID: 1122450379417745021, guid: 29114edd25c663d40a20216a78b7594c, type: 3}
   board: {fileID: 7189055470670389114}
   battleCommandReference: {fileID: 11400000, guid: abf2d51d2bb32c2499e6b2d34b944b90, type: 2}
 --- !u!1 &2475990255288109191
@@ -3287,6 +3287,7 @@ GameObject:
   - component: {fileID: 865244558941343948}
   - component: {fileID: 1447636658551723669}
   - component: {fileID: 9185088227967851910}
+  - component: {fileID: 6480345440013477302}
   m_Layer: 5
   m_Name: Content
   m_TagString: Untagged
@@ -3353,6 +3354,22 @@ MonoBehaviour:
   m_ChildScaleWidth: 1
   m_ChildScaleHeight: 1
   m_ReverseArrangement: 0
+--- !u!114 &6480345440013477302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4704249717735497076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89cd1430c75b9084d9ca4028f677dfa0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  menuCanvas: {fileID: 4711190796642599361}
+  prefab: {fileID: 1122450379417745021, guid: 3240286eab9f8b54bb5e8a4054497b9c, type: 3}
+  board: {fileID: 6004935423494859402}
+  battleCommandReference: {fileID: 11400000, guid: 0c568ac683f7a2844aeeeb4d5d6223e7, type: 2}
 --- !u!1 &4711190796594875566
 GameObject:
   m_ObjectHideFlags: 0
