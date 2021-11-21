@@ -4004,6 +4004,10 @@ PrefabInstance:
       value: Character
       objectReference: {fileID: 0}
     - target: {fileID: 2995130532799822223, guid: 593f04141833eab40b2ce3ff293d75ff, type: 3}
+      propertyPath: movingSpeed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2995130532799822223, guid: 593f04141833eab40b2ce3ff293d75ff, type: 3}
       propertyPath: startPosition
       value: 
       objectReference: {fileID: 1116924642}
