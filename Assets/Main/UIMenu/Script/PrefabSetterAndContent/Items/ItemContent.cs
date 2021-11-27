@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ItemContent : BaseContent<Item,ItemReference>
+public class ItemContent : BaseContent<Item,ItemReference,PlayerInventory>
 {
     protected override void setPrefab(int i)
     {

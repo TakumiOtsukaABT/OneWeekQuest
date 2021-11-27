@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class BaseContent <U,CommandReference> : MonoBehaviour 
+public class BaseContent <U,CommandReference,CommandList> : MonoBehaviour 
     where U:BaseItemType
     where CommandReference : BaseReference<U>
+    where CommandList: BasePlayerData
 {
     [SerializeField] private GameObject menuCanvas;
     [SerializeField] protected GameObject prefab;
@@ -15,8 +16,8 @@ public class BaseContent <U,CommandReference> : MonoBehaviour
     private void OnEnable()
     {
         outlet = menuCanvas.GetComponent<Outlet>();
-        List<int> battle_commands_id_list = outlet.gameObjects[0].GetComponent<PlayerBattleCommandList>().IdList;
-        foreach (int i in battle_commands_id_list)
+        List<int> commands_id_list = outlet.gameObjects[0].GetComponent<CommandList>().IdList;
+        foreach (int i in commands_id_list)
         {
             setPrefab(i);
             GameObject instantiated = Instantiate(prefab, this.transform);

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class BattleCommandContent : BaseContent<BattleCommand,BattleCommandReference>
+public class BattleCommandContent : BaseContent<BattleCommand,BattleCommandReference,PlayerBattleCommandList>
 {
     protected override void setPrefab(int i)
     {
