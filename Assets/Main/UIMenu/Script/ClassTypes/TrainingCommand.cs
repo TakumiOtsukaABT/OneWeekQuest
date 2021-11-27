@@ -5,4 +5,5 @@ using UnityEngine;
 
 public class TrainingCommand:BaseItemType
 {
+    public PlayerStatusForReference incrementStatus;
 }

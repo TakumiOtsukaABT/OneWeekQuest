@@ -8,7 +8,7 @@ public class Board : MonoBehaviour
 {
     [SerializeField] private GameObject description;
 
-    public void updateText(string newText)
+    virtual public void updateText(string newText)
     {
         description.GetComponent<TextMeshProUGUI>().text = newText;
     }
