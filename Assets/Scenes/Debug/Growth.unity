@@ -2693,7 +2693,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2569235461243147741, guid: 8c5a7e6c1bb66ef478c1f6e52d01d121, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: hukidashi
       objectReference: {fileID: 0}
     - target: {fileID: 2569235461248808889, guid: 8c5a7e6c1bb66ef478c1f6e52d01d121, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -3656,7 +3656,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1361496710}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 442374908}
+        m_TargetAssemblyTypeName: GrowthBoard, Assembly-CSharp
+        m_MethodName: onButtonPush
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1361496710
 MonoBehaviour:
   m_ObjectHideFlags: 0

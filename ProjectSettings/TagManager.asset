@@ -7,6 +7,7 @@ TagManager:
   - UIPanels
   - original
   - cloned task
+  - hukidashi
   layers:
   - Default
   - TransparentFX

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GrowthBoard : Board
 {
-    [SerializeField] private GameObject CharacterHouse;
+    [SerializeField] protected GameObject CharacterHouse;
 
     protected FadeoutCharacterController fadeoutCharacterController;
     public void onButtonPush()
