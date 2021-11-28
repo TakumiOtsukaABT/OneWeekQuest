@@ -19,4 +19,15 @@ public class PlayerStatusForReference
     public int Speed_access { get => Speed; set => Speed = value; }
     public int HitRate_access { get => HitRate; set => HitRate = value; }
     public int Regen_access { get => Regen; set => Regen = value; }
+
+    public void increment(PlayerStatusForReference playerStatusForReferenceInc)
+    {
+        HP += playerStatusForReferenceInc.HP_access;
+        MP += playerStatusForReferenceInc.MP_access;
+        Attack += playerStatusForReferenceInc.Attack_access;
+        Defence += playerStatusForReferenceInc.Defence_access;
+        Speed += playerStatusForReferenceInc.Speed_access;
+        HitRate += playerStatusForReferenceInc.HitRate_access;
+        Regen += playerStatusForReferenceInc.Regen_access;
+    }
 }
