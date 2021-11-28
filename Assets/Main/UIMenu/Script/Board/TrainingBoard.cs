@@ -4,9 +4,7 @@ using UnityEngine;
 
 public class TrainingBoard : GrowthBoard
 {
-    PlayerStatus incrementPlayerStatus;
-    protected override void selectAction()
-    {
+     public PlayerStatusForReference incrementPlayerStatus;
 
-    }
+
 }

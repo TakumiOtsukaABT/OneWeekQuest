@@ -10,8 +10,8 @@ public class BaseContent <U,CommandReference,CommandList> : MonoBehaviour
 {
     [SerializeField] private GameObject menuCanvas;
     [SerializeField] protected GameObject prefab;
-    [SerializeField] private GameObject board;
-    [SerializeField] protected CommandReference battleCommandReference;
+    [SerializeField] protected GameObject board;
+    [SerializeField] protected CommandReference uniqueCommandReference;
     private Outlet outlet;
     private void OnEnable()
     {
@@ -21,13 +21,19 @@ public class BaseContent <U,CommandReference,CommandList> : MonoBehaviour
         {
             setPrefab(i);
             GameObject instantiated = Instantiate(prefab, this.transform);
-            instantiated.GetComponent<Button>().onClick.AddListener(() => { board.GetComponent<Board>().updateText(battleCommandReference.GetElement(i).description); });
-
+            instantiated.GetComponent<Button>().onClick.AddListener(() => {
+                setListener(i);
+            });
         }
     }
     protected virtual void setPrefab(int i)
     {
 
+    }
+
+    protected virtual void setListener(int i)
+    {
+        board.GetComponent<Board>().updateText(uniqueCommandReference.GetElement(i).description);
     }
 
     private void OnDisable()

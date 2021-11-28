@@ -6,6 +6,6 @@ public class StudyCommandContent : BaseContent<StudyCommand,StudyReference,Playe
 {
     protected override void setPrefab(int i)
     {
-        base.prefab.GetComponent<GrowthCommandPrefabSetter>().nameText = base.battleCommandReference.GetElement(i).element_name;
+        base.prefab.GetComponent<GrowthCommandPrefabSetter>().nameText = base.uniqueCommandReference.GetElement(i).element_name;
     }
 }
