@@ -32,7 +32,7 @@ public class GrowthBoard : Board
 
     virtual public void childDeactivation()
     {
-
+        fadeoutCharacterController.DeactivateWithDelay(0);
     }
 
     virtual public void childTakeEffect()

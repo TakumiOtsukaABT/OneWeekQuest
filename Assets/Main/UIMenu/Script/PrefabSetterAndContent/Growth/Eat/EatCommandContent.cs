@@ -8,4 +8,10 @@ public class EatCommandContent : BaseContent<EatCommand,EatReference,PlayerEatCo
     {
         base.prefab.GetComponent<GrowthCommandPrefabSetter>().nameText = base.uniqueCommandReference.GetElement(i).element_name;
     }
+
+    protected override void setListener(int i)
+    {
+        base.setListener(i);
+        base.board.GetComponent<EatBoard>().id = base.uniqueCommandReference.GetElement(i).id;
+    }
 }

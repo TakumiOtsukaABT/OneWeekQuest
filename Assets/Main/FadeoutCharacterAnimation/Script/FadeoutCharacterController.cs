@@ -12,13 +12,22 @@ public class FadeoutCharacterController : MonoBehaviour
 
     public void ActivateTrain()
     {
+        activateAction(1);
+    }
+    public void ActivateEat()
+    {
+        activateAction(4);
+    }
+
+    private void activateAction(int actioncode)
+    {
         if (m_DeactivationCoroutine != null)
         {
             StopCoroutine(m_DeactivationCoroutine);
             m_DeactivationCoroutine = null;
         }
         gameObject.SetActive(true);
-        animator.SetInteger(m_HashActivePara, 1);
+        animator.SetInteger(m_HashActivePara, actioncode);
     }
 
     public void DeactivateWithDelay(float delay)

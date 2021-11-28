@@ -2,19 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TrainingBoard : GrowthBoard
+public class EatBoard :GrowthBoard
 {
-     public PlayerStatusForReference incrementPlayerStatus = null;
-
+    public int id;
     public override void childActivation()
     {
-        base.fadeoutCharacterController.ActivateTrain();
+        base.fadeoutCharacterController.ActivateEat();
     }
 
     public override void childTakeEffect()
     {
         GameObject playerData = base.CharacterHouse.GetComponent<Outlet>().gameObjects[0];
-        playerData.GetComponent<PlayerStatus>().playerStatusForReference.increment(incrementPlayerStatus);
+        playerData.GetComponent<PlayerBuff>().buff_list.Add(id);
     }
 
 }
