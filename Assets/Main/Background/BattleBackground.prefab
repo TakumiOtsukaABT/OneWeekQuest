@@ -92,7 +92,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4336806616917071710}
   - component: {fileID: 1379458076146688484}
-  - component: {fileID: 349430732004661124}
   m_Layer: 0
   m_Name: "\u67283\u30003\u5C64\u76EE (1)"
   m_TagString: Untagged
@@ -177,21 +176,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &349430732004661124
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 468984451752421965}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da3da4446e86b724083812e9a6e9642f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  grandParent: {fileID: 0}
-  cam_0: {fileID: 0}
-  parallaxEffect: 0.5
 --- !u!1 &477895652438456615
 GameObject:
   m_ObjectHideFlags: 0
@@ -776,7 +760,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6979852225428066274}
   - component: {fileID: 4044883240807291393}
-  - component: {fileID: 9060617665072067720}
   m_Layer: 0
   m_Name: kusa
   m_TagString: Untagged
@@ -856,21 +839,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &9060617665072067720
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1944569217753473316}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da3da4446e86b724083812e9a6e9642f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  grandParent: {fileID: 0}
-  cam_0: {fileID: 0}
-  parallaxEffect: 0
 --- !u!1 &2269639614184088379
 GameObject:
   m_ObjectHideFlags: 0
@@ -2206,7 +2174,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1633929807867934402}
   - component: {fileID: 6438064051170365448}
-  - component: {fileID: 1905470203150608231}
   m_Layer: 0
   m_Name: "\u67283\u30001\u5C64\u76EE"
   m_TagString: Untagged
@@ -2287,21 +2254,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1905470203150608231
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4541853376422750359}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da3da4446e86b724083812e9a6e9642f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  grandParent: {fileID: 0}
-  cam_0: {fileID: 0}
-  parallaxEffect: 0
 --- !u!1 &4677244080797484991
 GameObject:
   m_ObjectHideFlags: 0
@@ -4034,7 +3986,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1618520700080475184}
   - component: {fileID: 6741176209723714211}
-  - component: {fileID: 4869521614595676181}
   m_Layer: 0
   m_Name: background yokonaga
   m_TagString: Untagged
@@ -4107,21 +4058,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &4869521614595676181
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8214059244959776977}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da3da4446e86b724083812e9a6e9642f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  grandParent: {fileID: 0}
-  cam_0: {fileID: 0}
-  parallaxEffect: 1
 --- !u!1 &8313382784604020229
 GameObject:
   m_ObjectHideFlags: 0
@@ -4497,7 +4433,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8106309447872427654}
   - component: {fileID: 5993492447395732882}
-  - component: {fileID: 5214486781058874258}
   m_Layer: 0
   m_Name: "\u67283\u30002\u5C64\u76EE"
   m_TagString: Untagged
@@ -4579,21 +4514,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5214486781058874258
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9095387242967589254}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da3da4446e86b724083812e9a6e9642f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  grandParent: {fileID: 0}
-  cam_0: {fileID: 0}
-  parallaxEffect: 0.25
 --- !u!1 &9153969770601656700
 GameObject:
   m_ObjectHideFlags: 0
