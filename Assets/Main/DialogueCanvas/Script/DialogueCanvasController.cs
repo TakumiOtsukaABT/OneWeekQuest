@@ -5,11 +5,11 @@ using UnityEngine;
 
 namespace Gamekit2D
 {
-    public class DialogueCanvasForBattleController : MonoBehaviour
+    public class DialogueCanvasController : MonoBehaviour
     {
         public Animator animator;
         public TextMeshProUGUI textMeshProUGUI;
-        [SerializeField, ReadOnly] private InputController inputController_1;
+        [SerializeField, ReadOnly] protected InputController inputController_1;
         [SerializeField,ReadOnly] private TaskHandler taskHandler_0;
         private string[] dialogue;
         private int dialogueIndex = 0;
@@ -58,7 +58,17 @@ namespace Gamekit2D
             gameObject.SetActive(true);
             animator.SetBool(m_HashActivePara, true);
             textMeshProUGUI.text = dialogue[dialogueIndex];
+            setInputHandle();
+        }
+
+        protected virtual void setInputHandle()
+        {
             inputController_1.setInputHandle<TownConversationInputHandle>();
+        }
+
+        protected virtual void setInputHandleBack()
+        {
+            inputController_1.setInputHandle<CharacterMovementInputHandle>();
         }
 
         public bool isLastDialogue()
@@ -66,23 +76,10 @@ namespace Gamekit2D
             return dialogue[dialogueIndex] == "";
         }
 
-        //public void ActivateCanvasWithTranslatedText (string phraseKey)
-        //{
-        //    if (m_DeactivationCoroutine != null)
-        //    {
-        //        StopCoroutine(m_DeactivationCoroutine);
-        //        m_DeactivationCoroutine = null;
-        //    }
-
-        //    gameObject.SetActive(true);
-        //    animator.SetBool(m_HashActivePara, true);
-        //    //textMeshProUGUI.text = Translator.Instance[phraseKey];
-        //}
-
         public void DeactivateCanvasWithDelay (float delay)
         {
             m_DeactivationCoroutine = StartCoroutine (SetAnimatorParameterWithDelay (delay));
-            inputController_1.setInputHandle<CharacterMovementInputHandle>();
+            setInputHandleBack();
             dialogueIndex = 0;
             taskHandler_0.tickTask("Talk");
         }

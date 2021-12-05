@@ -11,11 +11,11 @@ GameObject:
   - component: {fileID: 224260303033278428}
   - component: {fileID: 223066732744343464}
   - component: {fileID: 95597451942662976}
-  - component: {fileID: 114751280143084318}
   - component: {fileID: 792885114715312087}
+  - component: {fileID: 8627776048985113369}
   - component: {fileID: 5460758248565894060}
   m_Layer: 5
-  m_Name: DialogueCanvas
+  m_Name: DialogueCanvasDescription
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -81,22 +81,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &114751280143084318
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1009638384006160}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a224f7f2de0b6e45b669ea4a7ebae75, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animator: {fileID: 95597451942662976}
-  textMeshProUGUI: {fileID: 114488631859498054}
-  inputController_1: {fileID: 0}
-  taskHandler_0: {fileID: 0}
 --- !u!114 &792885114715312087
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -120,6 +104,22 @@ MonoBehaviour:
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
   m_PresetInfoIsWorld: 0
+--- !u!114 &8627776048985113369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1009638384006160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43d0aa3db3121bc408b938a2255ee493, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 0}
+  textMeshProUGUI: {fileID: 0}
+  inputController_1: {fileID: 0}
+  taskHandler_0: {fileID: 0}
 --- !u!114 &5460758248565894060
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -230,7 +230,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18
+  m_fontSize: 57.65
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
