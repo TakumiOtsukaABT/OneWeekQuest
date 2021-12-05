@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace Gamekit2D
 {
-    public class DialogueCanvasForBattleController : MonoBehaviour
+    public class DialogueCanvasController : MonoBehaviour
     {
         public Animator animator;
         public TextMeshProUGUI textMeshProUGUI;
