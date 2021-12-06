@@ -17,7 +17,7 @@ public class Battle_ReadInputHandle : InputHandle
         if (Input.GetMouseButtonDown(0))
         {
             DialogueCanvasForBattleDescriptionController dialogueCanvas = dialogueCanvas_1.GetComponent<DialogueCanvasForBattleDescriptionController>();
-            //dialogueCanvas.DialogueIndex++;
+            dialogueCanvas.DialogueIndex++;
             dialogueCanvas.ActivateCanvasWithDialogueArray();
             if (dialogueCanvas.isLastDialogue())
             {
