@@ -288,6 +288,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 541771351}
+  - component: {fileID: 541771352}
   m_Layer: 0
   m_Name: GameDirector
   m_TagString: Untagged
@@ -309,6 +310,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &541771352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 541771350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6540a631b1ff884b8433059fa38bf5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &549410720 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7102798926392465796, guid: a51bbcc81071025408a176d7b85dd200, type: 3}
@@ -841,6 +854,10 @@ PrefabInstance:
     - target: {fileID: 224445442998268698, guid: b5a76b50480f2b0458d76da0a5ba3060, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -9.816711
+      objectReference: {fileID: 0}
+    - target: {fileID: 1814615696778865210, guid: b5a76b50480f2b0458d76da0a5ba3060, type: 3}
+      propertyPath: m_Text
+      value: "\u3053\u3046\u3052\u304D"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5a76b50480f2b0458d76da0a5ba3060, type: 3}
