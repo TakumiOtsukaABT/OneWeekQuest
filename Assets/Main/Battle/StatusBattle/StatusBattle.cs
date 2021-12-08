@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Battle_CommandInputHandle : InputHandle
+public class StatusBattle : PlayerStatus
 {
+    public int order;
 }

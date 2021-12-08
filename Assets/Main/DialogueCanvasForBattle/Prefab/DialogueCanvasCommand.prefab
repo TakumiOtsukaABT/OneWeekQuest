@@ -72,7 +72,7 @@ Animator:
   m_GameObject: {fileID: 1009638384006160}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: aa88f96b4a7ffe74495ded12bf04c81d, type: 2}
+  m_Controller: {fileID: 22100000, guid: 3001b5bd82d53c1429eab8d29759eb2e, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -121,6 +121,7 @@ MonoBehaviour:
   inputController_1: {fileID: 0}
   taskHandler_0: {fileID: 0}
   newDialogue: []
+  initialDialogue: []
 --- !u!114 &5460758248565894060
 MonoBehaviour:
   m_ObjectHideFlags: 0

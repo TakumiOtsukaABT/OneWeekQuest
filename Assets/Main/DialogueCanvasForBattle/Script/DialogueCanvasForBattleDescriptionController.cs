@@ -8,7 +8,7 @@ namespace Gamekit2D
     public class DialogueCanvasForBattleDescriptionController : DialogueCanvasController
     {
         public string[] newDialogue;
-
+        [SerializeField] private string[] initialDialogue;
 
         protected override void setInputHandle()
         {
@@ -26,6 +26,16 @@ namespace Gamekit2D
             base.Dialogue =  newDialogue;
         }
 
+        public void runInitialDialogue()
+        {
+            Debug.Log("ttttt");
+            base.Dialogue = initialDialogue;
+            ActivateCanvasWithDialogueArray();
+        }
 
+        protected override void tickTask()
+        {
+            //empty
+        }
     }
 }

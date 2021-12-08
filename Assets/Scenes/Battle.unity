@@ -279,6 +279,37 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 59d21a9dfd6cc044293aacf266bec384, type: 3}
+--- !u!1 &407847654 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3731620949798635418, guid: 59d21a9dfd6cc044293aacf266bec384, type: 3}
+  m_PrefabInstance: {fileID: 289632588}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &407847655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 407847654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eab7f9a1fb037184c965124cacfe18be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerStatusForReference:
+    HP: 0
+    MP: 0
+    Attack: 0
+    Defence: 0
+    Speed: 0
+    HitRate: 0
+    Regen: 0
+  order: 2
+--- !u!1 &475400263 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1009638384006160, guid: b5a76b50480f2b0458d76da0a5ba3060, type: 3}
+  m_PrefabInstance: {fileID: 1588764802}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &541771350
 GameObject:
   m_ObjectHideFlags: 0
@@ -289,6 +320,7 @@ GameObject:
   m_Component:
   - component: {fileID: 541771351}
   - component: {fileID: 541771352}
+  - component: {fileID: 541771353}
   m_Layer: 0
   m_Name: GameDirector
   m_TagString: Untagged
@@ -322,6 +354,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6540a631b1ff884b8433059fa38bf5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  battleState: 1
+  inputController_2: {fileID: 0}
+  dialogueCanvasDescription_0: {fileID: 0}
+--- !u!114 &541771353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 541771350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: affb5bae910c23d48b94d65af2169701, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameObjects:
+  - {fileID: 81991888}
+  - {fileID: 475400263}
+  - {fileID: 549410720}
 --- !u!1 &549410720 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7102798926392465796, guid: a51bbcc81071025408a176d7b85dd200, type: 3}
@@ -499,6 +550,32 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a63ffd61a19edeb498f59cf64becfe2e, type: 3}
+--- !u!1 &635878650 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3731620949798635418, guid: a014aa0cbedf2a04b84d70f9287cc21c, type: 3}
+  m_PrefabInstance: {fileID: 826951343}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &635878651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 635878650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eab7f9a1fb037184c965124cacfe18be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerStatusForReference:
+    HP: 0
+    MP: 0
+    Attack: 0
+    Defence: 0
+    Speed: 0
+    HitRate: 0
+    Regen: 0
+  order: 1
 --- !u!1 &704768673
 GameObject:
   m_ObjectHideFlags: 0
@@ -744,6 +821,32 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 7102798926392465798, guid: a51bbcc81071025408a176d7b85dd200, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: a51bbcc81071025408a176d7b85dd200, type: 3}
+--- !u!1 &1572335852 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3731620949798635418, guid: d6362490c18d08e499e76f3ffea8429c, type: 3}
+  m_PrefabInstance: {fileID: 555433368}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1572335853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1572335852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eab7f9a1fb037184c965124cacfe18be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerStatusForReference:
+    HP: 0
+    MP: 0
+    Attack: 0
+    Defence: 0
+    Speed: 0
+    HitRate: 0
+    Regen: 0
+  order: 4
 --- !u!1001 &1588764802
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -859,6 +962,10 @@ PrefabInstance:
       propertyPath: m_Text
       value: "\u3053\u3046\u3052\u304D"
       objectReference: {fileID: 0}
+    - target: {fileID: 3671117275791298446, guid: b5a76b50480f2b0458d76da0a5ba3060, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 40
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5a76b50480f2b0458d76da0a5ba3060, type: 3}
 --- !u!1 &1725442357
@@ -927,6 +1034,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1973571004 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3731620949798635418, guid: a63ffd61a19edeb498f59cf64becfe2e, type: 3}
+  m_PrefabInstance: {fileID: 603336089}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1973571005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1973571004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eab7f9a1fb037184c965124cacfe18be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerStatusForReference:
+    HP: 0
+    MP: 0
+    Attack: 0
+    Defence: 0
+    Speed: 0
+    HitRate: 0
+    Regen: 0
+  order: 3
 --- !u!1001 &1982558259
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -949,6 +1082,34 @@ PrefabInstance:
     - target: {fileID: 114259677963988754, guid: 2cd4a4c1f4aaf6f45b09f7b9b281546f, type: 3}
       propertyPath: m_Color.a
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114488631859498054, guid: 2cd4a4c1f4aaf6f45b09f7b9b281546f, type: 3}
+      propertyPath: m_fontSize
+      value: 47.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114488631859498054, guid: 2cd4a4c1f4aaf6f45b09f7b9b281546f, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 1e7b2aa6b67e9e941bf08a5ed4e78a47, type: 2}
+    - target: {fileID: 114488631859498054, guid: 2cd4a4c1f4aaf6f45b09f7b9b281546f, type: 3}
+      propertyPath: m_fontColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114488631859498054, guid: 2cd4a4c1f4aaf6f45b09f7b9b281546f, type: 3}
+      propertyPath: m_fontColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114488631859498054, guid: 2cd4a4c1f4aaf6f45b09f7b9b281546f, type: 3}
+      propertyPath: m_fontColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114488631859498054, guid: 2cd4a4c1f4aaf6f45b09f7b9b281546f, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -732440932588925597, guid: 1e7b2aa6b67e9e941bf08a5ed4e78a47, type: 2}
+    - target: {fileID: 114488631859498054, guid: 2cd4a4c1f4aaf6f45b09f7b9b281546f, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 224070939812307920, guid: 2cd4a4c1f4aaf6f45b09f7b9b281546f, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -1129,6 +1290,18 @@ PrefabInstance:
     - target: {fileID: 8627776048985113369, guid: 2cd4a4c1f4aaf6f45b09f7b9b281546f, type: 3}
       propertyPath: newDialogue.Array.data[2]
       value: bbbbbbbbbbbbbbbbbbbbb
+      objectReference: {fileID: 0}
+    - target: {fileID: 8627776048985113369, guid: 2cd4a4c1f4aaf6f45b09f7b9b281546f, type: 3}
+      propertyPath: initialDialogue.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8627776048985113369, guid: 2cd4a4c1f4aaf6f45b09f7b9b281546f, type: 3}
+      propertyPath: initialDialogue.Array.data[0]
+      value: "\u307E\u304A\u3046\u304C\u73FE\u308C\u305F!!!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8627776048985113369, guid: 2cd4a4c1f4aaf6f45b09f7b9b281546f, type: 3}
+      propertyPath: initialDialogue.Array.data[1]
+      value: "\u307E\u304A\u3046\u304C\u73FE\u308C\u305F!!!"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2cd4a4c1f4aaf6f45b09f7b9b281546f, type: 3}

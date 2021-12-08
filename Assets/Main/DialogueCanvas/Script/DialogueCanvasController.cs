@@ -81,6 +81,11 @@ namespace Gamekit2D
             m_DeactivationCoroutine = StartCoroutine (SetAnimatorParameterWithDelay (delay));
             setInputHandleBack();
             dialogueIndex = 0;
+            tickTask();
+        }
+
+        virtual protected void tickTask()
+        {
             taskHandler_0.tickTask("Talk");
         }
     }

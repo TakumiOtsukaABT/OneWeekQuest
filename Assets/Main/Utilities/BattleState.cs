@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Battle_CommandInputHandle : InputHandle
-{
+public enum BattleState{
+    WaitingInput,
+    Read,
+    SelectTarget,
+    Status
 }
