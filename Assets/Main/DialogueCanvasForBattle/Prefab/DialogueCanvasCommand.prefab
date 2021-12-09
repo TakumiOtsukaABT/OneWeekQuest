@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 223066732744343464}
   - component: {fileID: 95597451942662976}
   - component: {fileID: 792885114715312087}
-  - component: {fileID: 8627776048985113369}
   - component: {fileID: 5460758248565894060}
+  - component: {fileID: 8804711174683428213}
   m_Layer: 5
   m_Name: DialogueCanvasCommand
   m_TagString: Untagged
@@ -104,24 +104,6 @@ MonoBehaviour:
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
   m_PresetInfoIsWorld: 0
---- !u!114 &8627776048985113369
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1009638384006160}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 43d0aa3db3121bc408b938a2255ee493, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animator: {fileID: 0}
-  textMeshProUGUI: {fileID: 0}
-  inputController_1: {fileID: 0}
-  taskHandler_0: {fileID: 0}
-  newDialogue: []
-  initialDialogue: []
 --- !u!114 &5460758248565894060
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -137,6 +119,22 @@ MonoBehaviour:
   gameObjects:
   - {fileID: 0}
   - {fileID: 0}
+--- !u!114 &8804711174683428213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1009638384006160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a0465be648e48c4ead57363f37fe442, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 0}
+  textMeshProUGUI: {fileID: 0}
+  inputController_1: {fileID: 0}
+  taskHandler_0: {fileID: 0}
 --- !u!1 &2154364506131677759
 GameObject:
   m_ObjectHideFlags: 0
