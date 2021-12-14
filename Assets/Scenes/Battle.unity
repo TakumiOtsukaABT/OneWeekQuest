@@ -1062,6 +1062,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 40
       objectReference: {fileID: 0}
+    - target: {fileID: 5460758248565894060, guid: b5a76b50480f2b0458d76da0a5ba3060, type: 3}
+      propertyPath: gameObjects.Array.data[1]
+      value: 
+      objectReference: {fileID: 549410720}
     - target: {fileID: 8804711174683428213, guid: b5a76b50480f2b0458d76da0a5ba3060, type: 3}
       propertyPath: animator
       value: 
@@ -1352,9 +1356,17 @@ PrefabInstance:
       value: -285
       objectReference: {fileID: 0}
     - target: {fileID: 5460758248565894060, guid: 2cd4a4c1f4aaf6f45b09f7b9b281546f, type: 3}
+      propertyPath: gameObjects.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5460758248565894060, guid: 2cd4a4c1f4aaf6f45b09f7b9b281546f, type: 3}
       propertyPath: gameObjects.Array.data[1]
       value: 
       objectReference: {fileID: 549410720}
+    - target: {fileID: 5460758248565894060, guid: 2cd4a4c1f4aaf6f45b09f7b9b281546f, type: 3}
+      propertyPath: gameObjects.Array.data[2]
+      value: 
+      objectReference: {fileID: 541771350}
     - target: {fileID: 8627776048985113369, guid: 2cd4a4c1f4aaf6f45b09f7b9b281546f, type: 3}
       propertyPath: aa
       value: 
@@ -1397,7 +1409,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8627776048985113369, guid: 2cd4a4c1f4aaf6f45b09f7b9b281546f, type: 3}
       propertyPath: initialDialogue.Array.size
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8627776048985113369, guid: 2cd4a4c1f4aaf6f45b09f7b9b281546f, type: 3}
       propertyPath: initialDialogue.Array.data[0]
@@ -1405,7 +1417,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8627776048985113369, guid: 2cd4a4c1f4aaf6f45b09f7b9b281546f, type: 3}
       propertyPath: initialDialogue.Array.data[1]
-      value: "\u307E\u304A\u3046\u304C\u73FE\u308C\u305F!!!"
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8627776048985113369, guid: 2cd4a4c1f4aaf6f45b09f7b9b281546f, type: 3}
+      propertyPath: initialDialogue.dialogue.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8627776048985113369, guid: 2cd4a4c1f4aaf6f45b09f7b9b281546f, type: 3}
+      propertyPath: initialDialogue.dialogue.Array.data[0]
+      value: "\u307E\u304A\u3046\u304C\u73FE\u308C\u305F!"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2cd4a4c1f4aaf6f45b09f7b9b281546f, type: 3}

@@ -14,6 +14,7 @@ public class GameDirector : MonoBehaviour
     {
         battleGameCanvasController_0 = GetComponent<Outlet>().gameObjects[0].GetComponent<BattleGameCanvasController>();
         inputController_2 = GetComponent<Outlet>().gameObjects[2].GetComponent<InputControllerForBattle>();
+        
     }
 
     // Update is called once per frame
@@ -30,7 +31,6 @@ public class GameDirector : MonoBehaviour
             setState(battleState);
         }
     }
-
     public void setState(BattleState newState)
     {
         battleState = newState;
@@ -39,7 +39,6 @@ public class GameDirector : MonoBehaviour
             case BattleState.WaitingInput:
                 Debug.Log("aaaa");
                 battleGameCanvasController_0.atWaitingInput();
-
                 inputController_2.setInputHandle<Battle_CommandInputHandle>();
                 break;
             case BattleState.Read:

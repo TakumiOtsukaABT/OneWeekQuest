@@ -8,7 +8,9 @@ namespace Gamekit2D
     public class DialogueCanvasForBattleDescriptionController : DialogueCanvasController
     {
         public string[] newDialogue;
-        [SerializeField] private string[] initialDialogue;
+        private BattleState nextState;
+        [SerializeField] private Event initialDialogue;
+        [SerializeField,ReadOnly] private GameDirector director_2;
 
         protected override void setInputHandle()
         {
@@ -23,14 +25,22 @@ namespace Gamekit2D
         private void Start()
         {
             inputController_1 = GetComponent<Outlet>().gameObjects[1].GetComponent<InputController>();
-            base.Dialogue =  newDialogue;
+            director_2 = GetComponent<Outlet>().gameObjects[2].GetComponent<GameDirector>();
+            runInitialDialogue();
+        }
+
+        public override void DeactivateCanvasWithDelay(float delay)
+        {
+            base.DeactivateCanvasWithDelay(delay);
+            director_2.setState(nextState);
         }
 
         public void runInitialDialogue()
         {
-            Debug.Log("ttttt");
-            base.Dialogue = initialDialogue;
+            base.Dialogue = initialDialogue.dialogue;
+            nextState = initialDialogue.nextState;
             ActivateCanvasWithDialogueArray();
+            base.DialogueIndex = 0;
         }
 
         protected override void tickTask()

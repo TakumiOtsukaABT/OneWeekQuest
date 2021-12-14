@@ -76,7 +76,7 @@ namespace Gamekit2D
             return dialogue[dialogueIndex] == "";
         }
 
-        public void DeactivateCanvasWithDelay (float delay)
+        public virtual void DeactivateCanvasWithDelay (float delay)
         {
             m_DeactivationCoroutine = StartCoroutine (SetAnimatorParameterWithDelay (delay));
             setInputHandleBack();
