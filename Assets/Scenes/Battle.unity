@@ -441,6 +441,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueCanvas_1: {fileID: 0}
+  gameDirector_2: {fileID: 0}
 --- !u!114 &549410728
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -855,9 +856,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1911102102264271657, guid: a51bbcc81071025408a176d7b85dd200, type: 3}
+      propertyPath: gameObjects.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1911102102264271657, guid: a51bbcc81071025408a176d7b85dd200, type: 3}
       propertyPath: gameObjects.Array.data[1]
       value: 
       objectReference: {fileID: 81991888}
+    - target: {fileID: 1911102102264271657, guid: a51bbcc81071025408a176d7b85dd200, type: 3}
+      propertyPath: gameObjects.Array.data[2]
+      value: 
+      objectReference: {fileID: 541771350}
     - target: {fileID: 7102798926392465796, guid: a51bbcc81071025408a176d7b85dd200, type: 3}
       propertyPath: m_Name
       value: InputController
@@ -1063,9 +1072,21 @@ PrefabInstance:
       value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 5460758248565894060, guid: b5a76b50480f2b0458d76da0a5ba3060, type: 3}
+      propertyPath: gameObjects.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5460758248565894060, guid: b5a76b50480f2b0458d76da0a5ba3060, type: 3}
+      propertyPath: gameObjects.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5460758248565894060, guid: b5a76b50480f2b0458d76da0a5ba3060, type: 3}
       propertyPath: gameObjects.Array.data[1]
       value: 
       objectReference: {fileID: 549410720}
+    - target: {fileID: 5460758248565894060, guid: b5a76b50480f2b0458d76da0a5ba3060, type: 3}
+      propertyPath: gameObjects.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 8804711174683428213, guid: b5a76b50480f2b0458d76da0a5ba3060, type: 3}
       propertyPath: animator
       value: 

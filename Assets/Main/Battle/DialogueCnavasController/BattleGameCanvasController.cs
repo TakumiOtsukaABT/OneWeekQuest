@@ -33,5 +33,9 @@ public class BattleGameCanvasController : MonoBehaviour
         canvasCommand.DeactivateCanvasWithDelay(0);
     }
 
+    public void deactivateAll() {
+        canvasDescription.DeactivateCanvasWithDelay(0);
+        canvasCommand.DeactivateCanvasWithDelay(0);
+    }
   
 }

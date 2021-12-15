@@ -33,20 +33,6 @@ namespace Gamekit2D
             animator.SetBool(m_HashActivePara, false);
         }
 
-        //public void ActivateCanvasWithText (string text)
-        //{
-        //    if (m_DeactivationCoroutine != null)
-        //    {
-        //        StopCoroutine (m_DeactivationCoroutine);
-        //        m_DeactivationCoroutine = null;
-        //    }
-
-        //    gameObject.SetActive (true);
-        //    animator.SetBool (m_HashActivePara, true);
-        //    textMeshProUGUI.text = text;
-        //    inputController.setInputHandle<TownConversationInputHandle>();
-
-        //}
 
         public void ActivateCanvasWithDialogueArray()
         {

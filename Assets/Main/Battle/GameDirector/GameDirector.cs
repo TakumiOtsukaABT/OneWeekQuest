@@ -23,15 +23,29 @@ public class GameDirector : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Alpha0))
         {
             battleState++;
-            setState(battleState);
+            resetState(battleState);
         }
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             battleState--;
-            setState(battleState);
+            resetState(battleState);
         }
     }
-    public void setState(BattleState newState)
+
+    public void resetState(BattleState newState)
+    {
+        StartCoroutine(deactivate_then_activate_state(newState));
+    }
+
+    IEnumerator deactivate_then_activate_state(BattleState newState)
+    {
+        battleGameCanvasController_0.deactivateAll();
+        yield return new WaitForSeconds(0.5f);
+        setState(newState);
+    }
+
+
+    private void setState(BattleState newState)
     {
         battleState = newState;
         switch (newState)

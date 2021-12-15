@@ -8,7 +8,16 @@ namespace Gamekit2D
     {
         protected override void setInputHandleBack()
         {
-            base.inputController_1.setInputHandle<Battle_ReadInputHandle>();
+
+        }
+        private void Start()
+        {
+            
+        }
+
+        protected override void tickTask()
+        {
+
         }
     }
 }

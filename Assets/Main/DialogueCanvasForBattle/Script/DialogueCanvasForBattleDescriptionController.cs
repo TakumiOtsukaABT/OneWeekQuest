@@ -8,7 +8,7 @@ namespace Gamekit2D
     public class DialogueCanvasForBattleDescriptionController : DialogueCanvasController
     {
         public string[] newDialogue;
-        private BattleState nextState;
+        public BattleState nextState;
         [SerializeField] private Event initialDialogue;
         [SerializeField,ReadOnly] private GameDirector director_2;
 
@@ -27,12 +27,6 @@ namespace Gamekit2D
             inputController_1 = GetComponent<Outlet>().gameObjects[1].GetComponent<InputController>();
             director_2 = GetComponent<Outlet>().gameObjects[2].GetComponent<GameDirector>();
             runInitialDialogue();
-        }
-
-        public override void DeactivateCanvasWithDelay(float delay)
-        {
-            base.DeactivateCanvasWithDelay(delay);
-            director_2.setState(nextState);
         }
 
         public void runInitialDialogue()
