@@ -10,6 +10,10 @@ namespace Gamekit2D
         {
 
         }
+        protected override void setInputHandle()
+        {
+
+        }
         private void Start()
         {
             

@@ -14,12 +14,12 @@ namespace Gamekit2D
 
         protected override void setInputHandle()
         {
-            base.inputController_1.setInputHandle<Battle_ReadInputHandle>();
+            //base.inputController_1.setInputHandle<Battle_ReadInputHandle>();
         }
 
         protected override void setInputHandleBack()
         {
-            base.inputController_1.setInputHandle<Battle_ReadInputHandle>();
+            //base.inputController_1.setInputHandle<Battle_ReadInputHandle>();
         }
 
         private void Start()

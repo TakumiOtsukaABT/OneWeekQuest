@@ -54,6 +54,7 @@ public class GameDirector : MonoBehaviour
                 Debug.Log("aaaa");
                 battleGameCanvasController_0.atWaitingInput();
                 inputController_2.setInputHandle<Battle_CommandInputHandle>();
+
                 break;
             case BattleState.Read:
                 Debug.Log("bbbb");

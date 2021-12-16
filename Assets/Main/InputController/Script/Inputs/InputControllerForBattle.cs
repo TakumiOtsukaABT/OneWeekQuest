@@ -8,4 +8,6 @@ public class InputControllerForBattle : InputController
     {
         base.inputHandle = gameObject.GetComponent<Battle_ReadInputHandle>();
     }
+
+ 
 }
