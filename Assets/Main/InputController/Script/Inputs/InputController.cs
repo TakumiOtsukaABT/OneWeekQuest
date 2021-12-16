@@ -17,7 +17,6 @@ public class InputController : MonoBehaviour
         if (active)
         {
             inputHandle.handle();
-            Debug.Log(inputHandle.GetType());
         }
     }
 

@@ -1418,11 +1418,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8627776048985113369, guid: 2cd4a4c1f4aaf6f45b09f7b9b281546f, type: 3}
       propertyPath: newDialogue.Array.data[0]
-      value: gggggggggggggg
+      value: aaaaaaa
       objectReference: {fileID: 0}
     - target: {fileID: 8627776048985113369, guid: 2cd4a4c1f4aaf6f45b09f7b9b281546f, type: 3}
       propertyPath: newDialogue.Array.data[1]
-      value: 
+      value: aaaaaaaaaa
       objectReference: {fileID: 0}
     - target: {fileID: 8627776048985113369, guid: 2cd4a4c1f4aaf6f45b09f7b9b281546f, type: 3}
       propertyPath: newDialogue.Array.data[2]

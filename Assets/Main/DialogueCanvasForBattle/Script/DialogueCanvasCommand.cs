@@ -23,5 +23,10 @@ namespace Gamekit2D
         {
 
         }
+
+        protected override void setTextToTextMesh()
+        {
+            return;
+        }
     }
 }

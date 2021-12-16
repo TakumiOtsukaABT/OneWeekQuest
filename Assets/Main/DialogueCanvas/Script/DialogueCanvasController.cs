@@ -33,7 +33,6 @@ namespace Gamekit2D
             animator.SetBool(m_HashActivePara, false);
         }
 
-
         public void ActivateCanvasWithDialogueArray()
         {
             if (m_DeactivationCoroutine != null)
@@ -43,8 +42,13 @@ namespace Gamekit2D
             }
             gameObject.SetActive(true);
             animator.SetBool(m_HashActivePara, true);
-            textMeshProUGUI.text = dialogue[dialogueIndex];
+            setTextToTextMesh();
             setInputHandle();
+        }
+
+        protected virtual void setTextToTextMesh()
+        {
+            textMeshProUGUI.text = dialogue[dialogueIndex];
         }
 
         protected virtual void setInputHandle()
