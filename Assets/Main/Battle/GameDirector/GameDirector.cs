@@ -51,23 +51,23 @@ public class GameDirector : MonoBehaviour
         switch (newState)
         {
             case BattleState.WaitingInput:
-                Debug.Log("aaaa");
+                Debug.Log("waiting input");
                 battleGameCanvasController_0.atWaitingInput();
                 inputController_2.setInputHandle<Battle_CommandInputHandle>();
 
                 break;
             case BattleState.Read:
-                Debug.Log("bbbb");
+                Debug.Log("read");
                 battleGameCanvasController_0.atRead();
                 inputController_2.setInputHandle<Battle_ReadInputHandle>();
                 break;
             case BattleState.SelectTarget:
-                Debug.Log("cccc");
+                Debug.Log("select target");
                 battleGameCanvasController_0.atSelectTarget();
                 inputController_2.setInputHandle<Battle_CommandInputHandle>();
                 break;
             case BattleState.Status:
-                Debug.Log("dddd");
+                Debug.Log("status");
                 battleGameCanvasController_0.atStatus();
                 inputController_2.setInputHandle<Battle_CommandInputHandle>();
                 break;
