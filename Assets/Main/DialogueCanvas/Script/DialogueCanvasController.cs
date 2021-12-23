@@ -9,7 +9,7 @@ namespace Gamekit2D
     {
         public Animator animator;
         public TextMeshProUGUI textMeshProUGUI;
-        [SerializeField, ReadOnly] private InputController inputController_1;
+        [SerializeField, ReadOnly] protected InputController inputController_1;
         [SerializeField,ReadOnly] private TaskHandler taskHandler_0;
         private string[] dialogue;
         private int dialogueIndex = 0;
@@ -33,21 +33,6 @@ namespace Gamekit2D
             animator.SetBool(m_HashActivePara, false);
         }
 
-        //public void ActivateCanvasWithText (string text)
-        //{
-        //    if (m_DeactivationCoroutine != null)
-        //    {
-        //        StopCoroutine (m_DeactivationCoroutine);
-        //        m_DeactivationCoroutine = null;
-        //    }
-
-        //    gameObject.SetActive (true);
-        //    animator.SetBool (m_HashActivePara, true);
-        //    textMeshProUGUI.text = text;
-        //    inputController.setInputHandle<TownConversationInputHandle>();
-
-        //}
-
         public void ActivateCanvasWithDialogueArray()
         {
             if (m_DeactivationCoroutine != null)
@@ -57,8 +42,23 @@ namespace Gamekit2D
             }
             gameObject.SetActive(true);
             animator.SetBool(m_HashActivePara, true);
+            setTextToTextMesh();
+            setInputHandle();
+        }
+
+        protected virtual void setTextToTextMesh()
+        {
             textMeshProUGUI.text = dialogue[dialogueIndex];
+        }
+
+        protected virtual void setInputHandle()
+        {
             inputController_1.setInputHandle<TownConversationInputHandle>();
+        }
+
+        protected virtual void setInputHandleBack()
+        {
+            inputController_1.setInputHandle<CharacterMovementInputHandle>();
         }
 
         public bool isLastDialogue()
@@ -66,24 +66,16 @@ namespace Gamekit2D
             return dialogue[dialogueIndex] == "";
         }
 
-        //public void ActivateCanvasWithTranslatedText (string phraseKey)
-        //{
-        //    if (m_DeactivationCoroutine != null)
-        //    {
-        //        StopCoroutine(m_DeactivationCoroutine);
-        //        m_DeactivationCoroutine = null;
-        //    }
-
-        //    gameObject.SetActive(true);
-        //    animator.SetBool(m_HashActivePara, true);
-        //    //textMeshProUGUI.text = Translator.Instance[phraseKey];
-        //}
-
-        public void DeactivateCanvasWithDelay (float delay)
+        public virtual void DeactivateCanvasWithDelay (float delay)
         {
             m_DeactivationCoroutine = StartCoroutine (SetAnimatorParameterWithDelay (delay));
-            inputController_1.setInputHandle<CharacterMovementInputHandle>();
+            setInputHandleBack();
             dialogueIndex = 0;
+            tickTask();
+        }
+
+        virtual protected void tickTask()
+        {
             taskHandler_0.tickTask("Talk");
         }
     }
