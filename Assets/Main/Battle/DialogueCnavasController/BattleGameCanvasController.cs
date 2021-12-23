@@ -10,6 +10,7 @@ public class BattleGameCanvasController : MonoBehaviour
 
     public void atWaitingInput()
     {
+        canvasDescription.waitingInputTurn("‚ ‚ ‚ ‚ ");
         canvasDescription.ActivateCanvasWithDialogueArray();
         canvasCommand.ActivateCanvasWithDialogueArray();
     }

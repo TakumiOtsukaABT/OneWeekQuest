@@ -10,6 +10,7 @@ namespace Gamekit2D
         public string[] newDialogue;
         public BattleState nextState;
         [SerializeField] private Event initialDialogue;
+        [SerializeField] private Event whatToDoDialogue;
         [SerializeField,ReadOnly] private GameDirector director_2;
 
         protected override void setInputHandle()
@@ -35,6 +36,14 @@ namespace Gamekit2D
             nextState = initialDialogue.nextState;
             ActivateCanvasWithDialogueArray();
             base.DialogueIndex = 0;
+        }
+
+        public void waitingInputTurn(string character)
+        {
+            base.DialogueIndex = 0;
+            string[] whatTodo = new string[2];
+            whatTodo[0] = character + whatToDoDialogue.dialogue[0];
+            base.Dialogue = whatTodo;
         }
 
         protected override void tickTask()
