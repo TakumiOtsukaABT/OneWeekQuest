@@ -321,6 +321,7 @@ MonoBehaviour:
     HitRate: 90
     Regen: 20
   order: 2
+  characterType: 1
 --- !u!1 &475400263 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1009638384006160, guid: b5a76b50480f2b0458d76da0a5ba3060, type: 3}
@@ -394,6 +395,10 @@ MonoBehaviour:
   battleState: 1
   inputController_2: {fileID: 0}
   battleGameCanvasController_0: {fileID: 0}
+  human_3: {fileID: 0}
+  dog_4: {fileID: 0}
+  cat_5: {fileID: 0}
+  alpaca_6: {fileID: 0}
 --- !u!114 &541771353
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -410,6 +415,10 @@ MonoBehaviour:
   - {fileID: 747280025}
   - {fileID: 475400263}
   - {fileID: 549410720}
+  - {fileID: 635878650}
+  - {fileID: 407847654}
+  - {fileID: 1973571004}
+  - {fileID: 1572335852}
 --- !u!1 &549410720 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7102798926392465796, guid: a51bbcc81071025408a176d7b85dd200, type: 3}
@@ -626,6 +635,7 @@ MonoBehaviour:
     HitRate: 90
     Regen: 20
   order: 1
+  characterType: 0
 --- !u!1 &704768673
 GameObject:
   m_ObjectHideFlags: 0
@@ -952,6 +962,7 @@ MonoBehaviour:
     HitRate: 90
     Regen: 20
   order: 4
+  characterType: 3
 --- !u!1001 &1588764802
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1189,6 +1200,7 @@ MonoBehaviour:
     HitRate: 90
     Regen: 20
   order: 3
+  characterType: 2
 --- !u!1001 &1982558259
 PrefabInstance:
   m_ObjectHideFlags: 0

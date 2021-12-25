@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -9,6 +10,7 @@ namespace Gamekit2D
     {
         public string[] newDialogue;
         public BattleState nextState;
+        public string playerName;
         [SerializeField] private Event initialDialogue;
         [SerializeField] private Event whatToDoDialogue;
         [SerializeField,ReadOnly] private GameDirector director_2;
@@ -38,12 +40,38 @@ namespace Gamekit2D
             base.DialogueIndex = 0;
         }
 
-        public void waitingInputTurn(string character)
+        public void waitingInputTurn(characterType character)
         {
             base.DialogueIndex = 0;
             string[] whatTodo = new string[2];
-            whatTodo[0] = character + whatToDoDialogue.dialogue[0];
+            string characterName = getCharacterName(character);
+            whatTodo[0] = characterName + whatToDoDialogue.dialogue[0];
             base.Dialogue = whatTodo;
+        }
+
+        private string getCharacterName(characterType character)
+        {
+            switch (character)
+            {
+                case characterType.Human:
+                    return playerName;
+                    break;
+                case characterType.Dog:
+                    return "犬";
+                    break;
+                case characterType.Cat:
+                    return "猫";
+                    break;
+                case characterType.Alpaca:
+                    return "アルパカ";
+                    break;
+                case characterType.Enemy:
+                    return "";
+                    break;
+                default:
+                    return "";
+                    break;
+            }
         }
 
         protected override void tickTask()

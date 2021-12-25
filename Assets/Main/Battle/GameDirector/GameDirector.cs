@@ -5,16 +5,26 @@ using Gamekit2D;
 
 public class GameDirector : MonoBehaviour
 {
+    private Queue<characterType> turn_queue = new Queue<characterType>();
     [SerializeField, ReadOnly] private BattleState battleState = BattleState.Read;
     [SerializeField, ReadOnly] private InputControllerForBattle inputController_2;
     [SerializeField, ReadOnly] private BattleGameCanvasController battleGameCanvasController_0;
+    [SerializeField, ReadOnly] private GameObject human_3;
+    [SerializeField, ReadOnly] private GameObject dog_4;
+    [SerializeField, ReadOnly] private GameObject cat_5;
+    [SerializeField, ReadOnly] private GameObject alpaca_6;
+    private int[] sums = { 0, 0, 0, 0 };
 
     // Start is called before the first frame update
     void Start()
     {
         battleGameCanvasController_0 = GetComponent<Outlet>().gameObjects[0].GetComponent<BattleGameCanvasController>();
         inputController_2 = GetComponent<Outlet>().gameObjects[2].GetComponent<InputControllerForBattle>();
-        
+        human_3 = GetComponent<Outlet>().gameObjects[3];
+        dog_4 = GetComponent<Outlet>().gameObjects[4];
+        cat_5 = GetComponent<Outlet>().gameObjects[5];
+        alpaca_6 = GetComponent<Outlet>().gameObjects[6];
+        initQueue();
     }
 
     // Update is called once per frame
@@ -42,6 +52,10 @@ public class GameDirector : MonoBehaviour
         battleGameCanvasController_0.deactivateAll();
         yield return new WaitForSeconds(0.5f);
         setState(newState);
+        if (turn_queue.Count < 10)
+        {
+            turn_queue.Enqueue(GetNextEnque());
+        }
     }
 
 
@@ -52,9 +66,8 @@ public class GameDirector : MonoBehaviour
         {
             case BattleState.WaitingInput:
                 Debug.Log("waiting input");
-                battleGameCanvasController_0.atWaitingInput();
+                battleGameCanvasController_0.atWaitingInput(turn_queue.Dequeue());
                 inputController_2.setInputHandle<Battle_CommandInputHandle>();
-
                 break;
             case BattleState.Read:
                 Debug.Log("read");
@@ -71,6 +84,50 @@ public class GameDirector : MonoBehaviour
                 battleGameCanvasController_0.atStatus();
                 inputController_2.setInputHandle<Battle_CommandInputHandle>();
                 break;
+        }
+    }
+
+    private void initQueue()
+    {
+        StatusBattle[] speeds = new StatusBattle[4];
+        speeds[0] = human_3.GetComponent<StatusBattle>();
+        speeds[1] = dog_4.GetComponent<StatusBattle>();
+        speeds[2] = cat_5.GetComponent<StatusBattle>();
+        speeds[3] = alpaca_6.GetComponent<StatusBattle>();
+
+        while (turn_queue.Count < 10)
+        {
+            for (int i = 0; i < 4; i++)
+            {
+                sums[i] += speeds[i].playerStatusForReference.Speed_access;
+                if (sums[i] > 1000)
+                {
+                    turn_queue.Enqueue(speeds[i].characterType);
+                    sums[i] = sums[i] % 1000;
+                }
+            }
+        }
+    }
+
+    private characterType GetNextEnque()
+    {
+        StatusBattle[] speeds = new StatusBattle[4];
+        speeds[0] = human_3.GetComponent<StatusBattle>();
+        speeds[1] = dog_4.GetComponent<StatusBattle>();
+        speeds[2] = cat_5.GetComponent<StatusBattle>();
+        speeds[3] = alpaca_6.GetComponent<StatusBattle>();
+
+        while (true)
+        {
+            for (int i = 0; i < 4; i++)
+            {
+                sums[i] += speeds[i].playerStatusForReference.Speed_access;
+                if (sums[i] > 1000)
+                {
+                    sums[i] = sums[i] % 1000;
+                    return speeds[i].characterType;
+                }
+            }
         }
     }
 }

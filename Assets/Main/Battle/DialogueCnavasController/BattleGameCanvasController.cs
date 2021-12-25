@@ -8,9 +8,9 @@ public class BattleGameCanvasController : MonoBehaviour
     [SerializeField] private DialogueCanvasForBattleDescriptionController canvasDescription;
     [SerializeField] private DialogueCanvasCommand canvasCommand;
 
-    public void atWaitingInput()
+    public void atWaitingInput(characterType characterType)
     {
-        canvasDescription.waitingInputTurn("‚ ‚ ‚ ‚ ");
+        canvasDescription.waitingInputTurn(characterType);
         canvasDescription.ActivateCanvasWithDialogueArray();
         canvasCommand.ActivateCanvasWithDialogueArray();
     }
