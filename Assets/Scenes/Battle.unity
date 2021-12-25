@@ -313,13 +313,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerStatusForReference:
-    HP: 0
-    MP: 0
-    Attack: 0
-    Defence: 0
-    Speed: 0
-    HitRate: 0
-    Regen: 0
+    HP: 900
+    MP: 200
+    Attack: 80
+    Defence: 30
+    Speed: 90
+    HitRate: 90
+    Regen: 20
   order: 2
 --- !u!1 &475400263 stripped
 GameObject:
@@ -618,13 +618,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerStatusForReference:
-    HP: 0
-    MP: 0
-    Attack: 0
-    Defence: 0
-    Speed: 0
-    HitRate: 0
-    Regen: 0
+    HP: 800
+    MP: 200
+    Attack: 50
+    Defence: 60
+    Speed: 70
+    HitRate: 90
+    Regen: 20
   order: 1
 --- !u!1 &704768673
 GameObject:
@@ -944,13 +944,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerStatusForReference:
-    HP: 0
-    MP: 0
-    Attack: 0
-    Defence: 0
-    Speed: 0
-    HitRate: 0
-    Regen: 0
+    HP: 1000
+    MP: 200
+    Attack: 90
+    Defence: 90
+    Speed: 50
+    HitRate: 90
+    Regen: 20
   order: 4
 --- !u!1001 &1588764802
 PrefabInstance:
@@ -1181,13 +1181,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerStatusForReference:
-    HP: 0
-    MP: 0
-    Attack: 0
-    Defence: 0
-    Speed: 0
-    HitRate: 0
-    Regen: 0
+    HP: 800
+    MP: 200
+    Attack: 50
+    Defence: 60
+    Speed: 70
+    HitRate: 90
+    Regen: 20
   order: 3
 --- !u!1001 &1982558259
 PrefabInstance:
@@ -1433,6 +1433,10 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8627776048985113369, guid: 2cd4a4c1f4aaf6f45b09f7b9b281546f, type: 3}
+      propertyPath: whatToDoDialogue.nextState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8627776048985113369, guid: 2cd4a4c1f4aaf6f45b09f7b9b281546f, type: 3}
       propertyPath: initialDialogue.Array.data[0]
       value: "\u307E\u304A\u3046\u304C\u73FE\u308C\u305F!!!"
       objectReference: {fileID: 0}
@@ -1445,8 +1449,16 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8627776048985113369, guid: 2cd4a4c1f4aaf6f45b09f7b9b281546f, type: 3}
+      propertyPath: whatToDoDialogue.dialogue.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8627776048985113369, guid: 2cd4a4c1f4aaf6f45b09f7b9b281546f, type: 3}
       propertyPath: initialDialogue.dialogue.Array.data[0]
       value: "\u307E\u304A\u3046\u304C\u73FE\u308C\u305F!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8627776048985113369, guid: 2cd4a4c1f4aaf6f45b09f7b9b281546f, type: 3}
+      propertyPath: whatToDoDialogue.dialogue.Array.data[0]
+      value: "\u306F\u3069\u3046\u3059\u308B\uFF1F"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2cd4a4c1f4aaf6f45b09f7b9b281546f, type: 3}
