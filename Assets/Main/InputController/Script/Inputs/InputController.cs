@@ -2,7 +2,7 @@
 
 public class InputController : MonoBehaviour
 {
-    protected InputHandle inputHandle;
+    [SerializeField,ReadOnly]protected InputHandle inputHandle;
     [ReadOnly] public bool active = true;
 
     // Start is called before the first frame update

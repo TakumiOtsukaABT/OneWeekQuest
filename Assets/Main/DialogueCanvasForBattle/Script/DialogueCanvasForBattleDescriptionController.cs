@@ -55,22 +55,16 @@ namespace Gamekit2D
             {
                 case characterType.Human:
                     return playerName;
-                    break;
                 case characterType.Dog:
                     return "犬";
-                    break;
                 case characterType.Cat:
                     return "猫";
-                    break;
                 case characterType.Alpaca:
                     return "アルパカ";
-                    break;
                 case characterType.Enemy:
                     return "";
-                    break;
                 default:
                     return "";
-                    break;
             }
         }
 
