@@ -14,6 +14,7 @@ public class GameDirector : MonoBehaviour
     [SerializeField, ReadOnly] private GameObject cat_5;
     [SerializeField, ReadOnly] private GameObject alpaca_6;
     [SerializeField, ReadOnly] private GameObject enemy_7;
+    [SerializeField, ReadOnly] private characterType currentCharacter;
 
     private int[] sums = { 0, 0, 0, 0, 0 };
 
@@ -69,7 +70,8 @@ public class GameDirector : MonoBehaviour
         {
             case BattleState.WaitingInput:
                 Debug.Log("waiting input");
-                battleGameCanvasController_0.atWaitingInput(turn_queue.Dequeue());
+                currentCharacter = turn_queue.Dequeue();
+                battleGameCanvasController_0.atWaitingInput(currentCharacter);
                 inputController_2.setInputHandle<Battle_CommandInputHandle>();
                 break;
             case BattleState.Read:
