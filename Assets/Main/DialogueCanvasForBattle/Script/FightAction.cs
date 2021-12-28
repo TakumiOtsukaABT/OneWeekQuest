@@ -6,6 +6,6 @@ public class FightAction : BaseActionCommand
 {
     public override void runActionCommand()
     {
-        Debug.Log("aaaaaaaa");
+        GameObject.Find("GameDirector").GetComponent<GameDirector>().resetState(BattleState.SelectTarget);
     }
 }

@@ -25,6 +25,14 @@ namespace Gamekit2D
             //base.inputController_1.setInputHandle<Battle_ReadInputHandle>();
         }
 
+        public void chooseTargetDialogue()
+        {
+            base.DialogueIndex = 0;
+            string[] choose = new string[2];
+            choose[0] = "対象をタップ";
+            base.Dialogue = choose;
+        }
+
         private void Start()
         {
             inputController_1 = GetComponent<Outlet>().gameObjects[1].GetComponent<InputController>();

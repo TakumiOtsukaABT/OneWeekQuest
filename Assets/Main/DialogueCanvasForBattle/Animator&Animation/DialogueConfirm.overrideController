@@ -6,10 +6,10 @@ AnimatorOverrideController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: DialogueCommand
+  m_Name: DialogueConfirm
   m_Controller: {fileID: 9100000, guid: aa88f96b4a7ffe74495ded12bf04c81d, type: 2}
   m_Clips:
   - m_OriginalClip: {fileID: 7400000, guid: 457e7ae49b7b1664d9ae0886aa5f1965, type: 2}
-    m_OverrideClip: {fileID: 7400000, guid: 77d2afb7a7c73ac4586ede6f00d188f1, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 37a388248f394ac4fbb744fed54609f5, type: 2}
   - m_OriginalClip: {fileID: 7400000, guid: 3bef546413f2b724cab0b48365c9fdfc, type: 2}
-    m_OverrideClip: {fileID: 7400000, guid: ae9e8fab4b88a2e468a551bae6fd9fc9, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: c8e9e26c3eb12c048837e1ade1f0fc2a, type: 2}

@@ -72,7 +72,7 @@ Animator:
   m_GameObject: {fileID: 1009638384006160}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 22100000, guid: 3001b5bd82d53c1429eab8d29759eb2e, type: 2}
+  m_Controller: {fileID: 22100000, guid: 8334e5cda5508b64192b9ac0b0e255ac, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -135,6 +135,7 @@ MonoBehaviour:
   textMeshProUGUI: {fileID: 0}
   inputController_1: {fileID: 0}
   taskHandler_0: {fileID: 0}
+  selecting: {fileID: 0}
 --- !u!1 &2154364506131677759
 GameObject:
   m_ObjectHideFlags: 0
