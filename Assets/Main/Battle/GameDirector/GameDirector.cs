@@ -13,7 +13,10 @@ public class GameDirector : MonoBehaviour
     [SerializeField, ReadOnly] private GameObject dog_4;
     [SerializeField, ReadOnly] private GameObject cat_5;
     [SerializeField, ReadOnly] private GameObject alpaca_6;
-    private int[] sums = { 0, 0, 0, 0 };
+    [SerializeField, ReadOnly] private GameObject enemy_7;
+    [SerializeField, ReadOnly] private characterType currentCharacter;
+
+    private int[] sums = { 0, 0, 0, 0, 0 };
 
     // Start is called before the first frame update
     void Start()
@@ -24,6 +27,7 @@ public class GameDirector : MonoBehaviour
         dog_4 = GetComponent<Outlet>().gameObjects[4];
         cat_5 = GetComponent<Outlet>().gameObjects[5];
         alpaca_6 = GetComponent<Outlet>().gameObjects[6];
+        enemy_7 = GetComponent<Outlet>().gameObjects[7];
         initQueue();
     }
 
@@ -66,7 +70,8 @@ public class GameDirector : MonoBehaviour
         {
             case BattleState.WaitingInput:
                 Debug.Log("waiting input");
-                battleGameCanvasController_0.atWaitingInput(turn_queue.Dequeue());
+                currentCharacter = turn_queue.Dequeue();
+                battleGameCanvasController_0.atWaitingInput(currentCharacter);
                 inputController_2.setInputHandle<Battle_CommandInputHandle>();
                 break;
             case BattleState.Read:
@@ -89,15 +94,16 @@ public class GameDirector : MonoBehaviour
 
     private void initQueue()
     {
-        StatusBattle[] speeds = new StatusBattle[4];
+        StatusBattle[] speeds = new StatusBattle[5];
         speeds[0] = human_3.GetComponent<StatusBattle>();
         speeds[1] = dog_4.GetComponent<StatusBattle>();
         speeds[2] = cat_5.GetComponent<StatusBattle>();
         speeds[3] = alpaca_6.GetComponent<StatusBattle>();
+        speeds[4] = enemy_7.GetComponent<StatusBattle>();
 
         while (turn_queue.Count < 10)
         {
-            for (int i = 0; i < 4; i++)
+            for (int i = 0; i < 5; i++)
             {
                 sums[i] += speeds[i].playerStatusForReference.Speed_access;
                 if (sums[i] > 1000)
@@ -111,15 +117,16 @@ public class GameDirector : MonoBehaviour
 
     private characterType GetNextEnque()
     {
-        StatusBattle[] speeds = new StatusBattle[4];
+        StatusBattle[] speeds = new StatusBattle[5];
         speeds[0] = human_3.GetComponent<StatusBattle>();
         speeds[1] = dog_4.GetComponent<StatusBattle>();
         speeds[2] = cat_5.GetComponent<StatusBattle>();
         speeds[3] = alpaca_6.GetComponent<StatusBattle>();
+        speeds[4] = enemy_7.GetComponent<StatusBattle>();
 
         while (true)
         {
-            for (int i = 0; i < 4; i++)
+            for (int i = 0; i < 5; i++)
             {
                 sums[i] += speeds[i].playerStatusForReference.Speed_access;
                 if (sums[i] > 1000)

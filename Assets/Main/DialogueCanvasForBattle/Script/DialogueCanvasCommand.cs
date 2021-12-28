@@ -7,13 +7,13 @@ namespace Gamekit2D
 {
     public class DialogueCanvasCommand : DialogueCanvasController
     {
-        [SerializeField, ReadOnly] private Button selecting;
+        [SerializeField, ReadOnly] private GameObject selecting;
 
-        public void onButtonClick(Button gameObject)
+        public void onButtonClick(GameObject gameObject)
         {
             if (gameObject.Equals(selecting))
             {
-                Debug.Log("going great");
+                selecting.GetComponent<BaseActionCommand>().runActionCommand();
             }
             else
             {
