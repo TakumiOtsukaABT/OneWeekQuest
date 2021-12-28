@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &64628251 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3285948760691082023, guid: a014aa0cbedf2a04b84d70f9287cc21c, type: 3}
+  m_PrefabInstance: {fileID: 826951343}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &81991888 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1009638384006160, guid: 2cd4a4c1f4aaf6f45b09f7b9b281546f, type: 3}
@@ -166,6 +171,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93111f26d910a1b4082c063d700a9a82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &111598853 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3285948760691082023, guid: 59d21a9dfd6cc044293aacf266bec384, type: 3}
+  m_PrefabInstance: {fileID: 289632588}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &158239551
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -356,6 +366,7 @@ MonoBehaviour:
     Regen: 20
   order: 2
   characterType: 1
+  healthBar: {fileID: 111598853}
 --- !u!1 &475400263 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1009638384006160, guid: b5a76b50480f2b0458d76da0a5ba3060, type: 3}
@@ -691,6 +702,7 @@ MonoBehaviour:
     Regen: 20
   order: 1
   characterType: 0
+  healthBar: {fileID: 64628251}
 --- !u!1 &704768673
 GameObject:
   m_ObjectHideFlags: 0
@@ -1011,6 +1023,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a014aa0cbedf2a04b84d70f9287cc21c, type: 3}
+--- !u!1 &1452493324 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3285948760691082023, guid: a63ffd61a19edeb498f59cf64becfe2e, type: 3}
+  m_PrefabInstance: {fileID: 603336089}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1552676635
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1116,6 +1133,7 @@ MonoBehaviour:
     Regen: 20
   order: 4
   characterType: 3
+  healthBar: {fileID: 1913705409}
 --- !u!1001 &1588764802
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1475,6 +1493,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1913705409 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3285948760691082023, guid: d6362490c18d08e499e76f3ffea8429c, type: 3}
+  m_PrefabInstance: {fileID: 555433368}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1972641404 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3731620949798635418, guid: 79d41bf1add408d478eb18d8a031fede, type: 3}
@@ -1502,6 +1525,7 @@ MonoBehaviour:
     Regen: 20
   order: 5
   characterType: 4
+  healthBar: {fileID: 0}
 --- !u!1 &1973571004 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3731620949798635418, guid: a63ffd61a19edeb498f59cf64becfe2e, type: 3}
@@ -1529,6 +1553,7 @@ MonoBehaviour:
     Regen: 20
   order: 3
   characterType: 2
+  healthBar: {fileID: 1452493324}
 --- !u!1001 &1982558259
 PrefabInstance:
   m_ObjectHideFlags: 0
