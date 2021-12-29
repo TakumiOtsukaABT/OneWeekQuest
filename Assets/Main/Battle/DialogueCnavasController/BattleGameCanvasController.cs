@@ -8,6 +8,7 @@ public class BattleGameCanvasController : MonoBehaviour
     [SerializeField] private DialogueCanvasForBattleDescriptionController canvasDescription;
     [SerializeField] private DialogueCanvasCommand canvasCommand;
     [SerializeField] private DialogueConfirm canvasConfirm;
+    [SerializeField, ReadOnly] private List<GameObject> targetted = new List<GameObject>();
 
 
     public void atWaitingInput(characterType characterType)
@@ -44,6 +45,20 @@ public class BattleGameCanvasController : MonoBehaviour
         canvasDescription.DeactivateCanvasWithDelay(0);
         canvasCommand.DeactivateCanvasWithDelay(0);
         canvasConfirm.DeactivateCanvasWithDelay(0);
+    }
+
+    public void setClickedObject(GameObject gameObject)
+    {
+        //for (int i = 0; i<targetted.Count; i++)
+        //{
+        //    if (gameObject.Equals(targetted[i]))
+        //    {
+        //        targetted.Remove(gameObject);
+        //        return;
+        //    }
+        //}
+        targetted.Add(gameObject);
+        return;
     }
   
 }

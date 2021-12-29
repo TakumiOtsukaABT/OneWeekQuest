@@ -6,7 +6,12 @@ namespace Gamekit2D
 {
     public class DialogueConfirm : DialogueCanvasController
     {
+        [SerializeField, ReadOnly] private GameObject target;
 
+        public bool isConfirmed()
+        {
+            return true;
+        }
         protected override void setInputHandleBack()
         {
 
