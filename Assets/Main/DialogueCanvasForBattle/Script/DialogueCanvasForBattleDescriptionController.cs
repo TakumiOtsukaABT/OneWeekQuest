@@ -56,6 +56,14 @@ namespace Gamekit2D
             base.DialogueIndex = 0;
         }
 
+        public void setEvent(Event new_event)
+        {
+            new_event.dialogue[0] = playerName + new_event.dialogue[0];
+            base.Dialogue = new_event.dialogue;
+            nextState = new_event.nextState;
+            base.DialogueIndex = 0;
+        }
+
         public void waitingInputTurn(characterType character)
         {
             base.DialogueIndex = 0;

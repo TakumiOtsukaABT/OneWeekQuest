@@ -11,6 +11,7 @@ public class FightAction : BaseActionCommand
     [SerializeField] private GameObject dialogueCanvasCommand;
     [SerializeField, ReadOnly] private GameObject target;
     public GameDirector gameDirector;
+    [SerializeField] private Event _event;
 
     public override void runActionCommand()
     {
@@ -29,7 +30,10 @@ public class FightAction : BaseActionCommand
         dialoguecanvasConfirm_2 = dialogueCanvasCommand.GetComponent<Outlet>().gameObjects[2].GetComponent<DialogueConfirm>();
         yield return new WaitUntil(battleGameCanvasController_3.getFlagDoneSelecting);
         target = battleGameCanvasController_3.Single_target;
+        battleGameCanvasController_3.setDescriptionByEvent(_event);
+        target.GetComponent<StatusBattle>().takeDamage(100);
         gameDirector.resetState(BattleState.Read);
+        
 
     }
 }

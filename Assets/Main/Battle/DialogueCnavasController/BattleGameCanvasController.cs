@@ -83,6 +83,12 @@ public class BattleGameCanvasController : MonoBehaviour
     {
         selected = true;
     }
+
+    public void setDescriptionByEvent(Event _event)
+    {
+        canvasDescription.setEvent(_event);
+    }
+
     public bool getFlagDoneSelecting()
     {
         if (Single_target != null || targetted != null)

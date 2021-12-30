@@ -979,6 +979,13 @@ MonoBehaviour:
   dialoguecanvasConfirm_2: {fileID: 0}
   battleGameCanvasController_3: {fileID: 0}
   dialogueCanvasCommand: {fileID: 475400263}
+  target: {fileID: 0}
+  gameDirector: {fileID: 541771352}
+  _event:
+    dialogue:
+    - "\u306E\u3053\u3046\u3052\u304D"
+    - 
+    nextState: 0
 --- !u!1001 &733205038
 PrefabInstance:
   m_ObjectHideFlags: 0
