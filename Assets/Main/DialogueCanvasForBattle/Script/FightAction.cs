@@ -9,21 +9,27 @@ public class FightAction : BaseActionCommand
     [SerializeField,ReadOnly] private DialogueConfirm dialoguecanvasConfirm_2;
     [SerializeField, ReadOnly] private BattleGameCanvasController battleGameCanvasController_3;
     [SerializeField] private GameObject dialogueCanvasCommand;
+    [SerializeField, ReadOnly] private GameObject target;
+    public GameDirector gameDirector;
 
     public override void runActionCommand()
     {
-        GameObject.Find("GameDirector").GetComponent<GameDirector>().resetState(BattleState.SelectTarget);
+        gameDirector.resetState(BattleState.SelectTarget);
         battleGameCanvasController_3 = dialogueCanvasCommand.GetComponent<Outlet>().gameObjects[3].GetComponent<BattleGameCanvasController>();
         battleGameCanvasController_3.selectingType = SelectingType.Single;
+        selectTarget();
     }
 
     private void selectTarget()
     {
-        dialoguecanvasConfirm_2 = dialogueCanvasCommand.GetComponent<Outlet>().gameObjects[2].GetComponent<DialogueConfirm>();
         StartCoroutine(chooseTarget());
     }
     IEnumerator chooseTarget()
     {
-        throw new UnassignedReferenceException();
+        dialoguecanvasConfirm_2 = dialogueCanvasCommand.GetComponent<Outlet>().gameObjects[2].GetComponent<DialogueConfirm>();
+        yield return new WaitUntil(battleGameCanvasController_3.getFlagDoneSelecting);
+        target = battleGameCanvasController_3.Single_target;
+        gameDirector.resetState(BattleState.Read);
+
     }
 }

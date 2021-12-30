@@ -10,8 +10,11 @@ public class BattleGameCanvasController : MonoBehaviour
     [SerializeField] private DialogueConfirm canvasConfirm;
     [SerializeField, ReadOnly] private List<GameObject> targetted = new List<GameObject>();
     [SerializeField, ReadOnly] private GameObject single_target;
+    private bool selected = false;
 
     [ReadOnly]public SelectingType selectingType = SelectingType.Disable;
+
+    public GameObject Single_target { get => single_target; set => single_target = value; }
 
     public void atWaitingInput(characterType characterType)
     {
@@ -30,6 +33,7 @@ public class BattleGameCanvasController : MonoBehaviour
 
     public void atSelectTarget()
     {
+        selected = false;
         canvasDescription.chooseTargetDialogue();
         canvasCommand.DeactivateCanvasWithDelay(0);
         canvasConfirm.ActivateCanvasWithDialogueArray();
@@ -55,8 +59,8 @@ public class BattleGameCanvasController : MonoBehaviour
         switch (selectingType)
         {
             case SelectingType.Single:
-                single_target = gameObject;
-                canvasDescription.updateSingleTargetDialogue(single_target.GetComponent<StatusBattle>().characterType);
+                Single_target = gameObject;
+                canvasDescription.updateSingleTargetDialogue(Single_target.GetComponent<StatusBattle>().characterType);
                 break;
             case SelectingType.Multiple:
                 for (int i = 0; i < targetted.Count; i++)
@@ -73,6 +77,19 @@ public class BattleGameCanvasController : MonoBehaviour
                 break;
         }
         return;
+    }
+
+    public void setSelectedFlag()
+    {
+        selected = true;
+    }
+    public bool getFlagDoneSelecting()
+    {
+        if (Single_target != null || targetted != null)
+        {
+            return selected;
+        }
+        else { return false; }
     }
 
 }
