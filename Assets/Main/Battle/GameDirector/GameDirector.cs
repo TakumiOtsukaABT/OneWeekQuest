@@ -29,6 +29,7 @@ public class GameDirector : MonoBehaviour
         alpaca_6 = GetComponent<Outlet>().gameObjects[6];
         enemy_7 = GetComponent<Outlet>().gameObjects[7];
         initQueue();
+        
     }
 
     // Update is called once per frame

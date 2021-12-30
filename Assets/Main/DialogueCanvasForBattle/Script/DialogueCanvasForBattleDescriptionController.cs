@@ -32,6 +32,14 @@ namespace Gamekit2D
             choose[0] = "対象をタップ";
             base.Dialogue = choose;
         }
+        public void updateSingleTargetDialogue(characterType characterType)
+        {
+            base.DialogueIndex = 0;
+            string[] choose = new string[2];
+            choose[0] = getCharacterName(characterType);
+            base.Dialogue = choose;
+            base.setTextToTextMesh();
+        }
 
         private void Start()
         {
@@ -70,7 +78,7 @@ namespace Gamekit2D
                 case characterType.Alpaca:
                     return "アルパカ";
                 case characterType.Enemy:
-                    return "";
+                    return "魔王";
                 default:
                     return "";
             }

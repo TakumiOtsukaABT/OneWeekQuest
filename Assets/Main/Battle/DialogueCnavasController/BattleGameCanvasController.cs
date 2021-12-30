@@ -9,7 +9,9 @@ public class BattleGameCanvasController : MonoBehaviour
     [SerializeField] private DialogueCanvasCommand canvasCommand;
     [SerializeField] private DialogueConfirm canvasConfirm;
     [SerializeField, ReadOnly] private List<GameObject> targetted = new List<GameObject>();
+    [SerializeField, ReadOnly] private GameObject single_target;
 
+    [ReadOnly]public SelectingType selectingType = SelectingType.Disable;
 
     public void atWaitingInput(characterType characterType)
     {
@@ -42,6 +44,7 @@ public class BattleGameCanvasController : MonoBehaviour
     }
 
     public void deactivateAll() {
+        selectingType = SelectingType.Disable;
         canvasDescription.DeactivateCanvasWithDelay(0);
         canvasCommand.DeactivateCanvasWithDelay(0);
         canvasConfirm.DeactivateCanvasWithDelay(0);
@@ -49,16 +52,34 @@ public class BattleGameCanvasController : MonoBehaviour
 
     public void setClickedObject(GameObject gameObject)
     {
-        for (int i = 0; i < targetted.Count; i++)
+        switch (selectingType)
         {
-            if (gameObject.Equals(targetted[i]))
-            {
-                targetted.Remove(gameObject);
-                return;
-            }
+            case SelectingType.Single:
+                single_target = gameObject;
+                canvasDescription.updateSingleTargetDialogue(single_target.GetComponent<StatusBattle>().characterType);
+                break;
+            case SelectingType.Multiple:
+                for (int i = 0; i < targetted.Count; i++)
+                {
+                    if (gameObject.Equals(targetted[i]))
+                    {
+                        targetted.Remove(gameObject);
+                        return;
+                    }
+                }
+                targetted.Add(gameObject);
+                break;
+            case SelectingType.Disable:
+                break;
         }
-        targetted.Add(gameObject);
         return;
     }
-  
+
+}
+
+public enum SelectingType
+{
+    Single,
+    Multiple,
+    Disable
 }
