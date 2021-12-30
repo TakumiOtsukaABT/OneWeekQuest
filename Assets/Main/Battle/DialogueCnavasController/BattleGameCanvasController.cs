@@ -49,14 +49,14 @@ public class BattleGameCanvasController : MonoBehaviour
 
     public void setClickedObject(GameObject gameObject)
     {
-        //for (int i = 0; i<targetted.Count; i++)
-        //{
-        //    if (gameObject.Equals(targetted[i]))
-        //    {
-        //        targetted.Remove(gameObject);
-        //        return;
-        //    }
-        //}
+        for (int i = 0; i < targetted.Count; i++)
+        {
+            if (gameObject.Equals(targetted[i]))
+            {
+                targetted.Remove(gameObject);
+                return;
+            }
+        }
         targetted.Add(gameObject);
         return;
     }
