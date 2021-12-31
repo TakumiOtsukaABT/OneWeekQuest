@@ -16,6 +16,14 @@ public class GameDirector : MonoBehaviour
     [SerializeField, ReadOnly] private GameObject enemy_7;
     [SerializeField, ReadOnly] private characterType currentCharacter;
 
+    //select target
+    [ReadOnly] public SelectingType selectingType = SelectingType.Disable;
+    [SerializeField, ReadOnly] private List<GameObject> targetted = new List<GameObject>();
+    [SerializeField, ReadOnly] private GameObject single_target;
+    private bool selected = false;
+    public GameObject Single_target { get => single_target; set => single_target = value; }
+
+
     private int[] sums = { 0, 0, 0, 0, 0 };
 
     // Start is called before the first frame update
@@ -54,6 +62,7 @@ public class GameDirector : MonoBehaviour
 
     IEnumerator deactivate_then_activate_state(BattleState newState)
     {
+        selectingType = SelectingType.Disable;
         battleGameCanvasController_0.deactivateAll();
         yield return new WaitForSeconds(0.5f);
         setState(newState);
@@ -82,6 +91,7 @@ public class GameDirector : MonoBehaviour
                 break;
             case BattleState.SelectTarget:
                 Debug.Log("select target");
+                selected = false;
                 battleGameCanvasController_0.atSelectTarget();
                 inputController_2.setInputHandle<Battle_CommandInputHandle>();
                 break;
@@ -114,6 +124,78 @@ public class GameDirector : MonoBehaviour
                 }
             }
         }
+    }
+
+    public GameObject getCurrentCharacter()
+    {
+        return getCharacterObject(currentCharacter);
+    }
+
+    public GameObject getCharacterObject(characterType character)
+    {
+        switch (character)
+        {
+            case characterType.Human:
+                return human_3;
+            case characterType.Dog:
+                return dog_4;
+            case characterType.Cat:
+                return cat_5;
+            case characterType.Alpaca:
+                return alpaca_6;
+            case characterType.Enemy:
+                return enemy_7;
+            default:
+                return human_3;
+        }
+    }
+
+    public void setTakeDamageAndDialogue(int damage){
+        Event _event = new Event();
+        single_target.GetComponent<StatusBattle>().takeDamage(damage);
+        _event.nextState = BattleState.WaitingInput;
+        _event.dialogue = new string[2];
+        _event.dialogue[1] = "";
+        _event.dialogue[0] = single_target.GetComponent<StatusBattle>().name + "Ç…" + damage.ToString() + "ÇÃÉ_ÉÅÅ[ÉW!";
+        battleGameCanvasController_0.setDescriptionByEvent(_event);
+    }
+    public void setClickedObject(GameObject gameObject)
+    {
+        switch (selectingType)
+        {
+            case SelectingType.Single:
+                Single_target = gameObject;
+                battleGameCanvasController_0.updateDescription_singleTarget(Single_target.GetComponent<StatusBattle>().characterType);
+                break;
+            case SelectingType.Multiple:
+                for (int i = 0; i < targetted.Count; i++)
+                {
+                    if (gameObject.Equals(targetted[i]))
+                    {
+                        targetted.Remove(gameObject);
+                        return;
+                    }
+                }
+                targetted.Add(gameObject);
+                break;
+            case SelectingType.Disable:
+                break;
+        }
+        return;
+    }
+
+    public bool getFlagDoneSelecting()
+    {
+        if (Single_target != null || targetted != null)
+        {
+            return selected;
+        }
+        else { return false; }
+    }
+
+    public void setSelectedFlag()
+    {
+        selected = true;
     }
 
     private characterType GetNextEnque()

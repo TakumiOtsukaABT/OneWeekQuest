@@ -13,7 +13,6 @@ namespace Gamekit2D
         public string playerName;
         [SerializeField] private Event initialDialogue;
         [SerializeField] private Event whatToDoDialogue;
-        [SerializeField,ReadOnly] private GameDirector director_2;
 
         protected override void setInputHandle()
         {
@@ -44,7 +43,6 @@ namespace Gamekit2D
         private void Start()
         {
             inputController_1 = GetComponent<Outlet>().gameObjects[1].GetComponent<InputController>();
-            director_2 = GetComponent<Outlet>().gameObjects[2].GetComponent<GameDirector>();
             runInitialDialogue();
         }
 
@@ -58,7 +56,7 @@ namespace Gamekit2D
 
         public void setEvent(Event new_event)
         {
-            new_event.dialogue[0] = playerName + new_event.dialogue[0];
+            new_event.dialogue[0] = new_event.dialogue[0];
             base.Dialogue = new_event.dialogue;
             nextState = new_event.nextState;
             base.DialogueIndex = 0;

@@ -22,8 +22,11 @@ public class Battle_ReadInputHandle : InputHandle
             DialogueCanvasForBattleDescriptionController dialogueCanvas = dialogueCanvas_1.GetComponent<DialogueCanvasForBattleDescriptionController>();
             dialogueCanvas.DialogueIndex++;
             dialogueCanvas.ActivateCanvasWithDialogueArray();
+            Debug.Log("islasaaat"+dialogueCanvas.DialogueIndex);
+
             if (dialogueCanvas.isLastDialogue())
             {
+                Debug.Log("islast");
                 gameDirector_2.resetState(dialogueCanvas.nextState);
                 return;
             }
