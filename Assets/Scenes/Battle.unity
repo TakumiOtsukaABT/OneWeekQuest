@@ -419,7 +419,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3, y: 3.65}
+    oldSize: {x: 3.03, y: 3.68}
     newSize: {x: 3, y: 3.65}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -527,6 +527,7 @@ MonoBehaviour:
   selectingType: 2
   targetted: []
   single_target: {fileID: 0}
+  selected: 0
 --- !u!114 &541771353
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -981,11 +982,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetCharacter: {fileID: 0}
-  dialoguecanvasConfirm_2: {fileID: 0}
-  battleGameCanvasController_3: {fileID: 0}
+  currentCharacter: {fileID: 0}
+  gameDirector_3: {fileID: 0}
   dialogueCanvasCommand: {fileID: 475400263}
-  target: {fileID: 0}
-  gameDirector: {fileID: 541771352}
   _event:
     dialogue:
     - "\u306E\u3053\u3046\u3052\u304D"
@@ -1622,7 +1621,7 @@ PrefabInstance:
     - target: {fileID: 5460758248565894060, guid: b5a76b50480f2b0458d76da0a5ba3060, type: 3}
       propertyPath: gameObjects.Array.data[3]
       value: 
-      objectReference: {fileID: 747280025}
+      objectReference: {fileID: 541771350}
     - target: {fileID: 5819924673068783815, guid: b5a76b50480f2b0458d76da0a5ba3060, type: 3}
       propertyPath: m_Colors.m_NormalColor.b
       value: 1
@@ -1782,7 +1781,7 @@ MonoBehaviour:
     MP: 200
     Attack: 90
     Defence: 90
-    Speed: 83
+    Speed: 17
     HitRate: 90
     Regen: 20
   order: 5
@@ -1919,7 +1918,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3, y: 3.65}
+    oldSize: {x: 2.99, y: 3.64}
     newSize: {x: 3, y: 3.65}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -2231,7 +2230,7 @@ PrefabInstance:
     - target: {fileID: 2633982546026391376, guid: e094b7651a224db499341f0c1408a413, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 747280027}
+      objectReference: {fileID: 541771352}
     - target: {fileID: 2633982546026391376, guid: e094b7651a224db499341f0c1408a413, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -2242,7 +2241,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2633982546026391376, guid: e094b7651a224db499341f0c1408a413, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: BattleGameCanvasController, Assembly-CSharp
+      value: GameDirector, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 2633982546026391376, guid: e094b7651a224db499341f0c1408a413, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
