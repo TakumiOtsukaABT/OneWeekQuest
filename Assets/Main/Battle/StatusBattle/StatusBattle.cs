@@ -6,6 +6,7 @@ public class StatusBattle : PlayerStatus
 {
     public int order;
     public characterType characterType;
+    public new string name;
 
     [SerializeField] private GameObject healthBar;
     private void Start()
@@ -14,10 +15,8 @@ public class StatusBattle : PlayerStatus
         healthBar.GetComponent<ValueBar>().SetMaxHealth(maxHealth);
     }
 
-    public void takeDamage(int attacker)
+    public void takeDamage(int damage)
     {
-        int defence = playerStatusForReference.Defence_access;
-        int damage = Mathf.RoundToInt((attacker - defence) * Random.Range(1.0f, 1.3f));
         setHP(playerStatusForReference.HP_access - damage);
     }
 

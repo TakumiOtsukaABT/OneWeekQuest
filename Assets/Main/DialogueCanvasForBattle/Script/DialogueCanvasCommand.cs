@@ -9,11 +9,16 @@ namespace Gamekit2D
     {
         [SerializeField, ReadOnly] private GameObject selecting;
 
+        void initializeProperty()
+        {
+            selecting = null;
+        }
         public void onButtonClick(GameObject gameObject)
         {
             if (gameObject.Equals(selecting))
             {
                 selecting.GetComponent<BaseActionCommand>().runActionCommand();
+                initializeProperty();
             }
             else
             {

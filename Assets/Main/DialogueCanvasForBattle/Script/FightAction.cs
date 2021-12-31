@@ -6,18 +6,18 @@ using Gamekit2D;
 public class FightAction : BaseActionCommand
 {
     [SerializeField,ReadOnly] private GameObject targetCharacter;
-    [SerializeField,ReadOnly] private DialogueConfirm dialoguecanvasConfirm_2;
-    [SerializeField, ReadOnly] private BattleGameCanvasController battleGameCanvasController_3;
-    [SerializeField] private GameObject dialogueCanvasCommand;
-    [SerializeField, ReadOnly] private GameObject target;
-    public GameDirector gameDirector;
+    [SerializeField, ReadOnly] private GameObject currentCharacter;
+    [SerializeField, ReadOnly] private GameDirector gameDirector_3;
+    public GameObject dialogueCanvasCommand;
+
     [SerializeField] private Event _event;
 
     public override void runActionCommand()
     {
-        gameDirector.resetState(BattleState.SelectTarget);
-        battleGameCanvasController_3 = dialogueCanvasCommand.GetComponent<Outlet>().gameObjects[3].GetComponent<BattleGameCanvasController>();
-        battleGameCanvasController_3.selectingType = SelectingType.Single;
+        gameDirector_3 = dialogueCanvasCommand.GetComponent<Outlet>().gameObjects[3].GetComponent<GameDirector>();
+        gameDirector_3.resetState(BattleState.SelectTarget);
+        gameDirector_3.selectingType = SelectingType.Single;
+        Debug.Log("ran until");
         selectTarget();
     }
 
@@ -27,13 +27,19 @@ public class FightAction : BaseActionCommand
     }
     IEnumerator chooseTarget()
     {
-        dialoguecanvasConfirm_2 = dialogueCanvasCommand.GetComponent<Outlet>().gameObjects[2].GetComponent<DialogueConfirm>();
-        yield return new WaitUntil(battleGameCanvasController_3.getFlagDoneSelecting);
-        target = battleGameCanvasController_3.Single_target;
-        battleGameCanvasController_3.setDescriptionByEvent(_event);
-        target.GetComponent<StatusBattle>().takeDamage(100);
-        gameDirector.resetState(BattleState.Read);
-        
-
+        Debug.Log(gameDirector_3.getFlagDoneSelecting());
+        yield return new WaitUntil(gameDirector_3.getFlagDoneSelecting);
+        Debug.Log("ran untilwait");
+        Debug.Log(gameDirector_3.getFlagDoneSelecting());
+        int attack = gameDirector_3.getCurrentCharacter().GetComponent<StatusBattle>().playerStatusForReference.Attack_access;
+        int defence = gameDirector_3.Single_target.GetComponent<StatusBattle>().playerStatusForReference.Defence_access;
+        int attackMinusDefence = attack - defence;
+        if (attackMinusDefence < 0)
+        {
+            attackMinusDefence = 0;
+        }
+        int damage = Mathf.RoundToInt(((attackMinusDefence) * Random.Range(1.0f, 1.3f))+Random.Range(1.0f,10.0f));
+        gameDirector_3.setTakeDamageAndDialogue(damage);
+        gameDirector_3.resetState(BattleState.Read);
     }
 }

@@ -371,6 +371,7 @@ MonoBehaviour:
     Regen: 20
   order: 2
   characterType: 1
+  name: "\u72AC"
   healthBar: {fileID: 111598853}
 --- !u!114 &407847658
 MonoBehaviour:
@@ -389,8 +390,8 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 747280027}
-          m_TargetAssemblyTypeName: BattleGameCanvasController, Assembly-CSharp
+        - m_Target: {fileID: 541771352}
+          m_TargetAssemblyTypeName: GameDirector, Assembly-CSharp
           m_MethodName: setClickedObject
           m_Mode: 2
           m_Arguments:
@@ -523,6 +524,9 @@ MonoBehaviour:
   alpaca_6: {fileID: 0}
   enemy_7: {fileID: 0}
   currentCharacter: 0
+  selectingType: 2
+  targetted: []
+  single_target: {fileID: 0}
 --- !u!114 &541771353
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -802,6 +806,7 @@ MonoBehaviour:
     Regen: 20
   order: 1
   characterType: 0
+  name: "\u30AD\u30E3\u30E9"
   healthBar: {fileID: 64628251}
 --- !u!114 &635878654
 MonoBehaviour:
@@ -820,8 +825,8 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 747280027}
-          m_TargetAssemblyTypeName: BattleGameCanvasController, Assembly-CSharp
+        - m_Target: {fileID: 541771352}
+          m_TargetAssemblyTypeName: GameDirector, Assembly-CSharp
           m_MethodName: setClickedObject
           m_Mode: 2
           m_Arguments:
@@ -993,6 +998,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 73056769650519185, guid: 79d41bf1add408d478eb18d8a031fede, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 2.8902
+      objectReference: {fileID: 0}
+    - target: {fileID: 73056769650519185, guid: 79d41bf1add408d478eb18d8a031fede, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.26
+      objectReference: {fileID: 0}
     - target: {fileID: 1899570430686662130, guid: 79d41bf1add408d478eb18d8a031fede, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -1127,9 +1140,6 @@ MonoBehaviour:
   canvasDescription: {fileID: 81991890}
   canvasCommand: {fileID: 475400264}
   canvasConfirm: {fileID: 8463692244210765017}
-  targetted: []
-  single_target: {fileID: 0}
-  selectingType: 2
 --- !u!1001 &826951343
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1321,6 +1331,7 @@ MonoBehaviour:
     Regen: 20
   order: 4
   characterType: 3
+  name: "\u30A2\u30EB\u30D1\u30AB"
   healthBar: {fileID: 1913705409}
 --- !u!114 &1572335856
 MonoBehaviour:
@@ -1339,8 +1350,8 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 747280027}
-          m_TargetAssemblyTypeName: BattleGameCanvasController, Assembly-CSharp
+        - m_Target: {fileID: 541771352}
+          m_TargetAssemblyTypeName: GameDirector, Assembly-CSharp
           m_MethodName: setClickedObject
           m_Mode: 2
           m_Arguments:
@@ -1776,6 +1787,7 @@ MonoBehaviour:
     Regen: 20
   order: 5
   characterType: 4
+  name: "\u9B54\u738B"
   healthBar: {fileID: 161489579}
 --- !u!114 &1972641408
 MonoBehaviour:
@@ -1794,8 +1806,8 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 747280027}
-          m_TargetAssemblyTypeName: BattleGameCanvasController, Assembly-CSharp
+        - m_Target: {fileID: 541771352}
+          m_TargetAssemblyTypeName: GameDirector, Assembly-CSharp
           m_MethodName: setClickedObject
           m_Mode: 2
           m_Arguments:
@@ -1859,6 +1871,7 @@ MonoBehaviour:
     Regen: 20
   order: 3
   characterType: 2
+  name: "\u732B"
   healthBar: {fileID: 1452493324}
 --- !u!114 &1973571008
 MonoBehaviour:
@@ -1877,8 +1890,8 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 747280027}
-          m_TargetAssemblyTypeName: BattleGameCanvasController, Assembly-CSharp
+        - m_Target: {fileID: 541771352}
+          m_TargetAssemblyTypeName: GameDirector, Assembly-CSharp
           m_MethodName: setClickedObject
           m_Mode: 2
           m_Arguments:
