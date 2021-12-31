@@ -20,11 +20,18 @@ public class GameDirector : MonoBehaviour
     [ReadOnly] public SelectingType selectingType = SelectingType.Disable;
     [SerializeField, ReadOnly] private List<GameObject> targetted = new List<GameObject>();
     [SerializeField, ReadOnly] private GameObject single_target;
-    private bool selected = false;
+    [SerializeField, ReadOnly] private bool selected = false;
     public GameObject Single_target { get => single_target; set => single_target = value; }
 
 
     private int[] sums = { 0, 0, 0, 0, 0 };
+
+    void initializeProperty()
+    {
+        single_target = null;
+        targetted = null;
+        selected = false;
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -62,6 +69,7 @@ public class GameDirector : MonoBehaviour
 
     IEnumerator deactivate_then_activate_state(BattleState newState)
     {
+        initializeProperty();
         selectingType = SelectingType.Disable;
         battleGameCanvasController_0.deactivateAll();
         yield return new WaitForSeconds(0.5f);
@@ -91,7 +99,7 @@ public class GameDirector : MonoBehaviour
                 break;
             case BattleState.SelectTarget:
                 Debug.Log("select target");
-                selected = false;
+                initializeProperty();
                 battleGameCanvasController_0.atSelectTarget();
                 inputController_2.setInputHandle<Battle_CommandInputHandle>();
                 break;
