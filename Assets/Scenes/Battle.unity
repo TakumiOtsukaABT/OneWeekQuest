@@ -1340,6 +1340,7 @@ MonoBehaviour:
   order: 2
   characterType: 1
   name: "\u72AC"
+  MaxHP: 0
   healthBar: {fileID: 111598853}
 --- !u!114 &407847658
 MonoBehaviour:
@@ -2387,6 +2388,7 @@ MonoBehaviour:
   order: 1
   characterType: 0
   name: "\u30AD\u30E3\u30E9"
+  MaxHP: 0
   healthBar: {fileID: 64628251}
 --- !u!114 &635878654
 MonoBehaviour:
@@ -3788,6 +3790,7 @@ MonoBehaviour:
   order: 4
   characterType: 3
   name: "\u30A2\u30EB\u30D1\u30AB"
+  MaxHP: 0
   healthBar: {fileID: 1913705409}
 --- !u!114 &1572335856
 MonoBehaviour:
@@ -4399,6 +4402,7 @@ MonoBehaviour:
   order: 5
   characterType: 4
   name: "\u9B54\u738B"
+  MaxHP: 0
   healthBar: {fileID: 161489579}
 --- !u!114 &1972641408
 MonoBehaviour:
@@ -4483,6 +4487,7 @@ MonoBehaviour:
   order: 3
   characterType: 2
   name: "\u732B"
+  MaxHP: 0
   healthBar: {fileID: 1452493324}
 --- !u!114 &1973571008
 MonoBehaviour:
@@ -4846,8 +4851,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.76}
   m_AnchorMax: {x: 0.5, y: 0.76}
-  m_AnchoredPosition: {x: -5.8699994, y: -20}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: -6.058752, y: -20}
+  m_SizeDelta: {x: 212.22015, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2043713184
 MonoBehaviour:
@@ -4932,7 +4937,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 1
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -26.524538, w: -3.418398}
+  m_margin: {x: -39.09439, y: 0, z: -26.524538, w: -3.418398}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
