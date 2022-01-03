@@ -5,11 +5,12 @@ using TMPro;
 
 public class StatDataBattle : StatData
 {
-    public GameObject character;
+    public PlayerStatusForReference character;
     [SerializeField] TextMeshProUGUI Name;
 
     private void OnEnable()
     {
+        base.mystatus = character;
         base.updateText();
     }
 }
