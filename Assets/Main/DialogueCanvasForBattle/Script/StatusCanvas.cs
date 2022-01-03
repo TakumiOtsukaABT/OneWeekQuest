@@ -24,7 +24,7 @@ public class StatusCanvas : DialogueCanvasController
         return closed;
     }
 
-    public void setstatDataBattle(PlayerStatusForReference new_stat)
+    public void setstatDataBattle(StatusBattle new_stat)
     {
         statDataBattle.character = new_stat;
     }
