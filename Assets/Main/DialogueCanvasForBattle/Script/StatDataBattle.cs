@@ -12,6 +12,26 @@ public class StatDataBattle : StatData
     {
         base.mystatus = character.playerStatusForReference;
         Name.text = character.name.ToString();
-        base.updateText();
+        if (character.characterType != characterType.Enemy)
+        {
+            base.updateText();
+            HP.text = HP.text + "/" + character.MaxHP;
+        }
+        else
+        {
+            updateTextToQuestion();
+        }
+        
+    }
+    private void updateTextToQuestion()
+    {
+        string question = "?????";
+        HP.text = question;
+        MP.text = question;
+        power.text = question;
+        Defence.text = question;
+        speed.text = question;
+        hit.text = question;
+        regen.text = question;
     }
 }

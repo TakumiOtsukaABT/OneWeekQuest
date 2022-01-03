@@ -7,12 +7,14 @@ public class StatusBattle : PlayerStatus
     public int order;
     public characterType characterType;
     public new string name;
+    public int MaxHP;
+
 
     [SerializeField] private GameObject healthBar;
     private void Start()
     {
-        int maxHealth = base.playerStatusForReference.HP_access;
-        healthBar.GetComponent<ValueBar>().SetMaxHealth(maxHealth);
+        MaxHP = base.playerStatusForReference.HP_access;
+        healthBar.GetComponent<ValueBar>().SetMaxHealth(MaxHP);
     }
 
     public void takeDamage(int damage)

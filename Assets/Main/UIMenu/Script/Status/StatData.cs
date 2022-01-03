@@ -9,13 +9,13 @@ public class StatData : MonoBehaviour
     protected PlayerStatusForReference mystatus;
     [SerializeField] private Outlet outlet;
 
-    [SerializeField] TextMeshProUGUI HP;
-    [SerializeField] TextMeshProUGUI MP;
-    [SerializeField] TextMeshProUGUI power;
-    [SerializeField] TextMeshProUGUI Defence;
-    [SerializeField] TextMeshProUGUI speed;
-    [SerializeField] TextMeshProUGUI hit;
-    [SerializeField] TextMeshProUGUI regen;
+    [SerializeField] protected TextMeshProUGUI HP;
+    [SerializeField] protected TextMeshProUGUI MP;
+    [SerializeField] protected TextMeshProUGUI power;
+    [SerializeField] protected TextMeshProUGUI Defence;
+    [SerializeField] protected TextMeshProUGUI speed;
+    [SerializeField] protected TextMeshProUGUI hit;
+    [SerializeField] protected TextMeshProUGUI regen;
     private void OnEnable()
     {
         mystatus = outlet.gameObjects[0].GetComponent<PlayerStatus>().playerStatusForReference;
