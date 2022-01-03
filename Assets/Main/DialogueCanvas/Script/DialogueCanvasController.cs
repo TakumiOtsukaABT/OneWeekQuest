@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-namespace Gamekit2D
-{
+
     public class DialogueCanvasController : MonoBehaviour
     {
         public Animator animator;
@@ -79,4 +78,3 @@ namespace Gamekit2D
             taskHandler_0.tickTask("Talk");
         }
     }
-}
