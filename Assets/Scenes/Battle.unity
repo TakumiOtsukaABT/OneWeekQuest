@@ -855,7 +855,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3, y: 3.65}
+    oldSize: {x: 3.01, y: 3.66}
     newSize: {x: 3, y: 3.65}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1597,6 +1597,18 @@ PrefabInstance:
     - target: {fileID: 3671117275791298446, guid: b5a76b50480f2b0458d76da0a5ba3060, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 4601603006732207475, guid: b5a76b50480f2b0458d76da0a5ba3060, type: 3}
+      propertyPath: m_Text
+      value: "\u30B9\u30C6\u30FC\u30BF\u30B9"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4601603006732207475, guid: b5a76b50480f2b0458d76da0a5ba3060, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 56
+      objectReference: {fileID: 0}
+    - target: {fileID: 4712955783341179780, guid: b5a76b50480f2b0458d76da0a5ba3060, type: 3}
+      propertyPath: m_Name
+      value: Status
       objectReference: {fileID: 0}
     - target: {fileID: 4920920081927273963, guid: b5a76b50480f2b0458d76da0a5ba3060, type: 3}
       propertyPath: m_RaycastTarget

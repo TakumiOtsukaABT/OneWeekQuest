@@ -210,6 +210,10 @@ PrefabInstance:
       propertyPath: m_hasFontAssetChanged
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4711190796594875566, guid: 0b7157f30d8839b42b18be8715b4a224, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4711190796642599361, guid: 0b7157f30d8839b42b18be8715b4a224, type: 3}
       propertyPath: m_Name
       value: MenuCanvas
