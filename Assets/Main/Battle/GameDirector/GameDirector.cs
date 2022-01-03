@@ -62,18 +62,23 @@ public class GameDirector : MonoBehaviour
         }
     }
 
-    public void resetState(BattleState newState)
+    public void resetState(BattleState newState, bool nextTurn = true)
     {
-        StartCoroutine(deactivate_then_activate_state(newState));
+        StartCoroutine(deactivate_then_activate_state(newState,nextTurn));
     }
 
-    IEnumerator deactivate_then_activate_state(BattleState newState)
+    public void deactivateAllCanvas()
+    {
+        battleGameCanvasController_0.deactivateAll();
+    }
+
+    IEnumerator deactivate_then_activate_state(BattleState newState, bool nextTurn = true)
     {
         initializeProperty();
         selectingType = SelectingType.Disable;
         battleGameCanvasController_0.deactivateAll();
         yield return new WaitForSeconds(0.5f);
-        setState(newState);
+        setState(newState,nextTurn);
         if (turn_queue.Count < 10)
         {
             turn_queue.Enqueue(GetNextEnque());
@@ -81,14 +86,17 @@ public class GameDirector : MonoBehaviour
     }
 
 
-    private void setState(BattleState newState)
+    private void setState(BattleState newState, bool nextTurn=true)
     {
         battleState = newState;
         switch (newState)
         {
             case BattleState.WaitingInput:
                 Debug.Log("waiting input");
-                currentCharacter = turn_queue.Dequeue();
+                if (nextTurn)
+                {
+                    currentCharacter = turn_queue.Dequeue();
+                }
                 battleGameCanvasController_0.atWaitingInput(currentCharacter);
                 inputController_2.setInputHandle<Battle_CommandInputHandle>();
                 break;

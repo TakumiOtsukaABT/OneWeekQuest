@@ -6,8 +6,8 @@ using TMPro;
 
 public class StatData : MonoBehaviour
 {
-    private PlayerStatusForReference mystatus;
-    [SerializeField] Outlet outlet;
+    protected PlayerStatusForReference mystatus;
+    [SerializeField] private Outlet outlet;
 
     [SerializeField] TextMeshProUGUI HP;
     [SerializeField] TextMeshProUGUI MP;
@@ -19,6 +19,11 @@ public class StatData : MonoBehaviour
     private void OnEnable()
     {
         mystatus = outlet.gameObjects[0].GetComponent<PlayerStatus>().playerStatusForReference;
+        updateText();
+    }
+
+    protected void updateText()
+    {
         HP.text = mystatus.HP_access.ToString();
         MP.text = mystatus.MP_access.ToString();
         power.text = mystatus.Attack_access.ToString();

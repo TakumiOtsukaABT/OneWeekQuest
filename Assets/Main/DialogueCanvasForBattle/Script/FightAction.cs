@@ -5,12 +5,9 @@ using Gamekit2D;
 
 public class FightAction : BaseActionCommand
 {
-    [SerializeField,ReadOnly] private GameObject targetCharacter;
-    [SerializeField, ReadOnly] private GameObject currentCharacter;
     [SerializeField, ReadOnly] private GameDirector gameDirector_3;
     public GameObject dialogueCanvasCommand;
 
-    [SerializeField] private Event _event;
 
     public override void runActionCommand()
     {
