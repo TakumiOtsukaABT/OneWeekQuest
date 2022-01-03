@@ -1,9 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Gamekit2D;
 
-public class FightAction : BaseActionCommand
+public class StatusAction : BaseActionCommand
 {
     [SerializeField, ReadOnly] private GameDirector gameDirector_3;
     public GameObject dialogueCanvasCommand;
@@ -35,7 +34,7 @@ public class FightAction : BaseActionCommand
         {
             attackMinusDefence = 0;
         }
-        int damage = Mathf.RoundToInt(((attackMinusDefence) * Random.Range(1.0f, 1.3f))+Random.Range(1.0f,10.0f));
+        int damage = Mathf.RoundToInt(((attackMinusDefence) * Random.Range(1.0f, 1.3f)) + Random.Range(1.0f, 10.0f));
         gameDirector_3.setTakeDamageAndDialogue(damage);
         gameDirector_3.resetState(BattleState.Read);
     }
