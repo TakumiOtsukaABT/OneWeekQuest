@@ -37,6 +37,6 @@ public class FightAction : BaseActionCommand
         }
         int damage = Mathf.RoundToInt(((attackMinusDefence) * Random.Range(1.0f, 1.3f))+Random.Range(1.0f,10.0f));
         gameDirector_3.setTakeDamageAndDialogue(damage);
-        gameDirector_3.resetState(BattleState.Read);
+        gameDirector_3.resetState(BattleState.Read,battleEffect:base.Effect);
     }
 }

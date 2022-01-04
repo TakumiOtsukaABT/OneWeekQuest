@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BaseActionCommand : MonoBehaviour
 {
+    public GameObject Effect;
     public virtual void runActionCommand()
     {
 

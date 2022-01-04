@@ -386,6 +386,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93111f26d910a1b4082c063d700a9a82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Effect: {fileID: 0}
 --- !u!1 &111598853 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3285948760691082023, guid: 59d21a9dfd6cc044293aacf266bec384, type: 3}
@@ -470,6 +471,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e0a6ba0298962d49aa81f4876745109, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Effect: {fileID: 0}
   gameDirector_3: {fileID: 0}
   dialogueCanvasCommand: {fileID: 475400263}
   statusCanvas: {fileID: 223679372}
@@ -2637,6 +2639,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8b4793a64309b84dbc2a6fe93149a87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Effect: {fileID: 1663709190023589424, guid: c0d8f2ab34cc5c042b9c606a090dfd13, type: 3}
   gameDirector_3: {fileID: 0}
   dialogueCanvasCommand: {fileID: 475400263}
 --- !u!1001 &733205038

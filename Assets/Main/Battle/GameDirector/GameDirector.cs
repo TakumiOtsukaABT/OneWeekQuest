@@ -62,9 +62,9 @@ public class GameDirector : MonoBehaviour
         }
     }
 
-    public void resetState(BattleState newState, bool nextTurn = true)
+    public void resetState(BattleState newState, bool nextTurn = true, GameObject battleEffect = null)
     {
-        StartCoroutine(deactivate_then_activate_state(newState,nextTurn));
+        StartCoroutine(deactivate_then_activate_state(newState,nextTurn, battleEffect));
     }
 
     public void deactivateAllCanvas()
@@ -72,17 +72,26 @@ public class GameDirector : MonoBehaviour
         battleGameCanvasController_0.deactivateAll();
     }
 
-    IEnumerator deactivate_then_activate_state(BattleState newState, bool nextTurn = true)
+    IEnumerator deactivate_then_activate_state(BattleState newState, bool nextTurn = true, GameObject battleEffect = null)
     {
-        initializeProperty();
         selectingType = SelectingType.Disable;
         battleGameCanvasController_0.deactivateAll();
         yield return new WaitForSeconds(0.5f);
+        if (battleEffect != null)
+        {
+            GameObject effect = Instantiate(battleEffect);
+            effect.transform.parent = single_target.transform;
+            effect.transform.localPosition = new Vector3(0, 0, 0);
+            effect.transform.localScale = new Vector3(5, 5, 5);
+            effect.GetComponent<SpriteRenderer>().sortingOrder = 10;
+            //yield return new WaitUntil(()=>!effect.activeSelf);
+        }
         setState(newState,nextTurn);
         if (turn_queue.Count < 10)
         {
             turn_queue.Enqueue(GetNextEnque());
         }
+        initializeProperty();
     }
 
 
@@ -165,6 +174,7 @@ public class GameDirector : MonoBehaviour
                 return human_3;
         }
     }
+
 
     public void setTakeDamageAndDialogue(int damage){
         Event _event = new Event();
