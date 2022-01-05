@@ -8,10 +8,12 @@ namespace Gamekit2D
     public class DialogueCanvasCommand : DialogueCanvasController
     {
         [SerializeField, ReadOnly] private GameObject selecting;
+        [SerializeField] private GameObject waza_panel;
 
         void initializeProperty()
         {
             selecting = null;
+            waza_panel.SetActive(false);
         }
         public void onButtonClick(GameObject gameObject)
         {
