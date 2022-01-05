@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TokushuAction : BaseActionCommand
+public class GoBackAction : BaseActionCommand
 {
+    [SerializeField] private GameObject waza_panel;
+
     public override void runActionCommand()
     {
-        Debug.Log("bbbbbbbbb");
+        waza_panel.SetActive(false);
     }
 }
