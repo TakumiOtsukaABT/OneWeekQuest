@@ -11,6 +11,7 @@ public class BattleGameCanvasController : MonoBehaviour
 
     public void atWaitingInput(characterType characterType)
     {
+        canvasCommand.initializeProperty();
         canvasDescription.waitingInputTurn(characterType);
         canvasDescription.ActivateCanvasWithDialogueArray();
         canvasCommand.ActivateCanvasWithDialogueArray();

@@ -106,6 +106,7 @@ public class GameDirector : MonoBehaviour
                 {
                     currentCharacter = turn_queue.Dequeue();
                 }
+                
                 battleGameCanvasController_0.atWaitingInput(currentCharacter);
                 inputController_2.setInputHandle<Battle_CommandInputHandle>();
                 break;

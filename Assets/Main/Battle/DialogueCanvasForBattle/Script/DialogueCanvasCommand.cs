@@ -10,7 +10,7 @@ namespace Gamekit2D
         [SerializeField, ReadOnly] private GameObject selecting;
         [SerializeField] private GameObject waza_panel;
 
-        void initializeProperty()
+        public void initializeProperty()
         {
             selecting = null;
             waza_panel.SetActive(false);
@@ -19,9 +19,7 @@ namespace Gamekit2D
         {
             if (gameObject.Equals(selecting))
             {
-                selecting.GetComponent<BaseActionCommand>().runActionCommand();
-                initializeProperty();
-            }
+                selecting.GetComponent<BaseActionCommand>().runActionCommand();            }
             else
             {
                 selecting = gameObject;
