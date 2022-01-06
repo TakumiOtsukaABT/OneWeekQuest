@@ -119,8 +119,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue: []
-  hukidashi_0: {fileID: 0}
-  dialogueCanvas_1: {fileID: 0}
+  hukidashi: {fileID: 0}
+  dialogueCanvas_0: {fileID: 0}
 --- !u!58 &8829525937214256293
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -225,11 +225,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 682727601993403620, guid: e9971d7f27c18b440b04440bd6f1c78f, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 637.42
+      value: 622.24
       objectReference: {fileID: 0}
     - target: {fileID: 682727601993403620, guid: e9971d7f27c18b440b04440bd6f1c78f, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 260.72998
+      value: 256.18
       objectReference: {fileID: 0}
     - target: {fileID: 682727601993403620, guid: e9971d7f27c18b440b04440bd6f1c78f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

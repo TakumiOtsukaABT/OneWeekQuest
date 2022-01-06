@@ -11,6 +11,12 @@ public class TrainingBoard : GrowthBoard
         base.fadeoutCharacterController.ActivateTrain();
     }
 
+    public override void childDeactivation()
+    {
+        base.childDeactivation();
+        base.CharacterHouse.GetComponent<MenuCanvas>().popWindow();
+    }
+
     public override void childTakeEffect()
     {
         GameObject playerData = base.CharacterHouse.GetComponent<Outlet>().gameObjects[0];

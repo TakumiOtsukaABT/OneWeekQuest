@@ -1486,7 +1486,7 @@ MonoBehaviour:
   menuCanvas: {fileID: 4711190796642599361}
   prefab: {fileID: 1122450379417745021, guid: 29114edd25c663d40a20216a78b7594c, type: 3}
   board: {fileID: 7189055470670389114}
-  battleCommandReference: {fileID: 11400000, guid: abf2d51d2bb32c2499e6b2d34b944b90, type: 2}
+  uniqueCommandReference: {fileID: 11400000, guid: abf2d51d2bb32c2499e6b2d34b944b90, type: 2}
 --- !u!1 &2475990255288109191
 GameObject:
   m_ObjectHideFlags: 0
@@ -3369,7 +3369,7 @@ MonoBehaviour:
   menuCanvas: {fileID: 4711190796642599361}
   prefab: {fileID: 1122450379417745021, guid: 3240286eab9f8b54bb5e8a4054497b9c, type: 3}
   board: {fileID: 6004935423494859402}
-  battleCommandReference: {fileID: 11400000, guid: 0c568ac683f7a2844aeeeb4d5d6223e7, type: 2}
+  uniqueCommandReference: {fileID: 11400000, guid: 0c568ac683f7a2844aeeeb4d5d6223e7, type: 2}
 --- !u!1 &4711190796594875566
 GameObject:
   m_ObjectHideFlags: 0

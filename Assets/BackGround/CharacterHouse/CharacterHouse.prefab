@@ -211,12 +211,12 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 6075473831811382260}
         m_TargetAssemblyTypeName: MenuCanvas, Assembly-CSharp
         m_MethodName: pushWindow
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgument: {fileID: 6585542880125810348}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -1406,7 +1406,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 6075473831811382260}
         m_TargetAssemblyTypeName: MenuCanvas, Assembly-CSharp
         m_MethodName: popWindow
         m_Mode: 6
@@ -2153,7 +2153,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 6075473831811382260}
         m_TargetAssemblyTypeName: MenuCanvas, Assembly-CSharp
         m_MethodName: pushWindow
         m_Mode: 2
@@ -4016,7 +4016,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 6075473831811382260}
         m_TargetAssemblyTypeName: MenuCanvas, Assembly-CSharp
         m_MethodName: popWindow
         m_Mode: 6
@@ -4317,7 +4317,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 6075473831811382260}
         m_TargetAssemblyTypeName: MenuCanvas, Assembly-CSharp
         m_MethodName: popWindow
         m_Mode: 6

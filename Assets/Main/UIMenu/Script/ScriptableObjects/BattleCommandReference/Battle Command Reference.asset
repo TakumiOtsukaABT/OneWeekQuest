@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   elements:
   - id: 0
-    description: "\u3082\u3061\u3082\u3061\u306A\u3053\u3046\u3052\u304D"
-    element_name: "\u3082\u3061\u3082\u3061\u30A2\u30BF\u30C3\u30AF"
+    description: "\u6575\u3092\u653B\u6483\u3059\u308B"
+    element_name: "\u3053\u3046\u3052\u304D"
     cost: 0
