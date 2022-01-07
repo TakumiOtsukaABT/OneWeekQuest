@@ -11,10 +11,12 @@ public class TrainingBoard : GrowthBoard
         base.fadeoutCharacterController.ActivateTrain();
     }
 
+
     public override void childTakeEffect()
     {
         GameObject playerData = base.CharacterHouse.GetComponent<Outlet>().gameObjects[0];
         playerData.GetComponent<PlayerStatus>().playerStatusForReference.increment(incrementPlayerStatus);
+        base.taskHandler_3.tickTask("Train");
     }
 
 }

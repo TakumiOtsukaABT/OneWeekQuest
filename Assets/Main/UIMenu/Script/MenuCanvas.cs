@@ -8,6 +8,7 @@ public class MenuCanvas : MonoBehaviour
     public Stack<GameObject> menuStack = new Stack<GameObject>() { };
     [SerializeField] InputController inputController;
     [SerializeField] GameObject firstButton;
+    [SerializeField] GameObject secondButton;
 
 
     public void Start()
@@ -34,6 +35,26 @@ public class MenuCanvas : MonoBehaviour
             if (!ignoreEmpty)
             {
                 DeactivateCanvasWithDelay(window);
+            }
+            else
+            {
+                window.SetActive(false);
+            }
+        }
+        else
+        {
+            DeactivateCanvasWithDelayForLaterPanel(window);
+        }
+    }
+    public void popWindowForCharacterHouse(bool ignoreEmpty = false)
+    {
+        var window = menuStack.Pop();
+        if (menuStack.Count == 0)
+        {
+            if (!ignoreEmpty)
+            {
+                DeactivateCanvasWithDelay(window);
+                secondButton.SetActive(true);
             }
             else
             {

@@ -5,6 +5,8 @@ using UnityEngine;
 public class GrowthBoard : Board
 {
     [SerializeField] protected GameObject CharacterHouse;
+    [SerializeField] protected TaskHandler taskHandler_3;
+    Outlet outlet;
 
     protected FadeoutCharacterController fadeoutCharacterController;
     public void onButtonPush()
@@ -12,9 +14,15 @@ public class GrowthBoard : Board
         StartCoroutine(waitGrowthAnimation());
     }
 
+    private void Start()
+    {
+        outlet = CharacterHouse.GetComponent<Outlet>();
+        taskHandler_3 = outlet.gameObjects[3].GetComponent<TaskHandler>();
+    }
+
     private IEnumerator waitGrowthAnimation()
     {
-        Outlet outlet = CharacterHouse.GetComponent<Outlet>();
+        
         BlackoutController blackout = outlet.gameObjects[1].GetComponent<BlackoutController>();
         fadeoutCharacterController = outlet.gameObjects[2].GetComponent<FadeoutCharacterController>();
         blackout.ActivateFadeout();
@@ -33,6 +41,7 @@ public class GrowthBoard : Board
     virtual public void childDeactivation()
     {
         fadeoutCharacterController.DeactivateWithDelay(0);
+        CharacterHouse.GetComponent<MenuCanvas>().popWindow();
     }
 
     virtual public void childTakeEffect()

@@ -14,6 +14,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   elements:
   - id: 0
-    description: "\u3082\u3061\u3082\u3061\u306A\u3053\u3046\u3052\u304D"
-    element_name: "\u3082\u3061\u3082\u3061\u30A2\u30BF\u30C3\u30AF"
+    description: "\u6575\u3092\u653B\u6483\u3059\u308B"
+    element_name: "\u3053\u3046\u3052\u304D"
     cost: 0
+    jukuren_kaisu: 0
+    study_id: 9999
+  - id: 1
+    description: "\u708E\u5C5E\u6027\u3067\u6575\u3092\u653B\u6483\u3059\u308B"
+    element_name: "\u30D5\u30A1\u30A4\u30A2"
+    cost: 10
+    jukuren_kaisu: 2
+    study_id: 0
+  - id: 2
+    description: "\u6C37\u5C5E\u6027\u3067\u6575\u3092\u653B\u6483\u3059\u308B"
+    element_name: "\u30D6\u30EA\u30B6\u30FC\u30C9"
+    cost: 10
+    jukuren_kaisu: 2
+    study_id: 1

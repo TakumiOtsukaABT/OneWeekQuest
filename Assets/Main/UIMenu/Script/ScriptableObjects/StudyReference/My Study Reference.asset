@@ -12,4 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7e8176b656ffae40bd3dec730ce632e, type: 3}
   m_Name: My Study Reference
   m_EditorClassIdentifier: 
-  elements: []
+  elements:
+  - id: 0
+    description: "\u307B\u306E\u304A\u306E\u9B54\u6CD5\u3092\u899A\u3048\u308B"
+    element_name: "\u307B\u306E\u304A\u306E\u66F8"
+  - id: 1
+    description: "\u3053\u304A\u308A\u306E\u9B54\u6CD5\u3092\u899A\u3048\u308B"
+    element_name: "\u3053\u304A\u308A\u306E\u66F8"
+  - id: 2
+    description: "\u304B\u307F\u306A\u308A\u306E\u9B54\u6CD5\u3092\u899A\u3048\u308B"
+    element_name: "\u96F7\u306E\u66F8"

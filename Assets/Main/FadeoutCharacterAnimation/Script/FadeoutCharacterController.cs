@@ -19,6 +19,11 @@ public class FadeoutCharacterController : MonoBehaviour
         activateAction(4);
     }
 
+    public void ActivateStudy()
+    {
+        activateAction(2);
+    }
+
     private void activateAction(int actioncode)
     {
         if (m_DeactivationCoroutine != null)

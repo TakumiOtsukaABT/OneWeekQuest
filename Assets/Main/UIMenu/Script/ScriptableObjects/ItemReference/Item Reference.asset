@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   elements:
   - id: 0
-    description: "HP\u309215\u304B\u3044\u3075\u304F"
-    element_name: "\u304A\u3082\u3061"
+    description: "HP\u3092100\u5897\u3084\u3059"
+    element_name: "\u304A\u306B\u304E\u308A"
     count: 0
