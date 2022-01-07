@@ -5,4 +5,6 @@ using UnityEngine;
 public class BattleCommand : BaseItemType
 {
     public int cost;
+    public int jukuren_kaisu;
+    public int study_id;
 }

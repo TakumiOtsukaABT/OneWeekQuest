@@ -13,8 +13,9 @@ public class EatBoard :GrowthBoard
     public override void childTakeEffect()
     {
         GameObject playerData = base.CharacterHouse.GetComponent<Outlet>().gameObjects[0];
-        playerData.GetComponent<PlayerBuff>().buff_list.Add(id);
         base.taskHandler_3.tickTask("Eat");
+
+        playerData.GetComponent<PlayerBuff>().buff_list.Add(id);
     }
 
 }

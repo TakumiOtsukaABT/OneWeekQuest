@@ -13,7 +13,7 @@ public class StudyBoard : GrowthBoard
     public override void childTakeEffect()
     {
         GameObject playerData = base.CharacterHouse.GetComponent<Outlet>().gameObjects[0];
-        playerData.GetComponent<PlayerStudyCommandsList>().Add(id);
         base.taskHandler_3.tickTask("Study");
+        playerData.GetComponent<PlayerStudyCommandsList>().Add(id);
     }
 }
