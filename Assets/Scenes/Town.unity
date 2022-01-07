@@ -1087,6 +1087,10 @@ PrefabInstance:
       value: Talk
       objectReference: {fileID: 0}
     - target: {fileID: 8381357421858052506, guid: 957abf0c167b6474cb6590cda767679c, type: 3}
+      propertyPath: baseTasks.Array.data[1].count.Array.data[0]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8381357421858052506, guid: 957abf0c167b6474cb6590cda767679c, type: 3}
       propertyPath: baseTasks.Array.data[3].count.Array.data[0]
       value: 1
       objectReference: {fileID: 0}
@@ -1959,6 +1963,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1931285822}
     - target: {fileID: 8806809841790386596, guid: ad91c5b1482d2b7428fd6ae9f2012708, type: 3}
+      propertyPath: gameObjects.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8806809841790386596, guid: ad91c5b1482d2b7428fd6ae9f2012708, type: 3}
       propertyPath: gameObjects.Array.data[0]
       value: 
       objectReference: {fileID: 1870993222}
@@ -1970,6 +1978,10 @@ PrefabInstance:
       propertyPath: gameObjects.Array.data[2]
       value: 
       objectReference: {fileID: 1337110832}
+    - target: {fileID: 8806809841790386596, guid: ad91c5b1482d2b7428fd6ae9f2012708, type: 3}
+      propertyPath: gameObjects.Array.data[3]
+      value: 
+      objectReference: {fileID: 1454191753}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad91c5b1482d2b7428fd6ae9f2012708, type: 3}
 --- !u!1001 &2995130531707438843
@@ -2034,7 +2046,7 @@ PrefabInstance:
     - target: {fileID: 2995130532799822217, guid: 593f04141833eab40b2ce3ff293d75ff, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 51d82cb071dfcac488d134d22966a275, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 2995130532799822217, guid: 593f04141833eab40b2ce3ff293d75ff, type: 3}
       propertyPath: m_Enabled
       value: 1
