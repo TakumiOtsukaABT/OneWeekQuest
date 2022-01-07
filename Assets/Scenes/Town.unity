@@ -1729,6 +1729,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IdList: 000000000100000002000000
+  count: 000000000000000000000000
+  battleCommandReference: {fileID: 11400000, guid: abf2d51d2bb32c2499e6b2d34b944b90, type: 2}
 --- !u!114 &1870993226
 MonoBehaviour:
   m_ObjectHideFlags: 0

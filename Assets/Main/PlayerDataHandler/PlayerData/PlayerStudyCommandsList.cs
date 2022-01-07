@@ -36,7 +36,8 @@ public class PlayerStudyCommandsList : BasePlayerData
         foreach( var i in battleCommandReference.elements)
         {
             if (i.study_id == IdList[index_IdList] && count[index_IdList]>=i.jukuren_kaisu) {
-                gameObject.GetComponent<PlayerBattleCommandList>().Add(newId);
+                gameObject.GetComponent<PlayerBattleCommandList>().Add(i.id);
+                Debug.Log("aaaaaaaaaaaaaai");
             }
         }
     }
