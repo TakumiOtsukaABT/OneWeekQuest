@@ -14,6 +14,7 @@ public class EatBoard :GrowthBoard
     {
         GameObject playerData = base.CharacterHouse.GetComponent<Outlet>().gameObjects[0];
         playerData.GetComponent<PlayerBuff>().buff_list.Add(id);
+        base.taskHandler_3.tickTask("Eat");
     }
 
 }

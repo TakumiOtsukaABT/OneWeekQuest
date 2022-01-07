@@ -14,5 +14,6 @@ public class StudyBoard : GrowthBoard
     {
         GameObject playerData = base.CharacterHouse.GetComponent<Outlet>().gameObjects[0];
         playerData.GetComponent<PlayerStudyCommandsList>().Add(id);
+        base.taskHandler_3.tickTask("Study");
     }
 }

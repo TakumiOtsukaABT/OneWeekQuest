@@ -16,6 +16,7 @@ public class TrainingBoard : GrowthBoard
     {
         GameObject playerData = base.CharacterHouse.GetComponent<Outlet>().gameObjects[0];
         playerData.GetComponent<PlayerStatus>().playerStatusForReference.increment(incrementPlayerStatus);
+        base.taskHandler_3.tickTask("Train");
     }
 
 }
