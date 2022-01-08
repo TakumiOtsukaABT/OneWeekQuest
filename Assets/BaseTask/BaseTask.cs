@@ -10,7 +10,7 @@ public class BaseTask
     public string[] key;
     public int[] count; 
     private Dictionary<string, int> completeCondition = new Dictionary<string, int>();
-    private Dictionary<string, int> currentCondition = new Dictionary<string, int>();
+    public Dictionary<string, int> currentCondition = new Dictionary<string, int>();
 
     public void initDictionary()
     {
@@ -45,6 +45,7 @@ public class BaseTask
         if (currentCondition.ContainsKey(key))
         {
             currentCondition[key]++;
+            Debug.Log("currentcondition  "+currentCondition[key]);
         }
         checkClear();
     }
