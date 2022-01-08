@@ -5,6 +5,7 @@ using UnityEngine;
 public class EatBoard : GrowthBoard
 {
     public int id;
+    [SerializeField] TrainingBoard trainingBoard;
     public override void childActivation()
     {
         base.fadeoutCharacterController.ActivateEat();
@@ -22,6 +23,9 @@ public class EatBoard : GrowthBoard
         switch (id)
         {
             case 0:
+                PlayerStatusForReference add_playerStatus = new PlayerStatusForReference();
+                add_playerStatus.HP_access = 100;
+                playerData.GetComponent<PlayerStatus>().playerStatusForReference.increment(add_playerStatus,1.0f);
                 break;
             case 1:
                 playerData.GetComponent<PlayerBuff>().buff_list.Add(id);
@@ -39,8 +43,19 @@ public class EatBoard : GrowthBoard
                 }
                 break;
             case 4:
+                trainingBoard.Sushi = true;
                 break;
             case 5:
+                PlayerStatusForReference add_playerStatus5 = new PlayerStatusForReference();
+                add_playerStatus5.HP_access = 10;
+                add_playerStatus5.MP_access = 10;
+                add_playerStatus5.Attack_access = 10;
+                add_playerStatus5.Defence_access = 10;
+                add_playerStatus5.Speed_access = 10;
+                add_playerStatus5.HitRate_access = 10;
+                add_playerStatus5.Regen_access = 10;
+                playerData.GetComponent<PlayerStatus>().playerStatusForReference.increment(add_playerStatus5, 1.0f);
+                playerData.GetComponent<PlayerInventory>().Add(1);
                 break;
         }
     }

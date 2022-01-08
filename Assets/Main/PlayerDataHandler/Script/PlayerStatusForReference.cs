@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -20,14 +21,14 @@ public class PlayerStatusForReference
     public int HitRate_access { get => HitRate; set => HitRate = value; }
     public int Regen_access { get => Regen; set => Regen = value; }
 
-    public void increment(PlayerStatusForReference playerStatusForReferenceInc)
+    public void increment(PlayerStatusForReference playerStatusForReferenceInc, float multiplier)
     {
-        HP += playerStatusForReferenceInc.HP_access;
-        MP += playerStatusForReferenceInc.MP_access;
-        Attack += playerStatusForReferenceInc.Attack_access;
-        Defence += playerStatusForReferenceInc.Defence_access;
-        Speed += playerStatusForReferenceInc.Speed_access;
-        HitRate += playerStatusForReferenceInc.HitRate_access;
-        Regen += playerStatusForReferenceInc.Regen_access;
+        HP += Convert.ToInt32(playerStatusForReferenceInc.HP_access*multiplier);
+        MP += Convert.ToInt32(playerStatusForReferenceInc.MP_access * multiplier);
+        Attack += Convert.ToInt32(playerStatusForReferenceInc.Attack_access * multiplier);
+        Defence += Convert.ToInt32(playerStatusForReferenceInc.Defence_access * multiplier);
+        Speed += Convert.ToInt32(playerStatusForReferenceInc.Speed_access * multiplier);
+        HitRate += Convert.ToInt32(playerStatusForReferenceInc.HitRate_access * multiplier);
+        Regen += Convert.ToInt32(playerStatusForReferenceInc.Regen_access * multiplier);
     }
 }
