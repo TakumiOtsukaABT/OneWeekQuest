@@ -1,0 +1,15 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: AlertAnimator
+  m_Controller: {fileID: 9100000, guid: d20967d8792be064ab58413d8e45b4b7, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 0ce788d80b1def546981f0b2456e5899, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 8724ecf6dabc27843a0a213bd7597f5f, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: affa51f31488e3d49824530b963b2c17, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 24140ec9fe91bf74a9fdd618dac9ca88, type: 2}

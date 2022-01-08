@@ -31,3 +31,9 @@ MonoBehaviour:
     cost: 10
     jukuren_kaisu: 2
     study_id: 1
+  - id: 3
+    description: "\u96F7\u5C5E\u6027\u3067\u6575\u3092\u653B\u6483\u3059\u308B"
+    element_name: "\u30B5\u30F3\u30C0\u30FC"
+    cost: 10
+    jukuren_kaisu: 2
+    study_id: 1
