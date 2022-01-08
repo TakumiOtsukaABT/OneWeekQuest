@@ -1318,8 +1318,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 1048662655}
   textMeshProUGUI: {fileID: 1751855233}
-  inputController_1: {fileID: 0}
-  taskHandler_0: {fileID: 0}
+  seconds: 2
 --- !u!1001 &1062949360
 PrefabInstance:
   m_ObjectHideFlags: 0

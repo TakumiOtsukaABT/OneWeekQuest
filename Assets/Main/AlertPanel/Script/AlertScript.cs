@@ -8,20 +8,10 @@ public class AlertScript : MonoBehaviour
 {
     public Animator animator;
     public TextMeshProUGUI textMeshProUGUI;
-    [SerializeField, ReadOnly] protected InputController inputController_1;
-    [SerializeField, ReadOnly] private TaskHandler taskHandler_0;
-
+    [SerializeField] private float seconds;
     protected Coroutine m_DeactivationCoroutine;
 
     protected readonly int m_HashActivePara = Animator.StringToHash("Active");
-
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.L))
-        {
-            Activate("lalala");
-        }
-    }
 
     IEnumerator SetAnimatorParameterWithDelay(float delay)
     {
@@ -31,6 +21,12 @@ public class AlertScript : MonoBehaviour
 
     public void Activate(string text)
     {
+        StartCoroutine(waitFadeout(text,seconds));
+    }
+    
+    IEnumerator waitFadeout(string text,float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
         if (m_DeactivationCoroutine != null)
         {
             StopCoroutine(m_DeactivationCoroutine);
