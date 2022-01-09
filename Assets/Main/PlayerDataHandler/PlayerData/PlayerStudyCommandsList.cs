@@ -6,6 +6,7 @@ public class PlayerStudyCommandsList : BasePlayerData
 {
     [SerializeField] private List<int> count;
     [SerializeField] private BattleCommandReference battleCommandReference;
+    [SerializeField] AlertScript alertScript;
     public override void Add(int newId)
     {
         for (int i =0;i<IdList.Count;i++)
@@ -35,10 +36,12 @@ public class PlayerStudyCommandsList : BasePlayerData
         }
         foreach( var i in battleCommandReference.elements)
         {
-            if (i.study_id == IdList[index_IdList] && count[index_IdList]>=i.jukuren_kaisu) {
+            if (i.study_id == IdList[index_IdList] && count[index_IdList]==i.jukuren_kaisu) {
                 gameObject.GetComponent<PlayerBattleCommandList>().Add(i.id);
-                Debug.Log("aaaaaaaaaaaaaai");
+                alertScript.Activate("新しい技を覚えた!");
+                break;
             }
+            alertScript.Activate("技を覚えるにはもう少し勉強が必要のようだ");
         }
     }
 

@@ -42,6 +42,7 @@ public class GrowthBoard : Board
     {
         fadeoutCharacterController.DeactivateWithDelay(0);
         CharacterHouse.GetComponent<MenuCanvas>().popWindow();
+        CharacterHouse.GetComponent<MenuCanvas>().popWindowForCharacterHouse();
     }
 
     virtual public void childTakeEffect()

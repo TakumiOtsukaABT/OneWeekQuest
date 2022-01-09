@@ -16,6 +16,24 @@ MonoBehaviour:
   - id: 0
     description: "HP\u304C100\u4E0A\u304C\u308B"
     element_name: "\u304A\u306B\u304E\u308A"
+    alertDialogue: "HP\u304C100\u4E0A\u304C\u3063\u305F"
   - id: 1
     description: "\u53EF\u611B\u304F\u306A\u308B"
     element_name: "\u30C1\u30E7\u30B3\u30EC\u30FC\u30C8"
+    alertDialogue: "\u53EF\u611B\u304F\u306A\u3063\u305F"
+  - id: 2
+    description: "\u7CBE\u795E\u304C\u5B89\u5B9A\u3059\u308B"
+    element_name: "\u30D6\u30ED\u30C3\u30B3\u30EA\u30FC"
+    alertDialogue: "\u7CBE\u795E\u304C\u5B89\u5B9A\u3057\u305F"
+  - id: 3
+    description: "\u52C9\u5F37\u306E\u884C\u52D5\u56DE\u6570\u304C1\u5897\u3048\u308B"
+    element_name: "\u30B3\u30FC\u30D2\u30FC"
+    alertDialogue: "\u52C9\u5F37\u306E\u884C\u52D5\u56DE\u6570\u304C\u5897\u3048\u305F"
+  - id: 4
+    description: "\u6B21\u306E\u30C8\u30EC\u30FC\u30CB\u30F3\u30B0\u52B9\u679C1.5\u500D"
+    element_name: "\u3059\u3057"
+    alertDialogue: "\u6B21\u306E\u30C8\u30EC\u30FC\u30CB\u30F3\u30B0\u3067\u52B9\u679C1.5\u500D"
+  - id: 5
+    description: "\u5168\u30D1\u30E9\u30E1\u30FC\u30BF+10"
+    element_name: "\u306B\u304F"
+    alertDialogue: "\u5168\u30D1\u30E9\u30E1\u30FC\u30BF\u304C10\u4E0A\u304C\u3063\u305F!\u9AA8\u3092\u624B\u306B\u5165\u308C\u305F!"
