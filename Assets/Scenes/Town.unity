@@ -1318,7 +1318,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 1048662655}
   textMeshProUGUI: {fileID: 1751855233}
-  seconds: 2
+  seconds: 4
 --- !u!1001 &1062949360
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2313,6 +2313,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 256980248019367800, guid: ad91c5b1482d2b7428fd6ae9f2012708, type: 3}
+      propertyPath: alertScript
+      value: 
+      objectReference: {fileID: 1048662660}
+    - target: {fileID: 256980248019367800, guid: ad91c5b1482d2b7428fd6ae9f2012708, type: 3}
+      propertyPath: eatReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 36f0d36a73f44bf4ea982e41a9be81c6, type: 2}
     - target: {fileID: 260527041252449049, guid: ad91c5b1482d2b7428fd6ae9f2012708, type: 3}
       propertyPath: m_IsActive
       value: 1

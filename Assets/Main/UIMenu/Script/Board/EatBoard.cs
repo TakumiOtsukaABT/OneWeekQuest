@@ -6,6 +6,8 @@ public class EatBoard : GrowthBoard
 {
     public int id;
     [SerializeField] TrainingBoard trainingBoard;
+    [SerializeField] AlertScript alertScript;
+    [SerializeField] EatReference eatReference;
     public override void childActivation()
     {
         base.fadeoutCharacterController.ActivateEat();
@@ -58,5 +60,6 @@ public class EatBoard : GrowthBoard
                 playerData.GetComponent<PlayerInventory>().Add(1);
                 break;
         }
+        alertScript.Activate(eatReference.GetElement(id).alertDialogue);
     }
 }
