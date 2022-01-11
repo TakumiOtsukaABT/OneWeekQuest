@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerStudyCommandsList : BasePlayerData
 {
-    [SerializeField] private List<int> count;
+    [SerializeField] public List<int> count;
     [SerializeField] private BattleCommandReference battleCommandReference;
     [SerializeField] AlertScript alertScript;
     public override void Add(int newId)

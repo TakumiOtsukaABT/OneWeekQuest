@@ -3584,6 +3584,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inputController: {fileID: 0}
   firstButton: {fileID: 4711190797006252105}
+  secondButton: {fileID: 0}
 --- !u!114 &7025069519139496981
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6009,6 +6010,7 @@ GameObject:
   - component: {fileID: 2462395905762661348}
   - component: {fileID: 3928735787818971916}
   - component: {fileID: 6994681991209849487}
+  - component: {fileID: 2498240632377171174}
   m_Layer: 5
   m_Name: BackToTitleButton
   m_TagString: Untagged
@@ -6118,6 +6120,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &2498240632377171174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6908755692192268968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8591a8018af380428cc0642700bc80d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7034487626876844855
 GameObject:
   m_ObjectHideFlags: 0
