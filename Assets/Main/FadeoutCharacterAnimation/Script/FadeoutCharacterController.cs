@@ -23,6 +23,10 @@ public class FadeoutCharacterController : MonoBehaviour
     {
         activateAction(2);
     }
+    public void ActivateSleep()
+    {
+        activateAction(3);
+    }
 
     private void activateAction(int actioncode)
     {

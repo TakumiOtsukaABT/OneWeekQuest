@@ -222,6 +222,14 @@ PrefabInstance:
       propertyPath: m_SizeDelta.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2498240632377171174, guid: 0b7157f30d8839b42b18be8715b4a224, type: 3}
+      propertyPath: outlet
+      value: 
+      objectReference: {fileID: 1444232254}
+    - target: {fileID: 2498240632377171174, guid: 0b7157f30d8839b42b18be8715b4a224, type: 3}
+      propertyPath: taskPanel
+      value: 
+      objectReference: {fileID: 91554572}
     - target: {fileID: 2781453702853935489, guid: 0b7157f30d8839b42b18be8715b4a224, type: 3}
       propertyPath: m_fontAsset
       value: 
@@ -457,9 +465,21 @@ PrefabInstance:
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 7025069519139496981, guid: 0b7157f30d8839b42b18be8715b4a224, type: 3}
+      propertyPath: gameObjects.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7025069519139496981, guid: 0b7157f30d8839b42b18be8715b4a224, type: 3}
       propertyPath: gameObjects.Array.data[0]
       value: 
       objectReference: {fileID: 1870993222}
+    - target: {fileID: 7025069519139496981, guid: 0b7157f30d8839b42b18be8715b4a224, type: 3}
+      propertyPath: gameObjects.Array.data[1]
+      value: 
+      objectReference: {fileID: 1337110832}
+    - target: {fileID: 7025069519139496981, guid: 0b7157f30d8839b42b18be8715b4a224, type: 3}
+      propertyPath: gameObjects.Array.data[2]
+      value: 
+      objectReference: {fileID: 1359739368}
     - target: {fileID: 7168253435884016525, guid: 0b7157f30d8839b42b18be8715b4a224, type: 3}
       propertyPath: m_fontAsset
       value: 
@@ -2029,7 +2049,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_TargetDisplay: 0
 --- !u!224 &1337110838
 RectTransform:
@@ -2133,6 +2153,17 @@ MonoBehaviour:
   TrainingButton: {fileID: 835611752}
   StudyButton: {fileID: 955813334}
   EatButton: {fileID: 336684323}
+--- !u!114 &1444232254 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7025069519139496981, guid: 0b7157f30d8839b42b18be8715b4a224, type: 3}
+  m_PrefabInstance: {fileID: 68851651}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: affb5bae910c23d48b94d65af2169701, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1454191753 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8381357421858052507, guid: 957abf0c167b6474cb6590cda767679c, type: 3}
@@ -2820,6 +2851,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1924894241848472378, guid: 4d7d8c8127c69d749b2086668bac831b, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2503122297143245574, guid: 4d7d8c8127c69d749b2086668bac831b, type: 3}
       propertyPath: m_AnchorMax.x
       value: 1
