@@ -10,6 +10,12 @@ public class BlackoutController : MonoBehaviour
     protected readonly int m_HashActivePara = Animator.StringToHash("Active");
     //0stale 1blackout 2blackoutend 3fadeout 4fadeoutend
 
+
+    private void Start()
+    {
+        Debug.Log("aaaa");
+        DeactivateFadeoutWithDelay(0);
+    }
     IEnumerator SetAnimatorParameterWithDelay(float delay, int state)
     {
         yield return new WaitForSeconds(delay);
