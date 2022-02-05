@@ -23,7 +23,7 @@ public class NextDayButton : MonoBehaviour
         yield return new WaitForSeconds(0.3f);
         blackout_2.ActivateFadeout();
         fadeoutCharacterController_1.ActivateSleep();
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(4);
         SceneManager.LoadScene(sceneName);
     }
 }
