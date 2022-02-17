@@ -23,7 +23,12 @@ public class AlertScript : MonoBehaviour
     {
         StartCoroutine(waitFadeout(text,seconds));
     }
-    
+
+    public void Activate(string text, float sec)
+    {
+        StartCoroutine(waitFadeout(text, sec));
+    }
+
     IEnumerator waitFadeout(string text,float seconds)
     {
         yield return new WaitForSeconds(seconds);
