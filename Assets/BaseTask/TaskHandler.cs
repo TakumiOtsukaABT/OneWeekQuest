@@ -28,6 +28,18 @@ public class TaskHandler : MonoBehaviour
         return null;
     }
 
+    public bool isAllTicked()
+    {
+        foreach(var i in baseTasks)
+        {
+            if (!i.clearFlag)
+            {
+                return false;
+            }
+        }
+        return true;
+    }
+
     public void tickTask(string key)
     {
         foreach (var i in baseTasks)
@@ -46,9 +58,4 @@ public class TaskHandler : MonoBehaviour
         passTask();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
