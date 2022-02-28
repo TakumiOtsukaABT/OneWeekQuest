@@ -23,10 +23,16 @@ public class MobCharacterController : MonoBehaviour
     public void activateCanvas()
     {
         playerData_1 = GetComponent<Outlet>().gameObjects[1];
+        setDialogueAndItemWithCondition();
         var dialogueCanvas = dialogueCanvas_0.GetComponent<DialogueCanvasController>();
         dialogueCanvas.Dialogue = dialogue;
         dialogueCanvas.ActivateCanvasWithDialogueArray();
         addToInventory();
+    }
+
+    protected virtual void setDialogueAndItemWithCondition()
+    {
+
     }
 
     private void addToInventory()
