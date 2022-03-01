@@ -9,7 +9,7 @@ public class MobCharacterController : MonoBehaviour
     public int[] itemId;
     [SerializeField] private GameObject hukidashi;
     [SerializeField, ReadOnly] private GameObject dialogueCanvas_0;
-    [SerializeField, ReadOnly] private GameObject playerData_1;
+    [SerializeField, ReadOnly] protected GameObject playerData_1;
     [SerializeField, ReadOnly] private TaskHandler taskHandler_2;
 
 
@@ -17,12 +17,12 @@ public class MobCharacterController : MonoBehaviour
     private void Start()
     {
         dialogueCanvas_0 = GetComponent<Outlet>().gameObjects[0];
+        playerData_1 = GetComponent<Outlet>().gameObjects[1];
         taskHandler_2 = GetComponent<Outlet>().gameObjects[2].GetComponent<TaskHandler>();
     }
 
     public void activateCanvas()
     {
-        playerData_1 = GetComponent<Outlet>().gameObjects[1];
         setDialogueAndItemWithCondition();
         var dialogueCanvas = dialogueCanvas_0.GetComponent<DialogueCanvasController>();
         dialogueCanvas.Dialogue = dialogue;
