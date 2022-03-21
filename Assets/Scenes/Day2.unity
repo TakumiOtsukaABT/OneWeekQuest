@@ -540,17 +540,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1009638384006160, guid: b7d8d29d9839beb41b123859c19f2966, type: 3}
   m_PrefabInstance: {fileID: 864926684}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &114745897 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5335522647037937752, guid: a5be0f2818535624e8e21f95b944f013, type: 3}
-  m_PrefabInstance: {fileID: 510082255}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f425dfff545f05d4081959b87175f03d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &202005593 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2498240632377171174, guid: 0b7157f30d8839b42b18be8715b4a224, type: 3}
@@ -771,6 +760,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1909803519}
     - target: {fileID: 5335522647037937752, guid: a5be0f2818535624e8e21f95b944f013, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5335522647037937752, guid: a5be0f2818535624e8e21f95b944f013, type: 3}
       propertyPath: itemId.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -813,7 +806,7 @@ PrefabInstance:
     - target: {fileID: 8437755548800165007, guid: a5be0f2818535624e8e21f95b944f013, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 114745897}
+      objectReference: {fileID: 1471626857}
     - target: {fileID: 8437755548800165007, guid: a5be0f2818535624e8e21f95b944f013, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: activateCanvas
@@ -1795,6 +1788,40 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8381357421858052507, guid: 957abf0c167b6474cb6590cda767679c, type: 3}
   m_PrefabInstance: {fileID: 1062949360}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1471626856 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4016836958877898631, guid: a5be0f2818535624e8e21f95b944f013, type: 3}
+  m_PrefabInstance: {fileID: 510082255}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1471626857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1471626856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e35ab359c0001a47918f081a324ad4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+  - 
+  - 
+  itemId: 00000000
+  hukidashi: {fileID: 1909803519}
+  dialogueCanvas_0: {fileID: 0}
+  playerData_1: {fileID: 0}
+  taskHandler_2: {fileID: 0}
+  baaberu: []
+  balanceball: []
+  jitensha: []
+  after: []
+  default_: []
+  baaberuId: 
+  balanceballId: 
+  jitenshaId: 
+  gosa: 0
 --- !u!1 &1681511283 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4711190797006252105, guid: 0b7157f30d8839b42b18be8715b4a224, type: 3}
