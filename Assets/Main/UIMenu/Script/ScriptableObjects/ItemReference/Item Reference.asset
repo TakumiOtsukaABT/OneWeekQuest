@@ -25,3 +25,15 @@ MonoBehaviour:
     description: "\u306A\u3093\u306E\u5F79\u306B\u3082\u7ACB\u305F\u306A\u3044\u85C1"
     element_name: "\u85C1"
     count: 0
+  - id: 3
+    description: "\u30C8\u30EC\u30FC\u30CB\u30F3\u30B0\u304C\u51FA\u6765\u308B\u3088\u3046\u306B\u306A\u308B"
+    element_name: "\u30D0\u30FC\u30D9\u30EB"
+    count: 0
+  - id: 4
+    description: "\u30C8\u30EC\u30FC\u30CB\u30F3\u30B0\u304C\u51FA\u6765\u308B\u3088\u3046\u306B\u306A\u308B"
+    element_name: "\u30D0\u30E9\u30F3\u30B9\u30DC\u30FC\u30EB"
+    count: 0
+  - id: 5
+    description: "\u30C8\u30EC\u30FC\u30CB\u30F3\u30B0\u304C\u51FA\u6765\u308B\u3088\u3046\u306B\u306A\u308B"
+    element_name: "\u81EA\u8EE2\u8ECA"
+    count: 0

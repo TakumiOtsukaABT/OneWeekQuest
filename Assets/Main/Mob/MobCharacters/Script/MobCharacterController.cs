@@ -11,11 +11,13 @@ public class MobCharacterController : MonoBehaviour
     [SerializeField, ReadOnly] private GameObject dialogueCanvas_0;
     [SerializeField, ReadOnly] protected GameObject playerData_1;
     [SerializeField, ReadOnly] private TaskHandler taskHandler_2;
+    [SerializeField, ReadOnly] protected bool gave;
 
 
 
     private void Start()
     {
+        gave = false;
         dialogueCanvas_0 = GetComponent<Outlet>().gameObjects[0];
         playerData_1 = GetComponent<Outlet>().gameObjects[1];
         taskHandler_2 = GetComponent<Outlet>().gameObjects[2].GetComponent<TaskHandler>();

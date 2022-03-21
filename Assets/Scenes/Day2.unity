@@ -1806,22 +1806,35 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
+  - "\u541B\u306F\u653B\u6483\u529B\u3001\u9632\u5FA1\u529B\u3001\u3059\u3070\u3084\u3055\u3092\u5747\u7B49\u306B\u935B\u3048\u3066\u3044\u308B\u306E\u304B\u306A?"
+  - "\u4F55\u304B\u306B\u7279\u5316\u3055\u305B\u3066\u3044\u305F\u3089\u3001\u30C8\u30EC\u30FC\u30CB\u30F3\u30B0\u6A5F\u5177\u3092\u3042\u3052\u3088\u3046\u3068\u601D\u3063\u305F\u3093\u3060\u304C"
   - 
-  - 
-  itemId: 00000000
+  itemId: 
   hukidashi: {fileID: 1909803519}
   dialogueCanvas_0: {fileID: 0}
   playerData_1: {fileID: 0}
   taskHandler_2: {fileID: 0}
-  baaberu: []
-  balanceball: []
-  jitensha: []
-  after: []
-  default_: []
-  baaberuId: 
-  balanceballId: 
-  jitenshaId: 
-  gosa: 0
+  baaberu:
+  - "\u541B\u306F\u653B\u6483\u529B\u3092\u4F38\u3070\u3057\u3066\u3044\u308B\u3088\u3046\u3060\u306D\uFF01"
+  - "\u662F\u975E\u3053\u306E\u30D0\u30FC\u30D9\u30EB\u3092\u4F7F\u3063\u3066\u304F\u308C\uFF01"
+  - "\u30D0\u30FC\u30D9\u30EB\u3092\u624B\u306B\u5165\u308C\u305F\uFF01"
+  - 
+  balanceball:
+  - "\u541B\u306F\u9632\u5FA1\u529B\u3092\u4F38\u3070\u3057\u3066\u3044\u308B\u3088\u3046\u3060\u306D\uFF01"
+  - "\u662F\u975E\u3053\u306E\u30D0\u30E9\u30F3\u30B9\u30DC\u30FC\u30EB\u3092\u4F7F\u3063\u3066\u304F\u308C\uFF01"
+  - "\u30D0\u30E9\u30F3\u30B9\u30DC\u30FC\u30EB\u3092\u624B\u306B\u5165\u308C\u305F\uFF01"
+  - 
+  jitensha:
+  - "\u541B\u306F\u3059\u3070\u3084\u3055\u3092\u4F38\u3070\u3057\u3066\u3044\u308B\u3088\u3046\u3060\u306D\uFF01"
+  - "\u662F\u975E\u3053\u306E\u81EA\u8EE2\u8ECA\u3092\u4F7F\u3063\u3066\u304F\u308C\uFF01"
+  - "\u81EA\u8EE2\u8ECA\u3092\u624B\u306B\u5165\u308C\u305F\uFF01"
+  - 
+  after:
+  - 
+  baaberuId: 03000000
+  balanceballId: 04000000
+  jitenshaId: 05000000
+  gosa: 20
 --- !u!1 &1681511283 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4711190797006252105, guid: 0b7157f30d8839b42b18be8715b4a224, type: 3}
