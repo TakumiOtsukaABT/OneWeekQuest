@@ -13,9 +13,12 @@ public class MobCharacterCondition_trainingItem : MobCharacterController
     public int[] balanceballId;
     public int[] jitenshaId;
     public int gosa;
+    [SerializeField] private string[] alreadyDialogue;
+
     protected override void setDialogueAndItemWithCondition()
     {
         PlayerStatusForReference playerStatus = base.playerData_1.GetComponent<PlayerStatus>().playerStatusForReference;
+        PlayerInventory playerInventory = base.playerData_1.GetComponent<PlayerInventory>();
         var status = new List<int>(){ playerStatus.Attack_access, playerStatus.Defence_access, playerStatus.Speed_access };
         var temp = new List<int>(status);
         temp.Sort();
@@ -25,21 +28,40 @@ public class MobCharacterCondition_trainingItem : MobCharacterController
             {
                 if (status[0] == temp[2])
                 {
-                    base.dialogue = baaberu;
-                    base.itemId = baaberuId;
-                    base.gave = true;
+                    if (!playerInventory.hasItem(baaberuId[0]))
+                    {
+                        base.dialogue = baaberu;
+                        base.itemId = baaberuId;
+                        base.gave = true;
+                    }
+                    else
+                    {
+                        base.dialogue = alreadyDialogue;
+                    }
                 }
                 else if (status[1] == temp[2])
                 {
-                    base.dialogue = balanceball;
-                    base.itemId = balanceballId;
-                    base.gave = true;
+                    if (!playerInventory.hasItem(baaberuId[1]))
+                    {
+                        base.dialogue = balanceball;
+                        base.itemId = balanceballId;
+                        base.gave = true;
+                    } else
+                    {
+                        base.dialogue = alreadyDialogue;
+                    }
                 }
                 else
                 {
-                    base.dialogue = jitensha;
-                    base.itemId = jitenshaId;
-                    base.gave = true;
+                    if (!playerInventory.hasItem(baaberuId[2]))
+                    {
+                        base.dialogue = jitensha;
+                        base.itemId = jitenshaId;
+                        base.gave = true;
+                    } else
+                    {
+                        base.dialogue = alreadyDialogue;
+                    }
                 }
             } else
             {

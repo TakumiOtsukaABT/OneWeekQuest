@@ -37,6 +37,17 @@ public class PlayerInventory : BasePlayerData
         }
     }
 
+    public bool hasItem(int id)
+    {
+        foreach(int i in IdList) {
+            if (id == i)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+
     override public void Clear()
     {
         IdList.Clear();

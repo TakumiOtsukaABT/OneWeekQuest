@@ -1814,6 +1814,7 @@ MonoBehaviour:
   dialogueCanvas_0: {fileID: 0}
   playerData_1: {fileID: 0}
   taskHandler_2: {fileID: 0}
+  gave: 0
   baaberu:
   - "\u541B\u306F\u653B\u6483\u529B\u3092\u4F38\u3070\u3057\u3066\u3044\u308B\u3088\u3046\u3060\u306D\uFF01"
   - "\u662F\u975E\u3053\u306E\u30D0\u30FC\u30D9\u30EB\u3092\u4F7F\u3063\u3066\u304F\u308C\uFF01"
@@ -1830,11 +1831,16 @@ MonoBehaviour:
   - "\u81EA\u8EE2\u8ECA\u3092\u624B\u306B\u5165\u308C\u305F\uFF01"
   - 
   after:
+  - "\u4ED6\u306E\u7269\u304C\u6B32\u3057\u304B\u3063\u305F\u3089\u307E\u305F\u304A\u3044\u3067"
   - 
   baaberuId: 03000000
   balanceballId: 04000000
   jitenshaId: 05000000
   gosa: 20
+  alreadyDialogue:
+  - "\u50D5\u304C\u3042\u3052\u305F\u3082\u306E\u4F7F\u3063\u3066\u304F\u308C\u3066\u308B\u304B\u3044\uFF1F"
+  - "\u4ED6\u306E\u80FD\u529B\u3082\u4F38\u3070\u3057\u3066\u307E\u305F\u304A\u3044\u3067"
+  - 
 --- !u!1 &1681511283 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4711190797006252105, guid: 0b7157f30d8839b42b18be8715b4a224, type: 3}
