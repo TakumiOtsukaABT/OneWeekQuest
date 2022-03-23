@@ -37,6 +37,41 @@ public class PlayerInventory : BasePlayerData
         }
     }
 
+    public int getElementId(int id)
+    {
+        foreach (var i in IdList)
+        {
+            if (i.Equals(id))
+            {
+                return i;
+            }
+        }
+        return 99;
+    }
+
+    public int getElementCount(int id)
+    {
+        for (int i =0; i<IdList.Count;i++)
+        {
+            if (IdList[i].Equals(id))
+            {
+                return countList[i];
+            }
+        }
+        return 99;
+    }
+
+    public bool hasItem(int id)
+    {
+        foreach(int i in IdList) {
+            if (id == i)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+
     override public void Clear()
     {
         IdList.Clear();

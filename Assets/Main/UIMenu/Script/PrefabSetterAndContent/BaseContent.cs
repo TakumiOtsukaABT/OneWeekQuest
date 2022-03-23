@@ -8,7 +8,7 @@ public class BaseContent <U,CommandReference,CommandList> : MonoBehaviour
     where CommandReference : BaseReference<U>
     where CommandList: BasePlayerData
 {
-    [SerializeField] private GameObject menuCanvas;
+    [SerializeField] protected GameObject menuCanvas;
     [SerializeField] protected GameObject prefab;
     [SerializeField] protected GameObject board;
     [SerializeField] protected CommandReference uniqueCommandReference;
