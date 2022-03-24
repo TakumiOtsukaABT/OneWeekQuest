@@ -22,7 +22,7 @@ MonoBehaviour:
     element_name: "\u307B\u306D"
     count: 0
   - id: 2
-    description: "\u306A\u3093\u306E\u5F79\u306B\u3082\u7ACB\u305F\u306A\u3044\u85C1"
+    description: "\u306A\u3093\u306E\u5F79\u306B\u3082\u7ACB\u305F\u306A\u305D\u3046\u306A\u85C1"
     element_name: "\u85C1"
     count: 0
   - id: 3
@@ -44,4 +44,12 @@ MonoBehaviour:
   - id: 7
     description: "\u5168\u30D1\u30E9\u30E1\u30FC\u30BF+10"
     element_name: "\u304A\u306B\u304F"
+    count: 0
+  - id: 8
+    description: "\u884C\u52D5\u56DE\u6570\u304C\u5897\u3048\u308B"
+    element_name: "\u30B3\u30FC\u30D2\u30FC"
+    count: 0
+  - id: 9
+    description: "\u306A\u3093\u306E\u5F79\u306B\u3082\u7ACB\u305F\u306A\u3044\u5E03"
+    element_name: "\u5E03"
     count: 0

@@ -27,14 +27,16 @@ public class PlayerInventory : BasePlayerData
 
     override public void Remove(int id)
     {
-        foreach (var i in IdList)
+        int length = IdList.Count;
+        for(int i = 0; i < length; i++)
         {
-            if (i == id)
+            if (IdList[i] == id)
             {
-                countList.Remove(IdList.IndexOf(i));
-                IdList.Remove(i);
+                countList.Remove(i);
+                IdList.Remove(id);
             }
         }
+
     }
 
     public int getElementId(int id)
