@@ -547,6 +547,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -704904755562210704, guid: 5d04505297e901c46b257b23a156624c, type: 3}
+      propertyPath: gameObjects.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -704904755562210704, guid: 5d04505297e901c46b257b23a156624c, type: 3}
+      propertyPath: gameObjects.Array.data[0]
+      value: 
+      objectReference: {fileID: 100781830}
+    - target: {fileID: -704904755562210704, guid: 5d04505297e901c46b257b23a156624c, type: 3}
+      propertyPath: gameObjects.Array.data[1]
+      value: 
+      objectReference: {fileID: 1870993222}
+    - target: {fileID: -704904755562210704, guid: 5d04505297e901c46b257b23a156624c, type: 3}
+      propertyPath: gameObjects.Array.data[2]
+      value: 
+      objectReference: {fileID: 1454191753}
     - target: {fileID: 6354337588516323168, guid: 5d04505297e901c46b257b23a156624c, type: 3}
       propertyPath: hukidashi
       value: 
@@ -639,18 +655,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f80466372bd20b41a1528947b27a95a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogue: []
+  dialogue:
+  - "\u305D\u308C\u3063\u3066\u3082\u3057\u304B\u3057\u3066\u305F\u3060\u306E\u5E03\uFF1F"
+  - "\u826F\u304B\u3063\u305F\u3089\u5E03\u3068\u3051\u3093\u7389\u3092\u4EA4\u63DB\u3057\u3066\u304F\u308C\u306A\u3044?"
+  - "\u3082\u3057\u826F\u3051\u308C\u3070\u3082\u3046\u4E00\u56DE\u8A71\u3057\u304B\u3051\u3066"
+  - "\u5ACC\u306A\u3089\u7121\u8996\u3057\u3066\uFF01"
+  - "\u6C7A\u3057\u3066\u9078\u629E\u80A2\u7528\u306E\u30C6\u30AD\u30B9\u30C8\u30DC\u30C3\u30AF\u30B9\u3092\u8FFD\u52A0\u3057\u305F\u304F\u306A\u304B\u3063\u305F\u8A33\u3067\u306F\u306A\u3044\u3088"
+  - 
   itemId: 
   hukidashi: {fileID: 118805126}
   dialogueCanvas_0: {fileID: 0}
   playerData_1: {fileID: 0}
   taskHandler_2: {fileID: 0}
   gave: 0
-  second: []
-  dontHave: []
-  after: []
-  tradeGiveId: 
-  tradeTakeId: 0
+  second:
+  - "\u8B72\u3063\u3066\u304F\u308C\u308B\u3093\u3060\u306D\uFF01\u3042\u308A\u304C\u3068\u3046\uFF01"
+  - "\u5E03\u3092\u624B\u653E\u3057\u305F\uFF01"
+  - "\u3051\u3093\u7389\u3092\u624B\u306B\u5165\u308C\u305F\uFF01"
+  - "\u5E03\u5927\u597D\u304D......"
+  - 
+  dontHave:
+  - "\u5E03\u304C\u6B32\u3057\u3044\u306A....\u8AB0\u304B\u6301\u3063\u3066\u306A\u3044\u304B\u306A..."
+  - 
+  after:
+  - "\u5E03\u5927\u597D\u304D......."
+  - 
+  tradeGiveId: 0a000000
+  tradeTakeId: 9
   talked: 0
   traded: 0
 --- !u!114 &202005593 stripped

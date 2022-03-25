@@ -53,3 +53,7 @@ MonoBehaviour:
     description: "\u306A\u3093\u306E\u5F79\u306B\u3082\u7ACB\u305F\u306A\u3044\u5E03"
     element_name: "\u5E03"
     count: 0
+  - id: 10
+    description: "\u306A\u3093\u306E\u5F79\u306B\u3082\u7ACB\u305F\u306A\u3044\u3051\u3093\u7389"
+    element_name: "\u3051\u3093\u7389"
+    count: 0
