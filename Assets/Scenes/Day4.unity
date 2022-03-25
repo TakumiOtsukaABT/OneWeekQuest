@@ -563,6 +563,14 @@ PrefabInstance:
       propertyPath: gameObjects.Array.data[2]
       value: 
       objectReference: {fileID: 1454191753}
+    - target: {fileID: 1936023323337155553, guid: 5d04505297e901c46b257b23a156624c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 118805127}
+    - target: {fileID: 1936023323337155553, guid: 5d04505297e901c46b257b23a156624c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: activateCanvas
+      objectReference: {fileID: 0}
     - target: {fileID: 6354337588516323168, guid: 5d04505297e901c46b257b23a156624c, type: 3}
       propertyPath: hukidashi
       value: 
