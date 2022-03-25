@@ -668,6 +668,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IdList: 00000000
   countList: 01000000
+  itemReference: {fileID: 0}
 --- !u!114 &133446278
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -866,9 +867,21 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 491664579604435527, guid: 151655812db2ec34b81d7cf2a481e95a, type: 3}
+      propertyPath: gameObjects.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 491664579604435527, guid: 151655812db2ec34b81d7cf2a481e95a, type: 3}
       propertyPath: gameObjects.Array.data[0]
       value: 
       objectReference: {fileID: 100781830}
+    - target: {fileID: 491664579604435527, guid: 151655812db2ec34b81d7cf2a481e95a, type: 3}
+      propertyPath: gameObjects.Array.data[1]
+      value: 
+      objectReference: {fileID: 1870993222}
+    - target: {fileID: 491664579604435527, guid: 151655812db2ec34b81d7cf2a481e95a, type: 3}
+      propertyPath: gameObjects.Array.data[2]
+      value: 
+      objectReference: {fileID: 1454191753}
     - target: {fileID: 2393976701189023348, guid: 151655812db2ec34b81d7cf2a481e95a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -1068,12 +1081,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6936491519889237447, guid: a5be0f2818535624e8e21f95b944f013, type: 3}
       propertyPath: gameObjects.Array.size
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6936491519889237447, guid: a5be0f2818535624e8e21f95b944f013, type: 3}
       propertyPath: gameObjects.Array.data[0]
       value: 
       objectReference: {fileID: 100781830}
+    - target: {fileID: 6936491519889237447, guid: a5be0f2818535624e8e21f95b944f013, type: 3}
+      propertyPath: gameObjects.Array.data[1]
+      value: 
+      objectReference: {fileID: 1870993222}
+    - target: {fileID: 6936491519889237447, guid: a5be0f2818535624e8e21f95b944f013, type: 3}
+      propertyPath: gameObjects.Array.data[2]
+      value: 
+      objectReference: {fileID: 1454191753}
     - target: {fileID: 8437755548800165007, guid: a5be0f2818535624e8e21f95b944f013, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -1761,12 +1782,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7661915831355585318, guid: 0b6f92e4a76519e4eb60fa564986d92d, type: 3}
       propertyPath: gameObjects.Array.size
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7661915831355585318, guid: 0b6f92e4a76519e4eb60fa564986d92d, type: 3}
       propertyPath: gameObjects.Array.data[0]
       value: 
       objectReference: {fileID: 100781830}
+    - target: {fileID: 7661915831355585318, guid: 0b6f92e4a76519e4eb60fa564986d92d, type: 3}
+      propertyPath: gameObjects.Array.data[1]
+      value: 
+      objectReference: {fileID: 1870993222}
+    - target: {fileID: 7661915831355585318, guid: 0b6f92e4a76519e4eb60fa564986d92d, type: 3}
+      propertyPath: gameObjects.Array.data[2]
+      value: 
+      objectReference: {fileID: 1454191753}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0b6f92e4a76519e4eb60fa564986d92d, type: 3}
 --- !u!1 &1116924642 stripped
@@ -2186,7 +2215,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -4911073786623599967, guid: 8bc8b1b9f672c5b4c9969ea24c492d50, type: 3}
       propertyPath: gameObjects.Array.size
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: -4911073786623599967, guid: 8bc8b1b9f672c5b4c9969ea24c492d50, type: 3}
       propertyPath: gameObjects.Array.data[0]
@@ -2195,7 +2224,11 @@ PrefabInstance:
     - target: {fileID: -4911073786623599967, guid: 8bc8b1b9f672c5b4c9969ea24c492d50, type: 3}
       propertyPath: gameObjects.Array.data[1]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1870993222}
+    - target: {fileID: -4911073786623599967, guid: 8bc8b1b9f672c5b4c9969ea24c492d50, type: 3}
+      propertyPath: gameObjects.Array.data[2]
+      value: 
+      objectReference: {fileID: 1454191753}
     - target: {fileID: 2166779664605885514, guid: 8bc8b1b9f672c5b4c9969ea24c492d50, type: 3}
       propertyPath: dialogue.Array.size
       value: 3
@@ -2517,6 +2550,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IdList: 00000000
   countList: 01000000
+  itemReference: {fileID: 11400000, guid: 0c568ac683f7a2844aeeeb4d5d6223e7, type: 2}
 --- !u!114 &1870993228
 MonoBehaviour:
   m_ObjectHideFlags: 0

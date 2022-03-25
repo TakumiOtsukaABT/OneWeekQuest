@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerInventory : BasePlayerData
 {
     public List<int> countList = new List<int>();
+    public ItemReference itemReference;
     override public void Add(int newId)
     {
         for (var i =0;i < IdList.Count;i++)
@@ -17,6 +18,21 @@ public class PlayerInventory : BasePlayerData
         }
         IdList.Add(newId);
         countList.Add(1);
+        var j = itemReference.GetElement(newId);
+        switch (j.effect)
+        {
+            case effectList.None:
+                break;
+            case effectList.TrainingCommand:
+                GetComponent<PlayerTrainingCommandsList>().Add(j.otherId);
+                break;
+            case effectList.StudyCommand:
+                GetComponent<PlayerStudyCommandsList>().Add(j.otherId);
+                break;
+            case effectList.EatCommand:
+                GetComponent<PlayerEatCommandsList>().Add(j.otherId);
+                break;
+        }
     }
 
     override public void RemoveAt(int index)
@@ -34,6 +50,21 @@ public class PlayerInventory : BasePlayerData
             {
                 countList.Remove(i);
                 IdList.Remove(id);
+                var j = itemReference.GetElement(id);
+                switch (j.effect)
+                {
+                    case effectList.None:
+                        break;
+                    case effectList.TrainingCommand:
+                        GetComponent<PlayerTrainingCommandsList>().Remove(j.otherId);
+                        break;
+                    case effectList.StudyCommand:
+                        GetComponent<PlayerStudyCommandsList>().Remove(j.otherId);
+                        break;
+                    case effectList.EatCommand:
+                        GetComponent<PlayerEatCommandsList>().Remove(j.otherId);
+                        break;
+                }
             }
         }
 

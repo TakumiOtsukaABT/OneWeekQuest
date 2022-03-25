@@ -46,3 +46,14 @@ MonoBehaviour:
       Speed: 0
       HitRate: 0
       Regen: 0
+  - id: 2
+    description: "\u3059\u3070\u3084\u3055+20"
+    element_name: "\u30B9\u30AF\u30EF\u30C3\u30C8"
+    incrementStatus:
+      HP: 0
+      MP: 0
+      Attack: 15
+      Defence: 0
+      Speed: 0
+      HitRate: 0
+      Regen: 0

@@ -22,3 +22,6 @@ MonoBehaviour:
   - id: 2
     description: "\u304B\u307F\u306A\u308A\u306E\u9B54\u6CD5\u3092\u899A\u3048\u308B"
     element_name: "\u96F7\u306E\u66F8"
+  - id: 3
+    description: "\u304B\u307F\u306A\u308A\u306E\u9B54\u6CD5\u3092\u899A\u3048\u308B"
+    element_name: "\u7121\u306E\u66F8"

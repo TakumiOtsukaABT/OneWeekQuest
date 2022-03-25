@@ -2648,6 +2648,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IdList: 0000000002000000
   countList: 0100000001000000
+  itemReference: {fileID: 11400000, guid: 0c568ac683f7a2844aeeeb4d5d6223e7, type: 2}
 --- !u!114 &1870993228
 MonoBehaviour:
   m_ObjectHideFlags: 0
