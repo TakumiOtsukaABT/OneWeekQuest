@@ -268,7 +268,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4711190796642599366, guid: 0b7157f30d8839b42b18be8715b4a224, type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 4711190796642599366, guid: 0b7157f30d8839b42b18be8715b4a224, type: 3}
       propertyPath: m_AnchorMax.x
@@ -1441,7 +1441,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 224260303033278428, guid: b7d8d29d9839beb41b123859c19f2966, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 224260303033278428, guid: b7d8d29d9839beb41b123859c19f2966, type: 3}
       propertyPath: m_AnchorMax.x
@@ -1665,7 +1665,7 @@ RectTransform:
   m_Children:
   - {fileID: 1257927936}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1982,7 +1982,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1337110833
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2286,7 +2286,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5612622506530803883, guid: 8c9b1ee4145efc1418feb0cbbae16141, type: 3}
       propertyPath: itemId.Array.data[0]
-      value: 11
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 5612622506530803883, guid: 8c9b1ee4145efc1418feb0cbbae16141, type: 3}
       propertyPath: dialogue.Array.data[0]
@@ -3035,7 +3035,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4589881317346487157, guid: 54aeb24f5a602ec44be060a8af75b488, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4589881317346487161, guid: 54aeb24f5a602ec44be060a8af75b488, type: 3}
       propertyPath: m_Pivot.x
@@ -3248,7 +3248,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7299507992185791703, guid: 4d7d8c8127c69d749b2086668bac831b, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 7299507992185791703, guid: 4d7d8c8127c69d749b2086668bac831b, type: 3}
       propertyPath: m_AnchorMax.x
