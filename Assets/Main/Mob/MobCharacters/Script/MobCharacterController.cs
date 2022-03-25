@@ -7,7 +7,7 @@ public class MobCharacterController : MonoBehaviour
 {
     public string[] dialogue;
     public int[] itemId;
-    [SerializeField] private GameObject hukidashi;
+    [SerializeField] protected GameObject hukidashi;
     [SerializeField, ReadOnly] private GameObject dialogueCanvas_0;
     [SerializeField, ReadOnly] protected GameObject playerData_1;
     [SerializeField, ReadOnly] private TaskHandler taskHandler_2;
