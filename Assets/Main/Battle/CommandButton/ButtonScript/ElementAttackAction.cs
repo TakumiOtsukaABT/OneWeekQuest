@@ -2,17 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ElementAttackAction : MonoBehaviour
+public abstract class ElementAttackAction : BaseActionCommand
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField, ReadOnly] protected GameDirector gameDirector_3;
+    public GameObject dialogueCanvasCommand;
+
+
+    public override void runActionCommand()
     {
-        
+        gameDirector_3 = dialogueCanvasCommand.GetComponent<Outlet>().gameObjects[3].GetComponent<GameDirector>();
+        gameDirector_3.resetState(BattleState.SelectTarget);
+        gameDirector_3.selectingType = SelectingType.Single;
+        Debug.Log("ran until");
+        selectTarget();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void selectTarget()
     {
-        
+        StartCoroutine(chooseTarget());
     }
+    protected abstract IEnumerator chooseTarget();
 }

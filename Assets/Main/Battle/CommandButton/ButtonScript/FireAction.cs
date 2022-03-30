@@ -2,26 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FireAction : BaseActionCommand
+public class FireAction : ElementAttackAction
 {
-    [SerializeField, ReadOnly] private GameDirector gameDirector_3;
-    public GameObject dialogueCanvasCommand;
-
-
-    public override void runActionCommand()
-    {
-        gameDirector_3 = dialogueCanvasCommand.GetComponent<Outlet>().gameObjects[3].GetComponent<GameDirector>();
-        gameDirector_3.resetState(BattleState.SelectTarget);
-        gameDirector_3.selectingType = SelectingType.Single;
-        Debug.Log("ran until");
-        selectTarget();
-    }
-
-    private void selectTarget()
-    {
-        StartCoroutine(chooseTarget());
-    }
-    IEnumerator chooseTarget()
+    protected override IEnumerator chooseTarget()
     {
         Debug.Log(gameDirector_3.getFlagDoneSelecting());
         yield return new WaitUntil(gameDirector_3.getFlagDoneSelecting);
