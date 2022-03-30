@@ -8,6 +8,9 @@ public class StatusBattle : PlayerStatus
     public characterType characterType;
     public new string name;
     public int MaxHP;
+    public ElementEnum weakness;
+    public ElementEnum sightWeakness;
+    public ElementEnum strength;
 
 
     [SerializeField] private GameObject healthBar;
