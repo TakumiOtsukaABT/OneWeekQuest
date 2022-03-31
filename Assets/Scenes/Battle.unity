@@ -1573,7 +1573,7 @@ MonoBehaviour:
   MaxHP: 0
   weakness: 0
   sightWeakness: 0
-  strength: 0
+  resist: 0
   healthBar: {fileID: 111598853}
 --- !u!114 &407847658
 MonoBehaviour:
@@ -2700,7 +2700,7 @@ MonoBehaviour:
   MaxHP: 0
   weakness: 0
   sightWeakness: 0
-  strength: 0
+  resist: 0
   healthBar: {fileID: 64628251}
 --- !u!114 &635878654
 MonoBehaviour:
@@ -4622,7 +4622,7 @@ MonoBehaviour:
   MaxHP: 0
   weakness: 0
   sightWeakness: 0
-  strength: 0
+  resist: 0
   healthBar: {fileID: 1913705409}
 --- !u!114 &1572335856
 MonoBehaviour:
@@ -5245,7 +5245,7 @@ MonoBehaviour:
   MaxHP: 0
   weakness: 3
   sightWeakness: 2
-  strength: 1
+  resist: 1
   healthBar: {fileID: 161489579}
 --- !u!114 &1972641408
 MonoBehaviour:
@@ -5333,7 +5333,7 @@ MonoBehaviour:
   MaxHP: 0
   weakness: 0
   sightWeakness: 0
-  strength: 0
+  resist: 0
   healthBar: {fileID: 1452493324}
 --- !u!114 &1973571008
 MonoBehaviour:
@@ -6326,6 +6326,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2077338945}
     m_Modifications:
+    - target: {fileID: -2931326219203994699, guid: dbacab615bb5b5d4f93f12f1cece8fb7, type: 3}
+      propertyPath: dialogueCanvasCommand
+      value: 
+      objectReference: {fileID: 475400263}
     - target: {fileID: 971212076933200974, guid: dbacab615bb5b5d4f93f12f1cece8fb7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -6418,10 +6422,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: FireButton
       objectReference: {fileID: 0}
-    - target: {fileID: 7803545215762295991, guid: dbacab615bb5b5d4f93f12f1cece8fb7, type: 3}
-      propertyPath: dialogueCanvasCommand
-      value: 
-      objectReference: {fileID: 475400263}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dbacab615bb5b5d4f93f12f1cece8fb7, type: 3}
 --- !u!95 &8369135487694809991 stripped

@@ -47,7 +47,6 @@ public class ElementAttackAction : BaseActionCommand
         ElementEnum weakness = gameDirector_3.Single_target.GetComponent<StatusBattle>().weakness;
         ElementEnum resist = gameDirector_3.Single_target.GetComponent<StatusBattle>().resist;
         ElementEnum slightWeakness = gameDirector_3.Single_target.GetComponent<StatusBattle>().sightWeakness;
-        Debug.Log("poppiii");
         if (thisElement == weakness)
         {
             bairitsu = 2.0f;
@@ -57,7 +56,6 @@ public class ElementAttackAction : BaseActionCommand
         } else if(thisElement == resist)
         {
             bairitsu = 0.8f;
-            Debug.Log("poppiii1");
         } 
     }
 }
