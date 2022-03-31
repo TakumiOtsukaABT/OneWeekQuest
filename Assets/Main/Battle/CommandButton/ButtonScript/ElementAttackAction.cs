@@ -7,7 +7,7 @@ public class ElementAttackAction : BaseActionCommand
     [SerializeField, ReadOnly] protected GameDirector gameDirector_3;
     public GameObject dialogueCanvasCommand;
     [SerializeField] private ElementEnum thisElement;
-    [SerializeField,ReadOnly]private float bairitsu;
+    [SerializeField,ReadOnly]protected float bairitsu;
 
 
     public override void runActionCommand()
@@ -23,7 +23,7 @@ public class ElementAttackAction : BaseActionCommand
     {
         StartCoroutine(chooseTarget());
     }
-    protected IEnumerator chooseTarget()
+     virtual protected IEnumerator chooseTarget()
     {
         Debug.Log(gameDirector_3.getFlagDoneSelecting());
         yield return new WaitUntil(gameDirector_3.getFlagDoneSelecting);
@@ -42,7 +42,7 @@ public class ElementAttackAction : BaseActionCommand
         gameDirector_3.resetState(BattleState.Read, battleEffect: base.Effect);
     }
 
-    private void seeElementComp()
+    protected void seeElementComp()
     {
         ElementEnum weakness = gameDirector_3.Single_target.GetComponent<StatusBattle>().weakness;
         ElementEnum resist = gameDirector_3.Single_target.GetComponent<StatusBattle>().resist;
