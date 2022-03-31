@@ -10,7 +10,7 @@ public class StatusBattle : PlayerStatus
     public int MaxHP;
     public ElementEnum weakness;
     public ElementEnum sightWeakness;
-    public ElementEnum strength;
+    public ElementEnum resist;
 
 
     [SerializeField] private GameObject healthBar;

@@ -2,10 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class ElementAttackAction : BaseActionCommand
+public class ElementAttackAction : BaseActionCommand
 {
     [SerializeField, ReadOnly] protected GameDirector gameDirector_3;
     public GameObject dialogueCanvasCommand;
+    [SerializeField] private ElementEnum thisElement;
 
 
     public override void runActionCommand()
@@ -21,5 +22,25 @@ public abstract class ElementAttackAction : BaseActionCommand
     {
         StartCoroutine(chooseTarget());
     }
-    protected abstract IEnumerator chooseTarget();
+    protected IEnumerator chooseTarget()
+    {
+        Debug.Log(gameDirector_3.getFlagDoneSelecting());
+        yield return new WaitUntil(gameDirector_3.getFlagDoneSelecting);
+        Debug.Log("ran untilwait");
+        Debug.Log(gameDirector_3.getFlagDoneSelecting());
+        int attack = gameDirector_3.getCurrentCharacter().GetComponent<StatusBattle>().playerStatusForReference.Attack_access;
+        int defence = gameDirector_3.Single_target.GetComponent<StatusBattle>().playerStatusForReference.Defence_access;
+        ElementEnum weakness = gameDirector_3.Single_target.GetComponent<StatusBattle>().weakness;
+        ElementEnum resist = gameDirector_3.Single_target.GetComponent<StatusBattle>().resist;
+        ElementEnum slightWeakness = gameDirector_3.Single_target.GetComponent<StatusBattle>().sightWeakness;
+
+        int attackMinusDefence = attack - defence;
+        if (attackMinusDefence < 0)
+        {
+            attackMinusDefence = 0;
+        }
+        int damage = Mathf.RoundToInt(((attackMinusDefence) * Random.Range(1.0f, 1.3f)) + Random.Range(1.0f, 10.0f));
+        gameDirector_3.setTakeDamageAndDialogue(damage);
+        gameDirector_3.resetState(BattleState.Read, battleEffect: base.Effect);
+    }
 }
