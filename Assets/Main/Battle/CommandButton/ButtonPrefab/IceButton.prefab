@@ -67,7 +67,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 7c89d9590a747234d8516bc407bbac5d, type: 3}
-    m_FontSize: 62
+    m_FontSize: 52
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -78,7 +78,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u30D5\u30A1\u30A4\u30A2"
+  m_Text: "\u30D6\u30EA\u30B6\u30FC\u30C9"
 --- !u!1 &7803545215762295984
 GameObject:
   m_ObjectHideFlags: 0
@@ -93,7 +93,7 @@ GameObject:
   - component: {fileID: 971212076933200974}
   - component: {fileID: -2931326219203994699}
   m_Layer: 5
-  m_Name: FireButton
+  m_Name: IceButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -225,7 +225,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef5527aaaa64fc140aa0e20a7adfab2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Effect: {fileID: 1071960360213401134, guid: e3b2efa568d80014888575db83c1264d, type: 3}
+  Effect: {fileID: 1071960360213401134, guid: b5d94d8dfbd6e4340830ea9fb48f1ca9, type: 3}
   gameDirector_3: {fileID: 0}
   dialogueCanvasCommand: {fileID: 0}
-  thisElement: 1
+  thisElement: 2
+  bairitsu: 0
