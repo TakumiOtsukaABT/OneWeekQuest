@@ -7,6 +7,7 @@ public class ElementAttackAction : BaseActionCommand
     [SerializeField, ReadOnly] protected GameDirector gameDirector_3;
     public GameObject dialogueCanvasCommand;
     [SerializeField] private ElementEnum thisElement;
+    [SerializeField,ReadOnly]private float bairitsu;
 
 
     public override void runActionCommand()
@@ -30,17 +31,33 @@ public class ElementAttackAction : BaseActionCommand
         Debug.Log(gameDirector_3.getFlagDoneSelecting());
         int attack = gameDirector_3.getCurrentCharacter().GetComponent<StatusBattle>().playerStatusForReference.Attack_access;
         int defence = gameDirector_3.Single_target.GetComponent<StatusBattle>().playerStatusForReference.Defence_access;
-        ElementEnum weakness = gameDirector_3.Single_target.GetComponent<StatusBattle>().weakness;
-        ElementEnum resist = gameDirector_3.Single_target.GetComponent<StatusBattle>().resist;
-        ElementEnum slightWeakness = gameDirector_3.Single_target.GetComponent<StatusBattle>().sightWeakness;
-
         int attackMinusDefence = attack - defence;
         if (attackMinusDefence < 0)
         {
             attackMinusDefence = 0;
         }
         int damage = Mathf.RoundToInt(((attackMinusDefence) * Random.Range(1.0f, 1.3f)) + Random.Range(1.0f, 10.0f));
-        gameDirector_3.setTakeDamageAndDialogue(damage);
+        seeElementComp();
+        gameDirector_3.setTakeDamageAndDialogue(Mathf.RoundToInt(damage*bairitsu));
         gameDirector_3.resetState(BattleState.Read, battleEffect: base.Effect);
+    }
+
+    private void seeElementComp()
+    {
+        ElementEnum weakness = gameDirector_3.Single_target.GetComponent<StatusBattle>().weakness;
+        ElementEnum resist = gameDirector_3.Single_target.GetComponent<StatusBattle>().resist;
+        ElementEnum slightWeakness = gameDirector_3.Single_target.GetComponent<StatusBattle>().sightWeakness;
+        Debug.Log("poppiii");
+        if (thisElement == weakness)
+        {
+            bairitsu = 2.0f;
+        } else if (thisElement == slightWeakness)
+        {
+            bairitsu = 1.5f;
+        } else if(thisElement == resist)
+        {
+            bairitsu = 0.8f;
+            Debug.Log("poppiii1");
+        } 
     }
 }
