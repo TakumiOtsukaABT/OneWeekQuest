@@ -67,7 +67,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 7c89d9590a747234d8516bc407bbac5d, type: 3}
-    m_FontSize: 52
+    m_FontSize: 33
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -78,7 +78,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u30D6\u30EA\u30B6\u30FC\u30C9"
+  m_Text: "\u3081\u3061\u3083\u30D6\u30EA\u30B6\u30FC\u30C9"
 --- !u!1 &7803545215762295984
 GameObject:
   m_ObjectHideFlags: 0
@@ -225,7 +225,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e88efa95c98c84449489140c33f5f21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Effect: {fileID: 1071960360213401134, guid: b5d94d8dfbd6e4340830ea9fb48f1ca9, type: 3}
+  Effect: {fileID: 1071960360213401134, guid: 1910ee57a98761e419e500939c89d938, type: 3}
   gameDirector_3: {fileID: 0}
   dialogueCanvasCommand: {fileID: 0}
   thisElement: 2
