@@ -56,6 +56,9 @@ public class ElementAttackAction : BaseActionCommand
         } else if(thisElement == resist)
         {
             bairitsu = 0.8f;
-        } 
+        } else
+        {
+            bairitsu = 1.0f;
+        }
     }
 }
