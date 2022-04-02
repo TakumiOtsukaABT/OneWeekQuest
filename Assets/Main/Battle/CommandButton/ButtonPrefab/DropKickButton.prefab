@@ -78,7 +78,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u3055\u3093\u308C\u3093\u3052\u304D"
+  m_Text: "\u30C9\u30ED\u30C3\u30D7\u30AD\u30C3\u30AF"
 --- !u!1 &7803545215762295984
 GameObject:
   m_ObjectHideFlags: 0
@@ -93,7 +93,7 @@ GameObject:
   - component: {fileID: 971212076933200974}
   - component: {fileID: 8244505575231556695}
   m_Layer: 5
-  m_Name: SanrengekiButton
+  m_Name: DropKickButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -225,9 +225,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64f194cd7174f154b8c7765074c8e386, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Effect: {fileID: 1071960360213401134, guid: bdaa737ddb9b3aa44bd2f4c1c521b4d6, type: 3}
+  Effect: {fileID: 1071960360213401134, guid: 9166e685d81f81e489449d29672b5c68, type: 3}
   gameDirector_3: {fileID: 0}
   dialogueCanvasCommand: {fileID: 0}
   thisElement: 0
   bairitsu: 0
-  sanren: 3
+  sanren: 7

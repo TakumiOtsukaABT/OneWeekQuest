@@ -8,7 +8,7 @@ public class SanrengekiAttack : BaseActionCommand
     public GameObject dialogueCanvasCommand;
     [SerializeField] private ElementEnum thisElement;
     [SerializeField, ReadOnly] protected float bairitsu;
-
+    [SerializeField] int sanren;
 
     public override void runActionCommand()
     {
@@ -38,7 +38,7 @@ public class SanrengekiAttack : BaseActionCommand
         }
         int damage = Mathf.RoundToInt(((attackMinusDefence) * Random.Range(1.0f, 1.3f)) + Random.Range(1.0f, 10.0f));
         seeElementComp();
-        gameDirector_3.setTakeDamageAndDialogue(Mathf.RoundToInt(damage * bairitsu)*3);
+        gameDirector_3.setTakeDamageAndDialogue(Mathf.RoundToInt(damage * bairitsu)*sanren);
         gameDirector_3.resetState(BattleState.Read, battleEffect: base.Effect);
     }
 
