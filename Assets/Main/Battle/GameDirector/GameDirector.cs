@@ -244,15 +244,27 @@ public class GameDirector : MonoBehaviour
                     if (gameObject.Equals(targetted[i]))
                     {
                         targetted.Remove(gameObject);
+                        updateDialogue_MultipleTargetted();
                         return;
                     }
                 }
                 targetted.Add(gameObject);
+                updateDialogue_MultipleTargetted();
                 break;
             case SelectingType.Disable:
                 break;
         }
         return;
+    }
+
+    private void updateDialogue_MultipleTargetted()
+    {
+        List<characterType> targettedCharacterType = new List<characterType>();
+        foreach (var i in targetted)
+        {
+            targettedCharacterType.Add(i.GetComponent<StatusBattle>().characterType);
+        }
+        battleGameCanvasController_0.updateDescription_multipleTarget(targettedCharacterType.ToArray());
     }
 
     public bool getFlagDoneSelecting()

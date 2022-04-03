@@ -40,6 +40,18 @@ namespace Gamekit2D
             base.setTextToTextMesh();
         }
 
+        public void updateMultipleTargetDialogue(characterType[] characterType)
+        {
+            base.DialogueIndex = 0;
+            string[] choose = new string[2];
+            foreach(var i in characterType)
+            {
+                choose[0] = choose[0] +" "+ getCharacterName(i);
+            }
+            base.Dialogue = choose;
+            base.setTextToTextMesh();
+        }
+
         private void Start()
         {
             inputController_1 = GetComponent<Outlet>().gameObjects[1].GetComponent<InputController>();

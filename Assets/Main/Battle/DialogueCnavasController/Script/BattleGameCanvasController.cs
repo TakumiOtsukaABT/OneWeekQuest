@@ -55,6 +55,11 @@ public class BattleGameCanvasController : MonoBehaviour
     {
         canvasDescription.updateSingleTargetDialogue(characterType);
     }
+
+    public void updateDescription_multipleTarget(characterType[] characterType)
+    {
+        canvasDescription.updateMultipleTargetDialogue(characterType);
+    }
 }
 
 public enum SelectingType
