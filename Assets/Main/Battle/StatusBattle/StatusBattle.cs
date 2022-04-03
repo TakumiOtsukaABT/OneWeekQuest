@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -35,6 +36,19 @@ public class StatusBattle : PlayerStatus
     {
         playerStatusForReference.HP_access = new_hp;
         healthBar.GetComponent<ValueBar>().SetHealth(playerStatusForReference.HP_access);
+        if(playerStatusForReference.HP_access < 0)
+        {
+            playerStatusForReference.HP_access = 0;
+        }
+        if (playerStatusForReference.HP_access > MaxHP)
+        {
+            playerStatusForReference.HP_access = MaxHP;
+        }
+    }
+
+    public void heal(int healAmount)
+    {
+        setHP(playerStatusForReference.HP_access+healAmount);
     }
 }
 public enum characterType

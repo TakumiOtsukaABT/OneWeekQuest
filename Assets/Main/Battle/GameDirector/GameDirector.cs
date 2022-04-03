@@ -206,6 +206,22 @@ public class GameDirector : MonoBehaviour
         battleGameCanvasController_0.setDescriptionByEvent(_event);
     }
 
+    public void setHealAndDialogue(int healAmount)
+    {
+        Event _event = new Event();
+        if (single_target.GetComponent<StatusBattle>().barrier)
+        {
+            healAmount = 0;
+            single_target.GetComponent<StatusBattle>().barrier = false;
+        }
+        single_target.GetComponent<StatusBattle>().heal(healAmount);
+        _event.nextState = BattleState.WaitingInput;
+        _event.dialogue = new string[2];
+        _event.dialogue[1] = "";
+        _event.dialogue[0] = single_target.GetComponent<StatusBattle>().name + "‚É" + healAmount.ToString() + "‚Ì‰ñ•œ!";
+        battleGameCanvasController_0.setDescriptionByEvent(_event);
+    }
+
     public void setBarrierAndDialogue()
     {
         Event _event = new Event();
