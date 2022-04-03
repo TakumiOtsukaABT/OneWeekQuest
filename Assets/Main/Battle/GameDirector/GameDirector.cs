@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System;
 using UnityEngine;
 using Gamekit2D;
 
@@ -19,6 +20,8 @@ public class GameDirector : MonoBehaviour
     //select target
     [ReadOnly] public SelectingType selectingType = SelectingType.Disable;
     [SerializeField, ReadOnly] private List<GameObject> targetted = new List<GameObject>();
+
+
     [SerializeField, ReadOnly] private GameObject single_target;
     [SerializeField, ReadOnly] private bool selected = false;
     public GameObject Single_target { get => single_target; set => single_target = value; }
@@ -29,7 +32,7 @@ public class GameDirector : MonoBehaviour
     void initializeProperty()
     {
         single_target = null;
-        targetted = null;
+        targetted.Clear();
         selected = false;
     }
 
@@ -44,7 +47,6 @@ public class GameDirector : MonoBehaviour
         alpaca_6 = GetComponent<Outlet>().gameObjects[6];
         enemy_7 = GetComponent<Outlet>().gameObjects[7];
         initQueue();
-        
     }
 
     // Update is called once per frame
@@ -62,9 +64,9 @@ public class GameDirector : MonoBehaviour
         }
     }
 
-    public void resetState(BattleState newState, bool nextTurn = true, GameObject battleEffect = null)
+    public void resetState(BattleState newState, bool nextTurn = true, GameObject battleEffect = null, bool multiple = false)
     {
-        StartCoroutine(deactivate_then_activate_state(newState,nextTurn, battleEffect));
+        StartCoroutine(deactivate_then_activate_state(newState,nextTurn, battleEffect,multiple));
     }
 
     public void deactivateAllCanvas()
@@ -72,19 +74,31 @@ public class GameDirector : MonoBehaviour
         battleGameCanvasController_0.deactivateAll();
     }
 
-    IEnumerator deactivate_then_activate_state(BattleState newState, bool nextTurn = true, GameObject battleEffect = null)
+    IEnumerator deactivate_then_activate_state(BattleState newState, bool nextTurn = true, GameObject battleEffect = null, bool multiple = false)
     {
         selectingType = SelectingType.Disable;
         battleGameCanvasController_0.deactivateAll();
         yield return new WaitForSeconds(0.5f);
         if (battleEffect != null)
         {
-            GameObject effect = Instantiate(battleEffect);
-            effect.transform.parent = single_target.transform;
-            effect.transform.localPosition = new Vector3(0, 0, 0);
-            effect.transform.localScale = new Vector3(5, 5, 5);
-            effect.GetComponent<SpriteRenderer>().sortingOrder = 10;
-            //yield return new WaitUntil(()=>!effect.activeSelf);
+            if (!multiple)
+            {
+                GameObject effect = Instantiate(battleEffect);
+                effect.transform.parent = single_target.transform;
+                effect.transform.localPosition = new Vector3(0, 0, 0);
+                effect.transform.localScale = new Vector3(5, 5, 5);
+                effect.GetComponent<SpriteRenderer>().sortingOrder = 10;
+            } else
+            {
+                foreach(var i in targetted)
+                {
+                    GameObject effect = Instantiate(battleEffect);
+                    effect.transform.parent = i.transform;
+                    effect.transform.localPosition = new Vector3(0, 0, 0);
+                    effect.transform.localScale = new Vector3(5, 5, 5);
+                    effect.GetComponent<SpriteRenderer>().sortingOrder = 10;
+                }
+            }
         }
         setState(newState,nextTurn);
         if (turn_queue.Count < 10)
@@ -199,6 +213,21 @@ public class GameDirector : MonoBehaviour
         _event.dialogue = new string[2];
         _event.dialogue[1] = "";
         _event.dialogue[0] = single_target.GetComponent<StatusBattle>().name + "にバリアを付与した!";
+        battleGameCanvasController_0.setDescriptionByEvent(_event);
+    }
+
+    public void setBarriersAndDialogue()
+    {
+        Event _event = new Event();
+        _event.dialogue = new string[targetted.Count+1];
+        for(int i =0;i<targetted.Count;i++)
+        {
+            targetted[i].GetComponent<StatusBattle>().setBarrier(true);
+            _event.dialogue[i] = targetted[i].GetComponent<StatusBattle>().name + "にバリアを付与した!";
+        }
+        _event.nextState = BattleState.WaitingInput;
+        _event.dialogue[targetted.Count] = "";
+
         battleGameCanvasController_0.setDescriptionByEvent(_event);
     }
     public void setClickedObject(GameObject gameObject)

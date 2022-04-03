@@ -11,7 +11,7 @@ public class StatusBattle : PlayerStatus
     public ElementEnum weakness;
     public ElementEnum sightWeakness;
     public ElementEnum resist;
-    [SerializeField] public bool barrier = false;
+    [ReadOnly] public bool barrier = false;
 
 
     [SerializeField] private GameObject healthBar;
