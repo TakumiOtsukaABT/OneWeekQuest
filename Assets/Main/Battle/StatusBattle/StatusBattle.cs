@@ -11,7 +11,7 @@ public class StatusBattle : PlayerStatus
     public ElementEnum weakness;
     public ElementEnum sightWeakness;
     public ElementEnum resist;
-    public bool barrier = false;
+    [SerializeField] public bool barrier = false;
 
 
     [SerializeField] private GameObject healthBar;
@@ -24,6 +24,11 @@ public class StatusBattle : PlayerStatus
     public void takeDamage(int damage)
     {
         setHP(playerStatusForReference.HP_access - damage);
+    }
+
+    public void setBarrier(bool barrierState)
+    {
+        barrier = barrierState;
     }
 
     private void setHP(int new_hp)

@@ -179,11 +179,26 @@ public class GameDirector : MonoBehaviour
 
     public void setTakeDamageAndDialogue(int damage){
         Event _event = new Event();
+        if (single_target.GetComponent<StatusBattle>().barrier)
+        {
+            damage = 0;
+        }
         single_target.GetComponent<StatusBattle>().takeDamage(damage);
         _event.nextState = BattleState.WaitingInput;
         _event.dialogue = new string[2];
         _event.dialogue[1] = "";
         _event.dialogue[0] = single_target.GetComponent<StatusBattle>().name + "に" + damage.ToString() + "のダメージ!";
+        battleGameCanvasController_0.setDescriptionByEvent(_event);
+    }
+
+    public void setBarrierAndDialogue()
+    {
+        Event _event = new Event();
+        single_target.GetComponent<StatusBattle>().setBarrier(true);
+        _event.nextState = BattleState.WaitingInput;
+        _event.dialogue = new string[2];
+        _event.dialogue[1] = "";
+        _event.dialogue[0] = single_target.GetComponent<StatusBattle>().name + "にバリアを付与した!";
         battleGameCanvasController_0.setDescriptionByEvent(_event);
     }
     public void setClickedObject(GameObject gameObject)
