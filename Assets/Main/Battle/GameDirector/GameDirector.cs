@@ -196,6 +196,7 @@ public class GameDirector : MonoBehaviour
         if (single_target.GetComponent<StatusBattle>().barrier)
         {
             damage = 0;
+            single_target.GetComponent<StatusBattle>().barrier = false;
         }
         single_target.GetComponent<StatusBattle>().takeDamage(damage);
         _event.nextState = BattleState.WaitingInput;

@@ -36,9 +36,13 @@ public class SanrengekiAttack : BaseActionCommand
         {
             attackMinusDefence = 0;
         }
-        int damage = Mathf.RoundToInt(((attackMinusDefence) * Random.Range(1.0f, 1.3f)) + Random.Range(1.0f, 10.0f));
+        int damage = Mathf.RoundToInt(((attackMinusDefence) * Random.Range(1.0f, 1.3f)) + Random.Range(1.0f, 5.0f));
         seeElementComp();
         gameDirector_3.setTakeDamageAndDialogue(Mathf.RoundToInt(damage * bairitsu)*sanren);
+        Debug.Log("damage");
+        Debug.Log(damage);
+        Debug.Log(bairitsu);
+        Debug.Log(sanren);
         gameDirector_3.resetState(BattleState.Read, battleEffect: base.Effect);
     }
 
