@@ -11,9 +11,13 @@ public class GameDirector : MonoBehaviour
     [SerializeField, ReadOnly] private InputControllerForBattle inputController_2;
     [SerializeField, ReadOnly] private BattleGameCanvasController battleGameCanvasController_0;
     [SerializeField, ReadOnly] private GameObject human_3;
+    public GameObject Human { get => human_3; }
     [SerializeField, ReadOnly] private GameObject dog_4;
+    public GameObject Dog { get => dog_4; }
     [SerializeField, ReadOnly] private GameObject cat_5;
+    public GameObject Cat { get => cat_5; }
     [SerializeField, ReadOnly] private GameObject alpaca_6;
+    public GameObject Alpaca { get => alpaca_6; }
     [SerializeField, ReadOnly] private GameObject enemy_7;
     [SerializeField, ReadOnly] private characterType currentCharacter;
 
