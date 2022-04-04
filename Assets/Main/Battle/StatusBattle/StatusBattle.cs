@@ -12,6 +12,7 @@ public class StatusBattle : PlayerStatus
     public ElementEnum weakness;
     public ElementEnum sightWeakness;
     public ElementEnum resist;
+    [ReadOnly] private bool alive = true;
     [ReadOnly] public bool barrier = false;
 
 
@@ -20,6 +21,16 @@ public class StatusBattle : PlayerStatus
     {
         MaxHP = base.playerStatusForReference.HP_access;
         healthBar.GetComponent<ValueBar>().SetMaxHealth(MaxHP);
+    }
+
+    public void setAlive(bool newState)
+    {
+        alive = newState;
+    }
+
+    public bool getAlive()
+    {
+        return alive;
     }
 
     public void takeDamage(int damage)

@@ -226,6 +226,24 @@ public class GameDirector : MonoBehaviour
         battleGameCanvasController_0.setDescriptionByEvent(_event);
     }
 
+    public void setReviveAndDialogue()
+    {
+        Event _event = new Event();
+        _event.dialogue = new string[2];
+
+        if (single_target.GetComponent<StatusBattle>().getAlive())
+        {
+            _event.dialogue[0] = single_target.GetComponent<StatusBattle>().name + "‚Í¶‚«‚Ä‚¢‚é!";
+        } else
+        {
+            _event.dialogue[0] = single_target.GetComponent<StatusBattle>().name + "‚Í•œŠˆ‚µ‚½!";
+            single_target.GetComponent<StatusBattle>().heal(100);
+        }
+        single_target.GetComponent<StatusBattle>().setAlive(true);
+        _event.dialogue[1] = "";
+        battleGameCanvasController_0.setDescriptionByEvent(_event);
+    }
+
     public void setBarrierAndDialogue()
     {
         Event _event = new Event();
