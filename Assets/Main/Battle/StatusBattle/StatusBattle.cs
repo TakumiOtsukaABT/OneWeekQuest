@@ -9,6 +9,7 @@ public class StatusBattle : PlayerStatus
     public characterType characterType;
     public new string name;
     public int MaxHP;
+    public int MaxMP;
     public ElementEnum weakness;
     public ElementEnum sightWeakness;
     public ElementEnum resist;
@@ -17,10 +18,14 @@ public class StatusBattle : PlayerStatus
 
 
     [SerializeField] private GameObject healthBar;
+    [SerializeField] private GameObject MPBar;
+
     private void Start()
     {
         MaxHP = base.playerStatusForReference.HP_access;
         healthBar.GetComponent<ValueBar>().SetMaxHealth(MaxHP);
+        MaxMP = base.playerStatusForReference.MP_access;
+        MPBar.GetComponent<ValueBar>().SetMaxHealth(MaxMP);
     }
 
     public void setAlive(bool newState)
@@ -46,7 +51,6 @@ public class StatusBattle : PlayerStatus
     private void setHP(int new_hp)
     {
         playerStatusForReference.HP_access = new_hp;
-        healthBar.GetComponent<ValueBar>().SetHealth(playerStatusForReference.HP_access);
         if(playerStatusForReference.HP_access < 0)
         {
             playerStatusForReference.HP_access = 0;
@@ -55,6 +59,21 @@ public class StatusBattle : PlayerStatus
         {
             playerStatusForReference.HP_access = MaxHP;
         }
+        healthBar.GetComponent<ValueBar>().SetHealth(playerStatusForReference.HP_access);
+    }
+
+    private void setMP(int new_mp)
+    {
+        playerStatusForReference.MP_access = new_mp;
+        if (playerStatusForReference.MP_access < 0)
+        {
+            playerStatusForReference.MP_access = 0;
+        }
+        if (playerStatusForReference.MP_access > MaxMP)
+        {
+            playerStatusForReference.MP_access = MaxMP;
+        }
+        healthBar.GetComponent<ValueBar>().SetHealth(playerStatusForReference.MP_access);
     }
 
     public void heal(int healAmount)

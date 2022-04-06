@@ -1436,6 +1436,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 59d21a9dfd6cc044293aacf266bec384, type: 3}
+--- !u!1 &289632589 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5681031519649236378, guid: 59d21a9dfd6cc044293aacf266bec384, type: 3}
+  m_PrefabInstance: {fileID: 289632588}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &306353949
 GameObject:
   m_ObjectHideFlags: 0
@@ -2141,11 +2146,13 @@ MonoBehaviour:
   characterType: 1
   name: "\u72AC"
   MaxHP: 0
+  MaxMP: 0
   weakness: 0
   sightWeakness: 0
   resist: 0
   barrier: 0
   healthBar: {fileID: 111598853}
+  MPBar: {fileID: 289632589}
 --- !u!114 &407847658
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2895,6 +2902,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d6362490c18d08e499e76f3ffea8429c, type: 3}
+--- !u!1 &555433369 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5681031519649236378, guid: d6362490c18d08e499e76f3ffea8429c, type: 3}
+  m_PrefabInstance: {fileID: 555433368}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &564129413
 GameObject:
   m_ObjectHideFlags: 0
@@ -3245,6 +3257,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a63ffd61a19edeb498f59cf64becfe2e, type: 3}
+--- !u!1 &603336090 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5681031519649236378, guid: a63ffd61a19edeb498f59cf64becfe2e, type: 3}
+  m_PrefabInstance: {fileID: 603336089}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &625928095 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7648858088185345655, guid: 6c8e2e24f7d42994b9dbd1a04a5b7cb5, type: 3}
@@ -3279,11 +3296,13 @@ MonoBehaviour:
   characterType: 0
   name: "\u30AD\u30E3\u30E9"
   MaxHP: 0
+  MaxMP: 0
   weakness: 0
   sightWeakness: 0
   resist: 0
   barrier: 0
   healthBar: {fileID: 64628251}
+  MPBar: {fileID: 826951344}
 --- !u!114 &635878654
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4073,6 +4092,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a014aa0cbedf2a04b84d70f9287cc21c, type: 3}
+--- !u!1 &826951344 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5681031519649236378, guid: a014aa0cbedf2a04b84d70f9287cc21c, type: 3}
+  m_PrefabInstance: {fileID: 826951343}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &878405722
 GameObject:
   m_ObjectHideFlags: 0
@@ -5657,11 +5681,13 @@ MonoBehaviour:
   characterType: 3
   name: "\u30A2\u30EB\u30D1\u30AB"
   MaxHP: 0
+  MaxMP: 0
   weakness: 0
   sightWeakness: 0
   resist: 0
   barrier: 0
   healthBar: {fileID: 1913705409}
+  MPBar: {fileID: 555433369}
 --- !u!114 &1572335856
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6613,11 +6639,13 @@ MonoBehaviour:
   characterType: 4
   name: "\u9B54\u738B"
   MaxHP: 0
+  MaxMP: 0
   weakness: 3
   sightWeakness: 2
   resist: 1
   barrier: 0
   healthBar: {fileID: 161489579}
+  MPBar: {fileID: 0}
 --- !u!114 &1972641408
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6702,11 +6730,13 @@ MonoBehaviour:
   characterType: 2
   name: "\u732B"
   MaxHP: 0
+  MaxMP: 0
   weakness: 0
   sightWeakness: 0
   resist: 0
   barrier: 0
   healthBar: {fileID: 1452493324}
+  MPBar: {fileID: 603336090}
 --- !u!114 &1973571008
 MonoBehaviour:
   m_ObjectHideFlags: 0
