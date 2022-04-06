@@ -24,8 +24,11 @@ public class StatusBattle : PlayerStatus
     {
         MaxHP = base.playerStatusForReference.HP_access;
         healthBar.GetComponent<ValueBar>().SetMaxHealth(MaxHP);
-        MaxMP = base.playerStatusForReference.MP_access;
-        MPBar.GetComponent<ValueBar>().SetMaxHealth(MaxMP);
+        if (!(characterType == characterType.Enemy))
+        {
+            MaxMP = base.playerStatusForReference.MP_access;
+            MPBar.GetComponent<ValueBar>().SetMaxHealth(MaxMP);
+        }
     }
 
     public void setAlive(bool newState)
