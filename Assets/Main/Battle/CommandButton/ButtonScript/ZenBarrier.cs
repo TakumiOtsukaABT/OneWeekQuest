@@ -4,24 +4,13 @@ using UnityEngine;
 
 public class ZenBarrier : WazaAction
 {
-
-    public override void runActionCommand()
+    protected override void whenMPIsEnough()
     {
-        if (isMPEnough())
-        {
-            gameDirector_3 = dialogueCanvasCommand.GetComponent<Outlet>().gameObjects[3].GetComponent<GameDirector>();
-            gameDirector_3.resetState(BattleState.SelectTarget);
-            gameDirector_3.selectingType = SelectingType.Multiple;
-            Debug.Log("ran until");
-            selectTarget();
-        }
+        initialSetupObjects(SelectingType.Multiple);
+        base.selectTarget();
     }
 
-    private void selectTarget()
-    {
-        StartCoroutine(chooseTarget());
-    }
-    virtual protected IEnumerator chooseTarget()
+    override protected IEnumerator chooseTarget()
     {
         Debug.Log(gameDirector_3.getFlagDoneSelecting());
         yield return new WaitUntil(gameDirector_3.getFlagDoneSelecting);
