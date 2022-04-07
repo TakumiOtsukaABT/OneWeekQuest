@@ -244,6 +244,11 @@ public class GameDirector : MonoBehaviour
         battleGameCanvasController_0.setDescriptionByEvent(_event);
     }
 
+    public void setNoMPDialogue()
+    {
+        battleGameCanvasController_0.setNoMPDescription();
+    }
+
     public void setBarrierAndDialogue()
     {
         Event _event = new Event();

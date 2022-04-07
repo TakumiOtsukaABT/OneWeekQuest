@@ -27,7 +27,7 @@ public class WazaAction : BaseActionCommand
 
     protected virtual void whenMPIsNotEnough()
     {
-
+        gameDirector_3.setNoMPDialogue();
     }
 
 

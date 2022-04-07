@@ -11,6 +11,7 @@ namespace Gamekit2D
         public string[] newDialogue;
         public BattleState nextState;
         public string playerName;
+        public string noMPDialogue;
         [SerializeField] private Event initialDialogue;
         [SerializeField] private Event whatToDoDialogue;
 
@@ -24,12 +25,22 @@ namespace Gamekit2D
             //base.inputController_1.setInputHandle<Battle_ReadInputHandle>();
         }
 
+        public void setNoMPDescription()
+        {
+            base.DialogueIndex = 0;
+            string[] choose = new string[2];
+            choose[0] = noMPDialogue;
+            base.Dialogue = choose;
+            base.setTextToTextMesh();
+        }
+
         public void chooseTargetDialogue()
         {
             base.DialogueIndex = 0;
             string[] choose = new string[2];
             choose[0] = "対象をタップ";
             base.Dialogue = choose;
+            base.setTextToTextMesh();
         }
         public void updateSingleTargetDialogue(characterType characterType)
         {

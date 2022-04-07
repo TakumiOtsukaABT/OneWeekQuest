@@ -7005,6 +7005,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 81991892}
     - target: {fileID: 8627776048985113369, guid: 2cd4a4c1f4aaf6f45b09f7b9b281546f, type: 3}
+      propertyPath: noMPDialogue
+      value: "MP\u304C\u8DB3\u308A\u306A\u3044!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8627776048985113369, guid: 2cd4a4c1f4aaf6f45b09f7b9b281546f, type: 3}
       propertyPath: textMeshProUGUI
       value: 
       objectReference: {fileID: 745131271}
