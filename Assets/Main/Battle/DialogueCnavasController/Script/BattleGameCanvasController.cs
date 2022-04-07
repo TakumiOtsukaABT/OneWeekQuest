@@ -65,6 +65,11 @@ public class BattleGameCanvasController : MonoBehaviour
     {
         canvasDescription.setNoMPDescription();
     }
+
+    public void setNoAliveDescription(characterType characterType)
+    {
+        canvasDescription.setNoAliveDescription(characterType);
+    }
 }
 
 public enum SelectingType

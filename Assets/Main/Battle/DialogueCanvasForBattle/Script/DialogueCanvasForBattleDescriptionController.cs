@@ -77,6 +77,15 @@ namespace Gamekit2D
             base.DialogueIndex = 0;
         }
 
+        public void setNoAliveDescription(characterType characterType)
+        {
+            base.DialogueIndex = 0;
+            string[] choose = new string[2];
+            choose[0] = getCharacterName(characterType)+"は戦闘不能だ!";
+            base.Dialogue = choose;
+            base.setTextToTextMesh();
+        }
+
         public void setEvent(Event new_event)
         {
             new_event.dialogue[0] = new_event.dialogue[0];

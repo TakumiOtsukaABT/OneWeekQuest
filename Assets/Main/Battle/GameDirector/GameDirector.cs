@@ -249,6 +249,11 @@ public class GameDirector : MonoBehaviour
         battleGameCanvasController_0.setNoMPDescription();
     }
 
+    private void setNoAliveDialogue(characterType characterType)
+    {
+        battleGameCanvasController_0.setNoAliveDescription(characterType);
+    }
+
     public void setBarrierAndDialogue()
     {
         Event _event = new Event();
@@ -276,27 +281,33 @@ public class GameDirector : MonoBehaviour
     }
     public void setClickedObject(GameObject gameObject)
     {
-        switch (selectingType)
+        if (gameObject.GetComponent<StatusBattle>().getAlive())
         {
-            case SelectingType.Single:
-                Single_target = gameObject;
-                battleGameCanvasController_0.updateDescription_singleTarget(Single_target.GetComponent<StatusBattle>().characterType);
-                break;
-            case SelectingType.Multiple:
-                for (int i = 0; i < targetted.Count; i++)
-                {
-                    if (gameObject.Equals(targetted[i]))
+            switch (selectingType)
+            {
+                case SelectingType.Single:
+                    Single_target = gameObject;
+                    battleGameCanvasController_0.updateDescription_singleTarget(Single_target.GetComponent<StatusBattle>().characterType);
+                    break;
+                case SelectingType.Multiple:
+                    for (int i = 0; i < targetted.Count; i++)
                     {
-                        targetted.Remove(gameObject);
-                        updateDialogue_MultipleTargetted();
-                        return;
+                        if (gameObject.Equals(targetted[i]))
+                        {
+                            targetted.Remove(gameObject);
+                            updateDialogue_MultipleTargetted();
+                            return;
+                        }
                     }
-                }
-                targetted.Add(gameObject);
-                updateDialogue_MultipleTargetted();
-                break;
-            case SelectingType.Disable:
-                break;
+                    targetted.Add(gameObject);
+                    updateDialogue_MultipleTargetted();
+                    break;
+                case SelectingType.Disable:
+                    break;
+            }
+        } else
+        {
+            setNoAliveDialogue(gameObject.GetComponent<StatusBattle>().characterType);
         }
         return;
     }
