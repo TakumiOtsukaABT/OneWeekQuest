@@ -29,7 +29,9 @@ public class GameDirector : MonoBehaviour
     [SerializeField, ReadOnly] private GameObject single_target;
     [SerializeField, ReadOnly] private bool selected = false;
     public GameObject Single_target { get => single_target; set => single_target = value; }
+    public bool IsReviveCalling { get => isReviveCalling; set => isReviveCalling = value; }
 
+    private bool isReviveCalling;
 
     private int[] sums = { 0, 0, 0, 0, 0 };
 
@@ -281,7 +283,7 @@ public class GameDirector : MonoBehaviour
     }
     public void setClickedObject(GameObject gameObject)
     {
-        if (gameObject.GetComponent<StatusBattle>().getAlive())
+        if (gameObject.GetComponent<StatusBattle>().getAlive() || isReviveCalling)
         {
             switch (selectingType)
             {
