@@ -54,9 +54,10 @@ public class StatusBattle : PlayerStatus
     private void setHP(int new_hp)
     {
         playerStatusForReference.HP_access = new_hp;
-        if(playerStatusForReference.HP_access < 0)
+        if(playerStatusForReference.HP_access <= 0)
         {
             playerStatusForReference.HP_access = 0;
+            alive = false;
         }
         if (playerStatusForReference.HP_access > MaxHP)
         {

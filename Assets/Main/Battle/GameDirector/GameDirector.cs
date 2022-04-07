@@ -333,7 +333,10 @@ public class GameDirector : MonoBehaviour
         {
             for (int i = 0; i < 5; i++)
             {
-                sums[i] += speeds[i].playerStatusForReference.Speed_access;
+                if (speeds[i].getAlive())
+                {
+                    sums[i] += speeds[i].playerStatusForReference.Speed_access;
+                }
                 if (sums[i] > 1000)
                 {
                     sums[i] = sums[i] % 1000;
