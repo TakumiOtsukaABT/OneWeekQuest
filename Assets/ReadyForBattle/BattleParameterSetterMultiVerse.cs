@@ -5,9 +5,9 @@ using UnityEngine;
 public class BattleParameterSetterMultiVerse : MonoBehaviour
 {
     [SerializeField, ReadOnly] GameObject playerDataHandler;
-    [ReadOnly] StatusBattle alpacaStatusBattle;
-    [ReadOnly] StatusBattle dogStatusBattle;
-    [ReadOnly] StatusBattle catStatusBattle;
+    [SerializeField, ReadOnly] StatusBattle alpacaStatusBattle;
+    [SerializeField, ReadOnly] StatusBattle dogStatusBattle;
+    [SerializeField, ReadOnly] StatusBattle catStatusBattle;
     [ReadOnly] StatusBattle characterStatusBattle;
 
     bool alpacaActive = false;
@@ -18,11 +18,12 @@ public class BattleParameterSetterMultiVerse : MonoBehaviour
     void Start()
     {
         playerDataHandler = GameObject.Find("PlayerDataHandlerMultiVerse");
+        characterStatusBattle.playerStatusForReference = playerDataHandler.GetComponent<PlayerStatus>().playerStatusForReference;
+        characterStatusBattle.name = playerDataHandler.GetComponent<PlayerStatus>().name;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void setStatusBattle(StatusBattle to)
     {
-        
+
     }
 }
