@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Day7.unity
     guid: 748304ef762a684438bc5d7af05b8746
+  - enabled: 1
+    path: Assets/Scenes/ReadyForBattle.unity
+    guid: 73bc28b292f290b47908c1eaa0616864
   m_configObjects: {}
