@@ -15,7 +15,7 @@ public class StatDataBattle : StatData
         if (character.characterType != characterType.Enemy)
         {
             base.updateText();
-            HP.text = HP.text + "/" + character.MaxHP;
+            HP.text = HP.text + "/" + character.getMaxHP();
         }
         else
         {

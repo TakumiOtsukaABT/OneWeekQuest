@@ -8,8 +8,8 @@ public class StatusBattle : PlayerStatus
     public int order;
     public characterType characterType;
     public new string name;
-    public int MaxHP;
-    public int MaxMP;
+    [ReadOnly] private int MaxHP;
+    [ReadOnly] private int MaxMP;
     public ElementEnum weakness;
     public ElementEnum sightWeakness;
     public ElementEnum resist;
@@ -49,6 +49,11 @@ public class StatusBattle : PlayerStatus
     public void setBarrier(bool barrierState)
     {
         barrier = barrierState;
+    }
+
+    public int getMaxHP()
+    {
+        return MaxHP;
     }
 
     private void setHP(int new_hp)
