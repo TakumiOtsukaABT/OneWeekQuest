@@ -702,6 +702,7 @@ MonoBehaviour:
     Speed: 40
     HitRate: 35
     Regen: 50
+  name: "\u3068\u307F\u3053"
 --- !u!4 &133446280
 Transform:
   m_ObjectHideFlags: 0
@@ -2584,6 +2585,7 @@ MonoBehaviour:
     Speed: 40
     HitRate: 35
     Regen: 50
+  name: "\u3068\u307F\u3053"
 --- !u!4 &1870993230
 Transform:
   m_ObjectHideFlags: 0

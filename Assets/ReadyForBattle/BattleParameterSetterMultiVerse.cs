@@ -20,6 +20,7 @@ public class BattleParameterSetterMultiVerse : MonoBehaviour
         playerDataHandler = GameObject.Find("PlayerDataHandlerMultiVerse");
         characterStatusBattle.playerStatusForReference = playerDataHandler.GetComponent<PlayerStatus>().playerStatusForReference;
         characterStatusBattle.name = playerDataHandler.GetComponent<PlayerStatus>().name;
+        //後はここから、インベントリから仲間の有無、バトルコマンドの設定
     }
 
     private void setStatusBattle(StatusBattle to)
