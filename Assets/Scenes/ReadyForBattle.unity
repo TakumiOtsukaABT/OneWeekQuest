@@ -206,6 +206,147 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1334842297
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1334842305}
+  - component: {fileID: 1334842304}
+  - component: {fileID: 1334842303}
+  - component: {fileID: 1334842302}
+  - component: {fileID: 1334842301}
+  - component: {fileID: 1334842300}
+  - component: {fileID: 1334842299}
+  - component: {fileID: 1334842298}
+  m_Layer: 0
+  m_Name: PlayerDataHandlerMultiVerse
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1334842298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1334842297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e337f2c976ac6f44a80bf193a40194f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buff_list: 
+--- !u!114 &1334842299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1334842297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5702210dc3938a4797119569e8e4441, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IdList: 0000000001000000
+--- !u!114 &1334842300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1334842297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcb857e99716cb443adf32e431d88607, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IdList: 000000000100000002000000
+  count: 000000000000000000000000
+  battleCommandReference: {fileID: 11400000, guid: abf2d51d2bb32c2499e6b2d34b944b90, type: 2}
+  alertScript: {fileID: 0}
+--- !u!114 &1334842301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1334842297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d7385415f340af4992b472ef76a3b41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IdList: 000000000100000002000000
+--- !u!114 &1334842302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1334842297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b3dd750cbeaa7e45bf6156106005f59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IdList: 000000000b000000
+  countList: 01000000
+  itemReference: {fileID: 11400000, guid: 0c568ac683f7a2844aeeeb4d5d6223e7, type: 2}
+--- !u!114 &1334842303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1334842297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbc69c5b5b1ef9b408fb14a0251a7e44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IdList: 00000000
+--- !u!114 &1334842304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1334842297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2444eb9350610e942bf2c2a8ad99661e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerStatusForReference:
+    HP: 100
+    MP: 70
+    Attack: 35
+    Defence: 35
+    Speed: 40
+    HitRate: 35
+    Regen: 50
+  name: "\u3068\u307F\u3053"
+--- !u!4 &1334842305
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1334842297}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -8.143378, y: -0.46836638, z: -164.22157}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2136810076
 GameObject:
   m_ObjectHideFlags: 0
@@ -249,3 +390,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25d82277b86cc7a4c9db90497765f42c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerDataHandler: {fileID: 0}
+  alpacaStatusBattle: {fileID: 0}
+  dogStatusBattle: {fileID: 0}
+  catStatusBattle: {fileID: 0}
+  characterStatusBattle: {fileID: 0}
+  alpacaActive: 0
+  dogActive: 0
+  catActive: 0
