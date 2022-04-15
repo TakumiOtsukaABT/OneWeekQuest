@@ -124,7 +124,23 @@ public class GameDirector : MonoBehaviour
                 Debug.Log("waiting input");
                 if (nextTurn)
                 {
-                    currentCharacter = turn_queue.Dequeue();
+                    int i = 0;
+                    while (i < 10)
+                    {
+                        if (getCharacterObject(turn_queue.Peek()).GetComponent<StatusBattle>().getAlive())
+                        {
+                            currentCharacter = turn_queue.Dequeue();
+                            break;
+                        } else
+                        {
+                            turn_queue.Dequeue();
+                            if (turn_queue.Count < 10)
+                            {
+                                turn_queue.Enqueue(GetNextEnque());
+                            }
+                        }
+                        i++;
+                    }
                 }
                 
                 battleGameCanvasController_0.atWaitingInput(currentCharacter);
