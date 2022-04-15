@@ -31,7 +31,7 @@ public class BattleParameterSetterMultiVerse : MonoBehaviour
                 checkActiveAllies(ref catActive, i, 15);
             }
             characterStatusBattle.playerStatusForReference = playerDataHandler.GetComponent<PlayerStatus>().playerStatusForReference;
-            characterStatusBattle.name = playerDataHandler.GetComponent<PlayerStatus>().name;
+            characterStatusBattle.name = playerDataHandler.GetComponent<PlayerStatus>().ObjectName;
             characterStatusBattle.battleCommandIdList = playerDataHandler.GetComponent<PlayerBattleCommandList>().IdList;
             Destroy(playerDataHandler);
         }
