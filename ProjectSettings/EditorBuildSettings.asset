@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ReadyForBattle.unity
     guid: 73bc28b292f290b47908c1eaa0616864
+  - enabled: 1
+    path: Assets/Scenes/Battle.unity
+    guid: 89f8cee604783a242b279e259c3a304a
   m_configObjects: {}

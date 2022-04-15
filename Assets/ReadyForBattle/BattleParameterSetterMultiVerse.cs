@@ -15,6 +15,10 @@ public class BattleParameterSetterMultiVerse : MonoBehaviour
     [SerializeField, ReadOnly] bool dogActive = false;
     [SerializeField, ReadOnly] bool catActive = false;
 
+    [SerializeField, ReadOnly] GameObject AlpacaImage;
+    [SerializeField, ReadOnly] GameObject DogImage;
+    [SerializeField, ReadOnly] GameObject CatImage;
+    [SerializeField, ReadOnly] GameObject CharacterImage;
     // Start is called before the first frame update
     void Start()
     {
@@ -40,8 +44,12 @@ public class BattleParameterSetterMultiVerse : MonoBehaviour
 
     void SceneLoaded(Scene scene, LoadSceneMode mode)
     {
-
-
+        AlpacaImage =  GameObject.Find("AlpacaImage");
+        DogImage = GameObject.Find("DogImage");
+        CatImage = GameObject.Find("CatImage");
+        setActiveAndAlive(ref AlpacaImage, alpacaActive);
+        setActiveAndAlive(ref DogImage, dogActive);
+        setActiveAndAlive(ref CatImage, catActive);
     }
 
     void Update()
@@ -50,6 +58,12 @@ public class BattleParameterSetterMultiVerse : MonoBehaviour
         {
             SceneManager.LoadScene("Battle");
         }
+    }
+
+    private void setActiveAndAlive(ref GameObject obj, bool active)
+    {
+        obj.SetActive(active);
+        obj.GetComponent<StatusBattle>().setAlive(active);
     }
 
     private void checkActiveAllies(ref bool activeFlag, int iteration, int flagID)

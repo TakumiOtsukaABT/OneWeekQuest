@@ -502,11 +502,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Effect: {fileID: 0}
   waza_panel: {fileID: 1007527145}
---- !u!1 &111598853 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3285948760691082023, guid: 59d21a9dfd6cc044293aacf266bec384, type: 3}
-  m_PrefabInstance: {fileID: 289632588}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &129297734 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7648858088185345655, guid: e7341906ac23fcf4285e6541a77faa69, type: 3}
@@ -1422,6 +1417,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: DogImage
       objectReference: {fileID: 0}
+    - target: {fileID: 3731620949798635418, guid: 59d21a9dfd6cc044293aacf266bec384, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4073114288937770198, guid: 59d21a9dfd6cc044293aacf266bec384, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 541771352}
     - target: {fileID: 5681031519090643711, guid: 59d21a9dfd6cc044293aacf266bec384, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -1430,17 +1433,8 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8273243826947941690, guid: 59d21a9dfd6cc044293aacf266bec384, type: 3}
-      propertyPath: m_SortingOrder
-      value: 5
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 59d21a9dfd6cc044293aacf266bec384, type: 3}
---- !u!1 &289632589 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5681031519649236378, guid: 59d21a9dfd6cc044293aacf266bec384, type: 3}
-  m_PrefabInstance: {fileID: 289632588}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &306353949
 GameObject:
   m_ObjectHideFlags: 0
@@ -2122,92 +2116,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3731620949798635418, guid: 59d21a9dfd6cc044293aacf266bec384, type: 3}
   m_PrefabInstance: {fileID: 289632588}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &407847655
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 407847654}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eab7f9a1fb037184c965124cacfe18be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerStatusForReference:
-    HP: 900
-    MP: 200
-    Attack: 80
-    Defence: 30
-    Speed: 90
-    HitRate: 90
-    Regen: 20
-  order: 2
-  characterType: 1
-  name: "\u72AC"
-  MaxHP: 0
-  MaxMP: 0
-  weakness: 0
-  sightWeakness: 0
-  resist: 0
-  barrier: 0
-  healthBar: {fileID: 111598853}
-  MPBar: {fileID: 289632589}
---- !u!114 &407847658
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 407847654}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 2
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 541771352}
-          m_TargetAssemblyTypeName: GameDirector, Assembly-CSharp
-          m_MethodName: setClickedObject
-          m_Mode: 2
-          m_Arguments:
-            m_ObjectArgument: {fileID: 407847654}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
---- !u!61 &407847659
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 407847654}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.03, y: 3.68}
-    newSize: {x: 3, y: 3.65}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 3, y: 3.65}
-  m_EdgeRadius: 0
 --- !u!1 &409955696
 GameObject:
   m_ObjectHideFlags: 0
@@ -2884,6 +2792,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AlpacaImage
       objectReference: {fileID: 0}
+    - target: {fileID: 3731620949798635418, guid: d6362490c18d08e499e76f3ffea8429c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5137314343012307693, guid: d6362490c18d08e499e76f3ffea8429c, type: 3}
       propertyPath: m_SortingOrder
       value: 6
@@ -3188,14 +3100,6 @@ PrefabInstance:
       value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1899570430686662130, guid: a63ffd61a19edeb498f59cf64becfe2e, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 1899570430686662130, guid: a63ffd61a19edeb498f59cf64becfe2e, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 1899570430686662130, guid: a63ffd61a19edeb498f59cf64becfe2e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 14
       objectReference: {fileID: 0}
@@ -3223,18 +3127,6 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1899570430686662130, guid: a63ffd61a19edeb498f59cf64becfe2e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1899570430686662130, guid: a63ffd61a19edeb498f59cf64becfe2e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1899570430686662130, guid: a63ffd61a19edeb498f59cf64becfe2e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3285948759035286594, guid: a63ffd61a19edeb498f59cf64becfe2e, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -3247,6 +3139,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CatImage
       objectReference: {fileID: 0}
+    - target: {fileID: 3731620949798635418, guid: a63ffd61a19edeb498f59cf64becfe2e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5681031519090643711, guid: a63ffd61a19edeb498f59cf64becfe2e, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -3255,13 +3151,12 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9039672268273347278, guid: a63ffd61a19edeb498f59cf64becfe2e, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 541771352}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a63ffd61a19edeb498f59cf64becfe2e, type: 3}
---- !u!1 &603336090 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5681031519649236378, guid: a63ffd61a19edeb498f59cf64becfe2e, type: 3}
-  m_PrefabInstance: {fileID: 603336089}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &625928095 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7648858088185345655, guid: 6c8e2e24f7d42994b9dbd1a04a5b7cb5, type: 3}
@@ -3292,11 +3187,10 @@ MonoBehaviour:
     Speed: 70
     HitRate: 90
     Regen: 20
+  ObjectName: 
   order: 1
   characterType: 0
   name: "\u30AD\u30E3\u30E9"
-  MaxHP: 0
-  MaxMP: 0
   weakness: 0
   sightWeakness: 0
   resist: 0
@@ -5452,11 +5346,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1402139430}
   m_CullTransparentMesh: 0
---- !u!1 &1452493324 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3285948760691082023, guid: a63ffd61a19edeb498f59cf64becfe2e, type: 3}
-  m_PrefabInstance: {fileID: 603336089}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1504837105
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5677,11 +5566,10 @@ MonoBehaviour:
     Speed: 50
     HitRate: 90
     Regen: 20
+  ObjectName: 
   order: 4
   characterType: 3
   name: "\u30A2\u30EB\u30D1\u30AB"
-  MaxHP: 0
-  MaxMP: 0
   weakness: 0
   sightWeakness: 0
   resist: 0
@@ -6635,11 +6523,10 @@ MonoBehaviour:
     Speed: 17
     HitRate: 90
     Regen: 20
+  ObjectName: 
   order: 5
   characterType: 4
   name: "\u9B54\u738B"
-  MaxHP: 0
-  MaxMP: 0
   weakness: 3
   sightWeakness: 2
   resist: 1
@@ -6706,92 +6593,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3731620949798635418, guid: a63ffd61a19edeb498f59cf64becfe2e, type: 3}
   m_PrefabInstance: {fileID: 603336089}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1973571005
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1973571004}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eab7f9a1fb037184c965124cacfe18be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerStatusForReference:
-    HP: 800
-    MP: 200
-    Attack: 50
-    Defence: 60
-    Speed: 70
-    HitRate: 90
-    Regen: 20
-  order: 3
-  characterType: 2
-  name: "\u732B"
-  MaxHP: 0
-  MaxMP: 0
-  weakness: 0
-  sightWeakness: 0
-  resist: 0
-  barrier: 0
-  healthBar: {fileID: 1452493324}
-  MPBar: {fileID: 603336090}
---- !u!114 &1973571008
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1973571004}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 2
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 541771352}
-          m_TargetAssemblyTypeName: GameDirector, Assembly-CSharp
-          m_MethodName: setClickedObject
-          m_Mode: 2
-          m_Arguments:
-            m_ObjectArgument: {fileID: 1973571004}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
---- !u!61 &1973571009
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1973571004}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.99, y: 3.64}
-    newSize: {x: 3, y: 3.65}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 3, y: 3.65}
-  m_EdgeRadius: 0
 --- !u!224 &1977718119 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7648858088185345655, guid: 4c2749159a1612d44983cd7f8e2606a2, type: 3}

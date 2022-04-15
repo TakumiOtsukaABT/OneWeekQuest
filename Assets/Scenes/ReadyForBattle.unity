@@ -296,7 +296,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b3dd750cbeaa7e45bf6156106005f59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IdList: 000000000b0000000f00000015000000
+  IdList: 000000000f00000015000000
   countList: 01000000
   itemReference: {fileID: 11400000, guid: 0c568ac683f7a2844aeeeb4d5d6223e7, type: 2}
 --- !u!114 &1334842303
@@ -332,7 +332,7 @@ MonoBehaviour:
     Speed: 40
     HitRate: 35
     Regen: 50
-  name: "\u3068\u307F\u3053"
+  ObjectName: 
 --- !u!4 &1334842305
 Transform:
   m_ObjectHideFlags: 0

@@ -111,6 +111,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1899570430686662130}
   - component: {fileID: 8273243826947941690}
+  - component: {fileID: 3613688197095392041}
+  - component: {fileID: 7500294684739116748}
+  - component: {fileID: 9039672268273347278}
   m_Layer: 0
   m_Name: CatImage
   m_TagString: Untagged
@@ -127,7 +130,7 @@ Transform:
   m_GameObject: {fileID: 3731620949798635418}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -16.880838, y: 6.729514, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 1.8, y: 1.8, z: 2}
   m_Children:
   - {fileID: 73056769650519185}
   m_Father: {fileID: 0}
@@ -184,6 +187,91 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &3613688197095392041
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3731620949798635418}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.99, y: 3.64}
+    newSize: {x: 3, y: 3.65}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3, y: 3.65}
+  m_EdgeRadius: 0
+--- !u!114 &7500294684739116748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3731620949798635418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eab7f9a1fb037184c965124cacfe18be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerStatusForReference:
+    HP: 800
+    MP: 200
+    Attack: 50
+    Defence: 60
+    Speed: 70
+    HitRate: 90
+    Regen: 20
+  ObjectName: 
+  order: 3
+  characterType: 2
+  name: "\u732B"
+  weakness: 0
+  sightWeakness: 0
+  resist: 0
+  barrier: 0
+  healthBar: {fileID: 3285948760691082023}
+  MPBar: {fileID: 5681031519649236378}
+--- !u!114 &9039672268273347278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3731620949798635418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: GameDirector, Assembly-CSharp
+          m_MethodName: setClickedObject
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 3731620949798635418}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!114 &5844431926057513295
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -326,6 +414,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 98ccdd58eebe1124a9808eb6c539a02d, type: 3}
+--- !u!1 &3285948760691082023 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1172229389069590202, guid: 98ccdd58eebe1124a9808eb6c539a02d, type: 3}
+  m_PrefabInstance: {fileID: 4458159663080578461}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &3285948760691082024 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1172229389069590197, guid: 98ccdd58eebe1124a9808eb6c539a02d, type: 3}
