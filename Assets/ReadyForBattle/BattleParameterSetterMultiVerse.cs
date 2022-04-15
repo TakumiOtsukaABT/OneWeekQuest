@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class BattleParameterSetterMultiVerse : MonoBehaviour
@@ -18,6 +19,7 @@ public class BattleParameterSetterMultiVerse : MonoBehaviour
     void Start()
     {
         DontDestroyOnLoad(gameObject);
+        SceneManager.sceneLoaded += SceneLoaded;
         playerDataHandler = GameObject.Find("PlayerDataHandlerMultiVerse");
         if (playerDataHandler)
         {
@@ -34,6 +36,20 @@ public class BattleParameterSetterMultiVerse : MonoBehaviour
             Destroy(playerDataHandler);
         }
 
+    }
+
+    void SceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+
+
+    }
+
+    void Update()
+    {
+        if (Input.GetKey(KeyCode.T))
+        {
+            SceneManager.LoadScene("Battle");
+        }
     }
 
     private void checkActiveAllies(ref bool activeFlag, int iteration, int flagID)
