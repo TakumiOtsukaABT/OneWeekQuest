@@ -3187,14 +3187,14 @@ MonoBehaviour:
     Speed: 70
     HitRate: 90
     Regen: 20
-  ObjectName: 
+  name: "\u30AD\u30E3\u30E9"
   order: 1
   characterType: 0
-  name: "\u30AD\u30E3\u30E9"
   weakness: 0
   sightWeakness: 0
   resist: 0
   barrier: 0
+  battleCommandID: 
   healthBar: {fileID: 64628251}
   MPBar: {fileID: 826951344}
 --- !u!114 &635878654
@@ -5566,14 +5566,14 @@ MonoBehaviour:
     Speed: 50
     HitRate: 90
     Regen: 20
-  ObjectName: 
+  name: "\u30A2\u30EB\u30D1\u30AB"
   order: 4
   characterType: 3
-  name: "\u30A2\u30EB\u30D1\u30AB"
   weakness: 0
   sightWeakness: 0
   resist: 0
   barrier: 0
+  battleCommandID: 
   healthBar: {fileID: 1913705409}
   MPBar: {fileID: 555433369}
 --- !u!114 &1572335856
@@ -6523,14 +6523,14 @@ MonoBehaviour:
     Speed: 17
     HitRate: 90
     Regen: 20
-  ObjectName: 
+  name: "\u9B54\u738B"
   order: 5
   characterType: 4
-  name: "\u9B54\u738B"
   weakness: 3
   sightWeakness: 2
   resist: 1
   barrier: 0
+  battleCommandID: 
   healthBar: {fileID: 161489579}
   MPBar: {fileID: 0}
 --- !u!114 &1972641408
@@ -7025,6 +7025,7 @@ GameObject:
   - component: {fileID: 2077338945}
   - component: {fileID: 2077338947}
   - component: {fileID: 2077338946}
+  - component: {fileID: 2077338948}
   m_Layer: 5
   m_Name: Content
   m_TagString: Untagged
@@ -7106,6 +7107,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_HorizontalFit: 2
   m_VerticalFit: 0
+--- !u!114 &2077338948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2077338944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7594bb22fc014924588385cd6783d622, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  techniquePrefabs:
+  - {fileID: 7803545215762295984, guid: dbacab615bb5b5d4f93f12f1cece8fb7, type: 3}
+  - {fileID: 7803545215762295984, guid: 0619114dc27ae9047b75829503f62a55, type: 3}
+  - {fileID: 7803545215762295984, guid: a64cc3010cf1e6f4c981ea1a674e40fe, type: 3}
+  - {fileID: 7803545215762295984, guid: 86e57c468e1f2a5459dd3309b5d4e311, type: 3}
+  - {fileID: 7803545215762295984, guid: 1884078b1f1c9e64b969a512e9c8df9e, type: 3}
+  - {fileID: 7803545215762295984, guid: 6c8e2e24f7d42994b9dbd1a04a5b7cb5, type: 3}
+  - {fileID: 7803545215762295984, guid: fe325fd4f403797448677b2f246bbc9a, type: 3}
+  - {fileID: 7803545215762295984, guid: d8b4adc1fb138094f88ef8de29bb9bd4, type: 3}
+  - {fileID: 7803545215762295984, guid: 4c2749159a1612d44983cd7f8e2606a2, type: 3}
+  - {fileID: 7803545215762295984, guid: e7341906ac23fcf4285e6541a77faa69, type: 3}
+  - {fileID: 7803545215762295984, guid: d0af134a391b05c4ea0061dcf6d4cc2d, type: 3}
+  - {fileID: 7803545215762295984, guid: 73afeffd3c0d79a478f7ffe23cef8be3, type: 3}
+  - {fileID: 7803545215762295984, guid: 5295594ca2800c14fa902187a3bdf5df, type: 3}
+  - {fileID: 7803545215762295984, guid: 4df647082530aff41aa98d1fa1025a93, type: 3}
 --- !u!1 &2097167299
 GameObject:
   m_ObjectHideFlags: 0

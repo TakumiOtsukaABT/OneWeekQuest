@@ -311,7 +311,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbc69c5b5b1ef9b408fb14a0251a7e44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IdList: 00000000
+  IdList: 00000000030000000600000009000000
 --- !u!114 &1334842304
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -400,7 +400,7 @@ MonoBehaviour:
       Speed: 0
       HitRate: 0
       Regen: 0
-    battleCommandIdList: 
+    battleCommandIdList: 050000000200000004000000
     name: 
     characterType: 3
     weakness: 0
@@ -430,7 +430,7 @@ MonoBehaviour:
       Speed: 0
       HitRate: 0
       Regen: 0
-    battleCommandIdList: 
+    battleCommandIdList: 07000000
     name: 
     characterType: 2
     weakness: 0
