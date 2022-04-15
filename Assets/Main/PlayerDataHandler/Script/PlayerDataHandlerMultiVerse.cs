@@ -39,6 +39,6 @@ public class PlayerDataHandlerMultiVerse : MonoBehaviour
         to.GetComponent<PlayerStudyCommandsList>().count = from.GetComponent<PlayerStudyCommandsList>().count;
         to.GetComponent<PlayerEatCommandsList>().IdList = from.GetComponent<PlayerEatCommandsList>().IdList;
         to.GetComponent<PlayerBuff>().buff_list = from.GetComponent<PlayerBuff>().buff_list;
-        to.GetComponent<PlayerStatus>().ObjectName = from.GetComponent<PlayerStatus>().ObjectName;
+        to.GetComponent<PlayerStatus>().name = from.GetComponent<PlayerStatus>().name;
     }
 }

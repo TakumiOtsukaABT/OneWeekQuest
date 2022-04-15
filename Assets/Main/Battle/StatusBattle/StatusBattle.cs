@@ -7,7 +7,6 @@ public class StatusBattle : PlayerStatus
 {
     public int order;
     public characterType characterType;
-    public new string name;
     [ReadOnly] private int MaxHP;
     [ReadOnly] private int MaxMP;
     public ElementEnum weakness;
@@ -15,6 +14,7 @@ public class StatusBattle : PlayerStatus
     public ElementEnum resist;
     [ReadOnly] private bool alive = true;
     [ReadOnly] public bool barrier = false;
+    public List<int> battleCommandID = new List<int>();
 
 
     [SerializeField] private GameObject healthBar;

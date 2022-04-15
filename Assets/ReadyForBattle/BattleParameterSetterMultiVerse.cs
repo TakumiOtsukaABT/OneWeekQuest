@@ -35,7 +35,7 @@ public class BattleParameterSetterMultiVerse : MonoBehaviour
                 checkActiveAllies(ref catActive, i, 15);
             }
             characterStatusBattle.playerStatusForReference = playerDataHandler.GetComponent<PlayerStatus>().playerStatusForReference;
-            characterStatusBattle.name = playerDataHandler.GetComponent<PlayerStatus>().ObjectName;
+            characterStatusBattle.name = playerDataHandler.GetComponent<PlayerStatus>().name;
             characterStatusBattle.battleCommandIdList = playerDataHandler.GetComponent<PlayerBattleCommandList>().IdList;
             Destroy(playerDataHandler);
         }
@@ -47,9 +47,22 @@ public class BattleParameterSetterMultiVerse : MonoBehaviour
         AlpacaImage =  GameObject.Find("AlpacaImage");
         DogImage = GameObject.Find("DogImage");
         CatImage = GameObject.Find("CatImage");
+        CharacterImage = GameObject.Find("CharacterImage");
         setActiveAndAlive(ref AlpacaImage, alpacaActive);
         setActiveAndAlive(ref DogImage, dogActive);
         setActiveAndAlive(ref CatImage, catActive);
+        setParameters(ref CharacterImage, characterStatusBattle);
+        setParameters(ref AlpacaImage, alpacaStatusBattle);
+        setParameters(ref DogImage, dogStatusBattle);
+        setParameters(ref CatImage, catStatusBattle);
+    }
+
+    private void setParameters(ref GameObject _gameObject, BattleParameterStorer parameterStorer)
+    {
+        StatusBattle status = _gameObject.GetComponent<StatusBattle>();
+        status.playerStatusForReference = parameterStorer.playerStatusForReference;
+        status.name = parameterStorer.name;
+        status.battleCommandID = parameterStorer.battleCommandIdList;
     }
 
     void Update()
@@ -59,6 +72,7 @@ public class BattleParameterSetterMultiVerse : MonoBehaviour
             SceneManager.LoadScene("Battle");
         }
     }
+
 
     private void setActiveAndAlive(ref GameObject obj, bool active)
     {

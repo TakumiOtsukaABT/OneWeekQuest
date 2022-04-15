@@ -4,5 +4,5 @@ using UnityEngine;
 public class PlayerStatus:MonoBehaviour
 {
     public PlayerStatusForReference playerStatusForReference;
-    public string ObjectName;
+    public new string name;
 }
