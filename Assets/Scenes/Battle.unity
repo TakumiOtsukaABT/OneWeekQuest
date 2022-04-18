@@ -7119,7 +7119,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7594bb22fc014924588385cd6783d622, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dialogueCanvasCommand: {fileID: 475400263}
   techniquePrefabs:
+  - {fileID: 238739145}
   - {fileID: 7803545215762295984, guid: dbacab615bb5b5d4f93f12f1cece8fb7, type: 3}
   - {fileID: 7803545215762295984, guid: 0619114dc27ae9047b75829503f62a55, type: 3}
   - {fileID: 7803545215762295984, guid: a64cc3010cf1e6f4c981ea1a674e40fe, type: 3}
