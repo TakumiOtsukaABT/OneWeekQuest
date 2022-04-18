@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: -2931326219203994699}
   m_Layer: 5
   m_Name: ThunderButton
-  m_TagString: Untagged
+  m_TagString: Waza
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -228,5 +228,6 @@ MonoBehaviour:
   Effect: {fileID: 1071960360213401134, guid: fb2c6c2887c90754384073b9324c8483, type: 3}
   gameDirector_3: {fileID: 0}
   dialogueCanvasCommand: {fileID: 0}
+  cost: 0
   thisElement: 3
   bairitsu: 0

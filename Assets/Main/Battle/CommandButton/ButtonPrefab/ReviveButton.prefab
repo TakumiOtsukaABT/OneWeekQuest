@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 6787612786502127154}
   m_Layer: 5
   m_Name: ReviveButton
-  m_TagString: Untagged
+  m_TagString: Waza
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -228,4 +228,5 @@ MonoBehaviour:
   Effect: {fileID: 1071960360213401134, guid: aae37b8f457b323409f5768a9b40220a, type: 3}
   gameDirector_3: {fileID: 0}
   dialogueCanvasCommand: {fileID: 0}
+  cost: 0
   editMultiplier: 0

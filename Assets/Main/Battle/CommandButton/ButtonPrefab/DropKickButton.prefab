@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 8244505575231556695}
   m_Layer: 5
   m_Name: DropKickButton
-  m_TagString: Untagged
+  m_TagString: Waza
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -228,6 +228,7 @@ MonoBehaviour:
   Effect: {fileID: 1071960360213401134, guid: 9166e685d81f81e489449d29672b5c68, type: 3}
   gameDirector_3: {fileID: 0}
   dialogueCanvasCommand: {fileID: 0}
+  cost: 0
   thisElement: 0
   bairitsu: 0
   sanren: 7

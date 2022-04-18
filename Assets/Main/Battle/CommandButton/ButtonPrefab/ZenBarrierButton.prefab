@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 2892825538873762860}
   m_Layer: 5
   m_Name: ZenBarrierButton
-  m_TagString: Untagged
+  m_TagString: Waza
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -228,3 +228,4 @@ MonoBehaviour:
   Effect: {fileID: 1071960360213401134, guid: de083aa59cc2f7c4ba1727ebd5167672, type: 3}
   gameDirector_3: {fileID: 0}
   dialogueCanvasCommand: {fileID: 0}
+  cost: 0
