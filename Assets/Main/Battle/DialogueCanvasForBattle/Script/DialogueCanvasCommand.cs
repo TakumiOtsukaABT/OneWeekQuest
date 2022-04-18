@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Gamekit2D;
 using UnityEngine.UI;
-namespace Gamekit2D
-{
+
     public class DialogueCanvasCommand : DialogueCanvasController
     {
         [SerializeField, ReadOnly] private GameObject selecting;
@@ -48,4 +47,3 @@ namespace Gamekit2D
             return;
         }
     }
-}
