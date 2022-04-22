@@ -122,29 +122,37 @@ public class GameDirector : MonoBehaviour
         {
             case BattleState.WaitingInput:
                 Debug.Log("waiting input");
-                if (nextTurn)
+                if (turn_queue.Peek() != characterType.Enemy)
                 {
-                    int i = 0;
-                    while (i < 10)
+                    if (nextTurn)
                     {
-                        if (getCharacterObject(turn_queue.Peek()).GetComponent<StatusBattle>().getAlive())
+                        int i = 0;
+                        while (i < 10)
                         {
-                            currentCharacter = turn_queue.Dequeue();
-                            break;
-                        } else
-                        {
-                            turn_queue.Dequeue();
-                            if (turn_queue.Count < 10)
+                            if (getCharacterObject(turn_queue.Peek()).GetComponent<StatusBattle>().getAlive())
                             {
-                                turn_queue.Enqueue(GetNextEnque());
+                                currentCharacter = turn_queue.Dequeue();
+                                break;
                             }
+                            else
+                            {
+                                turn_queue.Dequeue();
+                                if (turn_queue.Count < 10)
+                                {
+                                    turn_queue.Enqueue(GetNextEnque());
+                                }
+                            }
+                            i++;
                         }
-                        i++;
                     }
+                    battleGameCanvasController_0.atWaitingInput(currentCharacter);
+                    inputController_2.setInputHandle<Battle_CommandInputHandle>();
                 }
-                
-                battleGameCanvasController_0.atWaitingInput(currentCharacter);
-                inputController_2.setInputHandle<Battle_CommandInputHandle>();
+                else
+                {
+                    turn_queue.Dequeue();
+                    setState(BattleState.Read);
+                }
                 break;
             case BattleState.Read:
                 Debug.Log("read");
