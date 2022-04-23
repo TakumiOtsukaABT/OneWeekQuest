@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System;
 using UnityEngine;
+using System.Linq;
 using Gamekit2D;
 
 public class GameDirector : MonoBehaviour
@@ -23,7 +24,7 @@ public class GameDirector : MonoBehaviour
 
     //select target
     [ReadOnly] public SelectingType selectingType = SelectingType.Disable;
-    [SerializeField, ReadOnly] private List<GameObject> targetted = new List<GameObject>();
+    [SerializeField, ReadOnly] public List<GameObject> targetted = new List<GameObject>();
 
 
     [SerializeField, ReadOnly] private GameObject single_target;
@@ -148,10 +149,13 @@ public class GameDirector : MonoBehaviour
                     battleGameCanvasController_0.atWaitingInput(currentCharacter);
                     inputController_2.setInputHandle<Battle_CommandInputHandle>();
                 }
-                else
+                else//enemy turn
                 {
-                    turn_queue.Dequeue();
-                    setState(BattleState.Read);
+                    currentCharacter = turn_queue.Dequeue();
+                    var enemy = getCharacterObject(currentCharacter);
+                    enemy.GetComponent<EnemyPattern>().runPatternedBattleCommand();
+                    //enemy.GetComponent
+                    //setState(BattleState.Read);
                 }
                 break;
             case BattleState.Read:
@@ -220,8 +224,20 @@ public class GameDirector : MonoBehaviour
         }
     }
 
+    public void setDialogue(string[] dialogues)
+    {
+        var dialist = dialogues.ToList();
+        dialist.Add("");
+        Event _event = new Event();
+        _event.nextState = BattleState.WaitingInput;
+        _event.dialogue = dialist.ToArray();
+        Debug.Log(_event.dialogue[0]);
+        Debug.Log(dialogues[0]);
+        battleGameCanvasController_0.setDescriptionByEvent(_event);
+    }
 
-    public void setTakeDamageAndDialogue(int damage){
+
+    public string setTakeDamageAndDialogue(int damage){
         Event _event = new Event();
         if (single_target.GetComponent<StatusBattle>().barrier)
         {
@@ -234,6 +250,7 @@ public class GameDirector : MonoBehaviour
         _event.dialogue[1] = "";
         _event.dialogue[0] = single_target.GetComponent<StatusBattle>().name + "Ç…" + damage.ToString() + "ÇÃÉ_ÉÅÅ[ÉW!";
         battleGameCanvasController_0.setDescriptionByEvent(_event);
+        return _event.dialogue[0];
     }
 
     public void setHealAndDialogue(int healAmount)
