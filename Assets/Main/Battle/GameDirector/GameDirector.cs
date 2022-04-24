@@ -20,6 +20,8 @@ public class GameDirector : MonoBehaviour
     [SerializeField, ReadOnly] private GameObject alpaca_6;
     public GameObject Alpaca { get => alpaca_6; }
     [SerializeField, ReadOnly] private GameObject enemy_7;
+    public GameObject Enemy { get => enemy_7; }
+
     [SerializeField, ReadOnly] private characterType currentCharacter;
 
     //select target

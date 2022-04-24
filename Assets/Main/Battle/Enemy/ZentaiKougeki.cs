@@ -13,6 +13,11 @@ public class ZentaiKougeki : EnemyBaseCommand
     {
         yield return new WaitForSeconds(0.0f);
         int attack = gameDirector_3.getCurrentCharacter().GetComponent<StatusBattle>().playerStatusForReference.Attack_access;
+        if (gameDirector_3.getCurrentCharacter().GetComponent<StatusBattle>().tameru)
+        {
+            attack = attack * 2;
+            gameDirector_3.getCurrentCharacter().GetComponent<StatusBattle>().tameru = false;
+        }
         List<string> dialogues = new List<string>();
         for (int i = 0; i < activeCharacters.Count; i++)
         {

@@ -8,6 +8,11 @@ public class HitoriKougeki : EnemyBaseCommand
     {
         yield return new WaitForSeconds(0.0f);
         int attack = gameDirector_3.getCurrentCharacter().GetComponent<StatusBattle>().playerStatusForReference.Attack_access;
+        if (gameDirector_3.getCurrentCharacter().GetComponent<StatusBattle>().tameru)
+        {
+            attack = attack * 2;
+            gameDirector_3.getCurrentCharacter().GetComponent<StatusBattle>().tameru = false;
+        }
         List<string> dialogues = new List<string>();
         GameObject highestHPObject = activeCharacters[0];
         for (int i = 0; i < activeCharacters.Count; i++)
@@ -27,6 +32,7 @@ public class HitoriKougeki : EnemyBaseCommand
         gameDirector_3.Single_target = highestHPObject;
         gameDirector_3.setTakeDamageAndDialogue(damage);
         activeCharacters.Clear();
+
         gameDirector_3.resetState(BattleState.Read, battleEffect: base.Effect);
     }
 }

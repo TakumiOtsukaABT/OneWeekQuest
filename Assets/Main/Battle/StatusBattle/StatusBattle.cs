@@ -15,7 +15,7 @@ public class StatusBattle : PlayerStatus
     [ReadOnly] private bool alive = true;
     [ReadOnly] public bool barrier = false;
     public List<int> battleCommandID = new List<int>();
-
+    [ReadOnly] public bool tameru = false;
 
     [SerializeField] private GameObject healthBar;
     [SerializeField] private GameObject MPBar;
