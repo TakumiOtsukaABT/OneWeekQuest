@@ -15,6 +15,11 @@ public class StatusBattle : PlayerStatus
     [ReadOnly] private bool alive = true;
     [ReadOnly] public bool barrier = false;
     public List<int> battleCommandID = new List<int>();
+    [ReadOnly] public bool tameru = false;
+    [ReadOnly] public bool guard = false;
+    [ReadOnly] public bool kamae = false;
+    [ReadOnly] public int kamaeAmount = 0;
+
 
 
     [SerializeField] private GameObject healthBar;
@@ -43,6 +48,7 @@ public class StatusBattle : PlayerStatus
 
     public void takeDamage(int damage)
     {
+        if (kamae&&characterType.Equals(characterType.Enemy)) { kamaeAmount += damage; }
         setHP(playerStatusForReference.HP_access - damage);
     }
 
