@@ -18,6 +18,11 @@ public class ZentaiKougeki : EnemyBaseCommand
             attack = attack * 2;
             gameDirector_3.getCurrentCharacter().GetComponent<StatusBattle>().tameru = false;
         }
+        if (kamaed)
+        {
+            attack = gameDirector_3.getCurrentCharacter().GetComponent<StatusBattle>().kamaeAmount;
+            kamaed = false;
+        }
         List<string> dialogues = new List<string>();
         for (int i = 0; i < activeCharacters.Count; i++)
         {
