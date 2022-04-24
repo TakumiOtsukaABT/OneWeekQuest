@@ -502,11 +502,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Effect: {fileID: 0}
   waza_panel: {fileID: 1007527145}
---- !u!1 &125106181 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 82598171476907670, guid: 67ea58108c206b948ae05d818b2ecd0c, type: 3}
-  m_PrefabInstance: {fileID: 432463667}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &129297734 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7648858088185345655, guid: e7341906ac23fcf4285e6541a77faa69, type: 3}
@@ -4037,7 +4032,7 @@ PrefabInstance:
     - target: {fileID: 8273243826947941690, guid: 79d41bf1add408d478eb18d8a031fede, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 690ebc63093466245996b2e1a4461690, type: 3}
+      objectReference: {fileID: 21300000, guid: 513cf126c309b7d41902410b66c018cd, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 79d41bf1add408d478eb18d8a031fede, type: 3}
 --- !u!114 &745131271 stripped
@@ -6997,7 +6992,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4.43, y: 3.4}
+    oldSize: {x: 4.92, y: 5.49}
     newSize: {x: 3, y: 3.65}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -7020,7 +7015,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   commands:
   - {fileID: 1180767743}
-  - {fileID: 125106181}
+  - {fileID: 799038039}
   - {fileID: 799038039}
   - {fileID: 799038039}
   - {fileID: 799038039}
