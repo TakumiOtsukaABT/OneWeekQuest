@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: EndingBlackout
+  m_Controller: {fileID: 9100000, guid: 86cc3babf2b7ca54ca00a9c6bbdc1a73, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 61e18c8d2a84d124d866b438217971a5, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 61e18c8d2a84d124d866b438217971a5, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 515d0ea0cf139fd4dacba3ca8de8beb0, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 515d0ea0cf139fd4dacba3ca8de8beb0, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 7d14a250aef885240a0271cf18a21438, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 7d14a250aef885240a0271cf18a21438, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 70d13699b2098864ca5c107abd37eb8c, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 70d13699b2098864ca5c107abd37eb8c, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 3ec382eeca3f5c6498656733048d6e7b, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 2063aaae7057685408b260019b8c972a, type: 2}
