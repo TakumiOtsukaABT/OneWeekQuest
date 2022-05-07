@@ -38,9 +38,6 @@ public class GameDirector : MonoBehaviour
 
     private bool isReviveCalling;
 
-    bool win;
-    bool lose;
-
     private int[] sums = { 0, 0, 0, 0, 0 };
 
     void initializeProperty()
@@ -118,7 +115,20 @@ public class GameDirector : MonoBehaviour
                 }
             }
         }
-        setState(newState,nextTurn);
+        Debug.Log("win "+win().ToString());
+        Debug.Log("st lose "+ lose().ToString());
+        if (!win() && !lose())
+        {
+            setState(newState, nextTurn);
+        } else if(win())
+        {
+            goToWin();
+        } else if (lose())
+        {
+            goToLose();
+        }
+
+
         if (turn_queue.Count < 10)
         {
             turn_queue.Enqueue(GetNextEnque());
@@ -126,6 +136,18 @@ public class GameDirector : MonoBehaviour
         initializeProperty();
     }
 
+    private void goToLose()
+    {
+        Debug.Log("aaaaaaaaaaaaaaaaaaa");
+        throw new NotImplementedException();
+    }
+
+    private void goToWin()
+    {
+        Debug.Log("bbbbbbbbbbbbbbbbbbbb");
+
+        throw new NotImplementedException();
+    }
 
     private void setState(BattleState newState, bool nextTurn=true)
     {
@@ -415,5 +437,30 @@ public class GameDirector : MonoBehaviour
                 }
             }
         }
+    }
+
+    private bool win()
+    {
+        return !enemy_7.GetComponent<StatusBattle>().getAlive();
+    }
+
+    private bool lose()
+    {
+        bool allDead = true;
+        for (int i = 0; i < activeCharacters.Count; i++)
+        {
+            Debug.Log("1all dead " + allDead.ToString());
+
+            if (activeCharacters[i].GetComponent<StatusBattle>().getAlive())
+            {
+                Debug.Log("aaaaaaa");
+                allDead = false;
+            }
+            Debug.Log("2all dead " + allDead.ToString());
+
+        }
+        Debug.Log("3all dead " + allDead.ToString());
+
+        return allDead;//hitori demo ikitetara false
     }
 }

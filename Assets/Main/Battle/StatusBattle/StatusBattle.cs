@@ -12,7 +12,7 @@ public class StatusBattle : PlayerStatus
     public ElementEnum weakness;
     public ElementEnum sightWeakness;
     public ElementEnum resist;
-    [ReadOnly] private bool alive = true;
+    [SerializeField,ReadOnly] private bool alive = true;
     [ReadOnly] public bool barrier = false;
     public List<int> battleCommandID = new List<int>();
     [ReadOnly] public bool tameru = false;

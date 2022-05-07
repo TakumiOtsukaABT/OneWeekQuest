@@ -18,7 +18,7 @@ public class EnemyBaseCommand : BaseActionCommand
     protected void initialSetupObjects(SelectingType selecting)
     {
         gameDirector_3 = dialogueCanvasCommand.GetComponent<Outlet>().gameObjects[3].GetComponent<GameDirector>();
-        activeCharacters = gameDirector_3.activeCharacters;
+        activeCharacters = new List<GameObject>( gameDirector_3.activeCharacters);
         gameDirector_3.selectingType = selecting;
         if (gameDirector_3.getCurrentCharacter().GetComponent<StatusBattle>().guard)
         {
