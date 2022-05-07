@@ -18,10 +18,7 @@ public class EnemyBaseCommand : BaseActionCommand
     protected void initialSetupObjects(SelectingType selecting)
     {
         gameDirector_3 = dialogueCanvasCommand.GetComponent<Outlet>().gameObjects[3].GetComponent<GameDirector>();
-        if (gameDirector_3.Human.activeSelf) activeCharacters.Add(gameDirector_3.Human);
-        if (gameDirector_3.Dog.activeSelf) activeCharacters.Add(gameDirector_3.Dog);
-        if (gameDirector_3.Cat.activeSelf) activeCharacters.Add(gameDirector_3.Cat);
-        if (gameDirector_3.Alpaca.activeSelf) activeCharacters.Add(gameDirector_3.Alpaca);
+        activeCharacters = gameDirector_3.activeCharacters;
         gameDirector_3.selectingType = selecting;
         if (gameDirector_3.getCurrentCharacter().GetComponent<StatusBattle>().guard)
         {

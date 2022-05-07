@@ -11,6 +11,8 @@ public class GameDirector : MonoBehaviour
     [SerializeField, ReadOnly] private BattleState battleState = BattleState.Read;
     [SerializeField, ReadOnly] private InputControllerForBattle inputController_2;
     [SerializeField, ReadOnly] private BattleGameCanvasController battleGameCanvasController_0;
+    public List<GameObject> activeCharacters = new List<GameObject>();
+
     [SerializeField, ReadOnly] private GameObject human_3;
     public GameObject Human { get => human_3; }
     [SerializeField, ReadOnly] private GameObject dog_4;
@@ -36,6 +38,9 @@ public class GameDirector : MonoBehaviour
 
     private bool isReviveCalling;
 
+    bool win;
+    bool lose;
+
     private int[] sums = { 0, 0, 0, 0, 0 };
 
     void initializeProperty()
@@ -55,6 +60,10 @@ public class GameDirector : MonoBehaviour
         cat_5 = GetComponent<Outlet>().gameObjects[5];
         alpaca_6 = GetComponent<Outlet>().gameObjects[6];
         enemy_7 = GetComponent<Outlet>().gameObjects[7];
+        if (Human.activeSelf) activeCharacters.Add(Human);
+        if (Dog.activeSelf) activeCharacters.Add(Dog);
+        if (Cat.activeSelf) activeCharacters.Add(Cat);
+        if (Alpaca.activeSelf) activeCharacters.Add(Alpaca);
         initQueue();
     }
 
@@ -121,6 +130,7 @@ public class GameDirector : MonoBehaviour
     private void setState(BattleState newState, bool nextTurn=true)
     {
         battleState = newState;
+
         switch (newState)
         {
             case BattleState.WaitingInput:
