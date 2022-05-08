@@ -2840,7 +2840,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &541771352
 MonoBehaviour:
@@ -2873,7 +2873,8 @@ MonoBehaviour:
   - "\u6557\u5317\u3057\u305F..."
   - 
   winString:
-  - 
+  - "\u9B54\u738B\u306F\u5012\u308C\u305F...."
+  - "\u9B54\u738B\u306B\u52DD\u5229\u3057\u305F!"
   - 
 --- !u!114 &541771353
 MonoBehaviour:
@@ -2982,7 +2983,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 981813394084088586, guid: d6362490c18d08e499e76f3ffea8429c, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1899570430686662130, guid: d6362490c18d08e499e76f3ffea8429c, type: 3}
       propertyPath: m_RootOrder
@@ -3832,7 +3833,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &704768677
 MonoBehaviour:
@@ -6571,7 +6572,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1819221029
 PrefabInstance:

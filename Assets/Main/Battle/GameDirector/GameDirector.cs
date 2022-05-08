@@ -149,9 +149,8 @@ public class GameDirector : MonoBehaviour
 
     private void goToWin()
     {
-        Debug.Log("bbbbbbbbbbbbbbbbbbbb");
-
-        throw new NotImplementedException();
+        addDialogue(winString);
+        setState(BattleState.Read);
     }
 
     private void setState(BattleState newState, bool nextTurn=true)
