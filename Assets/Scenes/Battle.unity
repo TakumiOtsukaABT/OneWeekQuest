@@ -2857,6 +2857,7 @@ MonoBehaviour:
   battleState: 1
   inputController_2: {fileID: 0}
   battleGameCanvasController_0: {fileID: 0}
+  activeCharacters: []
   human_3: {fileID: 0}
   dog_4: {fileID: 0}
   cat_5: {fileID: 0}
@@ -2867,6 +2868,13 @@ MonoBehaviour:
   targetted: []
   single_target: {fileID: 0}
   selected: 0
+  loseString:
+  - "\u6226\u3048\u308B\u4EF2\u9593\u304C\u3044\u306A\u3044...."
+  - "\u6557\u5317\u3057\u305F..."
+  - 
+  winString:
+  - 
+  - 
 --- !u!114 &541771353
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3598,6 +3606,7 @@ MonoBehaviour:
   weakness: 0
   sightWeakness: 0
   resist: 0
+  alive: 1
   barrier: 0
   battleCommandID: 
   tameru: 0
@@ -5991,6 +6000,7 @@ MonoBehaviour:
   weakness: 0
   sightWeakness: 0
   resist: 0
+  alive: 1
   barrier: 0
   battleCommandID: 
   tameru: 0
@@ -6952,6 +6962,7 @@ MonoBehaviour:
   weakness: 3
   sightWeakness: 2
   resist: 1
+  alive: 1
   barrier: 0
   battleCommandID: 
   tameru: 0

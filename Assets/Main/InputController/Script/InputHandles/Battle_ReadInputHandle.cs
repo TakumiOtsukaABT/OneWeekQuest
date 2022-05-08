@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using Gamekit2D;
 
 
@@ -26,9 +27,20 @@ public class Battle_ReadInputHandle : InputHandle
 
             if (dialogueCanvas.isLastDialogue())
             {
-                Debug.Log("islast");
-                gameDirector_2.resetState(dialogueCanvas.nextState);
-                return;
+                if (gameDirector_2.win())
+                {
+                    SceneManager.LoadScene("Ending");
+                }
+                else if (gameDirector_2.lose())
+                {
+                    SceneManager.LoadScene("Haiboku");
+                }
+                else
+                {
+                    Debug.Log("islast");
+                    gameDirector_2.resetState(dialogueCanvas.nextState);
+                    return;
+                }
             }
         }
     }

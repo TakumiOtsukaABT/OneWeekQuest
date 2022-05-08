@@ -35,7 +35,8 @@ public class GameDirector : MonoBehaviour
     [SerializeField, ReadOnly] private bool selected = false;
     public GameObject Single_target { get => single_target; set => single_target = value; }
     public bool IsReviveCalling { get => isReviveCalling; set => isReviveCalling = value; }
-
+    public string[] loseString;
+    public string[] winString;
     private bool isReviveCalling;
 
     private int[] sums = { 0, 0, 0, 0, 0 };
@@ -115,8 +116,12 @@ public class GameDirector : MonoBehaviour
                 }
             }
         }
+
+
         Debug.Log("win "+win().ToString());
         Debug.Log("st lose "+ lose().ToString());
+
+
         if (!win() && !lose())
         {
             setState(newState, nextTurn);
@@ -138,8 +143,8 @@ public class GameDirector : MonoBehaviour
 
     private void goToLose()
     {
-        Debug.Log("aaaaaaaaaaaaaaaaaaa");
-        throw new NotImplementedException();
+        addDialogue(loseString);
+        setState(BattleState.Read);
     }
 
     private void goToWin()
@@ -152,7 +157,6 @@ public class GameDirector : MonoBehaviour
     private void setState(BattleState newState, bool nextTurn=true)
     {
         battleState = newState;
-
         switch (newState)
         {
             case BattleState.WaitingInput:
@@ -196,6 +200,10 @@ public class GameDirector : MonoBehaviour
                 Debug.Log("read");
                 battleGameCanvasController_0.atRead();
                 inputController_2.setInputHandle<Battle_ReadInputHandle>();
+
+
+
+
                 break;
             case BattleState.SelectTarget:
                 Debug.Log("select target");
@@ -268,6 +276,18 @@ public class GameDirector : MonoBehaviour
         Debug.Log(_event.dialogue[0]);
         Debug.Log(dialogues[0]);
         battleGameCanvasController_0.setDescriptionByEvent(_event);
+    }
+
+    private void addDialogue(string[] dialogues)
+    {
+        var dialist = dialogues.ToList();
+        dialist.Add("");
+        Event _event = new Event();
+        _event.nextState = BattleState.WaitingInput;
+        _event.dialogue = dialist.ToArray();
+        Debug.Log(_event.dialogue[0]);
+        Debug.Log(dialogues[0]);
+        battleGameCanvasController_0.addDescriptionByEvent(_event);
     }
 
 
@@ -439,12 +459,12 @@ public class GameDirector : MonoBehaviour
         }
     }
 
-    private bool win()
+    public bool win()
     {
         return !enemy_7.GetComponent<StatusBattle>().getAlive();
     }
 
-    private bool lose()
+    public bool lose()
     {
         bool allDead = true;
         for (int i = 0; i < activeCharacters.Count; i++)

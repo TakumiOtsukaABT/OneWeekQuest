@@ -51,6 +51,11 @@ public class BattleGameCanvasController : MonoBehaviour
         canvasDescription.setEvent(_event);
     }
 
+    public void addDescriptionByEvent(Event _event)
+    {
+        canvasDescription.addEvent(_event);
+    }
+
     public void updateDescription_singleTarget(characterType characterType)
     {
         canvasDescription.updateSingleTargetDialogue(characterType);

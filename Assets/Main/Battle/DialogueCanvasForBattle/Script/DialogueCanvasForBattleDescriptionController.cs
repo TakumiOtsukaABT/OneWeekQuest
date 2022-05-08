@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using System.Linq;
 using UnityEngine;
 
 namespace Gamekit2D
@@ -94,6 +95,19 @@ namespace Gamekit2D
             base.DialogueIndex = 0;
         }
 
+        public void addEvent(Event new_event)
+        {
+            new_event.dialogue[0] = new_event.dialogue[0];
+            List<string> unko = base.Dialogue.ToList<string>();
+            unko.RemoveAt(base.Dialogue.Length-1);
+            foreach (var i in new_event.dialogue)
+            {
+                unko.Add(i);
+            }
+            base.Dialogue = unko.ToArray();
+            nextState = new_event.nextState;
+            base.DialogueIndex = 0;
+        }
         public void waitingInputTurn(characterType character)
         {
             base.DialogueIndex = 0;
