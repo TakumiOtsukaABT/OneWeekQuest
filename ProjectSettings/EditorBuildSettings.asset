@@ -41,4 +41,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Ending.unity
     guid: d429ac1c7de581649be7add5835c7792
+  - enabled: 1
+    path: Assets/Scenes/ReadyForTown.unity
+    guid: d0c0066fd9eb3c344b37c0b70672fae1
   m_configObjects: {}
