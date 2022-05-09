@@ -2532,11 +2532,15 @@ PrefabInstance:
       objectReference: {fileID: 1454191753}
     - target: {fileID: 2166779664605885514, guid: 8bc8b1b9f672c5b4c9969ea24c492d50, type: 3}
       propertyPath: dialogue.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2166779664605885514, guid: 8bc8b1b9f672c5b4c9969ea24c492d50, type: 3}
       propertyPath: dialogue.Array.data[0]
       value: "\u9B54\u738B\u306E\u3059\u3070\u3084\u3055\u3063\u3066\u77E5\u3063\u3066\u308B\uFF1F"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2166779664605885514, guid: 8bc8b1b9f672c5b4c9969ea24c492d50, type: 3}
+      propertyPath: dialogue.Array.data[1]
+      value: "\u5642\u306B\u3088\u308B\u3068...150\u3042\u308B\u3089\u3057\u3044..."
       objectReference: {fileID: 0}
     - target: {fileID: 6533857937222428579, guid: 8bc8b1b9f672c5b4c9969ea24c492d50, type: 3}
       propertyPath: m_RootOrder
@@ -2726,6 +2730,7 @@ MonoBehaviour:
     Speed: 40
     HitRate: 35
     Regen: 50
+  name: 
 --- !u!4 &1870993230
 Transform:
   m_ObjectHideFlags: 0

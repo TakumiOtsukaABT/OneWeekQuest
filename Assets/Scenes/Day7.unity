@@ -1998,7 +1998,7 @@ PrefabInstance:
       objectReference: {fileID: 1454191753}
     - target: {fileID: 2166779664605885514, guid: 8bc8b1b9f672c5b4c9969ea24c492d50, type: 3}
       propertyPath: dialogue.Array.size
-      value: 3
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2166779664605885514, guid: 8bc8b1b9f672c5b4c9969ea24c492d50, type: 3}
       propertyPath: dialogue.Array.data[0]
@@ -2007,6 +2007,26 @@ PrefabInstance:
     - target: {fileID: 2166779664605885514, guid: 8bc8b1b9f672c5b4c9969ea24c492d50, type: 3}
       propertyPath: dialogue.Array.data[1]
       value: "\u9B54\u738B\u3068\u6226\u3046\u3068\u304D\u306E\u3001\u6700\u521D\u306E\u884C\u52D5\u3088"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2166779664605885514, guid: 8bc8b1b9f672c5b4c9969ea24c492d50, type: 3}
+      propertyPath: dialogue.Array.data[2]
+      value: "\u5148\u305A\u306F\u3001\u5168\u4F53\u653B\u6483\u3092\u3059\u308B\u3089\u3057\u3044\u308F"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2166779664605885514, guid: 8bc8b1b9f672c5b4c9969ea24c492d50, type: 3}
+      propertyPath: dialogue.Array.data[3]
+      value: "\u305D\u306E\u3042\u3068\u3001\u6280\u3092\u305F\u3081\u308B\u3089\u3057\u3044\u306E"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2166779664605885514, guid: 8bc8b1b9f672c5b4c9969ea24c492d50, type: 3}
+      propertyPath: dialogue.Array.data[4]
+      value: "\u6B21\u306E\u653B\u6483\u3092\u5F37\u304F\u3059\u308B\u6280\u3088"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2166779664605885514, guid: 8bc8b1b9f672c5b4c9969ea24c492d50, type: 3}
+      propertyPath: dialogue.Array.data[5]
+      value: "\u305D\u306E\u5F8C\u306E\u884C\u52D5\u306F\u3001\u4E00\u756AHP\u304C\u9AD8\u3044\u5B50\u3092\u653B\u6483\u3059\u308B\u306E"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2166779664605885514, guid: 8bc8b1b9f672c5b4c9969ea24c492d50, type: 3}
+      propertyPath: dialogue.Array.data[6]
+      value: "\u9811\u5F35\u3063\u3066\u306D!"
       objectReference: {fileID: 0}
     - target: {fileID: 6533857937222428579, guid: 8bc8b1b9f672c5b4c9969ea24c492d50, type: 3}
       propertyPath: m_RootOrder
@@ -2485,6 +2505,7 @@ MonoBehaviour:
     Speed: 40
     HitRate: 35
     Regen: 50
+  name: 
 --- !u!4 &1870993230
 Transform:
   m_ObjectHideFlags: 0

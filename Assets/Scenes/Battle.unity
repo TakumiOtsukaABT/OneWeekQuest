@@ -6950,11 +6950,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerStatusForReference:
-    HP: 5000
+    HP: 2000
     MP: 200
-    Attack: 100
+    Attack: 125
     Defence: 90
-    Speed: 100
+    Speed: 150
     HitRate: 90
     Regen: 20
   name: "\u9B54\u738B"

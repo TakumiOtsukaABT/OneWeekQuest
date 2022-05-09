@@ -1195,7 +1195,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3673711382740034979, guid: 70feda55c81598f4881e9715048c63e3, type: 3}
       propertyPath: dialogue.Array.data[0]
-      value: "\u9B54\u738B\u306EHP\u306F"
+      value: "\u9B54\u738B\u306EHP\u306F2000\u3082\u3042\u308B\u306E\u3088"
       objectReference: {fileID: 0}
     - target: {fileID: 5980020188430589131, guid: 70feda55c81598f4881e9715048c63e3, type: 3}
       propertyPath: gameObjects.Array.size
@@ -2492,6 +2492,7 @@ MonoBehaviour:
     Speed: 40
     HitRate: 35
     Regen: 50
+  name: 
 --- !u!4 &1870993230
 Transform:
   m_ObjectHideFlags: 0
