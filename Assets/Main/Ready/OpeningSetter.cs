@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 public class OpeningSetter : MonoBehaviour
 {
     public List<string> dialogue = new List<string>();

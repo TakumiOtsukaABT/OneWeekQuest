@@ -322,7 +322,6 @@ MonoBehaviour:
   - "\u4E16\u754C\u3067\u3082\u6551\u304A\u3046"
   - "\u79C1\u306E\u540D\u524D\u306F..."
   - 
-  - 
   dialogueCanvas: {fileID: 1009639062020664}
 --- !u!4 &796163059
 Transform:
@@ -416,6 +415,7 @@ GameObject:
   - component: {fileID: 1672959829}
   - component: {fileID: 1672959828}
   - component: {fileID: 1672959827}
+  - component: {fileID: 1672959830}
   m_Layer: 5
   m_Name: InputField
   m_TagString: Untagged
@@ -548,6 +548,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1672959825}
   m_CullTransparentMesh: 1
+--- !u!114 &1672959830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1672959825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a3532cbf278f91429c00aba755a20c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1690374351 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8381357421858052507, guid: 957abf0c167b6474cb6590cda767679c, type: 3}
@@ -947,6 +959,7 @@ GameObject:
   - component: {fileID: 1009639062020664}
   - component: {fileID: 792885115126766064}
   - component: {fileID: 5460758248977317259}
+  - component: {fileID: 1009639062020665}
   m_Layer: 5
   m_Name: DialogueCanvas
   m_TagString: Untagged
@@ -970,6 +983,24 @@ MonoBehaviour:
   textMeshProUGUI: {fileID: 114488632253880929}
   inputController_1: {fileID: 0}
   taskHandler_0: {fileID: 0}
+  inputField: {fileID: 1672959825}
+--- !u!114 &1009639062020665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1009639062020663}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
 --- !u!1 &1218462099739491
 GameObject:
   m_ObjectHideFlags: 0
