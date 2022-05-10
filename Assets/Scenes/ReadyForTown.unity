@@ -560,6 +560,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a3532cbf278f91429c00aba755a20c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  name_character: "\u3075\u3046\u3053"
+  text: {fileID: 510491023}
 --- !u!1 &1690374351 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8381357421858052507, guid: 957abf0c167b6474cb6590cda767679c, type: 3}
@@ -906,7 +908,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2126972299}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1672959830}
+        m_TargetAssemblyTypeName: NameInputField, Assembly-CSharp
+        m_MethodName: onClickConfirm
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2126972299
 MonoBehaviour:
   m_ObjectHideFlags: 0
