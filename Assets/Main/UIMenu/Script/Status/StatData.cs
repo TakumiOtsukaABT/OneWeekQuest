@@ -7,8 +7,10 @@ using TMPro;
 public class StatData : MonoBehaviour
 {
     protected PlayerStatusForReference mystatus;
+    protected PlayerStatus playerData;
     [SerializeField] private Outlet outlet;
 
+    [SerializeField] protected TextMeshProUGUI Name;
     [SerializeField] protected TextMeshProUGUI HP;
     [SerializeField] protected TextMeshProUGUI MP;
     [SerializeField] protected TextMeshProUGUI power;
@@ -18,12 +20,14 @@ public class StatData : MonoBehaviour
     [SerializeField] protected TextMeshProUGUI regen;
     private void OnEnable()
     {
-        mystatus = outlet.gameObjects[0].GetComponent<PlayerStatus>().playerStatusForReference;
+        playerData = outlet.gameObjects[0].GetComponent<PlayerStatus>();
+        mystatus = playerData.playerStatusForReference;
         updateText();
     }
 
     protected void updateText()
     {
+        Name.text = playerData.name;
         HP.text = mystatus.HP_access.ToString();
         MP.text = mystatus.MP_access.ToString();
         power.text = mystatus.Attack_access.ToString();

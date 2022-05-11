@@ -2215,6 +2215,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   outlet: {fileID: 7025069519139496981}
+  Name: {fileID: 139497974413931031}
   HP: {fileID: 8042139043288060644}
   MP: {fileID: 5418825824561921909}
   power: {fileID: 3350832482997995410}
@@ -6135,6 +6136,8 @@ MonoBehaviour:
   Menu: {fileID: 4711190796642599361}
   fadeoutCharacterController_1: {fileID: 0}
   blackout_2: {fileID: 0}
+  taskHandler_3: {fileID: 0}
+  alertScript_4: {fileID: 0}
 --- !u!1 &7034487626876844855
 GameObject:
   m_ObjectHideFlags: 0
