@@ -27,7 +27,7 @@ public class StatData : MonoBehaviour
 
     protected void updateText()
     {
-        Name.text = playerData.name;
+        nameUpdate();
         HP.text = mystatus.HP_access.ToString();
         MP.text = mystatus.MP_access.ToString();
         power.text = mystatus.Attack_access.ToString();
@@ -35,5 +35,11 @@ public class StatData : MonoBehaviour
         speed.text = mystatus.Speed_access.ToString();
         hit.text = mystatus.HitRate_access.ToString();
         regen.text = mystatus.Regen_access.ToString();
+    }
+
+    protected virtual void nameUpdate()
+    {
+        Name.text = playerData.name;
+
     }
 }

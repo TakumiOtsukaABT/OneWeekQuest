@@ -34,4 +34,8 @@ public class StatDataBattle : StatData
         hit.text = question;
         regen.text = question;
     }
+
+    protected override void nameUpdate()
+    {
+    }
 }
