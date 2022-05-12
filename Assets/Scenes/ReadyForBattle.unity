@@ -616,7 +616,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b3dd750cbeaa7e45bf6156106005f59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IdList: 00000000
+  IdList: 000000000b0000000f00000015000000
   countList: 01000000
   itemReference: {fileID: 11400000, guid: 0c568ac683f7a2844aeeeb4d5d6223e7, type: 2}
 --- !u!114 &1334842303
@@ -1257,45 +1257,45 @@ MonoBehaviour:
   playerDataHandler: {fileID: 0}
   alpacaStatusBattle:
     playerStatusForReference:
-      HP: 0
-      MP: 0
-      Attack: 0
-      Defence: 0
-      Speed: 0
-      HitRate: 0
-      Regen: 0
+      HP: 189
+      MP: 86
+      Attack: 71
+      Defence: 90
+      Speed: 85
+      HitRate: 179
+      Regen: 133
     battleCommandIdList: 050000000200000004000000
-    name: 
+    name: "\u30A2\u30EB\u30D1\u30AB"
     characterType: 3
     weakness: 0
     sightWeakness: 0
     resist: 0
   dogStatusBattle:
     playerStatusForReference:
-      HP: 0
-      MP: 0
-      Attack: 0
-      Defence: 0
-      Speed: 0
-      HitRate: 0
-      Regen: 0
+      HP: 280
+      MP: 101
+      Attack: 118
+      Defence: 121
+      Speed: 135
+      HitRate: 94
+      Regen: 107
     battleCommandIdList: 
-    name: 
+    name: "\u3044\u306C"
     characterType: 1
     weakness: 0
     sightWeakness: 0
     resist: 0
   catStatusBattle:
     playerStatusForReference:
-      HP: 0
-      MP: 0
-      Attack: 0
-      Defence: 0
-      Speed: 0
-      HitRate: 0
-      Regen: 0
+      HP: 95
+      MP: 128
+      Attack: 77
+      Defence: 96
+      Speed: 91
+      HitRate: 90
+      Regen: 187
     battleCommandIdList: 07000000
-    name: 
+    name: "\u306D\u3053"
     characterType: 2
     weakness: 0
     sightWeakness: 0
