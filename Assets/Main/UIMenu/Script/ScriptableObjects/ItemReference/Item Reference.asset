@@ -60,13 +60,13 @@ MonoBehaviour:
     element_name: "\u304A\u306B\u304F"
     count: 0
     effect: 3
-    otherId: 0
+    otherId: 5
   - id: 8
     description: "\u884C\u52D5\u56DE\u6570\u304C\u5897\u3048\u308B"
     element_name: "\u30B3\u30FC\u30D2\u30FC"
     count: 0
     effect: 3
-    otherId: 0
+    otherId: 3
   - id: 9
     description: "\u306A\u3093\u306E\u5F79\u306B\u3082\u7ACB\u305F\u306A\u3044\u5E03"
     element_name: "\u5E03"
@@ -96,13 +96,13 @@ MonoBehaviour:
     element_name: "\u30D6\u30ED\u30C3\u30B3\u30EA\u30FC"
     count: 0
     effect: 3
-    otherId: 0
+    otherId: 2
   - id: 14
     description: "\u98DF\u3079\u308B\u3068\u6B21\u306E\u30C8\u30EC\u30FC\u30CB\u30F3\u30B0\u52B9\u679C\u304C1.5\u500D\u306B\u306A\u308B"
     element_name: "\u3059\u3057"
     count: 0
     effect: 3
-    otherId: 0
+    otherId: 4
   - id: 15
     description: "\u732B\u3068\u306E\u53CB\u60C5\u306E\u8A3C"
     element_name: "\u732B\u3068\u306E\u7D04\u675F"
