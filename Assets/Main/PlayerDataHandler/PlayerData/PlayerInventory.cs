@@ -27,7 +27,7 @@ public class PlayerInventory : BasePlayerData
                 GetComponent<PlayerTrainingCommandsList>().Add(j.otherId);
                 break;
             case effectList.StudyCommand:
-                GetComponent<PlayerStudyCommandsList>().Add(j.otherId);
+                GetComponent<PlayerStudyCommandsList>().AddToList(j.otherId);
                 break;
             case effectList.EatCommand:
                 GetComponent<PlayerEatCommandsList>().Add(j.otherId);
