@@ -157,3 +157,9 @@ MonoBehaviour:
     count: 0
     effect: 2
     otherId: 0
+  - id: 24
+    description: "\u3055\u3093\u308C\u3093\u3052\u304D\u3092\u899A\u3048\u3089\u308C\u308B"
+    element_name: "\u3055\u3093\u308C\u3093\u3052\u304D\u306E\u66F8"
+    count: 0
+    effect: 2
+    otherId: 0

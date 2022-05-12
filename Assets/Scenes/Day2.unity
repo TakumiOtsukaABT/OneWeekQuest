@@ -1910,6 +1910,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1670075146903488373, guid: b1f50d801825ebe4385d262de95ab36c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1197491635}
+    - target: {fileID: 1670075146903488373, guid: b1f50d801825ebe4385d262de95ab36c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: activateCanvas
+      objectReference: {fileID: 0}
     - target: {fileID: 6127623129118893503, guid: b1f50d801825ebe4385d262de95ab36c, type: 3}
       propertyPath: hukidashi
       value: 
@@ -1945,6 +1953,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1670075146792756497, guid: b1f50d801825ebe4385d262de95ab36c, type: 3}
   m_PrefabInstance: {fileID: 1197491633}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1197491635 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6127623129118893503, guid: b1f50d801825ebe4385d262de95ab36c, type: 3}
+  m_PrefabInstance: {fileID: 1197491633}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f425dfff545f05d4081959b87175f03d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1257927935
 GameObject:
   m_ObjectHideFlags: 0
