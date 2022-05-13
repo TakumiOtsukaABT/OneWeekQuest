@@ -6,7 +6,7 @@ using TMPro;
 public class StatDataBattle : StatData
 {
     public StatusBattle character;
-    [SerializeField] TextMeshProUGUI Name;
+    //[SerializeField] TextMeshProUGUI Name;
 
     private void OnEnable()
     {

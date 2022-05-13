@@ -23,6 +23,20 @@ public class PlayerStudyCommandsList : BasePlayerData
         AddToBattleCommandList(newId);
     }
 
+    public void AddToList(int newId)
+    {
+        for (int i = 0; i < IdList.Count; i++)
+        {
+            if (IdList[i] == newId)
+            {
+                return;
+            }
+        }
+        IdList.Add(newId);
+        count.Add(0);
+
+    }
+
     private void AddToBattleCommandList(int newId)
     {
         int index_IdList = 0;

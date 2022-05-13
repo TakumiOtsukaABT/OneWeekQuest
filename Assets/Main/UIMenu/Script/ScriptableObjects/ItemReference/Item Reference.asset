@@ -36,19 +36,19 @@ MonoBehaviour:
     element_name: "\u30D0\u30FC\u30D9\u30EB"
     count: 0
     effect: 1
-    otherId: 0
+    otherId: 7
   - id: 4
     description: "\u30C8\u30EC\u30FC\u30CB\u30F3\u30B0\u304C\u51FA\u6765\u308B\u3088\u3046\u306B\u306A\u308B"
     element_name: "\u30D0\u30E9\u30F3\u30B9\u30DC\u30FC\u30EB"
     count: 0
     effect: 1
-    otherId: 0
+    otherId: 8
   - id: 5
     description: "\u30C8\u30EC\u30FC\u30CB\u30F3\u30B0\u304C\u51FA\u6765\u308B\u3088\u3046\u306B\u306A\u308B"
     element_name: "\u81EA\u8EE2\u8ECA"
     count: 0
     effect: 1
-    otherId: 0
+    otherId: 6
   - id: 6
     description: "\u98DF\u3079\u308B\u3068\u53EF\u611B\u304F\u306A\u308B"
     element_name: "\u30C1\u30E7\u30B3\u30EC\u30FC\u30C8"
@@ -60,13 +60,13 @@ MonoBehaviour:
     element_name: "\u304A\u306B\u304F"
     count: 0
     effect: 3
-    otherId: 0
+    otherId: 5
   - id: 8
     description: "\u884C\u52D5\u56DE\u6570\u304C\u5897\u3048\u308B"
     element_name: "\u30B3\u30FC\u30D2\u30FC"
     count: 0
     effect: 3
-    otherId: 0
+    otherId: 3
   - id: 9
     description: "\u306A\u3093\u306E\u5F79\u306B\u3082\u7ACB\u305F\u306A\u3044\u5E03"
     element_name: "\u5E03"
@@ -78,7 +78,7 @@ MonoBehaviour:
     element_name: "\u3051\u3093\u7389"
     count: 0
     effect: 1
-    otherId: 0
+    otherId: 5
   - id: 11
     description: "\u72AC\u3068\u306E\u53CB\u60C5\u306E\u8A3C"
     element_name: "\u72AC\u3068\u306E\u7D04\u675F"
@@ -90,19 +90,19 @@ MonoBehaviour:
     element_name: "\u30E8\u30FC\u30E8\u30FC"
     count: 0
     effect: 1
-    otherId: 0
+    otherId: 9
   - id: 13
     description: "\u98DF\u3079\u308B\u3068\u7CBE\u795E\u304C\u5B89\u5B9A\u3059\u308B"
     element_name: "\u30D6\u30ED\u30C3\u30B3\u30EA\u30FC"
     count: 0
     effect: 3
-    otherId: 0
+    otherId: 2
   - id: 14
     description: "\u98DF\u3079\u308B\u3068\u6B21\u306E\u30C8\u30EC\u30FC\u30CB\u30F3\u30B0\u52B9\u679C\u304C1.5\u500D\u306B\u306A\u308B"
     element_name: "\u3059\u3057"
     count: 0
     effect: 3
-    otherId: 0
+    otherId: 4
   - id: 15
     description: "\u732B\u3068\u306E\u53CB\u60C5\u306E\u8A3C"
     element_name: "\u732B\u3068\u306E\u7D04\u675F"
@@ -120,25 +120,25 @@ MonoBehaviour:
     element_name: "\u30C9\u30ED\u30C3\u30D7\u30AD\u30C3\u30AF\u306E\u66F8"
     count: 0
     effect: 2
-    otherId: 0
+    otherId: 7
   - id: 18
     description: "\u30C8\u30EC\u30FC\u30CB\u30F3\u30B0\u304C\u51FA\u6765\u308B\u3088\u3046\u306B\u306A\u308B"
     element_name: "\u30DC\u30AF\u30B7\u30F3\u30B0\u30B0\u30ED\u30FC\u30D6"
     count: 0
     effect: 1
-    otherId: 0
+    otherId: 13
   - id: 19
     description: "\u30C8\u30EC\u30FC\u30CB\u30F3\u30B0\u304C\u51FA\u6765\u308B\u3088\u3046\u306B\u306A\u308B"
     element_name: "\u6EDD\u306E\u5730\u56F3"
     count: 0
     effect: 1
-    otherId: 0
+    otherId: 12
   - id: 20
     description: "\u30D0\u30EA\u30A2\u3092\u899A\u3048\u3089\u308C\u308B"
     element_name: "\u30D0\u30EA\u30A2\u306E\u66F8"
     count: 0
     effect: 2
-    otherId: 0
+    otherId: 5
   - id: 21
     description: "\u30A2\u30EB\u30D1\u30AB\u3068\u306E\u53CB\u60C5\u306E\u8A3C"
     element_name: "\u30A2\u30EB\u30D1\u30AB\u3068\u306E\u7D04\u675F"
@@ -150,4 +150,16 @@ MonoBehaviour:
     element_name: "\u5168\u54E1\u30A2\u30BF\u30C3\u30AF\u306E\u66F8"
     count: 0
     effect: 2
-    otherId: 0
+    otherId: 8
+  - id: 23
+    description: "\u305B\u3044\u3051\u3093\u3065\u304D\u3092\u899A\u3048\u3089\u308C\u308B"
+    element_name: "\u305B\u3044\u3051\u3093\u3065\u304D\u306E\u66F8"
+    count: 0
+    effect: 2
+    otherId: 4
+  - id: 24
+    description: "\u3055\u3093\u308C\u3093\u3052\u304D\u3092\u899A\u3048\u3089\u308C\u308B"
+    element_name: "\u3055\u3093\u308C\u3093\u3052\u304D\u306E\u66F8"
+    count: 0
+    effect: 2
+    otherId: 6

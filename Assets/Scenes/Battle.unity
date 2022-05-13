@@ -3601,7 +3601,7 @@ MonoBehaviour:
     Speed: 70
     HitRate: 90
     Regen: 20
-  name: "\u30AD\u30E3\u30E9"
+  name: 
   order: 1
   characterType: 0
   weakness: 0
@@ -4044,6 +4044,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyImage
       objectReference: {fileID: 0}
+    - target: {fileID: 3731620949798635418, guid: 79d41bf1add408d478eb18d8a031fede, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5681031519090643711, guid: 79d41bf1add408d478eb18d8a031fede, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -4399,6 +4403,10 @@ PrefabInstance:
     - target: {fileID: 3731620949798635418, guid: a014aa0cbedf2a04b84d70f9287cc21c, type: 3}
       propertyPath: m_Name
       value: CharacterImage
+      objectReference: {fileID: 0}
+    - target: {fileID: 3731620949798635418, guid: a014aa0cbedf2a04b84d70f9287cc21c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5681031519090643711, guid: a014aa0cbedf2a04b84d70f9287cc21c, type: 3}
       propertyPath: m_AnchorMax.x
@@ -5079,6 +5087,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   outlet: {fileID: 0}
+  Name: {fileID: 246732606}
   HP: {fileID: 2043713184}
   MP: {fileID: 306353951}
   power: {fileID: 1219490027}
@@ -5087,7 +5096,6 @@ MonoBehaviour:
   hit: {fileID: 878405724}
   regen: {fileID: 2145862377}
   character: {fileID: 635878651}
-  Name: {fileID: 246732606}
 --- !u!1001 &1177325939
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5915,6 +5923,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: InputController
       objectReference: {fileID: 0}
+    - target: {fileID: 7102798926392465796, guid: a51bbcc81071025408a176d7b85dd200, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7102798926392465799, guid: a51bbcc81071025408a176d7b85dd200, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -5995,7 +6007,7 @@ MonoBehaviour:
     Speed: 50
     HitRate: 90
     Regen: 20
-  name: "\u30A2\u30EB\u30D1\u30AB"
+  name: 
   order: 4
   characterType: 3
   weakness: 0
@@ -6957,7 +6969,7 @@ MonoBehaviour:
     Speed: 150
     HitRate: 90
     Regen: 20
-  name: "\u9B54\u738B"
+  name: "\u307E\u304A\u3046"
   order: 5
   characterType: 4
   weakness: 3
@@ -7692,17 +7704,17 @@ MonoBehaviour:
   - {fileID: 7803545215762295984, guid: dbacab615bb5b5d4f93f12f1cece8fb7, type: 3}
   - {fileID: 7803545215762295984, guid: 0619114dc27ae9047b75829503f62a55, type: 3}
   - {fileID: 7803545215762295984, guid: a64cc3010cf1e6f4c981ea1a674e40fe, type: 3}
+  - {fileID: 7803545215762295984, guid: fe325fd4f403797448677b2f246bbc9a, type: 3}
+  - {fileID: 7803545215762295984, guid: e7341906ac23fcf4285e6541a77faa69, type: 3}
+  - {fileID: 7803545215762295984, guid: d8b4adc1fb138094f88ef8de29bb9bd4, type: 3}
   - {fileID: 7803545215762295984, guid: 86e57c468e1f2a5459dd3309b5d4e311, type: 3}
   - {fileID: 7803545215762295984, guid: 1884078b1f1c9e64b969a512e9c8df9e, type: 3}
   - {fileID: 7803545215762295984, guid: 6c8e2e24f7d42994b9dbd1a04a5b7cb5, type: 3}
-  - {fileID: 7803545215762295984, guid: fe325fd4f403797448677b2f246bbc9a, type: 3}
-  - {fileID: 7803545215762295984, guid: d8b4adc1fb138094f88ef8de29bb9bd4, type: 3}
-  - {fileID: 7803545215762295984, guid: 4c2749159a1612d44983cd7f8e2606a2, type: 3}
-  - {fileID: 7803545215762295984, guid: e7341906ac23fcf4285e6541a77faa69, type: 3}
   - {fileID: 7803545215762295984, guid: d0af134a391b05c4ea0061dcf6d4cc2d, type: 3}
-  - {fileID: 7803545215762295984, guid: 73afeffd3c0d79a478f7ffe23cef8be3, type: 3}
-  - {fileID: 7803545215762295984, guid: 5295594ca2800c14fa902187a3bdf5df, type: 3}
   - {fileID: 7803545215762295984, guid: 4df647082530aff41aa98d1fa1025a93, type: 3}
+  - {fileID: 7803545215762295984, guid: 5295594ca2800c14fa902187a3bdf5df, type: 3}
+  - {fileID: 7803545215762295984, guid: 4c2749159a1612d44983cd7f8e2606a2, type: 3}
+  - {fileID: 7803545215762295984, guid: 73afeffd3c0d79a478f7ffe23cef8be3, type: 3}
 --- !u!1 &2097167299
 GameObject:
   m_ObjectHideFlags: 0
