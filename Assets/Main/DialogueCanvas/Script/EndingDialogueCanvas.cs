@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EndingDialogueCanvas : DialogueCanvasController
 {
@@ -16,7 +17,13 @@ public class EndingDialogueCanvas : DialogueCanvasController
     protected override void setInputHandleBack()
     {
         inputController_1.setInputHandle<EndingInputHandle>();
+    }
+
+    IEnumerator showClear()
+    {
         GameObject.Find("Blackout").GetComponent<BlackoutController>().ActivateFadeout();
+        yield return new WaitForSeconds(3.0f);
+        SceneManager.LoadScene("TitleScene");
     }
 
     protected override void tickTask()
