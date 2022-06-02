@@ -6,13 +6,33 @@ using System.IO;
 public class SaveFunction : MonoBehaviour
 {
     public GameObject playerdataHandler;
+    [SerializeField, ReadOnly] private PlayerStatus status;
+    [SerializeField, ReadOnly] private PlayerBattleCommandList battleCommandList;
+    [SerializeField, ReadOnly] private PlayerInventory playerInventory;
+    [SerializeField, ReadOnly] private PlayerTrainingCommandsList playerTrainingCommandsList;
+    [SerializeField, ReadOnly] private PlayerStudyCommandsList playerStudyCommandsList;
+    [SerializeField, ReadOnly] private PlayerEatCommandsList playerEatCommandsList;
+    [SerializeField, ReadOnly] private PlayerBuff playerBuff;
     // Start is called before the first frame update
     void Start()
     {
         StreamWriter writer;
-        PlayerStatus status = playerdataHandler.GetComponent<PlayerStatus>();
+        setEveryComponent();
+        ClassesInPlayerHandler classesInPlayerDataHandler = new ClassesInPlayerHandler();
+        classesInPlayerDataHandler.status = status;
+        //classesInPlayerDataHandler.playerInventory = playerInventory;
+        //classesInPlayerDataHandler.playerTrainingCommandsList = playerTrainingCommandsList;
+        //classesInPlayerDataHandler.playerStudyCommandsList = playerStudyCommandsList;
+        //classesInPlayerDataHandler.playerEatCommandsList = playerEatCommandsList;
+        //classesInPlayerDataHandler.playerBuff = playerBuff;
+        string jsonstr = JsonUtility.ToJson(playerInventory,true);
+        //jsonstr += JsonUtility.ToJson(battleCommandList);
+        //jsonstr += JsonUtility.ToJson(playerInventory);
+        //jsonstr += JsonUtility.ToJson(playerTrainingCommandsList);
+        //jsonstr += JsonUtility.ToJson(playerStudyCommandsList);
+        //jsonstr += JsonUtility.ToJson(playerEatCommandsList);
+        //jsonstr += JsonUtility.ToJson(playerBuff);
 
-        string jsonstr = JsonUtility.ToJson(status);
 
         writer = new StreamWriter(Application.dataPath + "/savedata.json", false);
         writer.Write(jsonstr);
@@ -20,10 +40,15 @@ public class SaveFunction : MonoBehaviour
         writer.Close();
     }
 
-}
+    private void setEveryComponent()
+    {
+        status = playerdataHandler.GetComponent<PlayerStatus>();
+        battleCommandList = playerdataHandler.GetComponent<PlayerBattleCommandList>();
+        playerInventory = playerdataHandler.GetComponent<PlayerInventory>();
+        playerTrainingCommandsList = playerdataHandler.GetComponent<PlayerTrainingCommandsList>();
+        playerStudyCommandsList = playerdataHandler.GetComponent<PlayerStudyCommandsList>();
+        playerEatCommandsList = playerdataHandler.GetComponent<PlayerEatCommandsList>();
+        playerBuff = playerdataHandler.GetComponent<PlayerBuff>();
+    }
 
-class unko
-{
-    public int i = 0;
-    public int j = 10;
 }
