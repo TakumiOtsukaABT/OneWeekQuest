@@ -228,7 +228,7 @@ MonoBehaviour:
   Effect: {fileID: 1071960360213401134, guid: bdaa737ddb9b3aa44bd2f4c1c521b4d6, type: 3}
   gameDirector_3: {fileID: 0}
   dialogueCanvasCommand: {fileID: 0}
-  cost: 0
+  cost: 40
   thisElement: 0
   bairitsu: 0
   sanren: 3

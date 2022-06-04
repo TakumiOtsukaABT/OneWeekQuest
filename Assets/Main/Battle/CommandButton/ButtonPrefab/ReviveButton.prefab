@@ -228,5 +228,5 @@ MonoBehaviour:
   Effect: {fileID: 1071960360213401134, guid: aae37b8f457b323409f5768a9b40220a, type: 3}
   gameDirector_3: {fileID: 0}
   dialogueCanvasCommand: {fileID: 0}
-  cost: 0
+  cost: 60
   editMultiplier: 0
