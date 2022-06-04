@@ -24,8 +24,14 @@ public class PlayerDataHandlerMultiVerse : MonoBehaviour
 
     void SceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        playerDataHandler = GameObject.Find("PlayerDataHandler");
-        passPlayerDataHandler(gameObject, playerDataHandler);
+        try
+        {
+            playerDataHandler = GameObject.Find("PlayerDataHandler");
+            passPlayerDataHandler(gameObject, playerDataHandler);
+        } catch(System.NullReferenceException)
+        {
+            Debug.Log("Not town scene nor the day scene");
+        }
     }
 
     public void saveFile()
