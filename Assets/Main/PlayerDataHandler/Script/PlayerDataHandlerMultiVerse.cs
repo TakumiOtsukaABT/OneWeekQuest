@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine;
+using System.IO;
+
 
 public class PlayerDataHandlerMultiVerse : MonoBehaviour
 {
@@ -26,6 +28,17 @@ public class PlayerDataHandlerMultiVerse : MonoBehaviour
     {
         playerDataHandler = GameObject.Find("PlayerDataHandler");
         passPlayerDataHandler(gameObject, playerDataHandler);
+    }
+
+    public void saveFile()
+    {
+        StreamWriter writer;
+        ClassesInPlayerHandler classesInPlayerDataHandler = new ClassesInPlayerHandler(this.gameObject);
+        string jsonstr = JsonUtility.ToJson(classesInPlayerDataHandler, true);
+        writer = new StreamWriter(Application.dataPath + "/savedata.json", false);
+        writer.Write(jsonstr);
+        writer.Flush();
+        writer.Close();
     }
 
     private void passPlayerDataHandler(GameObject from, GameObject to)
