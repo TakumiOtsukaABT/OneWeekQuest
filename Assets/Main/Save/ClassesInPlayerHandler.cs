@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 [System.Serializable]
 class ClassesInPlayerHandler
@@ -15,6 +17,7 @@ class ClassesInPlayerHandler
     public List<int> playerStudyCommand_CountList = new List<int>();
     public List<int> playerEatCommand_IdList = new List<int>();
     public List<int> playerBuff_BuffList = new List<int>();
+    public string Day;
 
     public ClassesInPlayerHandler(GameObject from)
     {
@@ -33,5 +36,6 @@ class ClassesInPlayerHandler
         this.playerEatCommand_IdList = from.GetComponent<PlayerEatCommandsList>().IdList;
         this.playerBuff_BuffList = from.GetComponent<PlayerBuff>().buff_list;
         this.playerStatus_name = from.GetComponent<PlayerStatus>().name;
+        this.Day = SceneManager.GetActiveScene().name;
     }
 }

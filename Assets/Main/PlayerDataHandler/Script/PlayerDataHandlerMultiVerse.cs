@@ -19,15 +19,19 @@ public class PlayerDataHandlerMultiVerse : MonoBehaviour
             DontDestroyOnLoad(gameObject);
         }
         SceneManager.sceneLoaded += SceneLoaded;
-        playerDataHandler = GameObject.Find("PlayerDataHandler");
-        passPlayerDataHandler(gameObject, playerDataHandler);
         Debug.Log("Enabled00");
     }
 
     void SceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        playerDataHandler = GameObject.Find("PlayerDataHandler");
-        passPlayerDataHandler(gameObject, playerDataHandler);
+        try
+        {
+            playerDataHandler = GameObject.Find("PlayerDataHandler");
+            passPlayerDataHandler(gameObject, playerDataHandler);
+        } catch(System.NullReferenceException)
+        {
+            Debug.Log("Not town scene nor the day scene");
+        }
     }
 
     public void saveFile()
