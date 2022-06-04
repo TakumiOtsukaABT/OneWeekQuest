@@ -5,15 +5,14 @@ using System.IO;
 
 public class SaveFunction : MonoBehaviour
 {
-    public GameObject playerdataHandler;
-    void Start()
+    public GameObject Menu;
+    private Outlet outlet;
+    [SerializeField, ReadOnly] private AlertScript alertScript_4;
+    public void OnClick()
     {
-        StreamWriter writer;
-        ClassesInPlayerHandler classesInPlayerDataHandler = new ClassesInPlayerHandler(playerdataHandler);
-        string jsonstr = JsonUtility.ToJson(classesInPlayerDataHandler, true);
-        writer = new StreamWriter(Application.dataPath + "/savedata.json", false);
-        writer.Write(jsonstr);
-        writer.Flush();
-        writer.Close();
+        outlet = Menu.GetComponent<Outlet>();
+        alertScript_4 = outlet.gameObjects[4].GetComponent<AlertScript>();
+        alertScript_4.Activate("この日の始めの状態をセーブしました", 0);
+        GameObject.Find("PlayerDataHandlerMultiVerse").GetComponent<PlayerDataHandlerMultiVerse>().saveFile();
     }
 }
