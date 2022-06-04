@@ -19,8 +19,6 @@ public class PlayerDataHandlerMultiVerse : MonoBehaviour
             DontDestroyOnLoad(gameObject);
         }
         SceneManager.sceneLoaded += SceneLoaded;
-        playerDataHandler = GameObject.Find("PlayerDataHandler");
-        passPlayerDataHandler(gameObject, playerDataHandler);
         Debug.Log("Enabled00");
     }
 
