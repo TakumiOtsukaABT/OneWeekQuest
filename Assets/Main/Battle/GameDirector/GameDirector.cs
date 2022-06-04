@@ -170,6 +170,10 @@ public class GameDirector : MonoBehaviour
                             if (getCharacterObject(turn_queue.Peek()).GetComponent<StatusBattle>().getAlive())
                             {
                                 currentCharacter = turn_queue.Dequeue();
+                                getCurrentCharacter().GetComponent<StatusBattle>().setMP(
+                                    getCurrentCharacter().GetComponent<StatusBattle>().playerStatusForReference.MP_access +
+                                    getCurrentCharacter().GetComponent<StatusBattle>().playerStatusForReference.Regen_access
+                                    );
                                 break;
                             }
                             else
