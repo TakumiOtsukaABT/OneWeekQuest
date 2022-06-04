@@ -257,6 +257,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acef392e29e94e849a2b55292dcec90f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerMultiverse: {fileID: 1008025889}
 --- !u!114 &147487748
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3147,7 +3148,7 @@ MonoBehaviour:
     Speed: 40
     HitRate: 35
     Regen: 50
-  name: "\u3068\u307F\u3053"
+  name: "\u307D\u3093\u307D\u3093"
 --- !u!4 &1008025898
 Transform:
   m_ObjectHideFlags: 0
