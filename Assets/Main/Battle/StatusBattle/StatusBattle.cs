@@ -77,7 +77,7 @@ public class StatusBattle : PlayerStatus
         healthBar.GetComponent<ValueBar>().SetHealth(playerStatusForReference.HP_access);
     }
 
-    private void setMP(int new_mp)
+    public void setMP(int new_mp)
     {
         playerStatusForReference.MP_access = new_mp;
         if (playerStatusForReference.MP_access < 0)
@@ -88,7 +88,7 @@ public class StatusBattle : PlayerStatus
         {
             playerStatusForReference.MP_access = MaxMP;
         }
-        healthBar.GetComponent<ValueBar>().SetHealth(playerStatusForReference.MP_access);
+        MPBar.GetComponent<ValueBar>().SetHealth(playerStatusForReference.MP_access);
     }
 
     public void heal(int healAmount)

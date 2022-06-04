@@ -12,6 +12,8 @@ public class WazaAction : BaseActionCommand
     {
         if (isMPEnough())
         {
+            gameDirector_3.getCurrentCharacter().GetComponent<StatusBattle>().setMP(
+                gameDirector_3.getCurrentCharacter().GetComponent<StatusBattle>().playerStatusForReference.MP_access - cost);
             whenMPIsEnough();
         } else
         {
