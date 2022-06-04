@@ -21,7 +21,7 @@ public class TaskPanel : MonoBehaviour
     private void updateText()
     {
         var rect = gameObject.GetComponent<RectTransform>().sizeDelta;
-        rect.y = baseTasks.Length * 100;
+        rect.y = baseTasks.Length * 90;
         gameObject.GetComponent<RectTransform>().sizeDelta = rect;
         var index = 0;
         GameObject instance = generateTarget.gameObject;
@@ -32,7 +32,7 @@ public class TaskPanel : MonoBehaviour
             instance.GetComponent<Text>().text = i.taskDescription;
             instance.SetActive(true);
             Vector2 vector = instance.transform.position;
-            vector.y = vector.y - 70 * index;
+            vector.y = vector.y - 50 * index;
             instance.tag = "cloned task";
             Instantiate(instance, vector, Quaternion.identity, this.transform);
             index++;

@@ -556,6 +556,14 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8740877546498897828, guid: 0b7157f30d8839b42b18be8715b4a224, type: 3}
+      propertyPath: rectyMultiplier
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8740877546498897828, guid: 0b7157f30d8839b42b18be8715b4a224, type: 3}
+      propertyPath: vectoryMultiplier
+      value: 50
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0b7157f30d8839b42b18be8715b4a224, type: 3}
 --- !u!114 &90610923 stripped
