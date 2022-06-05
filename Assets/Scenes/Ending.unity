@@ -296,6 +296,10 @@ PrefabInstance:
       propertyPath: gameObjects.Array.data[0]
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 7578828583774239070, guid: 06811194cd84af243bebad28f412f52c, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 475f4837af487ce4a9e68bb227455e4c, type: 3}
     m_RemovedComponents:
     - {fileID: 4501548977751632715, guid: 06811194cd84af243bebad28f412f52c, type: 3}
     - {fileID: 4501548977751632756, guid: 06811194cd84af243bebad28f412f52c, type: 3}
