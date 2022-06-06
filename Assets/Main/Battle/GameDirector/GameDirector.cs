@@ -160,8 +160,11 @@ public class GameDirector : MonoBehaviour
                                 var enemy = getCharacterObject(currentCharacter);
                                 enemy.GetComponent<EnemyPattern>().runPatternedBattleCommand();
                                 break;
-
                             }
+                            getCurrentCharacter().GetComponent<StatusBattle>().setMP(
+    getCurrentCharacter().GetComponent<StatusBattle>().playerStatusForReference.MP_access +
+    getCurrentCharacter().GetComponent<StatusBattle>().playerStatusForReference.Regen_access
+    );
                             battleGameCanvasController_0.atWaitingInput(currentCharacter);
                             inputController_2.setInputHandle<Battle_CommandInputHandle>();
                             break;
