@@ -37,7 +37,6 @@ public class BattleParameterSetterMultiVerse : MonoBehaviour
             characterStatusBattle.playerStatusForReference = playerDataHandler.GetComponent<PlayerStatus>().playerStatusForReference;
             characterStatusBattle.name = playerDataHandler.GetComponent<PlayerStatus>().name;
             characterStatusBattle.battleCommandIdList = playerDataHandler.GetComponent<PlayerBattleCommandList>().IdList;
-            Destroy(playerDataHandler);
         }
 
     }
@@ -55,6 +54,12 @@ public class BattleParameterSetterMultiVerse : MonoBehaviour
         setParameters(ref AlpacaImage, alpacaStatusBattle);
         setParameters(ref DogImage, dogStatusBattle);
         setParameters(ref CatImage, catStatusBattle);
+        Destroy(gameObject);
+    }
+
+    private void OnDestroy()
+    {
+        SceneManager.sceneLoaded -= SceneLoaded;
     }
 
     private void setParameters(ref GameObject _gameObject, BattleParameterStorer parameterStorer)
