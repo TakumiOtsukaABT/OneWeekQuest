@@ -66,19 +66,6 @@ public class GameDirector : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Alpha0))
-        {
-            battleState++;
-            resetState(battleState);
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha1))
-        {
-            battleState--;
-            resetState(battleState);
-        }
-    }
 
     public void resetState(BattleState newState, bool nextTurn = true, GameObject battleEffect = null, bool multiple = false)
     {
