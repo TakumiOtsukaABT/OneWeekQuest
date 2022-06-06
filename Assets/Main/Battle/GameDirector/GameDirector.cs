@@ -146,44 +146,36 @@ public class GameDirector : MonoBehaviour
         switch (newState)
         {
             case BattleState.WaitingInput:
-                Debug.Log("waiting input");
-                if (turn_queue.Peek() != characterType.Enemy)
+                if (nextTurn)
                 {
-                    if (nextTurn)
+                    int i = 0;
+                    while (i < 10)
                     {
-                        int i = 0;
-                        while (i < 10)
+                        if (getCharacterObject(turn_queue.Peek()).GetComponent<StatusBattle>().getAlive())
                         {
-                            if (getCharacterObject(turn_queue.Peek()).GetComponent<StatusBattle>().getAlive())
+                            currentCharacter = turn_queue.Dequeue();
+                            if (currentCharacter.Equals(characterType.Enemy))
                             {
-                                currentCharacter = turn_queue.Dequeue();
-                                getCurrentCharacter().GetComponent<StatusBattle>().setMP(
-                                    getCurrentCharacter().GetComponent<StatusBattle>().playerStatusForReference.MP_access +
-                                    getCurrentCharacter().GetComponent<StatusBattle>().playerStatusForReference.Regen_access
-                                    );
+                                Debug.Log("haitteru?");
+                                var enemy = getCharacterObject(currentCharacter);
+                                enemy.GetComponent<EnemyPattern>().runPatternedBattleCommand();
                                 break;
+
                             }
-                            else
-                            {
-                                turn_queue.Dequeue();
-                                if (turn_queue.Count < 10)
-                                {
-                                    turn_queue.Enqueue(GetNextEnque());
-                                }
-                            }
-                            i++;
+                            battleGameCanvasController_0.atWaitingInput(currentCharacter);
+                            inputController_2.setInputHandle<Battle_CommandInputHandle>();
+                            break;
                         }
+                        else
+                        {
+                            turn_queue.Dequeue();
+                            if (turn_queue.Count < 10)
+                            {
+                                turn_queue.Enqueue(GetNextEnque());
+                            }
+                        }
+                        i++;
                     }
-                    battleGameCanvasController_0.atWaitingInput(currentCharacter);
-                    inputController_2.setInputHandle<Battle_CommandInputHandle>();
-                }
-                else//enemy turn
-                {
-                    currentCharacter = turn_queue.Dequeue();
-                    var enemy = getCharacterObject(currentCharacter);
-                    enemy.GetComponent<EnemyPattern>().runPatternedBattleCommand();
-                    //enemy.GetComponent
-                    //setState(BattleState.Read);
                 }
                 break;
             case BattleState.Read:
