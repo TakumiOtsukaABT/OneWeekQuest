@@ -34,6 +34,11 @@ public class PlayerDataHandlerMultiVerse : MonoBehaviour
         }
     }
 
+    private void OnDestroy()
+    {
+        SceneManager.sceneLoaded -= SceneLoaded;
+    }
+
     public void saveFile()
     {
         StreamWriter writer;
