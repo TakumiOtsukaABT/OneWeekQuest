@@ -1258,14 +1258,14 @@ MonoBehaviour:
     resist: 0
   characterStatusBattle:
     playerStatusForReference:
-      HP: 0
-      MP: 0
-      Attack: 0
-      Defence: 0
-      Speed: 0
-      HitRate: 0
-      Regen: 0
-    battleCommandIdList: 
+      HP: 221
+      MP: 98
+      Attack: 67
+      Defence: 118
+      Speed: 97
+      HitRate: 120
+      Regen: 92
+    battleCommandIdList: 0000000001000000020000000300000004000000
     name: 
     characterType: 0
     weakness: 0
