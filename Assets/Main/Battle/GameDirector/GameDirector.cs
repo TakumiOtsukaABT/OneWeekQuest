@@ -406,16 +406,15 @@ public class GameDirector : MonoBehaviour
 
     public bool getFlagDoneSelecting()
     {
-        if (Single_target != null || targetted != null)
-        {
             return selected;
-        }
-        else { return false; }
     }
 
     public void setSelectedFlag()
     {
-        selected = true;
+        if (Single_target != null || targetted.Count != 0)
+        {
+            selected = true;
+        }
     }
 
     private characterType GetNextEnque()
