@@ -1543,6 +1543,14 @@ PrefabInstance:
       propertyPath: alive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8948017328238428072, guid: 59d21a9dfd6cc044293aacf266bec384, type: 3}
+      propertyPath: battleCommandID.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8948017328238428072, guid: 59d21a9dfd6cc044293aacf266bec384, type: 3}
+      propertyPath: battleCommandID.Array.data[0]
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 59d21a9dfd6cc044293aacf266bec384, type: 3}
 --- !u!1 &306353949
