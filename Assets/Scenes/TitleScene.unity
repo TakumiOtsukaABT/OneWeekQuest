@@ -3349,11 +3349,11 @@ MonoBehaviour:
   playerStatusForReference:
     HP: 100
     MP: 70
-    Attack: 35
-    Defence: 35
-    Speed: 40
-    HitRate: 35
-    Regen: 50
+    Attack: 20
+    Defence: 20
+    Speed: 25
+    HitRate: 20
+    Regen: 30
   name: "\u307D\u3093\u307D\u3093"
 --- !u!4 &1008025898
 Transform:
