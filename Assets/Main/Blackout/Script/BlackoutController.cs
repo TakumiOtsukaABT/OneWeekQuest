@@ -13,7 +13,6 @@ public class BlackoutController : MonoBehaviour
 
     private void Start()
     {
-        Debug.Log("aaaa");
         DeactivateFadeoutWithDelay(0);
     }
     IEnumerator SetAnimatorParameterWithDelay(float delay, int state)

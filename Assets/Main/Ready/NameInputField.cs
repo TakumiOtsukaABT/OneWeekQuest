@@ -24,5 +24,6 @@ public class NameInputField : MonoBehaviour
         GameObject playerDataHandlerMultiVerse = GameObject.Find("PlayerDataHandlerMultiVerse");
         playerDataHandler.GetComponent<PlayerStatus>().name = name_character;
         playerDataHandlerMultiVerse.GetComponent<PlayerStatus>().name = name_character;
+        SceneManager.sceneLoaded -= SceneLoaded;
     }
 }

@@ -10,10 +10,7 @@ public class SanrengekiAttack : WazaAction
 
     override protected IEnumerator chooseTarget()
     {
-        Debug.Log(gameDirector_3.getFlagDoneSelecting());
         yield return new WaitUntil(gameDirector_3.getFlagDoneSelecting);
-        Debug.Log("ran untilwait");
-        Debug.Log(gameDirector_3.getFlagDoneSelecting());
         int attack = gameDirector_3.getCurrentCharacter().GetComponent<StatusBattle>().playerStatusForReference.Attack_access;
         int defence = gameDirector_3.Single_target.GetComponent<StatusBattle>().playerStatusForReference.Defence_access;
         int attackMinusDefence = attack - defence;
@@ -24,10 +21,6 @@ public class SanrengekiAttack : WazaAction
         int damage = Mathf.RoundToInt(((attackMinusDefence) * Random.Range(1.0f, 1.3f)) + Random.Range(1.0f, 5.0f));
         seeElementComp();
         gameDirector_3.setTakeDamageAndDialogue(Mathf.RoundToInt(damage * bairitsu)*sanren);
-        Debug.Log("damage");
-        Debug.Log(damage);
-        Debug.Log(bairitsu);
-        Debug.Log(sanren);
         gameDirector_3.resetState(BattleState.Read, battleEffect: base.Effect);
     }
 

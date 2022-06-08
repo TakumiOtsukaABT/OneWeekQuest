@@ -12,10 +12,7 @@ public class ZenBarrier : WazaAction
 
     override protected IEnumerator chooseTarget()
     {
-        Debug.Log(gameDirector_3.getFlagDoneSelecting());
         yield return new WaitUntil(gameDirector_3.getFlagDoneSelecting);
-        Debug.Log("ran untilwait");
-        Debug.Log(gameDirector_3.getFlagDoneSelecting());
         gameDirector_3.setBarriersAndDialogue();
         gameDirector_3.resetState(BattleState.Read, battleEffect: base.Effect, multiple: true);
     }

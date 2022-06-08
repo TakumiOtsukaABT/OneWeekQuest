@@ -20,7 +20,13 @@ public class WazaContent : MonoBehaviour
         foreach(int i in idList)
         {
             GameObject instantiated = Instantiate(techniquePrefabs[i], this.transform);
-            instantiated.GetComponent<WazaAction>().dialogueCanvasCommand = dialogueCanvasCommand;
+            try
+            {
+                instantiated.GetComponent<WazaAction>().dialogueCanvasCommand = dialogueCanvasCommand;
+            } catch (System.NullReferenceException)
+            {
+                Debug.Log("error kaihi");
+            }
             instantiated.GetComponent<Button>().onClick.AddListener(() => {
                 dialogueCanvasCommand.GetComponent<DialogueCanvasCommand>().onButtonClick(instantiated);
             });

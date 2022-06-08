@@ -19,7 +19,6 @@ public class PlayerDataHandlerMultiVerse : MonoBehaviour
             DontDestroyOnLoad(gameObject);
         }
         SceneManager.sceneLoaded += SceneLoaded;
-        Debug.Log("Enabled00");
     }
 
     void SceneLoaded(Scene scene, LoadSceneMode mode)
@@ -32,6 +31,11 @@ public class PlayerDataHandlerMultiVerse : MonoBehaviour
         {
             Debug.Log("Not town scene nor the day scene");
         }
+    }
+
+    private void OnDestroy()
+    {
+        SceneManager.sceneLoaded -= SceneLoaded;
     }
 
     public void saveFile()

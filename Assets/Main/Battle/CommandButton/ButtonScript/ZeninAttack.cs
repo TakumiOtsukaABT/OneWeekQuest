@@ -9,10 +9,7 @@ public class ZeninAttack : WazaAction
 
     override protected IEnumerator chooseTarget()
     {
-        Debug.Log(gameDirector_3.getFlagDoneSelecting());
         yield return new WaitUntil(gameDirector_3.getFlagDoneSelecting);
-        Debug.Log("ran untilwait");
-        Debug.Log(gameDirector_3.getFlagDoneSelecting());
         int attack = gameDirector_3.Human.GetComponent<StatusBattle>().playerStatusForReference.Attack_access;
         attack += gameDirector_3.Dog.GetComponent<StatusBattle>().playerStatusForReference.Attack_access;
         attack += gameDirector_3.Cat.GetComponent<StatusBattle>().playerStatusForReference.Attack_access;
