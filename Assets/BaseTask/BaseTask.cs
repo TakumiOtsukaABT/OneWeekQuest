@@ -23,13 +23,11 @@ public class BaseTask
     private void checkClear()
     {
          int conditionCount = completeCondition.Count;
-        Debug.Log("tttt3" + conditionCount);
 
         foreach (string key in completeCondition.Keys)
         {
             if (currentCondition[key] >= completeCondition[key])
             {
-                Debug.Log("tttt4" + conditionCount);
 
                 conditionCount--;
             }
@@ -45,7 +43,6 @@ public class BaseTask
         if (currentCondition.ContainsKey(key))
         {
             currentCondition[key]++;
-            Debug.Log("currentcondition  "+currentCondition[key]);
         }
         checkClear();
     }

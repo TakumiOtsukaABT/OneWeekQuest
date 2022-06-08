@@ -6,6 +6,5 @@ public class InventoryAction : BaseActionCommand
 {
     public override void runActionCommand()
     {
-        Debug.Log("cccccccccc");
     }
 }

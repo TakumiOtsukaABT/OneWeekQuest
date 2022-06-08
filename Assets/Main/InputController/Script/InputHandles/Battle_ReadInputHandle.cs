@@ -23,8 +23,6 @@ public class Battle_ReadInputHandle : InputHandle
             DialogueCanvasForBattleDescriptionController dialogueCanvas = dialogueCanvas_1.GetComponent<DialogueCanvasForBattleDescriptionController>();
             dialogueCanvas.DialogueIndex++;
             dialogueCanvas.ActivateCanvasWithDialogueArray();
-            Debug.Log("islasaaat"+dialogueCanvas.DialogueIndex);
-
             if (dialogueCanvas.isLastDialogue())
             {
                 if (gameDirector_2.win())
@@ -37,7 +35,6 @@ public class Battle_ReadInputHandle : InputHandle
                 }
                 else
                 {
-                    Debug.Log("islast");
                     gameDirector_2.resetState(dialogueCanvas.nextState);
                     return;
                 }

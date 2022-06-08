@@ -14,7 +14,6 @@ public class FightAction : BaseActionCommand
         gameDirector_3 = dialogueCanvasCommand.GetComponent<Outlet>().gameObjects[3].GetComponent<GameDirector>();
         gameDirector_3.resetState(BattleState.SelectTarget);
         gameDirector_3.selectingType = SelectingType.Single;
-        Debug.Log("ran until");
         selectTarget();
     }
 

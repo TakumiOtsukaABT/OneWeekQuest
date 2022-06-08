@@ -105,9 +105,6 @@ public class GameDirector : MonoBehaviour
         }
 
 
-        Debug.Log("win "+win().ToString());
-        Debug.Log("st lose "+ lose().ToString());
-
 
         if (!win() && !lose())
         {
@@ -156,7 +153,6 @@ public class GameDirector : MonoBehaviour
                             currentCharacter = turn_queue.Dequeue();
                             if (currentCharacter.Equals(characterType.Enemy))
                             {
-                                Debug.Log("haitteru?");
                                 var enemy = getCharacterObject(currentCharacter);
                                 enemy.GetComponent<EnemyPattern>().runPatternedBattleCommand();
                                 break;
@@ -182,7 +178,6 @@ public class GameDirector : MonoBehaviour
                 }
                 break;
             case BattleState.Read:
-                Debug.Log("read");
                 battleGameCanvasController_0.atRead();
                 inputController_2.setInputHandle<Battle_ReadInputHandle>();
 
@@ -191,13 +186,11 @@ public class GameDirector : MonoBehaviour
 
                 break;
             case BattleState.SelectTarget:
-                Debug.Log("select target");
                 initializeProperty();
                 battleGameCanvasController_0.atSelectTarget();
                 inputController_2.setInputHandle<Battle_CommandInputHandle>();
                 break;
             case BattleState.Status:
-                Debug.Log("status");
                 battleGameCanvasController_0.atStatus();
                 inputController_2.setInputHandle<Battle_CommandInputHandle>();
                 break;
@@ -258,8 +251,6 @@ public class GameDirector : MonoBehaviour
         Event _event = new Event();
         _event.nextState = BattleState.WaitingInput;
         _event.dialogue = dialist.ToArray();
-        Debug.Log(_event.dialogue[0]);
-        Debug.Log(dialogues[0]);
         battleGameCanvasController_0.setDescriptionByEvent(_event);
     }
 
@@ -270,8 +261,6 @@ public class GameDirector : MonoBehaviour
         Event _event = new Event();
         _event.nextState = BattleState.WaitingInput;
         _event.dialogue = dialist.ToArray();
-        Debug.Log(_event.dialogue[0]);
-        Debug.Log(dialogues[0]);
         battleGameCanvasController_0.addDescriptionByEvent(_event);
     }
 
@@ -453,17 +442,13 @@ public class GameDirector : MonoBehaviour
         bool allDead = true;
         for (int i = 0; i < activeCharacters.Count; i++)
         {
-            Debug.Log("1all dead " + allDead.ToString());
 
             if (activeCharacters[i].GetComponent<StatusBattle>().getAlive())
             {
-                Debug.Log("aaaaaaa");
                 allDead = false;
             }
-            Debug.Log("2all dead " + allDead.ToString());
 
         }
-        Debug.Log("3all dead " + allDead.ToString());
 
         return allDead;//hitori demo ikitetara false
     }

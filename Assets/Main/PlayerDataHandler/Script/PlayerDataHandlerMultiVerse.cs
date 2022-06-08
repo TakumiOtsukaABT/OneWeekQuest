@@ -19,7 +19,6 @@ public class PlayerDataHandlerMultiVerse : MonoBehaviour
             DontDestroyOnLoad(gameObject);
         }
         SceneManager.sceneLoaded += SceneLoaded;
-        Debug.Log("Enabled00");
     }
 
     void SceneLoaded(Scene scene, LoadSceneMode mode)
