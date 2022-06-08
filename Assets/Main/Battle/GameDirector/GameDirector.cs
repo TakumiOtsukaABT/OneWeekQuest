@@ -80,7 +80,9 @@ public class GameDirector : MonoBehaviour
     IEnumerator deactivate_then_activate_state(BattleState newState, bool nextTurn = true, GameObject battleEffect = null, bool multiple = false)
     {
         selectingType = SelectingType.Disable;
+        inputController_2.setInputHandle<MenuInputHandle>();
         battleGameCanvasController_0.deactivateAll();
+
         yield return new WaitForSeconds(0.5f);
         if (battleEffect != null)
         {
@@ -403,6 +405,7 @@ public class GameDirector : MonoBehaviour
         if (Single_target != null || targetted.Count != 0)
         {
             selected = true;
+
         }
     }
 
