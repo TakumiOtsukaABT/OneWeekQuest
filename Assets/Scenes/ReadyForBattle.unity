@@ -1213,14 +1213,14 @@ MonoBehaviour:
   playerDataHandler: {fileID: 0}
   alpacaStatusBattle:
     playerStatusForReference:
-      HP: 189
-      MP: 86
-      Attack: 71
-      Defence: 90
-      Speed: 85
-      HitRate: 179
-      Regen: 133
-    battleCommandIdList: 050000000200000004000000
+      HP: 500
+      MP: 150
+      Attack: 170
+      Defence: 100
+      Speed: 80
+      HitRate: 100
+      Regen: 70
+    battleCommandIdList: 0100000002000000030000000d000000
     name: "\u30A2\u30EB\u30D1\u30AB"
     characterType: 3
     weakness: 0
@@ -1229,13 +1229,13 @@ MonoBehaviour:
   dogStatusBattle:
     playerStatusForReference:
       HP: 280
-      MP: 101
-      Attack: 118
-      Defence: 121
-      Speed: 135
-      HitRate: 94
-      Regen: 107
-    battleCommandIdList: 
+      MP: 100
+      Attack: 120
+      Defence: 70
+      Speed: 250
+      HitRate: 95
+      Regen: 50
+    battleCommandIdList: 05000000060000000a0000000c000000
     name: "\u3044\u306C"
     characterType: 1
     weakness: 0
@@ -1243,14 +1243,14 @@ MonoBehaviour:
     resist: 0
   catStatusBattle:
     playerStatusForReference:
-      HP: 95
-      MP: 128
-      Attack: 77
-      Defence: 96
-      Speed: 91
+      HP: 200
+      MP: 150
+      Attack: 140
+      Defence: 170
+      Speed: 90
       HitRate: 90
-      Regen: 187
-    battleCommandIdList: 07000000
+      Regen: 60
+    battleCommandIdList: 010000000200000003000000060000000c0000000d000000
     name: "\u306D\u3053"
     characterType: 2
     weakness: 0
