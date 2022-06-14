@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   elements:
   - id: 0
-    description: "HP+100\u3061\u304B\u3089+15"
+    description: "HP+100MP+20\u3061\u304B\u3089+25\u307C\u3046\u304E\u3087+5\u3059\u3070\u3084\u3055+5\u3081\u3044\u3061\u3085\u3046+5"
     element_name: "\u3046\u3067\u305F\u3066\u3075\u305B"
     incrementStatus:
       HP: 100
@@ -25,7 +25,7 @@ MonoBehaviour:
       HitRate: 5
       Regen: 0
   - id: 1
-    description: "\u307C\u3046\u304E\u308720"
+    description: "HP+50MP+20\u307C\u3046\u304E\u3087+25\u3059\u3070\u3084\u3055+5\u3081\u3044\u3061\u3085\u3046+5"
     element_name: "\u3075\u3063\u304D\u3093"
     incrementStatus:
       HP: 50
@@ -36,7 +36,7 @@ MonoBehaviour:
       HitRate: 5
       Regen: 0
   - id: 2
-    description: "\u3059\u3070\u3084\u3055+20"
+    description: "MP+20\u3061\u304B\u3089+10\u307C\u3046\u304E\u3087+10\u3059\u3070\u3084\u3055+25"
     element_name: "\u30B9\u30AF\u30EF\u30C3\u30C8"
     incrementStatus:
       HP: 0
@@ -47,7 +47,7 @@ MonoBehaviour:
       HitRate: 0
       Regen: 0
   - id: 3
-    description: "\u3059\u3070\u3084\u3055+20"
+    description: "HP+100MP+5\u307C\u3046\u304E\u3087+10\u3059\u3070\u3084\u3055+15"
     element_name: "\u30B8\u30E7\u30AE\u30F3\u30B0"
     incrementStatus:
       HP: 100
@@ -58,7 +58,7 @@ MonoBehaviour:
       HitRate: 0
       Regen: 0
   - id: 4
-    description: "\u3059\u3070\u3084\u3055+20"
+    description: "HP+100MP+5\u307C\u3046\u304E\u3087+10\u3059\u3070\u3084\u3055+15"
     element_name: "\u53CD\u5FA9\u6A2A\u8DF3\u3073"
     incrementStatus:
       HP: 100
@@ -69,7 +69,7 @@ MonoBehaviour:
       HitRate: 0
       Regen: 0
   - id: 5
-    description: "\u3059\u3070\u3084\u3055+20"
+    description: "MP+30\u3061\u304B\u3089+15\u3081\u3044\u3061\u3085\u3046+20\u304B\u3044\u3075\u304F+5"
     element_name: "\u3051\u3093\u7389"
     incrementStatus:
       HP: 0
@@ -80,7 +80,7 @@ MonoBehaviour:
       HitRate: 20
       Regen: 5
   - id: 6
-    description: "\u3059\u3070\u3084\u3055+20"
+    description: "HP+70MP+10\u3059\u3070\u3084\u3055+20"
     element_name: "\u81EA\u8EE2\u8ECA"
     incrementStatus:
       HP: 70
@@ -91,7 +91,7 @@ MonoBehaviour:
       HitRate: 0
       Regen: 0
   - id: 7
-    description: "\u3059\u3070\u3084\u3055+20"
+    description: "\u3061\u304B\u3089+50\u3059\u3070\u3084\u3055+20"
     element_name: "\u91CD\u91CF\u4E0A\u3052"
     incrementStatus:
       HP: 0
@@ -102,7 +102,7 @@ MonoBehaviour:
       HitRate: 0
       Regen: 0
   - id: 8
-    description: "\u3059\u3070\u3084\u3055+20"
+    description: "MP+20\u307C\u3046\u304E\u3087+30\u3081\u3044\u3061\u3085\u3046+10"
     element_name: "\u30D0\u30E9\u30F3\u30B9\u30DC\u30FC\u30EB"
     incrementStatus:
       HP: 0
@@ -113,7 +113,7 @@ MonoBehaviour:
       HitRate: 10
       Regen: 0
   - id: 9
-    description: "\u3059\u3070\u3084\u3055+20"
+    description: "MP+20\u3061\u304B\u3089+10\u3059\u3070\u3084\u3055+5\u3081\u3044\u3061\u3085\u3046+20"
     element_name: "\u30E8\u30FC\u30E8\u30FC"
     incrementStatus:
       HP: 0
@@ -124,7 +124,7 @@ MonoBehaviour:
       HitRate: 20
       Regen: 0
   - id: 10
-    description: "\u3059\u3070\u3084\u3055+20"
+    description: "HP+100MP+20\u3061\u304B\u3089+5\u307C\u3046\u304E\u3087+10\u304B\u3044\u3075\u304F+40"
     element_name: "\u5F15\u3063\u8D8A\u3057\u306E\u304A\u624B\u4F1D\u3044"
     incrementStatus:
       HP: 100
@@ -135,7 +135,7 @@ MonoBehaviour:
       HitRate: 0
       Regen: 40
   - id: 11
-    description: "\u3059\u3070\u3084\u3055+20"
+    description: "MP+5\u3061\u304B\u3089+20\u3081\u3044\u3061\u3085\u3046+30"
     element_name: "\u6C34\u5207\u308A"
     incrementStatus:
       HP: 0
@@ -146,7 +146,7 @@ MonoBehaviour:
       HitRate: 30
       Regen: 0
   - id: 12
-    description: "\u3059\u3070\u3084\u3055+20"
+    description: "HP+100MP+50\u307C\u3046\u304E\u3087+10\u3059\u3070\u3084\u3055+5\u3081\u3044\u3061\u3085\u3046+5\u304B\u3044\u3075\u304F+10"
     element_name: "\u6EDD\u4FEE\u884C"
     incrementStatus:
       HP: 100
@@ -157,7 +157,7 @@ MonoBehaviour:
       HitRate: 5
       Regen: 10
   - id: 13
-    description: "\u3059\u3070\u3084\u3055+20"
+    description: "MP+10\u3061\u304B\u3089+40\u3059\u3070\u3084\u3055+30\u3081\u3044\u3061\u3085\u3046+20"
     element_name: "\u30B7\u30E3\u30C9\u30A6\u30DC\u30AF\u30B7\u30F3\u30B0"
     incrementStatus:
       HP: 0
@@ -168,7 +168,7 @@ MonoBehaviour:
       HitRate: 20
       Regen: 0
   - id: 14
-    description: "\u3059\u3070\u3084\u3055+20"
+    description: "HP+20MP+20\u3061\u304B\u3089+20\u307C\u3046\u304E\u3087+20\u3059\u3070\u3084\u3055+20\u3081\u3044\u3061\u3085\u3046+20\u304B\u3044\u3075\u304F+20"
     element_name: "\u7D20\u632F\u308A"
     incrementStatus:
       HP: 20

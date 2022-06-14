@@ -65,7 +65,10 @@ public class PlayerInventory : BasePlayerData
                         GetComponent<PlayerEatCommandsList>().Remove(j.otherId);
                         break;
                 }
+                break;
             }
+
+
         }
 
     }

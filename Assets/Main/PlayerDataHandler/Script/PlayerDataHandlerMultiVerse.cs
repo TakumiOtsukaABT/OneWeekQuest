@@ -43,7 +43,7 @@ public class PlayerDataHandlerMultiVerse : MonoBehaviour
         StreamWriter writer;
         ClassesInPlayerHandler classesInPlayerDataHandler = new ClassesInPlayerHandler(this.gameObject);
         string jsonstr = JsonUtility.ToJson(classesInPlayerDataHandler, true);
-        writer = new StreamWriter(Application.dataPath + "/savedata.json", false);
+        writer = new StreamWriter(Application.persistentDataPath + "/savedata.json", false);
         writer.Write(jsonstr);
         writer.Flush();
         writer.Close();

@@ -14,7 +14,7 @@ public class Continue : MonoBehaviour
     public void Onclick()
     {
         try {
-            reader = new StreamReader(Application.dataPath + "/savedata.json");
+            reader = new StreamReader(Application.persistentDataPath + "/savedata.json");
             datastr = reader.ReadToEnd();
             reader.Close();
             ClassesInPlayerHandler PH = JsonUtility.FromJson<ClassesInPlayerHandler>(datastr);
