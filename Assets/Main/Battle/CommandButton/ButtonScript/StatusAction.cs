@@ -29,6 +29,7 @@ public class StatusAction : BaseActionCommand
         statusCanvas.setstatDataBattle(targetPlayer);
         statusCanvas.ActivateCanvasWithDialogueArray();
         yield return new WaitUntil(statusCanvas.isClosed);
+        Debug.Log("aa");
         gameDirector_3.resetState(BattleState.WaitingInput, false);
     }
 }

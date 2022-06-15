@@ -178,6 +178,12 @@ public class GameDirector : MonoBehaviour
                         i++;
                     }
                 }
+                else
+                {
+                    
+                    battleGameCanvasController_0.atWaitingInput(currentCharacter);
+                    inputController_2.setInputHandle<Battle_CommandInputHandle>();
+                }
                 break;
             case BattleState.Read:
                 battleGameCanvasController_0.atRead();
