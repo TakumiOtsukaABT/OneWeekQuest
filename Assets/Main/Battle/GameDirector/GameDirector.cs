@@ -62,6 +62,7 @@ public class GameDirector : MonoBehaviour
         if (Dog.activeSelf) activeCharacters.Add(Dog);
         if (Cat.activeSelf) activeCharacters.Add(Cat);
         if (Alpaca.activeSelf) activeCharacters.Add(Alpaca);
+        battleGameCanvasController_0.setPlayerName(human_3.GetComponent<StatusBattle>().name);
         initQueue();
     }
 

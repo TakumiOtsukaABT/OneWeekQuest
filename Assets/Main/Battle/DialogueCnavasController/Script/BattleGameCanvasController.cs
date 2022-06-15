@@ -9,6 +9,11 @@ public class BattleGameCanvasController : MonoBehaviour
     [SerializeField] private DialogueCanvasCommand canvasCommand;
     [SerializeField] private DialogueConfirm canvasConfirm;
 
+    public void setPlayerName(string name)
+    {
+        canvasDescription.playerName = name;
+    }
+
     public void atWaitingInput(characterType characterType)
     {
         canvasCommand.initializeProperty();
