@@ -35,7 +35,7 @@ public class CameraFollow : MonoBehaviour
 
     public void setHaji(Floor floor)
     {
-        migihaji = floor.RightLim - 4;
+        migihaji = floor.RightLim - 3;
         hidarihaji = floor.LeftLim + 10f;
     }
 
