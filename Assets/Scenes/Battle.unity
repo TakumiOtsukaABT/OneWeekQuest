@@ -7164,7 +7164,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerStatusForReference:
-    HP: 1000
+    HP: 4000
     MP: 200
     Attack: 125
     Defence: 100
