@@ -15,7 +15,7 @@ public class NameInputField : MonoBehaviour
     public void onClickConfirm()
     {
         name_character = text.text;
-        SceneManager.LoadScene("Day6");
+        SceneManager.LoadScene("Town");
     }
 
     void SceneLoaded(Scene scene, LoadSceneMode mode)
