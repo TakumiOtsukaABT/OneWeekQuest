@@ -8,6 +8,6 @@ public class BattleCommandContent : BaseContent<BattleCommand,BattleCommandRefer
     protected override void setPrefab(int i)
     {
         base.prefab.GetComponent<BattleCommandPrefabSetter>().nameText = base.uniqueCommandReference.GetElement(i).element_name;
-        base.prefab.GetComponent<BattleCommandPrefabSetter>().costText = base.uniqueCommandReference.GetElement(i).cost;
+        //base.prefab.GetComponent<BattleCommandPrefabSetter>().costText = base.uniqueCommandReference.GetElement(i).cost;
     }
 }
