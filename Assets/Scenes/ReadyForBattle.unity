@@ -1265,7 +1265,7 @@ MonoBehaviour:
       Speed: 97
       HitRate: 120
       Regen: 92
-    battleCommandIdList: 0000000001000000020000000300000004000000
+    battleCommandIdList: 01000000020000000300000004000000
     name: 
     characterType: 0
     weakness: 0
