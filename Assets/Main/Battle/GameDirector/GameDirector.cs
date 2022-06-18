@@ -162,7 +162,7 @@ public class GameDirector : MonoBehaviour
                             }
                             getCurrentCharacter().GetComponent<StatusBattle>().setMP(
     getCurrentCharacter().GetComponent<StatusBattle>().playerStatusForReference.MP_access +
-    getCurrentCharacter().GetComponent<StatusBattle>().playerStatusForReference.Regen_access
+    (getCurrentCharacter().GetComponent<StatusBattle>().playerStatusForReference.Regen_access/2)
     );
                             battleGameCanvasController_0.atWaitingInput(currentCharacter);
                             inputController_2.setInputHandle<Battle_CommandInputHandle>();
