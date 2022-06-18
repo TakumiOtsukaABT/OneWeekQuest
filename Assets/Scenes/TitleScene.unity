@@ -259,6 +259,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerMultiverse: {fileID: 1008025889}
+  alertScript: {fileID: 865267616}
 --- !u!114 &147487748
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2366,7 +2367,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 865267617}
   textMeshProUGUI: {fileID: 1841957454}
-  seconds: 4
+  seconds: 0
 --- !u!95 &865267617
 Animator:
   serializedVersion: 3
