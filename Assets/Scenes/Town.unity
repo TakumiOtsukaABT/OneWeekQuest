@@ -2808,6 +2808,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DayRender
       objectReference: {fileID: 0}
+    - target: {fileID: 4589881317346487157, guid: 54aeb24f5a602ec44be060a8af75b488, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4589881317346487161, guid: 54aeb24f5a602ec44be060a8af75b488, type: 3}
       propertyPath: m_Pivot.x
       value: 0
