@@ -1215,8 +1215,8 @@ MonoBehaviour:
     playerStatusForReference:
       HP: 500
       MP: 150
-      Attack: 170
-      Defence: 100
+      Attack: 270
+      Defence: 120
       Speed: 80
       HitRate: 100
       Regen: 70
@@ -1230,7 +1230,7 @@ MonoBehaviour:
     playerStatusForReference:
       HP: 280
       MP: 100
-      Attack: 120
+      Attack: 235
       Defence: 70
       Speed: 250
       HitRate: 95
@@ -1245,7 +1245,7 @@ MonoBehaviour:
     playerStatusForReference:
       HP: 200
       MP: 150
-      Attack: 140
+      Attack: 235
       Defence: 170
       Speed: 90
       HitRate: 90
