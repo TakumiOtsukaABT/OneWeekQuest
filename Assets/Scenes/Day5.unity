@@ -1959,6 +1959,10 @@ PrefabInstance:
       value: GreenHairBoy
       objectReference: {fileID: 0}
     - target: {fileID: 5335522647037937752, guid: a5be0f2818535624e8e21f95b944f013, type: 3}
+      propertyPath: hukidashi
+      value: 
+      objectReference: {fileID: 352202179}
+    - target: {fileID: 5335522647037937752, guid: a5be0f2818535624e8e21f95b944f013, type: 3}
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
@@ -2907,8 +2911,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b3dd750cbeaa7e45bf6156106005f59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IdList: 0000000002000000
-  countList: 0100000001000000
+  IdList: 00000000020000000a000000
+  countList: 010000000100000001000000
   itemReference: {fileID: 11400000, guid: 0c568ac683f7a2844aeeeb4d5d6223e7, type: 2}
 --- !u!114 &1870993228
 MonoBehaviour:
