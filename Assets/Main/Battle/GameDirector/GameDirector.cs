@@ -361,8 +361,12 @@ public class GameDirector : MonoBehaviour
     }
     public void setClickedObject(GameObject gameObject)
     {
+        Debug.Log("which?");
+        if (win()|| lose()) { return; }
         if (gameObject.GetComponent<StatusBattle>().getAlive() || isReviveCalling)
         {
+            Debug.Log("yes?");
+
             switch (selectingType)
             {
                 case SelectingType.Single:
@@ -387,6 +391,7 @@ public class GameDirector : MonoBehaviour
             }
         } else
         {
+            Debug.Log("else?");
             setNoAliveDialogue(gameObject.GetComponent<StatusBattle>().characterType);
         }
         return;
