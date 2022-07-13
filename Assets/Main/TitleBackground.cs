@@ -24,4 +24,6 @@ public class TitleBackground : MonoBehaviour
         newPos = Mathf.Repeat(newPos + scrollSpeed, imageBound);
         transform.position = startPos + Vector2.right * newPos;
     }
+
+    //aaaaa
 }
