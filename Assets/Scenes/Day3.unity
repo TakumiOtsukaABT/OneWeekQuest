@@ -1355,6 +1355,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6653402079802196054, guid: d727f391208a0b043a2b8688dcb64a25, type: 3}
+      propertyPath: itemId.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d727f391208a0b043a2b8688dcb64a25, type: 3}
 --- !u!1 &835611752 stripped
@@ -1768,7 +1772,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_TargetDisplay: 0
 --- !u!224 &1048662659
 RectTransform:
@@ -1834,7 +1838,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8381357421858052506, guid: 957abf0c167b6474cb6590cda767679c, type: 3}
       propertyPath: baseTasks.Array.data[1].taskDescription
-      value: "\u52C9\u5F37\u30922\u56DE\u3059\u308B"
+      value: "\u52C9\u5F37\u3092\u3059\u308B"
       objectReference: {fileID: 0}
     - target: {fileID: 8381357421858052506, guid: 957abf0c167b6474cb6590cda767679c, type: 3}
       propertyPath: baseTasks.Array.data[3].taskDescription
@@ -1854,7 +1858,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8381357421858052506, guid: 957abf0c167b6474cb6590cda767679c, type: 3}
       propertyPath: baseTasks.Array.data[1].count.Array.data[0]
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8381357421858052506, guid: 957abf0c167b6474cb6590cda767679c, type: 3}
       propertyPath: baseTasks.Array.data[3].count.Array.data[0]
@@ -2571,7 +2575,7 @@ MonoBehaviour:
   - "\u541B\u306F\u653B\u6483\u529B\u3001\u9632\u5FA1\u529B\u3001\u3059\u3070\u3084\u3055\u3092\u5747\u7B49\u306B\u935B\u3048\u3066\u3044\u308B\u306E\u304B\u306A?"
   - "\u4F55\u304B\u306B\u7279\u5316\u3055\u305B\u3066\u3044\u305F\u3089\u3001\u30C8\u30EC\u30FC\u30CB\u30F3\u30B0\u6A5F\u5177\u3092\u3042\u3052\u3088\u3046\u3068\u601D\u3063\u305F\u3093\u3060\u304C"
   - 
-  itemId: 
+  itemId: 00000000
   hukidashi: {fileID: 258030175}
   dialogueCanvas_0: {fileID: 0}
   playerData_1: {fileID: 0}

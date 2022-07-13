@@ -11,20 +11,23 @@ public class Continue : MonoBehaviour
     string datastr = "";
     StreamReader reader;
     public GameObject playerMultiverse;
+    public AlertScript alertScript;
     public void Onclick()
     {
-        try {
+        try
+        {
             reader = new StreamReader(Application.persistentDataPath + "/savedata.json");
             datastr = reader.ReadToEnd();
             reader.Close();
             ClassesInPlayerHandler PH = JsonUtility.FromJson<ClassesInPlayerHandler>(datastr);
             continueDataPass(playerMultiverse, PH);
             SceneManager.LoadScene(PH.Day);
-        } catch (FileNotFoundException)
+        }
+        catch (FileNotFoundException)
         {
             GameObject.Find("AlertCanvas").GetComponent<AlertScript>().Activate("セーブファイルが見つかりません");
         }
-     }
+    }
     private void continueDataPass(GameObject playerMultiverse, ClassesInPlayerHandler classesInPlayer)
     {
         playerMultiverse.GetComponent<PlayerStatus>().playerStatusForReference = classesInPlayer.playerStatus_status;

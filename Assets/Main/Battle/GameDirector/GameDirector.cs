@@ -62,6 +62,7 @@ public class GameDirector : MonoBehaviour
         if (Dog.activeSelf) activeCharacters.Add(Dog);
         if (Cat.activeSelf) activeCharacters.Add(Cat);
         if (Alpaca.activeSelf) activeCharacters.Add(Alpaca);
+        battleGameCanvasController_0.setPlayerName(human_3.GetComponent<StatusBattle>().name);
         initQueue();
     }
 
@@ -161,7 +162,7 @@ public class GameDirector : MonoBehaviour
                             }
                             getCurrentCharacter().GetComponent<StatusBattle>().setMP(
     getCurrentCharacter().GetComponent<StatusBattle>().playerStatusForReference.MP_access +
-    getCurrentCharacter().GetComponent<StatusBattle>().playerStatusForReference.Regen_access
+    (getCurrentCharacter().GetComponent<StatusBattle>().playerStatusForReference.Regen_access/2)
     );
                             battleGameCanvasController_0.atWaitingInput(currentCharacter);
                             inputController_2.setInputHandle<Battle_CommandInputHandle>();
@@ -177,6 +178,12 @@ public class GameDirector : MonoBehaviour
                         }
                         i++;
                     }
+                }
+                else
+                {
+                    
+                    battleGameCanvasController_0.atWaitingInput(currentCharacter);
+                    inputController_2.setInputHandle<Battle_CommandInputHandle>();
                 }
                 break;
             case BattleState.Read:
@@ -354,8 +361,12 @@ public class GameDirector : MonoBehaviour
     }
     public void setClickedObject(GameObject gameObject)
     {
+        Debug.Log("which?");
+        if (win()|| lose()) { return; }
         if (gameObject.GetComponent<StatusBattle>().getAlive() || isReviveCalling)
         {
+            Debug.Log("yes?");
+
             switch (selectingType)
             {
                 case SelectingType.Single:
@@ -380,6 +391,7 @@ public class GameDirector : MonoBehaviour
             }
         } else
         {
+            Debug.Log("else?");
             setNoAliveDialogue(gameObject.GetComponent<StatusBattle>().characterType);
         }
         return;

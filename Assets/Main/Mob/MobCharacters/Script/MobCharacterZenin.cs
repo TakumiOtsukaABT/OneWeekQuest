@@ -18,7 +18,7 @@ public class MobCharacterZenin : MobCharacterController
             bool hasAllPromises = true;
             foreach(var i in PromisesId)
             {
-                if (playerBuff.GetElement(i) == 99) hasAllPromises = false;
+                if (playerInventory.getElementId(i) == 99) hasAllPromises = false;
             }
             if (hasAllPromises)
             {

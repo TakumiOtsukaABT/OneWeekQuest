@@ -37,6 +37,7 @@ public class BattleParameterSetterMultiVerse : MonoBehaviour
             characterStatusBattle.playerStatusForReference = playerDataHandler.GetComponent<PlayerStatus>().playerStatusForReference;
             characterStatusBattle.name = playerDataHandler.GetComponent<PlayerStatus>().name;
             characterStatusBattle.battleCommandIdList = playerDataHandler.GetComponent<PlayerBattleCommandList>().IdList;
+            characterStatusBattle.battleCommandIdList.Remove(0);
         }
 
     }

@@ -41,7 +41,7 @@ public class MobCharacterCondition_trainingItem : MobCharacterController
                 }
                 else if (status[1] == temp[2])
                 {
-                    if (!playerInventory.hasItem(baaberuId[1]))
+                    if (!playerInventory.hasItem(balanceballId[0]))
                     {
                         base.dialogue = balanceball;
                         base.itemId = balanceballId;
@@ -53,7 +53,7 @@ public class MobCharacterCondition_trainingItem : MobCharacterController
                 }
                 else
                 {
-                    if (!playerInventory.hasItem(baaberuId[2]))
+                    if (!playerInventory.hasItem(jitenshaId[0]))
                     {
                         base.dialogue = jitensha;
                         base.itemId = jitenshaId;

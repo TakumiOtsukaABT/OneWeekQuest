@@ -1,5 +1,24 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!95 &2574387481923528655
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 884581248089514296}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 02e04a7ac4050094ab3f9672c9af2cb6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2574387480156172363
 GameObject:
   m_ObjectHideFlags: 0
@@ -50,6 +69,9 @@ MonoBehaviour:
   leftLim: 0
   rightLim: 0
   ActiveFloor: {fileID: 0}
+  character_2: {fileID: 0}
+  camera_0: {fileID: 0}
+  blackout_1: {fileID: 0}
 --- !u!114 &2574387480156172366
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -490,25 +512,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rightLim: 36
   leftLim: -7
---- !u!95 &2574387481923528655
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 884581248089514296}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 02e04a7ac4050094ab3f9672c9af2cb6, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &2574387481156280863
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -993,6 +996,14 @@ PrefabInstance:
     - target: {fileID: 3457821352620643578, guid: f18b6dfe659cbf34e893d6199f8c331e, type: 3}
       propertyPath: cam
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3457821353539717626, guid: f18b6dfe659cbf34e893d6199f8c331e, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3457821353539717627, guid: f18b6dfe659cbf34e893d6199f8c331e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 29.87
       objectReference: {fileID: 0}
     - target: {fileID: 3457821353558338339, guid: f18b6dfe659cbf34e893d6199f8c331e, type: 3}
       propertyPath: cam

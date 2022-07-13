@@ -25,12 +25,17 @@ public class BasePlayerData : MonoBehaviour
 
     virtual public void Remove(int id)
     {
+        int remember=9999;
         foreach (var i in IdList)
         {
             if (i == id)
             {
-                IdList.Remove(i);
+                remember = i;
             }
+        }
+        if (remember != 9999)
+        {
+            IdList.Remove(remember);
         }
     }
 

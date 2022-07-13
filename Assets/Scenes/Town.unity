@@ -1437,7 +1437,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_TargetDisplay: 0
 --- !u!224 &1048662659
 RectTransform:
@@ -1511,7 +1511,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8381357421858052506, guid: 957abf0c167b6474cb6590cda767679c, type: 3}
       propertyPath: baseTasks.Array.data[1].count.Array.data[0]
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8381357421858052506, guid: 957abf0c167b6474cb6590cda767679c, type: 3}
       propertyPath: baseTasks.Array.data[3].count.Array.data[0]
@@ -2807,6 +2807,10 @@ PrefabInstance:
     - target: {fileID: 4589881317346487157, guid: 54aeb24f5a602ec44be060a8af75b488, type: 3}
       propertyPath: m_Name
       value: DayRender
+      objectReference: {fileID: 0}
+    - target: {fileID: 4589881317346487157, guid: 54aeb24f5a602ec44be060a8af75b488, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4589881317346487161, guid: 54aeb24f5a602ec44be060a8af75b488, type: 3}
       propertyPath: m_Pivot.x
